@@ -3,190 +3,187 @@
 # scripts/deploy.sh — локальный деплой сайта «Мир грибов».
 #
 # Использование:
-#   ./scripts/deploy.sh                — сборка + проверка (по умолчанию)
-#   ./scripts/deploy.sh build          — только сборка + проверка
-#   ./scripts/deploy.sh verify         — только проверка _site/
-#   ./scripts/deploy.sh package        — упаковать _site/ в tar.gz
-#   ./scripts/deploy.sh rsync          — залить на сервер через rsync
-#   ./scripts/deploy.sh vercel         — задеплоить в Vercel (нужен vercel CLI)
-#   ./scripts/deploy.sh preview        — локально поднять _site/ (python3 -m http.server)
-#
-# Переменные окружения (для rsync):
-#   DEPLOY_HOST      — ssh-хост, например user@grib.site
-#   DEPLOY_PATH      — путь на сервере, по умолчанию /var/www/grib.site
-#   DEPLOY_PORT      — порт SSH, по умолчанию 22
+#   ./scripts/deploy.sh                       — интерактивное меню
+#   ./scripts/deploy.sh verify                — проверка без деплоя
+#   ./scripts/deploy.sh build                 — только сборка
+#   ./scripts/deploy.sh deploy                — проверка → commit → push
+#   ./scripts/deploy.sh deploy "сообщение"    — то же, но с готовым сообщением
+#   ./scripts/deploy.sh preview               — локальный сервер
 #
 # Коды выхода:
 #   0  — успех
-#   1  — ошибка сборки или проверки
-#   2  — не настроены переменные окружения
+#   1  — ошибка проверки / сборки
+#   2  — нечего коммитить
+#   3  — push не прошёл
 # ----------------------------------------------------------------------------
 
 set -euo pipefail
 
-# ——— цвета и утилиты ———
+# ——— цвета ———
 if [[ -t 1 ]]; then
-  C_RED=$'\033[0;31m'
-  C_GREEN=$'\033[0;32m'
-  C_YELLOW=$'\033[0;33m'
-  C_BLUE=$'\033[0;34m'
-  C_RESET=$'\033[0m'
+  C_RED=$'\033[0;31m' C_GREEN=$'\033[0;32m' C_YELLOW=$'\033[0;33m'
+  C_BLUE=$'\033[0;34m' C_BOLD=$'\033[1m' C_RESET=$'\033[0m'
 else
-  C_RED="" C_GREEN="" C_YELLOW="" C_BLUE="" C_RESET=""
+  C_RED="" C_GREEN="" C_YELLOW="" C_BLUE="" C_BOLD="" C_RESET=""
 fi
 
-log()    { printf "%s[deploy]%s %s\n" "$C_BLUE" "$C_RESET" "$*"; }
-ok()     { printf "%s[ ok  ]%s %s\n" "$C_GREEN" "$C_RESET" "$*"; }
-warn()   { printf "%s[warn ]%s %s\n" "$C_YELLOW" "$C_RESET" "$*"; }
-err()    { printf "%s[fail ]%s %s\n" "$C_RED" "$C_RESET" "$*" >&2; }
+log()  { printf "%s[deploy]%s %s\n" "$C_BLUE" "$C_RESET" "$*"; }
+ok()   { printf "%s[ ok  ]%s %s\n" "$C_GREEN" "$C_RESET" "$*"; }
+warn() { printf "%s[warn ]%s %s\n" "$C_YELLOW" "$C_RESET" "$*"; }
+err()  { printf "%s[fail ]%s %s\n" "$C_RED" "$C_RESET" "$*" >&2; }
+head() { printf "\n%s%s%s\n" "$C_BOLD" "$*" "$C_RESET"; }
 
 # ——— пути ———
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 SITE_DIR="$ROOT_DIR/_site"
-PACKAGE_NAME="griby-site-$(date -u +%Y%m%dT%H%M%SZ).tar.gz"
-DIST_DIR="$ROOT_DIR/dist"
-
 cd "$ROOT_DIR"
 
-# ——— подкоманды ———
-cmd="${1:-all}"
-
-usage() {
-  sed -n '2,18p' "$0" | sed 's/^# \{0,1\}//'
-  exit 0
-}
-
-# ——— шаги ———
-
+# ——— утилиты ———
 preflight() {
-  log "Префлайт: проверка окружения"
   command -v node >/dev/null 2>&1 || { err "node не найден"; exit 1; }
-  command -v npm  >/dev/null 2>&1 || { err "npm не найден";  exit 1; }
-  if [[ ! -d node_modules ]]; then
-    warn "node_modules/ отсутствует — устанавливаю зависимости"
-    npm ci
+  command -v git  >/dev/null 2>&1 || { err "git не найден";  exit 1; }
+  [[ -d node_modules ]] || { warn "ставлю зависимости…"; npm ci; }
+}
+
+# Проверяет, что во всех .md в src/griby/ и src/stati/ выставлен verified: true.
+check_verified_flag() {
+  log "Проверка флага verified…"
+  if ! node scripts/check-verified.js; then
+    err "Есть неподтверждённые материалы — поставь verified: true или допиши"
+    exit 1
   fi
-  ok "Окружение готово (node $(node -v), npm $(npm -v))"
+  ok "verified: true у всех материалов"
 }
 
-build() {
-  preflight
-  log "Сборка сайта (npm run build)…"
+# Сборка сайта и проверка артефактов.
+build_and_verify() {
+  log "Сборка сайта…"
   npm run build
-  verify_site
-  ok "Сборка завершена: $SITE_DIR"
-}
-
-verify_site() {
-  log "Проверка артефактов сборки…"
+  log "Проверка артефактов…"
   local missing=0
   for f in index.html 404.html feed.xml sitemap.xml robots.txt CNAME; do
-    if [[ ! -f "$SITE_DIR/$f" ]]; then
-      err "отсутствует _site/$f"
-      missing=1
-    fi
+    [[ -f "$SITE_DIR/$f" ]] || { err "нет _site/$f"; missing=1; }
   done
-  if [[ ! -d "$SITE_DIR/pagefind" ]]; then
-    err "отсутствует _site/pagefind/ (поиск не проиндексирован)"
-    missing=1
-  fi
-  if [[ ! -d "$SITE_DIR/assets" ]]; then
-    err "отсутствует _site/assets/"
-    missing=1
-  fi
-  if (( missing )); then
-    err "Сборка не прошла проверку"
-    exit 1
-  fi
-  # Считаем базовые метрики
-  local pages
+  [[ -d "$SITE_DIR/pagefind" ]] || { err "нет _site/pagefind/"; missing=1; }
+  [[ -d "$SITE_DIR/assets"   ]] || { err "нет _site/assets/";   missing=1; }
+  (( missing )) && { err "сборка не прошла проверку"; exit 1; }
+  local pages size
   pages=$(find "$SITE_DIR" -name "*.html" | wc -l | tr -d ' ')
-  local size
   size=$(du -sh "$SITE_DIR" | cut -f1)
-  ok "Проверка пройдена: $pages HTML-страниц, размер $size"
+  ok "сборка ок: $pages страниц, $size"
 }
 
-package() {
-  build
-  log "Упаковка _site/ → dist/$PACKAGE_NAME"
-  mkdir -p "$DIST_DIR"
-  # --exclude нужен, чтобы в архив не попал мусор
-  tar -C "$ROOT_DIR" -czf "$DIST_DIR/$PACKAGE_NAME" \
-    --exclude='_site/pagefind/*.pf_meta' \
-    --exclude='_site/pagefind/fragment' \
-    _site
-  local size
-  size=$(du -h "$DIST_DIR/$PACKAGE_NAME" | cut -f1)
-  ok "Архив готов: dist/$PACKAGE_NAME ($size)"
+# Полная проверка — то, что запускается перед каждым деплоем.
+verify() {
+  preflight
+  head "▸ Проверка перед деплоем"
+  check_verified_flag
+  build_and_verify
+  ok "Все проверки пройдены"
 }
 
-rsync_deploy() {
-  build
-  if [[ -z "${DEPLOY_HOST:-}" ]]; then
-    err "DEPLOY_HOST не задан. Пример: export DEPLOY_HOST=user@grib.site"
+# Что изменилось в рабочей копии относительно HEAD.
+status_summary() {
+  if git diff --quiet HEAD 2>/dev/null && [[ -z "$(git ls-files --others --exclude-standard)" ]]; then
+    return 1
+  fi
+  echo
+  warn "Изменения в рабочей копии:"
+  git status --short
+  echo
+  git diff --stat HEAD | tail -n 20 || true
+  return 0
+}
+
+git_commit() {
+  local msg="${1:-}"
+  if ! status_summary; then
+    err "Нечего коммитить — рабочая копия чистая"
     exit 2
   fi
-  : "${DEPLOY_PATH:=/var/www/grib.site}"
-  : "${DEPLOY_PORT:=22}"
-  command -v rsync >/dev/null 2>&1 || { err "rsync не установлен"; exit 1; }
-
-  log "rsync → $DEPLOY_HOST:$DEPLOY_PATH (port $DEPLOY_PORT)"
-  # Используем --delete, чтобы зеркалить состояние;
-  # --delay-updates для атомарного обновления;
-  # --exclude — не трогаем .well-known/ (часто ACME-challenge) и т.п.
-  rsync -avz \
-    --delete \
-    --delay-updates \
-    --exclude='.well-known' \
-    --exclude='.htaccess' \
-    -e "ssh -p $DEPLOY_PORT -o StrictHostKeyChecking=accept-new" \
-    "$SITE_DIR"/ \
-    "$DEPLOY_HOST:$DEPLOY_PATH/"
-
-  ok "rsync завершён"
-  warn "Не забудьте: на сервере должен быть .nojekyll и корректный CNAME."
+  if [[ -z "$msg" ]]; then
+    printf "%sСообщение коммита:%s " "$C_BOLD" "$C_RESET"
+    read -r msg
+    [[ -z "$msg" ]] && { err "пустое сообщение — отмена"; exit 1; }
+  fi
+  git add -A
+  git commit -m "$msg"
+  ok "коммит создан: $(git log -1 --oneline)"
 }
 
-vercel_deploy() {
-  command -v vercel >/dev/null 2>&1 || {
-    err "vercel CLI не найден. Установите: npm i -g vercel"
-    exit 1
-  }
-  if [[ ! -f "$ROOT_DIR/vercel.json" ]]; then
-    err "vercel.json не найден в корне проекта"
-    exit 1
+git_push() {
+  log "git push origin main…"
+  if ! git push origin main; then
+    err "push не прошёл"
+    exit 3
   fi
-  build
-  log "vercel --prod…"
-  vercel --prod --yes
-  ok "Vercel-деплой завершён"
+  ok "залито в origin/main — сервер подхватит автоматически"
 }
 
-preview() {
-  build
-  if ! command -v python3 >/dev/null 2>&1; then
-    err "python3 не найден — нечем поднять локальный сервер"
-    exit 1
-  fi
+# ——— команды ———
+
+cmd_verify() {
+  verify
+}
+
+cmd_build() {
+  preflight
+  build_and_verify
+}
+
+cmd_deploy() {
+  local msg="${1:-}"
+  verify
+  git_commit "$msg"
+  git_push
+  echo
+  ok "Готово. $(git log -1 --oneline)"
+}
+
+cmd_preview() {
+  preflight
+  build_and_verify
+  command -v python3 >/dev/null 2>&1 || { err "python3 не найден"; exit 1; }
   local port="${PREVIEW_PORT:-4173}"
-  log "Локальный превью: http://localhost:$port/ (Ctrl+C для остановки)"
+  log "локальный превью: http://localhost:$port/  (Ctrl+C для остановки)"
   cd "$SITE_DIR"
   exec python3 -m http.server "$port"
 }
 
+# ——— интерактивное меню ———
+
+menu() {
+  head "▸ Деплой сайта «Мир грибов»"
+  printf "  %s1)%s Проверить (verified + сборка)\n" "$C_BOLD" "$C_RESET"
+  printf "  %s2)%s Собрать\n"                         "$C_BOLD" "$C_RESET"
+  printf "  %s3)%s Закоммитить и запушить\n"         "$C_BOLD" "$C_RESET"
+  printf "  %s4)%s Только запушить (уже есть коммит)\n" "$C_BOLD" "$C_RESET"
+  printf "  %s5)%s Локальный превью\n"                "$C_BOLD" "$C_RESET"
+  printf "  %s0)%s Выход\n"                          "$C_BOLD" "$C_RESET"
+  printf "\nВыбор: "
+  local choice
+  read -r choice
+  case "$choice" in
+    1) verify ;;
+    2) preflight; build_and_verify ;;
+    3) cmd_deploy ;;
+    4) git_push ;;
+    5) cmd_preview ;;
+    0) exit 0 ;;
+    *) err "неизвестный пункт: $choice"; exit 1 ;;
+  esac
+}
+
+# ——— точка входа ———
+
+cmd="${1:-menu}"
 case "$cmd" in
-  -h|--help|help) usage ;;
-  all)        build ;;
-  build)      build ;;
-  verify)     verify_site ;;
-  package)    package ;;
-  rsync)      rsync_deploy ;;
-  vercel)     vercel_deploy ;;
-  preview)    preview ;;
-  *)
-    err "Неизвестная подкоманда: $cmd"
-    usage
-    exit 1
-    ;;
+  -h|--help|help) sed -n '2,12p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
+  menu|'')        menu ;;
+  verify)         shift; cmd_verify "$@" ;;
+  build)          shift; cmd_build "$@" ;;
+  deploy)         shift; cmd_deploy "$@" ;;
+  preview)        shift; cmd_preview "$@" ;;
+  *) err "неизвестная команда: $cmd"; sed -n '2,12p' "$0" | sed 's/^# \{0,1\}//'; exit 1 ;;
 esac
