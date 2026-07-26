@@ -78,8 +78,16 @@ async function processMushroom(file) {
   const raw = await fs.readFile(filePath, "utf8");
   const { data, content } = matter(raw);
 
-  if (data.image_source_url) {
-    return { skipped: true, reason: "уже загружено" };
+  // Пропускаем, только если локальный файл уже существует и
+  // запись в front matter указывает на локальный путь.
+  const localImagePath = path.join(IMG_DIR, `${data.slug}.jpg`);
+  if (data.image && data.image.startsWith("/assets/img/")) {
+    try {
+      await fs.access(localImagePath);
+      return { skipped: true, reason: "локальный файл уже есть" };
+    } catch (_) {
+      // файл не найден — нужно перекачать
+    }
   }
   if (!data.latin_name) {
     return { skipped: true, reason: "нет latin_name" };

@@ -1,26 +1,32 @@
 ---
 layout: layouts/mushroom.njk
-title: "Опёнок осенний"
-latin_name: "Armillaria mellea"
+title: Опёнок осенний
+latin_name: Armillaria mellea
 slug: openyosenniy
 status: conditional
-tags: [условно-съедобные, лесные, древесные]
-habitat: "Паразит и сапротроф на живой и мёртвой древесине лиственных и хвойных пород."
-season: "Август — октябрь"
-image: https://commons.wikimedia.org/wiki/Special:FilePath/Armillaria_mellea_-_Honey_Fungus.jpg?width=1024
-image_alt: "Опёнок осенний (Armillaria mellea) на пне"
-image_author: "Stu's Images, 2012"
-image_license: "CC BY-SA 3.0"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Armillaria_mellea_-_Honey_Fungus.jpg"
-date: 2026-07-15
+tags:
+  - условно-съедобные
+  - лесные
+  - древесные
+habitat: Паразит и сапротроф на живой и мёртвой древесине лиственных и хвойных пород.
+season: Август — октябрь
+image: /assets/img/mushrooms/openyosenniy.jpg
+image_alt: Опёнок осенний (Armillaria mellea) на пне
+image_author: Stu's Images
+image_license: CC BY-SA 3.0
+image_source_url: >-
+  https://commons.wikimedia.org/wiki/File:Armillaria%20mellea%2C%20Honey%20Fungus%2C%20UK%201.jpg
+date: 2026-07-15T00:00:00.000Z
 verified: true
-verification_date: 2026-07-20
+verification_date: 2026-07-20T00:00:00.000Z
 sources:
-  - title: "Wikipedia: Armillaria mellea"
-    url: "https://en.wikipedia.org/wiki/Armillaria_mellea"
-  - title: "Forest Pathology: Armillaria species"
-    url: "https://www.fs.usda.gov"
-summary: "Условно-съедобный гриб, растущий большими колониями на древесине. Требует обязательной термической обработки перед употреблением."
+  - title: 'Wikipedia: Armillaria mellea'
+    url: 'https://en.wikipedia.org/wiki/Armillaria_mellea'
+  - title: 'Forest Pathology: Armillaria species'
+    url: 'https://www.fs.usda.gov'
+summary: >-
+  Условно-съедобный гриб, растущий большими колониями на древесине. Требует
+  обязательной термической обработки перед употреблением.
 ---
 
 ## Описание

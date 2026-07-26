@@ -1,26 +1,31 @@
 ---
 layout: layouts/mushroom.njk
-title: "Гриб Рейши (трутовик лакированный)"
-latin_name: "Ganoderma lucidum"
+title: Гриб Рейши (трутовик лакированный)
+latin_name: Ganoderma lucidum
 slug: reishi
 status: medicinal
-tags: [лечебные, древесные, иммунитет]
-habitat: "Мёртвая и ослабленная древесина лиственных пород, особенно дуба и бука."
-season: "Лето — осень, многолетний вид"
-image: https://commons.wikimedia.org/wiki/Special:FilePath/Ganoderma.lucidum-02.jpg?width=1024
-image_alt: "Трутовик лакированный (Ganoderma lucidum) на стволе дерева"
-image_author: "Jean-Pol Vigneron, 2007"
-image_license: "CC BY-SA 3.0"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Ganoderma.lucidum-02.jpg"
-date: 2026-07-15
+tags:
+  - лечебные
+  - древесные
+  - иммунитет
+habitat: 'Мёртвая и ослабленная древесина лиственных пород, особенно дуба и бука.'
+season: 'Лето — осень, многолетний вид'
+image: /assets/img/mushrooms/reishi.jpg
+image_alt: Трутовик лакированный (Ganoderma lucidum) на стволе дерева
+image_author: Eric Steinert
+image_license: CC BY-SA 3.0
+image_source_url: 'https://commons.wikimedia.org/wiki/File:Ganoderma%20lucidum%2001.jpg'
+date: 2026-07-15T00:00:00.000Z
 verified: true
-verification_date: 2026-07-20
+verification_date: 2026-07-20T00:00:00.000Z
 sources:
-  - title: "Wikipedia: Ganoderma lucidum"
-    url: "https://en.wikipedia.org/wiki/Ganoderma_lucidum"
-  - title: "PubMed: Immunomodulatory effects of Ganoderma lucidum"
-    url: "https://pubmed.ncbi.nlm.nih.gov"
-summary: "Древесный гриб, используемый в традиционной медицине Азии. Изучается как источник бета-глюканов и тритерпеноидов."
+  - title: 'Wikipedia: Ganoderma lucidum'
+    url: 'https://en.wikipedia.org/wiki/Ganoderma_lucidum'
+  - title: 'PubMed: Immunomodulatory effects of Ganoderma lucidum'
+    url: 'https://pubmed.ncbi.nlm.nih.gov'
+summary: >-
+  Древесный гриб, используемый в традиционной медицине Азии. Изучается как
+  источник бета-глюканов и тритерпеноидов.
 ---
 
 ## Описание

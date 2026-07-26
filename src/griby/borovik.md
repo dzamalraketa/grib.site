@@ -1,26 +1,32 @@
 ---
 layout: layouts/mushroom.njk
-title: "Белый гриб (боровик)"
-latin_name: "Boletus edulis"
+title: Белый гриб (боровик)
+latin_name: Boletus edulis
 slug: borovik
 status: edible
-tags: [съедобные, лесные, микориза]
-habitat: "Хвойные, лиственные и смешанные леса; предпочитает ель, сосну, берёзу, дуб."
-season: "Июнь — октябрь, отдельные волны после дождей"
-image: https://commons.wikimedia.org/wiki/Special:FilePath/Boletus_edulis_2011_G2.jpg?width=1024
-image_alt: "Белый гриб (Boletus edulis) в лесной подстилке"
-image_author: "Эрих Тиле (Erich T.), 2011"
-image_license: "CC BY-SA 3.0"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Boletus_edulis_2011_G2.jpg"
-date: 2026-07-15
+tags:
+  - съедобные
+  - лесные
+  - микориза
+habitat: 'Хвойные, лиственные и смешанные леса; предпочитает ель, сосну, берёзу, дуб.'
+season: 'Июнь — октябрь, отдельные волны после дождей'
+image: /assets/img/mushrooms/borovik.jpg
+image_alt: Белый гриб (Boletus edulis) в лесной подстилке
+image_author: Holger Krisp
+image_license: CC BY 3.0
+image_source_url: >-
+  https://commons.wikimedia.org/wiki/File:(Gemeine%20Steinpilz)%20Boletus%20edulis.jpg
+date: 2026-07-15T00:00:00.000Z
 verified: true
-verification_date: 2026-07-20
+verification_date: 2026-07-20T00:00:00.000Z
 sources:
-  - title: "Wikipedia: Boletus edulis"
-    url: "https://en.wikipedia.org/wiki/Boletus_edulis"
-  - title: "Funghi: Boletus edulis — edibility, ecology"
-    url: "https://www.first-nature.com/fungi/boletus-edulis.php"
-summary: "Ценный съедобный гриб с плотной мякотью, не темнеющей на срезе. Образует микоризу со многими лесными деревьями."
+  - title: 'Wikipedia: Boletus edulis'
+    url: 'https://en.wikipedia.org/wiki/Boletus_edulis'
+  - title: 'Funghi: Boletus edulis — edibility, ecology'
+    url: 'https://www.first-nature.com/fungi/boletus-edulis.php'
+summary: >-
+  Ценный съедобный гриб с плотной мякотью, не темнеющей на срезе. Образует
+  микоризу со многими лесными деревьями.
 ---
 
 ## Описание

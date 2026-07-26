@@ -1,28 +1,37 @@
 ---
 layout: layouts/mushroom.njk
-title: "Ежовик гребенчатый (Hericium erinaceus)"
-latin_name: "Hericium erinaceus"
+title: Ежовик гребенчатый (Hericium erinaceus)
+latin_name: Hericium erinaceus
 slug: ezhovik
 status: medicinal
-tags: [лечебные, древесные, нейропротекция]
-habitat: "Мёртвая и ослабленная древесина лиственных пород — дуба, бука, клёна, ясеня. Старовозрастные широколиственные и смешанные леса."
-season: "Конец лета — осень, однолетний вид"
-image: https://commons.wikimedia.org/wiki/Special:FilePath/Igel-Stacheling.jpg?width=1024
-image_alt: "Сферическое плодовое тело Hericium erinaceus с длинными свисающими белыми шипами"
-image_author: "Dmitry Fokin, 2018"
-image_license: "CC BY-SA 3.0"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Igel-Stacheling.jpg"
-date: 2026-02-12
+tags:
+  - лечебные
+  - древесные
+  - нейропротекция
+habitat: >-
+  Мёртвая и ослабленная древесина лиственных пород — дуба, бука, клёна, ясеня.
+  Старовозрастные широколиственные и смешанные леса.
+season: 'Конец лета — осень, однолетний вид'
+image: /assets/img/mushrooms/ezhovik.jpg
+image_alt: >-
+  Сферическое плодовое тело Hericium erinaceus с длинными свисающими белыми
+  шипами
+image_author: Lebrac
+image_license: CC BY-SA 3.0
+image_source_url: 'https://commons.wikimedia.org/wiki/File:Igelstachelbart%20Nov%2006.jpg'
+date: 2026-02-12T00:00:00.000Z
 verified: true
-verification_date: 2026-02-12
+verification_date: 2026-02-12T00:00:00.000Z
 sources:
-  - title: "Wikipedia: Hericium erinaceus"
-    url: "https://en.wikipedia.org/wiki/Hericium_erinaceus"
-  - title: "PubMed: Hericium erinaceus neurotrophic properties (PMC5987239)"
-    url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5987239/"
-  - title: "MDPI Nutrients: Recognition memory and neurogenesis"
-    url: "https://doi.org/10.3390/nu15040842"
-summary: "Древесный гриб с характерными белыми свисающими шипами. Изучается как источник гериценонов и эринацинов — стимуляторов факторов роста нервов (NGF, BDNF)."
+  - title: 'Wikipedia: Hericium erinaceus'
+    url: 'https://en.wikipedia.org/wiki/Hericium_erinaceus'
+  - title: 'PubMed: Hericium erinaceus neurotrophic properties (PMC5987239)'
+    url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5987239/'
+  - title: 'MDPI Nutrients: Recognition memory and neurogenesis'
+    url: 'https://doi.org/10.3390/nu15040842'
+summary: >-
+  Древесный гриб с характерными белыми свисающими шипами. Изучается как источник
+  гериценонов и эринацинов — стимуляторов факторов роста нервов (NGF, BDNF).
 ---
 
 ## Описание

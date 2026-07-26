@@ -1,28 +1,36 @@
 ---
 layout: layouts/mushroom.njk
-title: "Агарикон (Fomitopsis officinalis)"
-latin_name: "Laricifomes officinalis"
+title: Агарикон (Fomitopsis officinalis)
+latin_name: Laricifomes officinalis
 slug: agarikon
 status: medicinal
-tags: [лечебные, древесные, антимикробные, стеметс]
-habitat: "Старовозрастные хвойные леса; паразит и сапротроф на стволах лиственниц и других хвойных."
-season: "Многолетний вид, плодовые тела живут десятилетиями"
-image: https://commons.wikimedia.org/wiki/Special:FilePath/Laricifomes_officinalis.jpg?width=1024
-image_alt: "Плодовое тело Fomitopsis officinalis на стволе лиственницы"
-image_author: "Ylem, 2010"
-image_license: "CC BY-SA 3.0"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Laricifomes_officinalis.jpg"
-date: 2026-07-25
+tags:
+  - лечебные
+  - древесные
+  - антимикробные
+  - стеметс
+habitat: >-
+  Старовозрастные хвойные леса; паразит и сапротроф на стволах лиственниц и
+  других хвойных.
+season: 'Многолетний вид, плодовые тела живут десятилетиями'
+image: /assets/img/mushrooms/agarikon.jpg
+image_alt: Плодовое тело Fomitopsis officinalis на стволе лиственницы
+image_author: Dusty Yao-Stamets
+image_license: CC BY 3.0
+image_source_url: 'https://commons.wikimedia.org/wiki/File:Paul%20Stamets%20with%20Agarikon.jpg'
+date: 2026-07-25T00:00:00.000Z
 verified: true
-verification_date: 2026-07-25
+verification_date: 2026-07-25T00:00:00.000Z
 sources:
-  - title: "Wikipedia: Laricifomes officinalis"
-    url: "https://en.wikipedia.org/wiki/Laricifomes_officinalis"
-  - title: "Stamets P. Mycelium Running (2005) — глава об Agarikon"
-    url: "https://www.google.com/books/edition/Mycelium_Running"
-  - title: "Fungi Perfecti: Agarikon research"
-    url: "https://fungi.com/blogs/articles"
-summary: "Древесный гриб, известный в традиционной медицине и активно изучаемый Полом Стеметсом как источник антимикробных соединений."
+  - title: 'Wikipedia: Laricifomes officinalis'
+    url: 'https://en.wikipedia.org/wiki/Laricifomes_officinalis'
+  - title: Stamets P. Mycelium Running (2005) — глава об Agarikon
+    url: 'https://www.google.com/books/edition/Mycelium_Running'
+  - title: 'Fungi Perfecti: Agarikon research'
+    url: 'https://fungi.com/blogs/articles'
+summary: >-
+  Древесный гриб, известный в традиционной медицине и активно изучаемый Полом
+  Стеметсом как источник антимикробных соединений.
 ---
 
 ## Описание

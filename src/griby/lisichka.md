@@ -1,28 +1,36 @@
 ---
 layout: layouts/mushroom.njk
-title: "Лисичка обыкновенная"
-latin_name: "Cantharellus cibarius"
+title: Лисичка обыкновенная
+latin_name: Cantharellus cibarius
 slug: lisichka
 status: edible
-tags: [съедобные, лесные, микориза]
-habitat: "Хвойные и смешанные леса, на кислых почвах, часто рядом с елью, сосной, берёзой."
-season: "Июнь — октябрь, пик — июль–август"
-image: https://commons.wikimedia.org/wiki/Special:FilePath/Cantharellus_cibarius.jpg?width=1024
-image_alt: "Лисичка обыкновенная (Cantharellus cibarius) в еловом лесу"
-image_author: "Domenico Carotenuto, 2010"
-image_license: "CC BY-SA 2.0"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Cantharellus_cibarius.jpg"
-date: 2026-07-15
+tags:
+  - съедобные
+  - лесные
+  - микориза
+habitat: >-
+  Хвойные и смешанные леса, на кислых почвах, часто рядом с елью, сосной,
+  берёзой.
+season: 'Июнь — октябрь, пик — июль–август'
+image: /assets/img/mushrooms/lisichka.jpg
+image_alt: Лисичка обыкновенная (Cantharellus cibarius) в еловом лесу
+image_author: неизвестен
+image_license: CC BY-SA 3.0
+image_source_url: >-
+  https://commons.wikimedia.org/wiki/File:Chanterelle%20Cantharellus%20cibarius.jpg
+date: 2026-07-15T00:00:00.000Z
 verified: true
-verification_date: 2026-07-20
+verification_date: 2026-07-20T00:00:00.000Z
 sources:
-  - title: "Wikipedia: Cantharellus cibarius"
-    url: "https://en.wikipedia.org/wiki/Cantharellus_cibarius"
-  - title: "Mycologia: Revision of the Cantharellus cibarius complex"
-    url: "https://www.mycologia.org"
-  - title: "Российская микология: Cantharellus cibarius"
-    url: "https://www.mushroom.su"
-summary: "Один из самых известных съедобных грибов. Шляпка воронковидная, яично-жёлтая; мякоть плотная, с фруктовым запахом."
+  - title: 'Wikipedia: Cantharellus cibarius'
+    url: 'https://en.wikipedia.org/wiki/Cantharellus_cibarius'
+  - title: 'Mycologia: Revision of the Cantharellus cibarius complex'
+    url: 'https://www.mycologia.org'
+  - title: 'Российская микология: Cantharellus cibarius'
+    url: 'https://www.mushroom.su'
+summary: >-
+  Один из самых известных съедобных грибов. Шляпка воронковидная, яично-жёлтая;
+  мякоть плотная, с фруктовым запахом.
 ---
 
 ## Описание

@@ -1,26 +1,33 @@
 ---
 layout: layouts/mushroom.njk
-title: "Чага (Inonotus obliquus)"
-latin_name: "Inonotus obliquus"
+title: Чага (Inonotus obliquus)
+latin_name: Inonotus obliquus
 slug: chaga
 status: medicinal
-tags: [лечебные, древесные, антиоксиданты]
-habitat: "Живые и ослабленные стволы берёзы, реже ольхи, рябины, ясеня. В старовозрастных лесах умеренного пояса."
-season: "Многолетний нарост, собирают круглый год"
-image: https://commons.wikimedia.org/wiki/Special:FilePath/Inonotus_obliquus.jpg?width=1024
-image_alt: "Чёрный растрескавшийся нарост чаги на стволе берёзы"
-image_author: "Andreas Kunze, 2012"
-image_license: "CC BY-SA 3.0"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Inonotus_obliquus.jpg"
-date: 2026-02-12
+tags:
+  - лечебные
+  - древесные
+  - антиоксиданты
+habitat: >-
+  Живые и ослабленные стволы берёзы, реже ольхи, рябины, ясеня. В
+  старовозрастных лесах умеренного пояса.
+season: 'Многолетний нарост, собирают круглый год'
+image: /assets/img/mushrooms/chaga.jpg
+image_alt: Чёрный растрескавшийся нарост чаги на стволе берёзы
+image_author: Tocekas
+image_license: CC BY-SA 3.0
+image_source_url: 'https://commons.wikimedia.org/wiki/File:Inonotus%20obliquus.jpg'
+date: 2026-02-12T00:00:00.000Z
 verified: true
-verification_date: 2026-02-12
+verification_date: 2026-02-12T00:00:00.000Z
 sources:
-  - title: "Wikipedia: Inonotus obliquus"
-    url: "https://en.wikipedia.org/wiki/Inonotus_obliquus"
-  - title: "PubMed: Inonotus obliquus phytochemistry and bioactivity"
-    url: "https://pubmed.ncbi.nlm.nih.gov"
-summary: "Древесный гриб-паразит берёзы. Известен в народной медицине России; изучается как источник антиоксидантов, бетулина и меланинов."
+  - title: 'Wikipedia: Inonotus obliquus'
+    url: 'https://en.wikipedia.org/wiki/Inonotus_obliquus'
+  - title: 'PubMed: Inonotus obliquus phytochemistry and bioactivity'
+    url: 'https://pubmed.ncbi.nlm.nih.gov'
+summary: >-
+  Древесный гриб-паразит берёзы. Известен в народной медицине России; изучается
+  как источник антиоксидантов, бетулина и меланинов.
 ---
 
 ## Описание

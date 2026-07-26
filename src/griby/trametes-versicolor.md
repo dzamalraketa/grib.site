@@ -1,26 +1,36 @@
 ---
 layout: layouts/mushroom.njk
-title: "Траметес разноцветный (Trametes versicolor)"
-latin_name: "Trametes versicolor"
+title: Траметес разноцветный (Trametes versicolor)
+latin_name: Trametes versicolor
 slug: trametes-versicolor
 status: medicinal
-tags: [лечебные, древесные, иммунитет, полисахариды]
-habitat: "Мёртвая и ослабленная древесина лиственных пород — берёзы, дуба, бука, ольхи, осины."
-season: "Многолетний вид, плодовые тела можно встретить круглый год"
-image: https://commons.wikimedia.org/wiki/Special:FilePath/Trametes_versicolor_-_Turkey_tail.jpg?width=1024
-image_alt: "Веерообразное плодовое тело Trametes versicolor с концентрическими зонами разных оттенков"
-image_author: "Lindley Ashlin, 2014"
-image_license: "CC BY-SA 3.0"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Trametes_versicolor_-_Turkey_tail.jpg"
-date: 2026-02-12
+tags:
+  - лечебные
+  - древесные
+  - иммунитет
+  - полисахариды
+habitat: >-
+  Мёртвая и ослабленная древесина лиственных пород — берёзы, дуба, бука, ольхи,
+  осины.
+season: 'Многолетний вид, плодовые тела можно встретить круглый год'
+image: /assets/img/mushrooms/trametes-versicolor.jpg
+image_alt: >-
+  Веерообразное плодовое тело Trametes versicolor с концентрическими зонами
+  разных оттенков
+image_author: Ecornerdropshop at en.wikipedia
+image_license: Public domain
+image_source_url: 'https://commons.wikimedia.org/wiki/File:Stumpfungus.jpg'
+date: 2026-02-12T00:00:00.000Z
 verified: true
-verification_date: 2026-02-12
+verification_date: 2026-02-12T00:00:00.000Z
 sources:
-  - title: "Wikipedia: Trametes versicolor"
-    url: "https://en.wikipedia.org/wiki/Trametes_versicolor"
-  - title: "PubMed: Trametes versicolor and PSK/PSP"
-    url: "https://pubmed.ncbi.nlm.nih.gov"
-summary: "Древесный гриб с яркой полосатой шляпкой. Источник полисахаридов PSK и PSP, изучаемых в адъювантной терапии онкологических заболеваний."
+  - title: 'Wikipedia: Trametes versicolor'
+    url: 'https://en.wikipedia.org/wiki/Trametes_versicolor'
+  - title: 'PubMed: Trametes versicolor and PSK/PSP'
+    url: 'https://pubmed.ncbi.nlm.nih.gov'
+summary: >-
+  Древесный гриб с яркой полосатой шляпкой. Источник полисахаридов PSK и PSP,
+  изучаемых в адъювантной терапии онкологических заболеваний.
 ---
 
 ## Описание
