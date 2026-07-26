@@ -1,0 +1,69 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Разрешения: Pages читает содержимое _site, OIDC пишет в Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Нельзя запускать несколько деплоев параллельно — иначе будет гонка за _site.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+# Используем «latest» из среды actions; у GitHub Pages для своего runner.
+# Этот job собирает сайт.
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Verify build output
+        run: |
+          test -d _site || (echo "::error::_site/ not found" && exit 1)
+          test -f _site/index.html || (echo "::error::_site/index.html missing" && exit 1)
+          test -f _site/CNAME || (echo "::error::_site/CNAME missing" && exit 1)
+          test -f _site/feed.xml || (echo "::error::_site/feed.xml missing" && exit 1)
+          test -d _site/pagefind || (echo "::error::_site/pagefind/ missing" && exit 1)
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  # Этот job публикует собранный _site на GitHub Pages.
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

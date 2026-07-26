@@ -1,0 +1,11 @@
+{# image-caption.njk — автоатрибуция фото (раздел 7.4 ТЗ).
+   Рендерится под каждым фото: автор, лицензия, ссылка на источник. #}
+
+{% if image_author %}
+  <figcaption class="image-caption">
+    Фото: {{ image_author }} · {{ image_license or "лицензия не указана" }} ·
+    {% if image_source_url %}
+      <a href="{{ image_source_url }}" rel="noopener noreferrer" target="_blank">источник</a>
+    {% endif %}
+  </figcaption>
+{% endif %}

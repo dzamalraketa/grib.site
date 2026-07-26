@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+title: "Темы"
+description: "Тематические обзоры: микоремедиация, грибы и иммунитет, псилоцибин и исследования."
+permalink: "/temy/"
+eleventyExcludeFromCollections: true
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Обзоры</p>
+  <h1 class="page-header__title">Темы</h1>
+  <p class="page-header__lead">
+    Тематические страницы, на которых собираются материалы по ключевым
+    направлениям: микоремедиация, влияние грибов на иммунитет, исследования
+    псилоцибина. Каждая тема заканчивается обязательным дисклеймером.
+  </p>
+</header>
+
+<div class="topic-grid">
+  {% for t in collections.temy %}
+    <a class="topic-tile" href="{{ t.url | url }}">
+      <h2 class="topic-tile__title">{{ t.data.title }}</h2>
+      <p class="topic-tile__lead">{{ t.data.description or t.data.lead or "" }}</p>
+    </a>
+  {% endfor %}
+</div>

@@ -1,0 +1,21 @@
+{
+  "title": "Мир грибов",
+  "description": "Переводы и адаптация трудов Пола Стеметса (Paul Stamets) на русском языке: лекции, главы книг, статьи о мицелии, микоремедиации, бета-глюканах, псилоцибине.",
+  "url": "https://grib.site",
+  "author": "Команда «Мир грибов»",
+  "locale": "ru_RU",
+  "formspree_id": "xyzzabcd",
+  "default_image": "/assets/img/og-default.svg",
+  "navigation": {
+    "primary": [
+      { "text": "Главная", "url": "/" },
+      { "text": "О проекте", "url": "/o-proekte/" },
+      { "text": "Каталог грибов", "url": "/griby/" },
+      { "text": "Темы", "url": "/temy/" },
+      { "text": "Статьи", "url": "/stati/" },
+      { "text": "Источники", "url": "/istochniki/" },
+      { "text": "Поиск", "url": "/poisk/" },
+      { "text": "Контакты", "url": "/kontakty/" }
+    ]
+  }
+}

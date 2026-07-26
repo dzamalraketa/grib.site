@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+title: "Поиск"
+description: "Полнотекстовый поиск по сайту «Мир грибов»."
+permalink: "/poisk/"
+eleventyExcludeFromCollections: true
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Навигация</p>
+  <h1 class="page-header__title">Поиск</h1>
+  <p class="page-header__lead">
+    Полнотекстовый поиск по всем разделам сайта. Работает на статическом
+    индексе Pagefind — без бэкенда, без отправки данных третьим лицам.
+  </p>
+</header>
+
+{% include "partials/search-box.njk" %}

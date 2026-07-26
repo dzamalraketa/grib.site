@@ -1,0 +1,44 @@
+# ——— зависимости ———
+node_modules/
+package-lock.json.bak
+
+# ——— локальная сборка ———
+_site/
+.cache/
+dist/
+
+# ——— переменные окружения и секреты ———
+.env
+.env.local
+.env.*.local
+
+# ——— IDE / OS ———
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ——— логи ———
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ——— Vercel ———
+.vercel
+
+# ——— Node Coverage ———
+coverage/
+.nyc_output/
+
+# ——— Pagefind рабочие файлы ———
+# (сама папка pagefind внутри _site/ пересоздаётся при каждом билде)
+
+# ——— Загруженные картинки грибов (опционально, см. scripts/fetch-images.mjs) ———
+# src/assets/img/mushrooms/*.jpg
+# src/assets/img/mushrooms/*.jpeg
+# src/assets/img/mushrooms/*.webp

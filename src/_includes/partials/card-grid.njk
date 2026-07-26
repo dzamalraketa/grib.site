@@ -1,0 +1,38 @@
+{# card-grid.njk — сетка карточек.
+   Параметры (через set):
+     items   — коллекция (массив)
+     kind    — "mushroom" | "article" #}
+
+{% set kind = kind or "article" %}
+
+{% if items and items.length > 0 %}
+  <div class="card-grid">
+    {% for item in items %}
+      <article class="card" data-status="{{ item.data.status }}">
+        {% if kind == "mushroom" %}
+          {% set stamp_status = item.data.status %}
+          {% set stamp_label = item.data.status | statusLabel %}
+          {% include "partials/spore-stamp.njk" %}
+          <h3 class="card__title">
+            <a href="{{ item.url | url }}" style="text-decoration: none; color: inherit;">{{ item.data.title }}</a>
+          </h3>
+          <p class="card__latin">{{ item.data.latin_name }}</p>
+        {% else %}
+          <h3 class="card__title">
+            <a href="{{ item.url | url }}" style="text-decoration: none; color: inherit;">{{ item.data.title }}</a>
+          </h3>
+        {% endif %}
+        <p class="card__summary">{{ item.data.summary or item.data.description or "" }}</p>
+        <div class="card__meta">
+          {% if item.date %}<time datetime="{{ item.date | isoDate }}">{{ item.date | ruDate }}</time>{% endif %}
+          {% if item.data.tags and item.data.tags.length > 0 %}
+            <span aria-hidden="true">·</span>
+            <span>{{ item.data.tags[0] }}</span>
+          {% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+{% else %}
+  <p class="empty">Пока нет материалов.</p>
+{% endif %}

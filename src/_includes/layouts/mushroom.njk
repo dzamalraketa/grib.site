@@ -1,0 +1,59 @@
+---
+layout: layouts/base.njk
+og_type: "article"
+---
+
+<article class="mushroom-page">
+  <header class="mushroom-header">
+    <div class="mushroom-header__media">
+      {% if image %}
+        <img src="{{ image | url }}" alt="{{ image_alt or title }}" loading="lazy" decoding="async">
+      {% else %}
+        <img src="{{ '/assets/img/fallback-illustration.svg' | url }}" alt="" aria-hidden="true">
+      {% endif %}
+    </div>
+    <div>
+      {% set stamp_status = status %}
+      {% set stamp_label = status | statusLabel %}
+      {% set stamp_size = "lg" %}
+      {% include "partials/spore-stamp.njk" %}
+
+      <h1 class="mushroom-header__title">{{ title }}</h1>
+      {% if latin_name %}<p class="mushroom-header__latin">{{ latin_name }}</p>{% endif %}
+
+      {% include "partials/image-caption.njk" %}
+
+      <dl class="mushroom-meta">
+        {% if habitat %}<dt>Среда</dt><dd>{{ habitat }}</dd>{% endif %}
+        {% if season %}<dt>Сезон</dt><dd>{{ season }}</dd>{% endif %}
+        {% if verified %}<dt>Проверено</dt><dd>{{ verification_date | ruDate or "—" }}</dd>{% endif %}
+      </dl>
+    </div>
+  </header>
+
+  {% set divider_opacity = 0.10 %}
+  {% set divider_lines = 28 %}
+  {% include "partials/gill-divider.njk" %}
+
+  {# Дисклеймер: всегда для ядовитых и условно-съедобных, иначе по front matter #}
+  {% if status == "poisonous" or status == "conditional" %}
+    {% set disclaimer_type = "foraging" %}
+    {% include "partials/disclaimer.njk" %}
+  {% endif %}
+  {% if disclaimer and disclaimer != "none" %}
+    {% set disclaimer_type = disclaimer %}
+    {% include "partials/disclaimer.njk" %}
+  {% endif %}
+
+  <div class="article-content">
+    {{ content | safe }}
+  </div>
+
+  {% if tags and tags.length > 0 %}
+    <div class="tags" style="margin-top: var(--space-4);">
+      {% for t in tags %}<span class="tag">#{{ t }}</span>{% endfor %}
+    </div>
+  {% endif %}
+
+  {% include "partials/sources-block.njk" %}
+</article>

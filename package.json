@@ -1,0 +1,27 @@
+{
+  "name": "griby-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "node scripts/check-verified.js && eleventy && pagefind --site _site",
+    "prebuild": "node scripts/check-verified.js",
+    "fetch-images": "node scripts/fetch-images.mjs",
+    "clean": "rimraf _site",
+    "deploy": "bash scripts/deploy.sh all",
+    "deploy:build": "bash scripts/deploy.sh build",
+    "deploy:verify": "bash scripts/deploy.sh verify",
+    "deploy:package": "bash scripts/deploy.sh package",
+    "deploy:rsync": "bash scripts/deploy.sh rsync",
+    "deploy:vercel": "bash scripts/deploy.sh vercel",
+    "deploy:preview": "bash scripts/deploy.sh preview"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "pagefind": "^1.1.0",
+    "rimraf": "^5.0.5",
+    "sharp": "^0.33.0",
+    "gray-matter": "^4.0.3"
+  }
+}

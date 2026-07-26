@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+og_type: "article"
+---
+
+<article>
+  <header class="article-header">
+    <div class="article-header__meta">
+      <time datetime="{{ page.date | isoDate }}">{{ page.date | ruDate }}</time>
+      {% if author %}<span aria-hidden="true">·</span><span>{{ author }}</span>{% endif %}
+      {% if verified %}<span aria-hidden="true">·</span><span>Проверено: {{ verification_date | ruDate or "—" }}</span>{% endif %}
+    </div>
+    <h1 class="article-header__title">{{ title }}</h1>
+    {% if summary %}<p style="color: var(--color-text-muted); font-size: 1.1rem; max-width: 640px;">{{ summary }}</p>{% endif %}
+    {% if tags and tags.length > 0 %}
+      <div class="tags" style="margin-top: var(--space-2);">
+        {% for t in tags %}<span class="tag">#{{ t }}</span>{% endfor %}
+      </div>
+    {% endif %}
+  </header>
+
+  {% set divider_opacity = 0.10 %}
+  {% set divider_lines = 28 %}
+  {% include "partials/gill-divider.njk" %}
+
+  {# Дисклеймер: по front matter #}
+  {% if disclaimer and disclaimer != "none" %}
+    {% set disclaimer_type = disclaimer %}
+    {% include "partials/disclaimer.njk" %}
+  {% endif %}
+
+  <div class="article-content">
+    {{ content | safe }}
+  </div>
+
+  {% include "partials/sources-block.njk" %}
+</article>

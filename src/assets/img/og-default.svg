@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FAF7F2"/>
+      <stop offset="1" stop-color="#EDE6D7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g transform="translate(80,80)" fill="none" stroke="#6B4226" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M50 100c0-50 40-80 80-80s80 30 80 80c0 25-10 40-25 50l-10 10c-15 15-30 25-45 25s-30-10-45-25l-10-10C60 140 50 125 50 100z" fill="#7A8B4A" fill-opacity="0.18"/>
+    <path d="M130 200v100"></path>
+    <path d="M105 300h50"></path>
+  </g>
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#2B2620">
+    <text x="80" y="470" font-size="74" font-weight="700">Мир грибов</text>
+    <text x="80" y="520" font-size="28" fill="#6B6153">Проверенные факты о грибах · независимый проект</text>
+  </g>
+</svg>

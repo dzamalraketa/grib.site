@@ -1,0 +1,96 @@
+/* =========================================================================
+   Design tokens — палитра, типографика, отступы, сигнатурные значения.
+   Тёмная тема — основная. Светлая — альтернатива через [data-theme="light"].
+   Визуальная идентичность — споровый отпечаток: статусы рендерятся
+   круглыми «штампами» (--radius-stamp), а не тип-овыми пилюлями.
+   ========================================================================= */
+
+:root {
+  /* Тёмная тема — основная */
+  --color-loam: #1B1712;
+  --color-loam-surface: #26211A;
+  --color-ink-light: #EDE6D6;
+
+  /* Светлая тема — альтернатива */
+  --color-lichen: #ECEEE1;
+  --color-lichen-surface: #FFFFFF;
+  --color-ink: #211D17;
+  --color-ink-muted: #6E6656;
+
+  /* Активные цвета — текущая тема (по умолчанию тёмная) */
+  --color-bg: var(--color-loam);
+  --color-surface: var(--color-loam-surface);
+  --color-text: var(--color-ink-light);
+  --color-text-muted: #B3A893;
+  --color-border: rgba(237, 230, 214, 0.14);
+  --color-link: var(--color-glow);
+
+  /* Акценты — цвета реальных споровых отпечатков */
+  --color-spore-plum: #6E5A82;
+  --color-gill-amber: #C98A3B;
+  --color-glow: #6FBF8B;
+  --color-caution: #A13D3D;
+
+  /* Статусы грибов — цвета спорового штампа */
+  --status-edible: var(--color-gill-amber);
+  --status-conditional: var(--color-gill-amber);
+  --status-poisonous: var(--color-caution);
+  --status-inedible: var(--color-ink-muted);
+  --status-medicinal: var(--color-glow);
+
+  /* Дисклеймеры и источники */
+  --color-disclaimer-bg: rgba(161, 61, 61, 0.12);
+  --color-disclaimer-border: var(--color-caution);
+  --color-sources-bg: rgba(111, 191, 139, 0.08);
+  --color-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 16px rgba(0, 0, 0, 0.45);
+
+  /* Типографика — три роли, ни одна — не Georgia/Times */
+  --font-display: "Fraunces", ui-serif, serif;
+  --font-reading: "Source Serif 4", "Source Serif Pro", ui-serif, serif;
+  --font-ui: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --font-size-base: 1.125rem;
+  --font-size-sm: 0.95rem;
+  --font-size-xs: 0.825rem;
+  --font-size-lg: 1.25rem;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 1.85rem;
+  --font-size-h3: 1.4rem;
+  --line-height-body: 1.65;
+  --line-height-reading: 1.65;
+  --line-height-tight: 1.2;
+  --tracking-display: -0.01em;
+  --tracking-wide: 0.06em;
+
+  /* Отступы (шкала 4px) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 40px;
+  --space-6: 64px;
+  --space-7: 96px;
+
+  /* Радиусы — минимальное скругление, не "мыльный" UI */
+  --radius-stamp: 50%;
+  --radius-card: 6px;
+  --radius-pill: 999px;
+
+  --max-width: 720px;
+  --max-width-wide: 1100px;
+  --gutter: var(--space-3);
+  --transition: 180ms ease-out;
+}
+
+[data-theme="light"] {
+  --color-bg: var(--color-lichen);
+  --color-surface: var(--color-lichen-surface);
+  --color-text: var(--color-ink);
+  --color-text-muted: var(--color-ink-muted);
+  --color-border: rgba(33, 29, 23, 0.14);
+  --color-link: #2F6B4A;
+  --color-disclaimer-bg: rgba(161, 61, 61, 0.07);
+  --color-sources-bg: rgba(47, 107, 74, 0.08);
+  --color-shadow: 0 1px 2px rgba(33, 29, 23, 0.04), 0 4px 12px rgba(33, 29, 23, 0.06);
+}

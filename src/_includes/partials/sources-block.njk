@@ -1,0 +1,15 @@
+{# sources-block.njk — список источников из front matter.
+   Ожидает, что у страницы есть sources: [{ title, url }, ...] #}
+
+{% if sources and sources.length > 0 %}
+  <section class="sources" aria-label="Источники">
+    <h2 class="sources__title">Источники</h2>
+    <ol class="sources__list">
+      {% for src in sources %}
+        <li>
+          {% if src.url %}<a href="{{ src.url }}" rel="noopener noreferrer" target="_blank">{{ src.title }}</a>{% else %}{{ src.title }}{% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+{% endif %}

@@ -1,0 +1,26 @@
+{# search-box.njk — контейнер и инициализация Pagefind UI.
+   Подключается только на странице /poisk/ (после сборки там лежит /pagefind/pagefind-ui.js). #}
+
+<div class="search-block">
+  <h2>Поиск по сайту</h2>
+  <p style="color: var(--color-text-muted); font-size: var(--font-size-sm);">
+    Введите слово или фразу — например, «псилоцибин», «микориза», «лисичка».
+  </p>
+  <div id="search"></div>
+</div>
+
+<link rel="stylesheet" href="{{ '/pagefind/pagefind-ui.css' | url }}">
+<script src="{{ '/pagefind/pagefind-ui.js' | url }}" defer></script>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    if (window.PagefindUI) {
+      new PagefindUI({
+        element: "#search",
+        showImages: false,
+        showSubResults: true,
+        resetStyles: false,
+        autofocus: true,
+      });
+    }
+  });
+</script>

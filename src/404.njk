@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+title: "Страница не найдена"
+description: "Запрашиваемая страница не существует или была перемещена. Вернитесь на главную или откройте каталог грибов."
+permalink: /404.html
+eleventyExcludeFromCollections: true
+---
+
+<section class="empty">
+  <h1>404 — страница не найдена</h1>
+  <p>Запрашиваемая страница не существует или была перемещена.</p>
+  <p style="margin-top: var(--space-3);">
+    <a class="btn" href="{{ '/' | url }}">На главную</a>
+    <a class="btn" href="{{ '/griby/' | url }}" style="margin-left: var(--space-2);">Каталог грибов</a>
+  </p>
+</section>

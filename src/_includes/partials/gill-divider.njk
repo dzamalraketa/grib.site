@@ -1,0 +1,23 @@
+{# gill-divider.njk — SVG-разделитель секций (раздел 6.4.2 ТЗ).
+   Радиально расходящиеся линии, имитация пластинок гриба.
+   Используется вместо <hr> в шапке статьи и между секциями главной. #}
+
+{% set divider_size = divider_size or 800 %}
+{% set divider_lines = divider_lines or 24 %}
+{% set divider_opacity = divider_opacity or 0.18 %}
+
+<div class="gill-divider" role="presentation" aria-hidden="true">
+  <svg viewBox="-200 -40 400 80" width="100%" height="40" preserveAspectRatio="xMidYMid meet" style="overflow: visible;">
+    <g stroke="var(--color-ink-muted)" stroke-width="0.7" stroke-linecap="round" opacity="{{ divider_opacity }}">
+      {% for i in range(0, divider_lines) %}
+        {% set angle = (loop.index0 / divider_lines) * 360 %}
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate({{ angle }})"/>
+      {% endfor %}
+    </g>
+  </svg>
+</div>
+
+<style>
+  .gill-divider { display: block; width: 100%; margin: var(--space-4) 0; }
+  .gill-divider svg { display: block; }
+</style>

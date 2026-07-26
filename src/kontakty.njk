@@ -1,0 +1,54 @@
+---
+layout: layouts/base.njk
+title: "Контакты"
+description: "Форма обратной связи. Сообщения обрабатываются через Formspree."
+permalink: "/kontakty/"
+eleventyExcludeFromCollections: true
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Связь</p>
+  <h1 class="page-header__title">Контакты</h1>
+  <p class="page-header__lead">
+    Сообщения, предложения и замечания по фактам можно отправить через
+    форму ниже. Данные передаются через сервис Formspree — мы не храним
+    переписку на своём сервере.
+  </p>
+</header>
+
+<section style="max-width: 560px;">
+  <h2>Форма обратной связи</h2>
+  <form class="form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" aria-label="Форма обратной связи">
+    <div class="form-field">
+      <label class="form-label" for="name">Имя</label>
+      <input class="form-input" id="name" name="name" type="text" required autocomplete="name">
+    </div>
+
+    <div class="form-field">
+      <label class="form-label" for="email">E-mail</label>
+      <input class="form-input" id="email" name="email" type="email" required autocomplete="email">
+    </div>
+
+    <div class="form-field">
+      <label class="form-label" for="subject">Тема</label>
+      <input class="form-input" id="subject" name="subject" type="text" placeholder="Замечание по факту / предложение / иное">
+    </div>
+
+    <div class="form-field">
+      <label class="form-label" for="message">Сообщение</label>
+      <textarea class="form-textarea" id="message" name="message" rows="6" required></textarea>
+    </div>
+
+    <p class="form-help">
+      Отправляя форму, вы соглашаетесь с тем, что указанный e-mail будет
+      использован для ответа. Без вашего явного согласия мы не передаём
+      контактные данные третьим лицам.
+    </p>
+
+    <button type="submit" class="btn btn--primary">Отправить</button>
+  </form>
+
+  <p style="margin-top: var(--space-4); font-size: var(--font-size-sm); color: var(--color-text-muted);">
+    Если форма не работает, напишите напрямую: <em>info (ат) mir-gribov.example</em>.
+  </p>
+</section>

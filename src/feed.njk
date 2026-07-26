@@ -1,0 +1,31 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+metadata:
+  language: ru
+  title: "Мир грибов — статьи"
+  subtitle: "Переводы и адаптация трудов Пола Стеметса (Paul Stamets) о мицелии, микоремедиации, бета-глюканах, псилоцибине."
+  url: "https://grib.site"
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.subtitle }}</subtitle>
+  <link href="{{ metadata.url }}/feed.xml" rel="self"/>
+  <link href="{{ metadata.url }}/"/>
+  <updated>{{ collections.stati | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ metadata.url }}/</id>
+  <language>{{ metadata.language }}</language>
+
+  {% for item in collections.stati | reverse %}
+    {% set absolutePostUrl %}{{ metadata.url }}{{ item.url }}{% endset %}
+    <entry xmlns="http://www.w3.org/2005/Atom">
+      <title>{{ item.data.title }}</title>
+      <link href="{{ absolutePostUrl }}"/>
+      <id>{{ absolutePostUrl }}</id>
+      <updated>{{ item.date | dateToRfc3339 }}</updated>
+      <summary>{{ item.data.summary or item.data.description or "" }}</summary>
+      <content type="html">{{ item.templateContent }}</content>
+    </entry>
+  {% endfor %}
+</feed>

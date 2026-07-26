@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+title: "Статьи и переводы"
+description: "Хронологическая лента переводов и адаптаций лекций, глав книг и статей Пола Стеметса (Paul Stamets) о мицелии, микоремедиации, бета-глюканах, псилоцибине и пчёлах."
+permalink: "/stati/"
+eleventyExcludeFromCollections: true
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Блог</p>
+  <h1 class="page-header__title">Статьи и переводы</h1>
+  <p class="page-header__lead">
+    Хронологическая лента публикаций. Каждый материал — самостоятельная
+    переработка открытых источников с указанием источников и даты проверки.
+    Основная тематика — адаптированные переводы трудов Пола Стеметса
+    и связанных с ним авторов.
+  </p>
+</header>
+
+{% if collections.stati.length == 0 %}
+  <p class="empty">Пока нет опубликованных статей.</p>
+{% else %}
+  {% set sorted = collections.stati %}
+  <ul style="list-style: none; padding: 0; display: grid; gap: var(--space-3);">
+    {% for item in sorted %}
+      <li class="card" style="display: block;">
+        <div class="article-header__meta" style="margin-bottom: var(--space-1);">
+          <time datetime="{{ item.date | isoDate }}">{{ item.date | ruDate }}</time>
+          {% if item.data.tags and item.data.tags.length > 0 %}
+            <span aria-hidden="true">·</span>
+            <span>{{ item.data.tags | join(", ") }}</span>
+          {% endif %}
+        </div>
+        <h2 class="card__title" style="margin: 0 0 var(--space-1);">
+          <a href="{{ item.url | url }}" style="text-decoration: none; color: inherit;">{{ item.data.title }}</a>
+        </h2>
+        <p class="card__summary" style="margin: 0;">{{ item.data.summary or item.data.description or "" }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p style="margin-top: var(--space-4);">
+    <a href="{{ '/feed.xml' | url }}">Подписаться на RSS</a>
+  </p>
+{% endif %}

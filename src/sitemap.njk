@@ -1,0 +1,26 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- set pages = collections.all | sort("url") -%}
+  {%- for page in pages -%}
+    {%- if page.url and not page.data.eleventyExcludeFromCollections and not page.data.draft -%}
+      {%- set absUrl %}{{ site.url }}{{ page.url }}{% endset -%}
+      <url>
+        <loc>{{ absUrl }}</loc>
+        <lastmod>{{ page.date | isoDate }}</lastmod>
+        <changefreq>{% if page.url == "/" %}daily{% else %}monthly{% endif %}</changefreq>
+        <priority>{% if page.url == "/" %}1.0{% elif page.url == "/o-proekte/" %}0.8{% else %}0.7{% endif %}</priority>
+      </url>
+    {%- endif -%}
+  {%- endfor %}
+  {# Главная страница исключена из коллекций, но должна быть в sitemap. #}
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ page.date | isoDate }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

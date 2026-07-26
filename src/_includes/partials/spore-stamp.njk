@@ -1,0 +1,13 @@
+{# spore-stamp.njk — сигнатурный круглый статус-индикатор (раздел 6.4.1 ТЗ).
+   Использует цвет из CSS-переменной --status-<status>.
+   Параметры (через set):
+     stamp_status   — статус (edible | conditional | poisonous | inedible | medicinal)
+     stamp_label    — текст подписи (если не задан, берётся statusLabel)
+     stamp_size     — "sm" (по умолчанию) | "lg" #}
+
+{% set stamp_size = stamp_size or "sm" %}
+{% set stamp_label = stamp_label or (stamp_status | statusLabel) %}
+<span class="spore-stamp spore-stamp--{{ stamp_status }} spore-stamp--{{ stamp_size }}">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>{{ stamp_label }}</span>
+</span>
