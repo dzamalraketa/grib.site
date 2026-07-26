@@ -1,41 +1,53 @@
 ---
 layout: layouts/base.njk
-title: "Мир грибов — переводы и адаптация трудов Пола Стеметса"
-description: "Русскоязычный независимый проект: переводы и адаптация лекций, книг и статей Пола Стеметса (Paul Stamets) о мицелии, микоремедиации, бета-глюканах и пчёлах."
+title: "Мир грибов — энциклопедия о грибах"
+description: "Энциклопедия мира грибов: виды, микология, экология и практическое применение. Каталог грибов, статьи о мицелии, микоремедиации, бета-глюканах."
 og_type: "website"
 eleventyExcludeFromCollections: true
 ---
 
 <section class="hero">
-  {# Радиальные пластинки — анимация раскрытия при загрузке (раздел 6.4.3) #}
+  {# Радиальные пластинки — анимация раскрытия при загрузке #}
   <div class="hero__gills" aria-hidden="true">
     <svg viewBox="-300 -300 600 600" width="600" height="600">
-      <g stroke="var(--color-ink-muted)" stroke-width="0.7" stroke-linecap="round" opacity="0.55">
-        {% for i in range(0, 32) %}
-          {% set angle = (loop.index0 / 32) * 360 %}
+      <g stroke="var(--color-leaf)" stroke-width="0.6" stroke-linecap="round" opacity="0.5">
+        {% for i in range(0, 36) %}
+          {% set angle = (loop.index0 / 36) * 360 %}
           <line x1="0" y1="0" x2="280" y2="0" transform="rotate({{ angle }})"/>
         {% endfor %}
+      </g>
+      <g fill="var(--color-leaf)" opacity="0.25">
+        <circle cx="180" cy="-110" r="2"/>
+        <circle cx="-220" cy="60" r="2"/>
+        <circle cx="120" cy="220" r="1.5"/>
+        <circle cx="-160" cy="-180" r="1.5"/>
+        <circle cx="240" cy="160" r="1.5"/>
+        <circle cx="-80" cy="240" r="1.5"/>
       </g>
     </svg>
   </div>
 
-  <p class="hero__eyebrow">Переводы и адаптация трудов Пола Стеметса</p>
+  <p class="hero__eyebrow">Энциклопедия мира грибов</p>
   <h1 class="hero__title">{{ site.title }}</h1>
   <p class="hero__lead">
-    Русскоязычный проект, посвящённый идеям американского миколога
-    <strong>Пола Стеметса</strong> (Paul Stamets) — лекциям, главам из книг
-    и авторским статьям о мицелии, микоремедиации, бета-глюканах,
-    псилоцибине и взаимодействии грибов с лесами и пчёлами. Адаптированный
-    пересказ с указанием первоисточников.
+    Грибы, мицелий и микология — в одном месте. Каталог видов,
+    тематические обзоры по микоремедиации, микоризе, энтомопатогенным
+    грибам и бета-глюканам. Адаптированные переводы и оригинальные
+    материалы со ссылками на рецензируемые источники. В части
+    публикаций использованы труды Пола Стеметса — как один из
+    ключевых, но не единственный источник. За четыре тысячи лет
+    практики в Китае, Японии, Корее и России накоплен огромный
+    массив наблюдений; современная наука продолжает исследовать
+    эти виды и публикует новые данные каждый год.
   </p>
   <div class="hero__actions">
     <a class="btn btn--primary" href="{{ '/griby/' | url }}">Каталог грибов</a>
-    <a class="btn" href="{{ '/stati/' | url }}">Статьи и лекции</a>
+    <a class="btn" href="{{ '/stati/' | url }}">Статьи и обзоры</a>
   </div>
 </section>
 
 <section aria-labelledby="topics" style="margin-top: var(--space-6);">
-  <h2 id="topics" style="font-size: 1.6rem; margin-bottom: var(--space-3);">Темы по трудам Стеметса</h2>
+  <h2 id="topics" style="font-size: 1.6rem; margin-bottom: var(--space-3);">Темы</h2>
   <div class="topic-grid">
     {% for t in collections.temy %}
       <a class="topic-tile" href="{{ t.url | url }}">
@@ -47,7 +59,7 @@ eleventyExcludeFromCollections: true
 </section>
 
 <section aria-labelledby="latest" style="margin-top: var(--space-6);">
-  <h2 id="latest" style="font-size: 1.6rem; margin-bottom: var(--space-3);">Свежие переводы</h2>
+  <h2 id="latest" style="font-size: 1.6rem; margin-bottom: var(--space-3);">Свежие материалы</h2>
 
   {% if collections.stati.length == 0 %}
     <p class="empty">Пока нет опубликованных материалов.</p>
@@ -75,12 +87,11 @@ eleventyExcludeFromCollections: true
 <section aria-labelledby="about-short" style="margin-top: var(--space-6);">
   <h2 id="about-short" style="font-size: 1.6rem; margin-bottom: var(--space-3);">О проекте</h2>
   <p style="max-width: 640px; color: var(--color-text-muted);">
-    «Мир грибов» — независимый русскоязычный проект, не связанный с
-    Полом Стеметсом, Fungi Perfecti или Host Defense. Мы переводим и
-    адаптируем открытые англоязычные материалы: лекции, главы книг,
-    статьи и интервью Стеметса, а также связанные с ними научные
-    публикации. Сайт не является медицинским справочником или
-    полевым определителем.
+    «Мир грибов» — независимый русскоязычный портал о грибах.
+    Мы собираем и адаптируем открытые материалы, опираясь на
+    рецензируемые публикации, и подаём их в виде, удобном для
+    чтения, цитирования и обсуждения. Сайт носит информационный
+    и научно-популярный характер.
   </p>
   <p style="margin-top: var(--space-3);">
     <a href="{{ '/o-proekte/' | url }}">Подробнее о проекте →</a>

@@ -7,11 +7,11 @@ status: edible
 tags: [съедобные, лесные, микориза]
 habitat: "Хвойные и смешанные леса, на кислых почвах, часто рядом с елью, сосной, берёзой."
 season: "Июнь — октябрь, пик — июль–август"
-image: /assets/img/fallback-illustration.svg
-image_alt: "Лисичка обыкновенная в еловом лесу"
-image_author: ""
-image_license: ""
-image_source_url: ""
+image: https://commons.wikimedia.org/wiki/Special:FilePath/Cantharellus_cibarius.jpg?width=1024
+image_alt: "Лисичка обыкновенная (Cantharellus cibarius) в еловом лесу"
+image_author: "Domenico Carotenuto, 2010"
+image_license: "CC BY-SA 2.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Cantharellus_cibarius.jpg"
 date: 2026-07-15
 verified: true
 verification_date: 2026-07-20

@@ -1,11 +1,11 @@
-/* theme.js — переключение тёмной / светлой темы.
-   Тёмная — по умолчанию (выставляется inline-скриптом в base.njk).
-   Светлая — явный выбор пользователя. */
+/* theme.js — переключение светлой / тёмной темы.
+   Светлая — по умолчанию (выставляется inline-скриптом в base.njk).
+   Тёмная — явный выбор пользователя. */
 
 (function () {
   "use strict";
 
-  const STORAGE_KEY = "theme"; // "dark" | "light"
+  const STORAGE_KEY = "theme"; // "light" | "dark"
 
   function readStored() {
     try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
@@ -15,26 +15,29 @@
   }
 
   function currentTheme() {
-    return document.documentElement.getAttribute("data-theme") || "dark";
+    return document.documentElement.getAttribute("data-theme") || "light";
   }
 
   function toggle() {
-    const next = currentTheme() === "dark" ? "light" : "dark";
+    const next = currentTheme() === "light" ? "dark" : "light";
     document.documentElement.setAttribute("data-theme", next);
     store(next);
     syncToggle(next);
   }
 
   function syncToggle(value) {
-    const btn = document.querySelector("[data-theme-toggle]");
-    if (!btn) return;
-    btn.setAttribute("aria-pressed", value === "light" ? "true" : "false");
-    btn.setAttribute(
-      "aria-label",
-      value === "dark" ? "Включить светлую тему" : "Включить тёмную тему"
-    );
-    const label = btn.querySelector("[data-theme-toggle-label]");
-    if (label) label.textContent = value === "dark" ? "Тёмная" : "Светлая";
+    document.querySelectorAll("[data-theme-toggle]").forEach((btn) => {
+      const isLight = value === "light";
+      btn.setAttribute("aria-pressed", isLight ? "false" : "true");
+      btn.setAttribute(
+        "aria-label",
+        isLight ? "Включить тёмную тему" : "Включить светлую тему"
+      );
+      const label = btn.querySelector("[data-theme-toggle-label]");
+      if (label) label.textContent = isLight ? "Светлая" : "Тёмная";
+      // Иконка солнце/луна (через data-атрибут для CSS)
+      btn.setAttribute("data-current-theme", value);
+    });
   }
 
   function init() {

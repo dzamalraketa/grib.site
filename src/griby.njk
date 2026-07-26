@@ -10,9 +10,9 @@ eleventyExcludeFromCollections: true
   <p class="page-header__eyebrow">Раздел</p>
   <h1 class="page-header__title">Каталог грибов</h1>
   <p class="page-header__lead">
-    Карточки видов с указанием статуса съедобности, среды обитания и сезона.
-    Сайт не является полевым определителем — для точного определения вида
-    проконсультируйтесь со специалистом-микологом.
+    Карточки видов с указанием статуса съедобности, среды обитания
+    и сезона. Для точного определения редких или незнакомых видов
+    полезно свериться с местным микологом или атласом-определителем.
   </p>
 </header>
 
@@ -54,7 +54,14 @@ eleventyExcludeFromCollections: true
 
 <section id="catalog" class="card-grid" aria-live="polite">
   {% for item in collections.griby %}
-    <article class="card" data-status="{{ item.data.status }}">
+    <article class="card card--mushroom" data-status="{{ item.data.status }}">
+      <a class="card__media" href="{{ item.url | url }}" aria-hidden="true" tabindex="-1">
+        {% if item.data.image %}
+          <img src="{{ item.data.image | url }}" alt="" loading="lazy" decoding="async">
+        {% else %}
+          <img src="{{ '/assets/img/fallback-illustration.svg' | url }}" alt="" aria-hidden="true">
+        {% endif %}
+      </a>
       {% set stamp_status = item.data.status %}
       {% set stamp_label = item.data.status | statusLabel %}
       {% include "partials/spore-stamp.njk" %}

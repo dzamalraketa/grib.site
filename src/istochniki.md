@@ -1,86 +1,65 @@
 ---
 layout: layouts/base.njk
 title: "Источники"
-description: "Полный список первоисточников с описанием: Fungi Perfecti, Host Defense, независимые научные журналы."
+description: "Рецензируемые научные базы, ключевые авторы и каталог исследований о грибах, на которые опирается сайт."
 permalink: "/istochniki/"
 eleventyExcludeFromCollections: true
 ---
 
 <header class="page-header">
-  <p class="page-header__eyebrow">Справочник</p>
+  <p class="page-header__eyebrow">Раздел</p>
   <h1 class="page-header__title">Источники</h1>
   <p class="page-header__lead">
-    Список организаций, авторов и изданий, на которые мы ссылаемся при
-    подготовке материалов. Здесь же — пометки о коммерческой или
-    независимой природе источника.
+    Здесь собраны ключевые базы научных публикаций, авторы и издания,
+    на которые мы опираемся при подготовке материалов. Главная точка
+    входа для читателя — каталог конкретных рецензируемых исследований
+    о лечебных и пищевых грибах.
   </p>
 </header>
 
 <section>
-  <h2>Типы источников</h2>
+  <h2>Каталог исследований</h2>
+  <p>
+    Свежий рецензируемый материал собран в отдельном разделе —
+    <a href="{{ '/issledovaniya/' | url }}">«Исследования о грибах»</a>.
+    Там карточки по шести тематическим категориям с прямой ссылкой на
+    PubMed, Cochrane, NCI, Frontiers и другие академические источники.
+  </p>
+  <p>
+    <a class="btn btn--primary" href="{{ '/issledovaniya/' | url }}">Открыть каталог исследований →</a>
+  </p>
+</section>
+
+<section>
+  <h2>Академические базы</h2>
   <ul>
-    <li><strong>Коммерческие</strong> — компании, продающие продукцию на основе грибов (например, Fungi Perfecti). Цитируются с оговоркой о коммерческом интересе.</li>
-    <li><strong>Независимые научные</strong> — рецензируемые журналы и публикации университетов.</li>
-    <li><strong>Авторские</strong> — книги, лекции и публикации отдельных исследователей.</li>
+    <li><strong>PubMed</strong> — крупнейшая база биомедицинских публикаций (более 36 млн записей). <a href="https://pubmed.ncbi.nlm.nih.gov/" rel="noopener noreferrer" target="_blank">pubmed.ncbi.nlm.nih.gov</a></li>
+    <li><strong>PubMed Central (PMC)</strong> — открытый полнотекстовый архив биомедицинских журналов. <a href="https://www.ncbi.nlm.nih.gov/pmc/" rel="noopener noreferrer" target="_blank">ncbi.nlm.nih.gov/pmc</a></li>
+    <li><strong>Cochrane Library</strong> — систематические обзоры, подготовленные по методологии Cochrane. <a href="https://www.cochranelibrary.com/" rel="noopener noreferrer" target="_blank">cochranelibrary.com</a></li>
+    <li><strong>National Cancer Institute (PDQ)</strong> — официальные информационные материалы NCI о комплементарных подходах в онкологии. <a href="https://www.cancer.gov/" rel="noopener noreferrer" target="_blank">cancer.gov</a></li>
+    <li><strong>Frontiers</strong> — группа рецензируемых журналов открытого доступа. <a href="https://www.frontiersin.org/" rel="noopener noreferrer" target="_blank">frontiersin.org</a></li>
+    <li><strong>MDPI</strong> — издатель рецензируемых журналов открытого доступа (с переменным качеством отдельных журналов). <a href="https://www.mdpi.com/" rel="noopener noreferrer" target="_blank">mdpi.com</a></li>
+    <li><strong>ResearchGate</strong> — сеть, где авторы публикуют препринты и пишут к ним обсуждения. <a href="https://www.researchgate.net/" rel="noopener noreferrer" target="_blank">researchgate.net</a></li>
   </ul>
 </section>
 
 <section>
-  <h2>Список источников</h2>
-
-  <h3>Fungi Perfecti</h3>
-  <p>
-    Американская компания, основанная Полом Стеметсом и его женой Дастин
-    Бабб. Производит добавки на основе мицелия, организует обучающие
-    программы. Сайт: <a href="https://fungi.com" rel="noopener noreferrer" target="_blank">fungi.com</a>.
-    <em>Тип: коммерческий.</em>
-  </p>
-
-  <h3>Host Defense</h3>
-  <p>
-    Бренд пищевых добавок, основанный Полом Стеметсом. Сайт:
-    <a href="https://hostdefense.com" rel="noopener noreferrer" target="_blank">hostdefense.com</a>.
-    <em>Тип: коммерческий.</em>
-  </p>
-
-  <h3>Paul Stamets — личный сайт</h3>
-  <p>
-    Авторские материалы, лекции и публикации Пола Стеметса. Сайт:
-    <a href="https://paulstamets.com" rel="noopener noreferrer" target="_blank">paulstamets.com</a>.
-    <em>Тип: авторский.</em>
-  </p>
-
-  <h3>PubMed</h3>
-  <p>
-    Открытая база научных публикаций по медицине и смежным областям.
-    Используется для сверки фактов и поиска рецензируемых работ. Сайт:
-    <a href="https://pubmed.ncbi.nlm.nih.gov" rel="noopener noreferrer" target="_blank">pubmed.ncbi.nlm.nih.gov</a>.
-    <em>Тип: независимый научный.</em>
-  </p>
-
-  <h3>Mycological Society of America</h3>
-  <p>
-    Профессиональное сообщество микологов, издающее рецензируемые журналы
-    (Mycologia, Fungal Biology). Сайт:
-    <a href="https://msafungi.org" rel="noopener noreferrer" target="_blank">msafungi.org</a>.
-    <em>Тип: независимый научный.</em>
-  </p>
-
-  <h3>Wikipedia</h3>
-  <p>
-    Используется как отправная точка для первичной систематизации, но
-    всегда с перепроверкой первоисточников. Сайт:
-    <a href="https://en.wikipedia.org/wiki/Portal:Mycology" rel="noopener noreferrer" target="_blank">en.wikipedia.org</a>.
-    <em>Тип: открытая энциклопедия, не первоисточник.</em>
-  </p>
+  <h2>Авторы и организации</h2>
+  <ul>
+    <li><strong>Пол Стеметс (Paul Stamets)</strong> — американский миколог, автор книг «Mycelium Running», «Fantastic Fungi», сооснователь Fungi Perfecti. На сайте используем только рецензируемый раздел публикаций с <a href="https://paulstamets.com" rel="noopener noreferrer" target="_blank">paulstamets.com</a>; разделы, не относящиеся к научной работе, нами не используются.</li>
+    <li><strong>Fungi Perfecti</strong> — компания Стеметса по производству мицелия и добавок (<a href="https://fungi.com" rel="noopener noreferrer" target="_blank">fungi.com</a>). Используем только как источник патентных данных и публикаций.</li>
+    <li><strong>Robert Beelman и группа Penn State Center for Plant and Mushroom Foods for Health</strong> — авторы гипотезы об эрготионеине как «витамине долголетия».</li>
+    <li><strong>Wikimedia Commons</strong> — источник иллюстраций грибов с открытыми лицензиями (<a href="https://commons.wikimedia.org/" rel="noopener noreferrer" target="_blank">commons.wikimedia.org</a>). На каждой странице вида указаны автор, лицензия и ссылка на оригинал.</li>
+  </ul>
 </section>
 
 <section>
-  <h2>Как мы используем источники</h2>
-  <p>
-    Информация из коммерческих источников (Fungi Perfecti, Host Defense)
-    не считается самодостаточным основанием для утверждения. Каждое спорное
-    или коммерчески ангажированное утверждение сверяется минимум с одним
-    независимым источником.
-  </p>
+  <h2>Принципы отбора</h2>
+  <p>При подготовке материалов мы придерживаемся простых правил:</p>
+  <ul>
+    <li>используем только рецензируемые источники или препринты с явным указанием статуса;</li>
+    <li>в карточках исследований отделяем собственные гипотезы авторов от подтверждённых фактов;</li>
+    <li>не публикуем переводы близко к тексту — только самостоятельные пересказы;</li>
+    <li>к каждой карточке даём прямую ссылку, чтобы читатель мог свериться с оригиналом.</li>
+  </ul>
 </section>

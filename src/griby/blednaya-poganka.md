@@ -7,11 +7,11 @@ status: poisonous
 tags: [ядовитые, лесные, микориза]
 habitat: "Широколиственные и смешанные леса, микориза с дубом, берёзой, буком, лещиной."
 season: "Август — октябрь"
-image: /assets/img/fallback-illustration.svg
-image_alt: "Бледная поганка в осеннем лесу"
-image_author: ""
-image_license: ""
-image_source_url: ""
+image: https://commons.wikimedia.org/wiki/Special:FilePath/Amanita_phalloides_2014_G1.jpg?width=1024
+image_alt: "Бледная поганка (Amanita phalloides) в осеннем лесу"
+image_author: "Эрих Тиле (Erich T.), 2014"
+image_license: "CC BY-SA 3.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Amanita_phalloides_2014_G1.jpg"
 date: 2026-07-15
 verified: true
 verification_date: 2026-07-20

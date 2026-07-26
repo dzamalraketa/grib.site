@@ -7,11 +7,11 @@ status: edible
 tags: [съедобные, лесные, микориза]
 habitat: "Хвойные, лиственные и смешанные леса; предпочитает ель, сосну, берёзу, дуб."
 season: "Июнь — октябрь, отдельные волны после дождей"
-image: /assets/img/fallback-illustration.svg
-image_alt: "Белый гриб под ёлкой"
-image_author: ""
-image_license: ""
-image_source_url: ""
+image: https://commons.wikimedia.org/wiki/Special:FilePath/Boletus_edulis_2011_G2.jpg?width=1024
+image_alt: "Белый гриб (Boletus edulis) в лесной подстилке"
+image_author: "Эрих Тиле (Erich T.), 2011"
+image_license: "CC BY-SA 3.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Boletus_edulis_2011_G2.jpg"
 date: 2026-07-15
 verified: true
 verification_date: 2026-07-20

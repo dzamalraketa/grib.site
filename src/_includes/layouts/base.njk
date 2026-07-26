@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="ru" data-theme="dark">
+<html lang="ru" data-theme="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="color-scheme" content="dark light">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#FAF8F3" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1B1712" media="(prefers-color-scheme: dark)">
-    <meta name="theme-color" content="#ECEEE1" media="(prefers-color-scheme: light)">
     <title>{% if title %}{{ title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ description or summary or site.description }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
@@ -21,12 +21,21 @@
     <meta property="og:title" content="{% if title %}{{ title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:description" content="{{ description or summary or site.description }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:image" content="{{ site.url }}{{ image or site.default_image }}">
+    {% set og_image = image or site.default_image %}
+    {% if og_image and og_image.indexOf("http") == 0 %}
+      <meta property="og:image" content="{{ og_image }}">
+    {% else %}
+      <meta property="og:image" content="{{ site.url }}{{ og_image }}">
+    {% endif %}
     <meta property="og:locale" content="ru_RU">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{% if title %}{{ title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{{ description or summary or site.description }}">
-    <meta name="twitter:image" content="{{ site.url }}{{ image or site.default_image }}">
+    {% if og_image and og_image.indexOf("http") == 0 %}
+      <meta name="twitter:image" content="{{ og_image }}">
+    {% else %}
+      <meta name="twitter:image" content="{{ site.url }}{{ og_image }}">
+    {% endif %}
 
     {% if schema %}
       <script type="application/ld+json">{{ schema | safe }}</script>
@@ -38,8 +47,8 @@
 
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | url }}">
 
-    {# Inline-скрипт: установить тему ДО отрисовки (тёмная по умолчанию).
-       Сохранённый выбор пользователя в localStorage перекрывает дефолт. #}
+    {# Inline-скрипт: установить тему ДО отрисовки.
+       Светлая — по умолчанию. Сохранённый выбор пользователя перекрывает дефолт. #}
     <script>
       (function () {
         try {
@@ -47,10 +56,10 @@
           if (stored === "light" || stored === "dark") {
             document.documentElement.setAttribute("data-theme", stored);
           } else {
-            document.documentElement.setAttribute("data-theme", "dark");
+            document.documentElement.setAttribute("data-theme", "light");
           }
         } catch (e) {
-          document.documentElement.setAttribute("data-theme", "dark");
+          document.documentElement.setAttribute("data-theme", "light");
         }
       })();
     </script>
@@ -67,6 +76,7 @@
     {% include "partials/footer.njk" %}
 
     <script src="{{ '/assets/js/theme.js' | url }}" defer></script>
+    <script src="{{ '/assets/js/menu.js' | url }}" defer></script>
     {% block pageScripts %}{% endblock %}
   </body>
 </html>

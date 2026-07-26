@@ -1,0 +1,79 @@
+---
+layout: layouts/base.njk
+title: "Исследования о грибах"
+description: "Карточки рецензируемых научных исследований о пользе лечебных и пищевых грибов: когнитивные функции, иммунитет, онкология, физическая выносливость, антиоксиданты."
+permalink: "/issledovaniya/"
+eleventyExcludeFromCollections: true
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Научные источники</p>
+  <h1 class="page-header__title">Исследования о грибах</h1>
+  <p class="page-header__lead">
+    Каталог рецензируемых научных работ и обзоров о лечебных и пищевых
+    грибах. К каждой карточке привязана прямая ссылка на оригинальное
+    исследование — обычно это PubMed, Cochrane, Frontiers или
+    National Cancer Institute. Текст на сайте — авторский пересказ сути
+    находки; за подробностями, цифрами и обсуждением ограничений мы
+    рекомендуем переходить к первоисточнику.
+  </p>
+</header>
+
+{# Фильтр по категориям (кнопки) #}
+<section aria-label="Фильтр по категориям">
+  <div class="filters research-filters" role="group" aria-label="Фильтр по категории исследования">
+    <button type="button" class="filter-btn" data-research-filter="all" aria-pressed="true">
+      Все <span class="filter-btn__count" data-count="all"></span>
+    </button>
+    {% for cat in categories.research %}
+      <button type="button" class="filter-btn" data-research-filter="{{ cat.id }}" aria-pressed="false" style="--filter-accent: {{ cat.color }};">
+        {{ cat.title }} <span class="filter-btn__count" data-count="{{ cat.id }}"></span>
+      </button>
+    {% endfor %}
+  </div>
+</section>
+
+{# Сетка карточек #}
+<section id="research-catalog" class="card-grid" aria-live="polite">
+  {% for item in collections.issledovaniya %}
+    <article class="card card--research" data-category="{{ item.data.category }}" style="--cat-color: {% for c in categories.research %}{% if c.id == item.data.category %}{{ c.color }}{% endif %}{% endfor %};">
+      <div class="card--research__cat" aria-hidden="true">
+        <span class="card--research__cat-dot"></span>
+        <span class="card--research__cat-label">{{ item.data.category_label }}</span>
+      </div>
+
+      <h3 class="card__title">
+        <a href="{{ item.url | url }}">{{ item.data.title }}</a>
+      </h3>
+
+      <p class="card__summary">{{ item.data.summary }}</p>
+
+      <dl class="card--research__meta">
+        {% if item.data.mushroom %}
+          <dt>Гриб</dt><dd>{{ item.data.mushroom }}</dd>
+        {% endif %}
+        {% if item.data.design %}
+          <dt>Дизайн</dt><dd>{{ item.data.design }}</dd>
+        {% endif %}
+        <dt>Источник</dt>
+        <dd><a href="{{ item.data.source_url }}" rel="noopener noreferrer" target="_blank">{{ item.data.source_name }}</a>, {{ item.data.year }}</dd>
+      </dl>
+    </article>
+  {% endfor %}
+</section>
+
+<script src="{{ '/assets/js/research-filter.js' | url }}" defer></script>
+
+{% set disclaimer_type = "health" %}
+{% include "partials/disclaimer.njk" %}
+
+<aside class="disclaimer" role="note" aria-label="Дисклеймер раздела «Исследования»">
+  <p class="disclaimer__title">Дисклеймер раздела</p>
+  <p>
+    Материалы раздела носят информационный и научно-популярный
+    характер и представляют собой авторский пересказ рецензируемых
+    работ. Указанные ссылки ведут на оригинальные исследования
+    на английском языке; для проверки цифр, дизайна и
+    обсуждения ограничений рекомендуем переходить к первоисточнику.
+  </p>
+</aside>

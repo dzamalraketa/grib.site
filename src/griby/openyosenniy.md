@@ -7,11 +7,11 @@ status: conditional
 tags: [условно-съедобные, лесные, древесные]
 habitat: "Паразит и сапротроф на живой и мёртвой древесине лиственных и хвойных пород."
 season: "Август — октябрь"
-image: /assets/img/fallback-illustration.svg
-image_alt: "Опёнок осенний на пне"
-image_author: ""
-image_license: ""
-image_source_url: ""
+image: https://commons.wikimedia.org/wiki/Special:FilePath/Armillaria_mellea_-_Honey_Fungus.jpg?width=1024
+image_alt: "Опёнок осенний (Armillaria mellea) на пне"
+image_author: "Stu's Images, 2012"
+image_license: "CC BY-SA 3.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Armillaria_mellea_-_Honey_Fungus.jpg"
 date: 2026-07-15
 verified: true
 verification_date: 2026-07-20

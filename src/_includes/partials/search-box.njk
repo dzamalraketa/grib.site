@@ -1,26 +1,83 @@
-{# search-box.njk — контейнер и инициализация Pagefind UI.
-   Подключается только на странице /poisk/ (после сборки там лежит /pagefind/pagefind-ui.js). #}
+{# search-box.njk — контейнер поиска на базе Pagefind Component API.
+   Pagefind собирается командой `npm run build` (pagefind --site _site).
+   Начиная с Pagefind 1.5 для интеграции рекомендуется Component UI
+   (web components), а старый `pagefind-ui.js` больше не генерируется.
+   Если индекс не собран, показывается понятное сообщение. #}
 
-<div class="search-block">
+<div class="search-block" data-pagefind-root>
   <h2>Поиск по сайту</h2>
-  <p style="color: var(--color-text-muted); font-size: var(--font-size-sm);">
-    Введите слово или фразу — например, «псилоцибин», «микориза», «лисичка».
+  <p class="search-block__hint">
+    Введите слово или фразу — например, «лисичка», «микориза», «агарикон».
   </p>
-  <div id="search"></div>
+
+  {# Сюда монтируется Pagefind Component UI. Если скрипт не загрузится
+     (индекс не собран), покажется fallback-блок. #}
+  <div id="search" data-pagefind-mount class="pagefind-mount">
+    <pagefind-search class="pagefind-search">
+      <form slot="search-input" class="pagefind-form" role="search">
+        <label for="pagefind-search-input" class="visually-hidden">Поиск по сайту</label>
+        <pagefind-input>
+          <input id="pagefind-search-input" name="query" type="search"
+                 placeholder="Поиск по сайту…"
+                 autocomplete="off" enterkeyhint="search">
+        </pagefind-input>
+        <button type="submit" class="btn btn--primary pagefind-form__submit">Найти</button>
+      </form>
+      <div slot="summary" aria-live="polite">
+        <pagefind-summary class="pagefind-summary"></pagefind-summary>
+      </div>
+      <div slot="results">
+        <pagefind-results class="pagefind-results"></pagefind-results>
+      </div>
+    </pagefind-search>
+  </div>
+
+  <noscript>
+    <p class="empty">Для поиска требуется JavaScript.</p>
+  </noscript>
+
+  <p class="search-block__fallback" data-pagefind-fallback hidden>
+    Поисковый индекс ещё не построен. Запустите
+    <code>npm run build</code> локально, чтобы Pagefind проиндексировал
+    страницы, или откройте уже собранную версию сайта.
+  </p>
 </div>
 
-<link rel="stylesheet" href="{{ '/pagefind/pagefind-ui.css' | url }}">
-<script src="{{ '/pagefind/pagefind-ui.js' | url }}" defer></script>
+<link rel="stylesheet" href="{{ '/pagefind/pagefind-component-ui.css' | url }}">
+<script src="{{ '/pagefind/pagefind-component-ui.js' | url }}" defer></script>
+
 <script>
-  window.addEventListener("DOMContentLoaded", function () {
-    if (window.PagefindUI) {
-      new PagefindUI({
-        element: "#search",
-        showImages: false,
-        showSubResults: true,
-        resetStyles: false,
-        autofocus: true,
-      });
+  (function () {
+    "use strict";
+
+    function showFallback() {
+      var mount = document.querySelector("[data-pagefind-mount]");
+      if (mount) mount.style.display = "none";
+      var fb = document.querySelector("[data-pagefind-fallback]");
+      if (fb) fb.hidden = false;
     }
-  });
+
+    function checkReady() {
+      // Проверяем наличие скрипта компонента
+      var scripts = document.querySelectorAll('script[src*="pagefind-component-ui.js"]');
+      if (scripts.length === 0) {
+        showFallback();
+        return;
+      }
+      // Pagefind в 1.5 регистрирует customElement <pagefind-search>
+      // после загрузки скрипта. Если через секунду ничего не зарегистрировано
+      // и нет индекса — показываем fallback.
+      setTimeout(function () {
+        if (!customElements || !customElements.get("pagefind-search")) {
+          showFallback();
+        }
+      }, 1500);
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", checkReady);
+    } else {
+      checkReady();
+    }
+  })();
 </script>

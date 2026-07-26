@@ -7,7 +7,7 @@ og_type: "article"
   <header class="mushroom-header">
     <div class="mushroom-header__media">
       {% if image %}
-        <img src="{{ image | url }}" alt="{{ image_alt or title }}" loading="lazy" decoding="async">
+        <img src="{{ image | url }}" alt="{{ image_alt or title }}" loading="eager" decoding="async">
       {% else %}
         <img src="{{ '/assets/img/fallback-illustration.svg' | url }}" alt="" aria-hidden="true">
       {% endif %}

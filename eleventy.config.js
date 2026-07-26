@@ -47,6 +47,18 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => a.data.title.localeCompare(b.data.title, "ru"));
   });
 
+  // Карточки научных исследований (исследования/источники) — сортируем по году убыванию.
+  eleventyConfig.addCollection("issledovaniya", (api) => {
+    return api
+      .getFilteredByGlob("src/issledovaniya/*.md")
+      .sort((a, b) => {
+        const yearA = a.data.year || (a.date ? a.date.getUTCFullYear() : 0);
+        const yearB = b.data.year || (b.date ? b.date.getUTCFullYear() : 0);
+        if (yearA !== yearB) return yearB - yearA;
+        return (a.data.title || "").localeCompare(b.data.title || "", "ru");
+      });
+  });
+
   // ——— Фильтры ——————————————————————————————————————————————————
   // Локализованный статус гриба → русский ярлык.
   eleventyConfig.addFilter("statusLabel", (status) => {

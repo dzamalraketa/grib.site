@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Мир грибов">
+  <title>Мир грибов</title>
+  <!-- Шляпка гриба -->
+  <path d="M6 22 C6 13 12 7 24 7 C36 7 42 13 42 22 C42 24.5 40.5 26 39 27 L37 28 C35.5 28.5 33.5 29 31 29 L17 29 C14.5 29 12.5 28.5 11 28 L9 27 C7.5 26 6 24.5 6 22 Z"
+        fill="#4E7C5C"/>
+  <!-- Ножка -->
+  <path d="M19 29 L19 38 C19 40 21 42 24 42 C27 42 29 40 29 38 L29 29 Z"
+        fill="#C97B4A"/>
+  <!-- Мицелиевые нити -->
+  <path d="M24 42 L24 46" stroke="#4E7C5C" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M18 43.5 L14 46.5" stroke="#4E7C5C" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M30 43.5 L34 46.5" stroke="#4E7C5C" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Боковые корешки мицелия -->
+  <path d="M14 45 C13 43 11 43 9 44" stroke="#4E7C5C" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.85"/>
+  <path d="M34 45 C35 43 37 43 39 44" stroke="#4E7C5C" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.85"/>
+  <!-- Акцент на шляпке (блик) -->
+  <ellipse cx="32" cy="14" rx="3.2" ry="2" fill="#FAF8F3" opacity="0.45"/>
+  <!-- Маленькие споры/точки рядом с шляпкой -->
+  <circle cx="6" cy="14" r="1.1" fill="#4E7C5C" opacity="0.55"/>
+  <circle cx="42" cy="12" r="1.1" fill="#4E7C5C" opacity="0.55"/>
+  <circle cx="44" cy="20" r="0.9" fill="#4E7C5C" opacity="0.4"/>
+</svg>

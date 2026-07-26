@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "eleventy --serve",
+    "start": "node scripts/check-verified.js && eleventy && pagefind --site _site && eleventy --serve",
     "build": "node scripts/check-verified.js && eleventy && pagefind --site _site",
     "prebuild": "node scripts/check-verified.js",
     "fetch-images": "node scripts/fetch-images.mjs",

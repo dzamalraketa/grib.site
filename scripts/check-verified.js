@@ -13,6 +13,7 @@ const path = require("path");
 const CONTENT_DIRS = [
   path.join(__dirname, "..", "src", "griby"),
   path.join(__dirname, "..", "src", "stati"),
+  // src/issledovaniya — карточки исследований, не проходят verified-проверку.
 ];
 
 function walk(dir) {

@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+og_type: "article"
+---
+
+<article class="research-page">
+  <header class="page-header">
+    <p class="page-header__eyebrow">
+      <span class="card--research__cat" style="--cat-color: {% for c in categories.research %}{% if c.id == category %}{{ c.color }}{% endif %}{% endfor %};">
+        <span class="card--research__cat-dot" aria-hidden="true"></span>
+        <span class="card--research__cat-label">{{ category_label }}</span>
+      </span>
+    </p>
+    <h1 class="page-header__title">{{ title }}</h1>
+    {% if summary %}<p class="page-header__lead">{{ summary }}</p>{% endif %}
+  </header>
+
+  <aside class="research-meta" aria-label="Сводная информация об исследовании">
+    <dl>
+      {% if mushroom %}<dt>Гриб / объект</dt><dd>{{ mushroom }}</dd>{% endif %}
+      {% if design %}<dt>Дизайн</dt><dd>{{ design }}</dd>{% endif %}
+      <dt>Источник</dt>
+      <dd>
+        <a href="{{ source_url }}" rel="noopener noreferrer" target="_blank">{{ source_name }}</a>, {{ year }}
+      </dd>
+      {% if date %}<dt>Дата публикации</dt><dd><time datetime="{{ date | isoDate }}">{{ date | ruDate }}</time></dd>{% endif %}
+    </dl>
+  </aside>
+
+  <div class="article-content">
+    {{ content | safe }}
+  </div>
+
+  <p style="margin-top: var(--space-5);">
+    <a class="btn" href="{{ '/issledovaniya/' | url }}">← Вернуться к каталогу исследований</a>
+    <a class="btn btn--primary" href="{{ source_url }}" rel="noopener noreferrer" target="_blank" style="margin-left: var(--space-2);">Читать оригинал (англ.) →</a>
+  </p>
+
+  {% set disclaimer_type = "health" %}
+  {% include "partials/disclaimer.njk" %}
+</article>
