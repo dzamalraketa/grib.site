@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Контакты"
-description: "Форма обратной связи. Сообщения обрабатываются через Formspree."
+description: "Форма обратной связи. Сообщения отправляются через Cloudflare Worker."
 permalink: "/kontakty/"
 eleventyExcludeFromCollections: true
 ---
@@ -10,15 +10,27 @@ eleventyExcludeFromCollections: true
   <p class="page-header__eyebrow">Связь</p>
   <h1 class="page-header__title">Контакты</h1>
   <p class="page-header__lead">
-    Сообщения, предложения и замечания по фактам можно отправить через
-    форму ниже. Данные передаются через сервис Formspree — мы не храним
-    переписку на своём сервере.
+    Сообщения, предложения и замечания по фактам можно отправить
+    через форму ниже. Запрос уходит в Cloudflare Worker, оттуда —
+    на нашу почту. Свои данные и переписку мы не храним на сервере
+    сайта.
   </p>
 </header>
 
 <section style="max-width: 560px;">
   <h2>Форма обратной связи</h2>
-  <form class="form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" aria-label="Форма обратной связи">
+
+  {# Регион для статусов — покажем сообщение об успехе/ошибке #}
+  <div class="form-status" data-form-status hidden role="status" aria-live="polite"></div>
+
+  <form
+    class="form"
+    data-contact-form
+    action="{{ site.worker_url }}"
+    method="POST"
+    aria-label="Форма обратной связи"
+    novalidate>
+
     <div class="form-field">
       <label class="form-label" for="name">Имя</label>
       <input class="form-input" id="name" name="name" type="text" required autocomplete="name">
@@ -45,10 +57,84 @@ eleventyExcludeFromCollections: true
       контактные данные третьим лицам.
     </p>
 
-    <button type="submit" class="btn btn--primary">Отправить</button>
+    <button
+      type="submit"
+      class="btn btn--primary"
+      data-submit-button>Отправить</button>
   </form>
 
   <p style="margin-top: var(--space-4); font-size: var(--font-size-sm); color: var(--color-text-muted);">
-    Если форма не работает, напишите напрямую: <em>info (ат) mir-gribov.example</em>.
+    Если форма не работает, напишите напрямую:
+    <a href="mailto:info@grib.site">info@grib.site</a>.
   </p>
 </section>
+
+<script>
+  (() => {
+    const form   = document.querySelector('[data-contact-form]');
+    const status = document.querySelector('[data-form-status]');
+    const button = document.querySelector('[data-submit-button]');
+    if (!form || !button) return;
+
+    const workerUrl = form.getAttribute('action');
+    const defaultLabel = button.textContent.trim();
+
+    const setStatus = (kind, text) => {
+      if (!status) return;
+      status.hidden = false;
+      status.dataset.kind = kind;
+      status.textContent = text;
+    };
+    const clearStatus = () => {
+      if (!status) return;
+      status.hidden = true;
+      status.removeAttribute('data-kind');
+      status.textContent = '';
+    };
+    const setBusy = (busy) => {
+      button.disabled = busy;
+      button.textContent = busy ? 'Отправка…' : defaultLabel;
+      button.setAttribute('aria-busy', busy ? 'true' : 'false');
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      clearStatus();
+
+      // Лёгкая клиентская валидация — встроенная required + type=email
+      if (!form.reportValidity()) return;
+
+      const data = {
+        name:    form.elements.name.value.trim(),
+        email:   form.elements.email.value.trim(),
+        subject: form.elements.subject.value.trim(),
+        message: form.elements.message.value.trim(),
+      };
+
+      setBusy(true);
+      try {
+        const res = await fetch(workerUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        let payload = null;
+        try { payload = await res.json(); } catch (_) { /* не JSON — ок */ }
+
+        if (res.ok && payload && payload.success !== false) {
+          setStatus('ok', 'Спасибо! Сообщение отправлено, мы ответим на указанный e-mail.');
+          form.reset();
+        } else {
+          const reason = (payload && (payload.error || payload.message))
+            || `Сервер вернул ${res.status}`;
+          setStatus('error', `Не удалось отправить: ${reason}. Попробуйте ещё раз или напишите на info@grib.site.`);
+        }
+      } catch (err) {
+        setStatus('error', 'Не удалось связаться с сервером. Проверьте соединение и попробуйте ещё раз.');
+      } finally {
+        setBusy(false);
+      }
+    });
+  })();
+</script>

@@ -976,6 +976,35 @@ body.is-menu-open { overflow: hidden; }
 .form-textarea { min-height: 120px; resize: vertical; }
 .form-help { font-size: var(--font-size-xs); color: var(--color-text-muted); font-family: var(--font-ui); }
 
+/* --- Form status (успех / ошибка) ----------------------------------- */
+.form-status {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  background: rgba(38, 43, 39, 0.04);
+  color: var(--color-text);
+}
+.form-status[data-kind="ok"] {
+  background: rgba(78, 124, 92, 0.12);
+  border-color: var(--color-leaf);
+  color: var(--color-leaf-dark);
+}
+.form-status[data-kind="error"] {
+  background: var(--color-disclaimer-bg);
+  border-color: var(--color-caution);
+  color: var(--color-caution);
+}
+.form-status[hidden] { display: none; }
+
+.btn[aria-busy="true"],
+.btn:disabled {
+  opacity: 0.7;
+  cursor: progress;
+  transform: none;
+}
+
 /* --- Page header / breadcrumbs ------------------------------------- */
 .page-header { margin-bottom: var(--space-5); }
 .page-header__eyebrow {
