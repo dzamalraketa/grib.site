@@ -141,6 +141,9 @@
 /* Гамбургер показываем только на мобильных */
 .site-menu-toggle { display: none; }
 .site-menu-toggle__icon--close { display: none; }
+/* При раскрытом меню меняем иконки местами: прячем гамбургер, показываем X */
+.site-menu-toggle[aria-expanded="true"] .site-menu-toggle__icon--open { display: none; }
+.site-menu-toggle[aria-expanded="true"] .site-menu-toggle__icon--close { display: inline; }
 
 /* --- Site footer ----------------------------------------------------- */
 .site-footer {

@@ -92,6 +92,20 @@ module.exports = function (eleventyConfig) {
     return d.toISOString().slice(0, 10);
   });
 
+  // Краткое описание для карточек в листингах: первое предложение,
+  // при превышении maxLen — обрезка с многоточием. Не трогает короткие тексты.
+  eleventyConfig.addFilter("excerpt", (text, maxLen = 180) => {
+    if (!text) return "";
+    const trimmed = String(text).trim();
+    if (trimmed.length <= maxLen) return trimmed;
+    // Первое предложение по [.!?] + пробел (или конец строки).
+    const sentenceMatch = trimmed.match(/^[^.!?]+[.!?]/);
+    if (sentenceMatch && sentenceMatch[0].length <= maxLen) {
+      return sentenceMatch[0];
+    }
+    return trimmed.slice(0, maxLen).replace(/[\s,;:.-]+$/, "") + "…";
+  });
+
   // ——— Глобальные данные ——————————————————————————————————————————
   // site.json уже подключается автоматически из src/_data/site.json.
   // Дополнительно: язык по умолчанию для локализации дат.

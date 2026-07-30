@@ -65,20 +65,22 @@ eleventyExcludeFromCollections: true
     <p class="empty">Пока нет опубликованных материалов.</p>
   {% else %}
     <div class="card-grid">
-      {% for item in collections.stati | reverse | slice(0, 6) %}
-        <article class="card">
-          <h3 class="card__title">
-            <a href="{{ item.url | url }}" style="text-decoration: none; color: inherit;">{{ item.data.title }}</a>
-          </h3>
-          <p class="card__summary">{{ item.data.summary or item.data.description or "" }}</p>
-          <div class="card__meta">
-            <time datetime="{{ item.date | isoDate }}">{{ item.date | ruDate }}</time>
-            {% if item.data.tags %}
-              <span aria-hidden="true">·</span>
-              <span>{{ item.data.tags[0] }}</span>
-            {% endif %}
-          </div>
-        </article>
+      {% for item in collections.stati | reverse %}
+        {% if loop.index <= 6 %}
+          <article class="card">
+            <h3 class="card__title">
+              <a href="{{ item.url | url }}" style="text-decoration: none; color: inherit;">{{ item.data.title }}</a>
+            </h3>
+            <p class="card__summary">{{ (item.data.summary or item.data.description or "") | excerpt(160) }}</p>
+            <div class="card__meta">
+              <time datetime="{{ item.date | isoDate }}">{{ item.date | ruDate }}</time>
+              {% if item.data.tags %}
+                <span aria-hidden="true">·</span>
+                <span>{{ item.data.tags[0] }}</span>
+              {% endif %}
+            </div>
+          </article>
+        {% endif %}
       {% endfor %}
     </div>
   {% endif %}

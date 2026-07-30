@@ -34,7 +34,10 @@ eleventyExcludeFromCollections: true
         <h2 class="card__title" style="margin: 0 0 var(--space-1);">
           <a href="{{ item.url | url }}" style="text-decoration: none; color: inherit;">{{ item.data.title }}</a>
         </h2>
-        <p class="card__summary" style="margin: 0;">{{ item.data.summary or item.data.description or "" }}</p>
+        <p class="card__summary" style="margin: 0;">{{ (item.data.summary or item.data.description or "") | excerpt(180) }}</p>
+        <p style="margin: var(--space-2) 0 0; font-family: var(--font-ui); font-size: 0.85rem;">
+          <a href="{{ item.url | url }}" style="color: var(--color-leaf);">Читать полностью →</a>
+        </p>
       </li>
     {% endfor %}
   </ul>

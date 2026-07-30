@@ -9,17 +9,10 @@
     const menu = document.querySelector("[data-site-menu]");
     if (!toggle || !menu) return;
 
-    const openIcon = toggle.querySelector(".site-menu-toggle__icon--open");
-    const closeIcon = toggle.querySelector(".site-menu-toggle__icon--close");
-
     function setOpen(isOpen) {
       toggle.setAttribute("aria-expanded", String(isOpen));
       menu.hidden = !isOpen;
       document.body.classList.toggle("is-menu-open", isOpen);
-      if (openIcon && closeIcon) {
-        openIcon.style.display = isOpen ? "none" : "";
-        closeIcon.style.display = isOpen ? "" : "none";
-      }
       if (isOpen) {
         // Фокус на первый пункт меню для доступности
         const firstLink = menu.querySelector(".site-menu__link");
