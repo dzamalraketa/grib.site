@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FAF8F3"/>
+      <stop offset="1" stop-color="#EFE8DA"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Логотип (гриб + мицелий) слева сверху -->
+  <g transform="translate(80,90)">
+    <path d="M14 80 C14 50 36 28 80 28 C124 28 146 50 146 80 C146 88 142 94 137 98 L130 102 C124 105 116 108 108 108 L52 108 C44 108 36 105 30 102 L23 98 C18 94 14 88 14 80 Z"
+          fill="#4E7C5C"/>
+    <path d="M62 108 L62 138 C62 144 70 152 80 152 C90 152 98 144 98 138 L98 108 Z"
+          fill="#C97B4A"/>
+    <path d="M80 152 L80 168" stroke="#4E7C5C" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M60 158 L46 168" stroke="#4E7C5C" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M100 158 L114 168" stroke="#4E7C5C" stroke-width="6" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <g font-family="Georgia, 'Source Serif 4', 'Times New Roman', serif" fill="#262B27">
+    <text x="80" y="400" font-size="86" font-weight="700" letter-spacing="-1">Мир грибов</text>
+    <text x="80" y="455" font-size="30" fill="#6B6F66">Энциклопедия мира грибов: виды, микология,</text>
+    <text x="80" y="495" font-size="30" fill="#6B6F66">применение, экология.</text>
+    <text x="80" y="560" font-size="22" fill="#4E7C5C" font-family="'Work Sans', sans-serif" letter-spacing="3">GRIB.SITE</text>
+  </g>
+</svg>

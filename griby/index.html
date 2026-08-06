@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#FAF8F3" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1B1712" media="(prefers-color-scheme: dark)">
+    <title>Каталог грибов — Мир грибов</title>
+    <meta name="description" content="Карточки видов грибов: описание, среда обитания, статус съедобности и источники.">
+    <link rel="canonical" href="https://grib.site/griby/">
+    <link rel="alternate" type="application/rss+xml" title="Мир грибов — статьи" href="/feed.xml">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Source+Serif+4:opsz,wght@8..60,300..700&family=Work+Sans:wght@400..700&display=swap">
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Каталог грибов — Мир грибов">
+    <meta property="og:description" content="Карточки видов грибов: описание, среда обитания, статус съедобности и источники.">
+    <meta property="og:url" content="https://grib.site/griby/">
+    
+    
+      <meta property="og:image" content="https://grib.site/assets/img/og-default.svg">
+    
+    <meta property="og:locale" content="ru_RU">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Каталог грибов — Мир грибов">
+    <meta name="twitter:description" content="Карточки видов грибов: описание, среда обитания, статус съедобности и источники.">
+    
+      <meta name="twitter:image" content="https://grib.site/assets/img/og-default.svg">
+    
+
+    
+
+    <link rel="stylesheet" href="/assets/css/tokens.css?v=2026080602">
+    <link rel="stylesheet" href="/assets/css/base.css?v=2026080602">
+    <link rel="stylesheet" href="/assets/css/components.css?v=2026080602">
+
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg?v=2026080602">
+
+    
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          if (stored === "light" || stored === "dark") {
+            document.documentElement.setAttribute("data-theme", stored);
+          } else {
+            document.documentElement.setAttribute("data-theme", "light");
+          }
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <header class="site-header" role="banner" data-site-header>
+  <div class="container site-header__inner">
+    <a class="site-brand" href="/" aria-label="Мир грибов — главная">
+      <svg class="site-brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <defs>
+          <radialGradient id="brandHalo" cx="50%" cy="40%" r="55%">
+            <stop offset="0%"  stop-color="#E8B85A" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#E8B85A" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="brandCap" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"  stop-color="#E15F44"/>
+            <stop offset="100%" stop-color="#A8352A"/>
+          </linearGradient>
+        </defs>
+        <circle cx="16" cy="13" r="15" fill="url(#brandHalo)"/>
+        <g stroke="#4E7C5C" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9">
+          <path d="M16 26 L16 30"/>
+          <path d="M11 27 L8 30"/>
+          <path d="M21 27 L24 30"/>
+        </g>
+        <path d="M5 16 C5 9 10 4 16 4 C22 4 27 9 27 16 C27 17 26.5 17.5 25.5 18 L6.5 18 C5.5 17.5 5 17 5 16 Z" fill="url(#brandCap)"/>
+        <g fill="#FAF8F3">
+          <circle cx="10" cy="11" r="1.6"/>
+          <circle cx="16" cy="7.5" r="1.5"/>
+          <circle cx="21" cy="10" r="1.5"/>
+          <circle cx="9"  cy="15" r="1.1" opacity="0.92"/>
+          <circle cx="23" cy="14" r="1.2" opacity="0.92"/>
+        </g>
+        <ellipse cx="13" cy="7" rx="2.4" ry="1.2" fill="#FAF8F3" opacity="0.4"/>
+        <ellipse cx="16" cy="18.4" rx="3.6" ry="0.9" fill="#FAF8F3" stroke="#A8352A" stroke-width="0.4" opacity="0.95"/>
+        <path d="M13 18 L13 24 C13 25.4 14.4 26.4 16 26.4 C17.6 26.4 19 25.4 19 24 L19 18 Z" fill="#FAF8F3"/>
+        <ellipse cx="16" cy="26.4" rx="3.4" ry="0.7" fill="#FAF8F3" stroke="#A8352A" stroke-width="0.3" opacity="0.9"/>
+        <g fill="#E8B85A">
+          <path d="M3 5 L3.5 6.3 L4.8 6.8 L3.5 7.3 L3 8.6 L2.5 7.3 L1.2 6.8 L2.5 6.3 Z"/>
+          <path d="M29 3 L29.4 4 L30.4 4.4 L29.4 4.8 L29 5.8 L28.6 4.8 L27.6 4.4 L28.6 4 Z"/>
+        </g>
+      </svg>
+      <span class="site-brand__text">Мир грибов</span>
+    </a>
+
+    <nav class="site-nav site-nav--primary" aria-label="Основная навигация">
+      
+        
+        <a class="site-nav__link" href="/" >Главная</a>
+      
+        
+        <a class="site-nav__link" href="/griby/" aria-current="page">Каталог грибов</a>
+      
+        
+        <a class="site-nav__link" href="/temy/" >Темы</a>
+      
+        
+        <a class="site-nav__link" href="/stati/" >Статьи</a>
+      
+        
+        <a class="site-nav__link" href="/issledovaniya/" >Исследования</a>
+      
+        
+        <a class="site-nav__link" href="/kontakty/" >Контакты</a>
+      
+    </nav>
+
+    <div class="site-header__actions">
+      <button type="button" class="icon-btn" data-search-toggle aria-label="Поиск по сайту" aria-expanded="false" aria-controls="site-search">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"/>
+          <path d="m20 20-3.5-3.5"/>
+        </svg>
+      </button>
+
+      <button type="button" class="icon-btn" data-theme-toggle aria-label="Включить тёмную тему">
+        <svg class="icon-btn__icon icon-btn__icon--sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="icon-btn__icon icon-btn__icon--moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+
+      <button type="button" class="icon-btn site-menu-toggle" data-menu-toggle aria-label="Открыть меню" aria-expanded="false" aria-controls="site-menu">
+        <svg class="site-menu-toggle__icon site-menu-toggle__icon--open" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+        <svg class="site-menu-toggle__icon site-menu-toggle__icon--close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="site-search" id="site-search" data-site-search hidden>
+    <div class="container site-search__inner">
+      <form class="site-search__form" role="search" action="/poisk/" method="get">
+        <label for="site-search-input" class="visually-hidden">Поиск по сайту</label>
+        <input type="search" id="site-search-input" name="q" placeholder="Поиск по сайту — виды, темы, статьи…" autocomplete="off" data-site-search-input>
+        <button type="submit" class="btn btn--primary site-search__submit">Найти</button>
+        <button type="button" class="icon-btn site-search__close" data-search-close aria-label="Закрыть поиск">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M6 6l12 12M18 6L6 18"/>
+          </svg>
+        </button>
+      </form>
+      <p class="site-search__hint">
+        <a href="/poisk/">Расширенный поиск →</a>
+      </p>
+    </div>
+  </div>
+</header>
+
+
+<aside class="site-menu" id="site-menu" data-site-menu hidden aria-label="Мобильная навигация">
+  <button type="button" class="site-menu__scrim" data-menu-close aria-label="Закрыть меню" tabindex="-1"></button>
+  <div class="site-menu__panel">
+    <nav class="site-menu__nav" aria-label="Разделы сайта">
+      
+        
+        <a class="site-menu__link" href="/" >Главная</a>
+      
+        
+        <a class="site-menu__link" href="/griby/" aria-current="page">Каталог грибов</a>
+      
+        
+        <a class="site-menu__link" href="/temy/" >Темы</a>
+      
+        
+        <a class="site-menu__link" href="/stati/" >Статьи</a>
+      
+        
+        <a class="site-menu__link" href="/issledovaniya/" >Исследования</a>
+      
+        
+        <a class="site-menu__link" href="/kontakty/" >Контакты</a>
+      
+    </nav>
+    <div class="site-menu__divider" aria-hidden="true"></div>
+    <nav class="site-menu__subnav" aria-label="Дополнительно">
+      
+        <a class="site-menu__sublink" href="/o-proekte/">О проекте</a>
+      
+        <a class="site-menu__sublink" href="/istochniki/">Источники</a>
+      
+        <a class="site-menu__sublink" href="/poisk/">Поиск</a>
+      
+        <a class="site-menu__sublink" href="/feed.xml">RSS</a>
+      
+    </nav>
+    <div class="site-menu__divider" aria-hidden="true"></div>
+    <div class="site-menu__footer">
+      <a class="site-menu__contact" href="/kontakty/">Связаться с командой</a>
+    </div>
+  </div>
+</aside>
+
+
+    <main id="main" class="container" data-pagefind-body>
+      
+<header class="page-header">
+  <p class="page-header__eyebrow">Раздел</p>
+  <h1 class="page-header__title">Каталог грибов</h1>
+  <p class="page-header__lead">
+    Карточки съедобных, условно-съедобных и лечебных видов грибов:
+    описание, среда обитания, сезон и статус. Для точного определения
+    редких или незнакомых видов полезно свериться с местным микологом
+    или атласом-определителем.
+  </p>
+</header>
+
+
+
+
+
+  <aside class="disclaimer" role="note" aria-label="Предупреждение о сборе грибов">
+    <p class="disclaimer__title">Важно</p>
+    <p>Сайт — энциклопедический портал о грибах. Если вы планируете сбор дикорастущих грибов, при определении вида полезно свериться с местным микологом или опытным сборщиком: у съедобных видов есть ядовитые двойники.</p>
+  </aside>
+
+
+
+
+
+
+
+
+
+
+
+<div class="gill-divider" role="presentation" aria-hidden="true">
+  <svg viewBox="-200 -40 400 80" width="100%" height="40" preserveAspectRatio="xMidYMid meet" style="overflow: visible;">
+    <g stroke="var(--color-ink-muted)" stroke-width="0.7" stroke-linecap="round" opacity="0.1">
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(0)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(12.857142857142856)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(25.71428571428571)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(38.57142857142857)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(51.42857142857142)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(64.28571428571429)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(77.14285714285714)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(90)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(102.85714285714285)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(115.71428571428572)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(128.57142857142858)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(141.42857142857142)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(154.28571428571428)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(167.14285714285714)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(180)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(192.85714285714286)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(205.7142857142857)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(218.57142857142856)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(231.42857142857144)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(244.2857142857143)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(257.14285714285717)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(270)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(282.85714285714283)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(295.7142857142857)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(308.57142857142856)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(321.42857142857144)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(334.2857142857143)"/>
+      
+        
+        <line x1="0" y1="0" x2="200" y2="0" transform="rotate(347.14285714285717)"/>
+      
+    </g>
+  </svg>
+</div>
+
+<style>
+  .gill-divider { display: block; width: 100%; margin: var(--space-4) 0; }
+  .gill-divider svg { display: block; }
+</style>
+
+
+<section aria-label="Фильтр по статусу">
+  <div class="filters" role="group" aria-label="Фильтр по статусу съедобности">
+    <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">
+      <span class="filter-btn__stamp filter-btn__stamp--edible" style="background: var(--color-glow);"></span>
+      Все <span class="filter-btn__count" data-count="all"></span>
+    </button>
+    <button type="button" class="filter-btn" data-filter="edible" aria-pressed="false">
+      <span class="filter-btn__stamp filter-btn__stamp--edible"></span>
+      Съедобные <span class="filter-btn__count" data-count="edible"></span>
+    </button>
+    <button type="button" class="filter-btn" data-filter="conditional" aria-pressed="false">
+      <span class="filter-btn__stamp filter-btn__stamp--conditional"></span>
+      Условно-съедобные <span class="filter-btn__count" data-count="conditional"></span>
+    </button>
+    <button type="button" class="filter-btn" data-filter="medicinal" aria-pressed="false">
+      <span class="filter-btn__stamp filter-btn__stamp--medicinal"></span>
+      Лечебные <span class="filter-btn__count" data-count="medicinal"></span>
+    </button>
+  </div>
+</section>
+
+<section id="catalog" class="card-grid" aria-live="polite">
+  
+    <article class="card card--mushroom" data-status="medicinal">
+      <a class="card__media" href="/griby/agarikon/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/agarikon.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--medicinal spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Лечебный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/agarikon/" style="text-decoration: none; color: inherit;">Агарикон (Fomitopsis officinalis)</a>
+      </h3>
+      <p class="card__latin">Laricifomes officinalis</p>
+      <p class="card__summary">Древесный гриб, известный в традиционной медицине и активно изучаемый Полом Стеметсом как источник антимикробных соединений.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="edible">
+      <a class="card__media" href="/griby/borovik/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/borovik.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--edible spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Съедобный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/borovik/" style="text-decoration: none; color: inherit;">Белый гриб (боровик)</a>
+      </h3>
+      <p class="card__latin">Boletus edulis</p>
+      <p class="card__summary">Ценный съедобный гриб с плотной мякотью, не темнеющей на срезе. Образует микоризу со многими лесными деревьями.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="edible">
+      <a class="card__media" href="/griby/veshenka/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/veshenka.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--edible spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Съедобный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/veshenka/" style="text-decoration: none; color: inherit;">Вёшенка обыкновенная (устричная)</a>
+      </h3>
+      <p class="card__latin">Pleurotus ostreatus</p>
+      <p class="card__summary">Древесный сапротроф из семейства Pleurotaceae. Растёт ярусами на мёртвой древесине лиственных пород. Один из самых популярных культивируемых грибов в мире. В горных районах Кавказа встречается на буковых валежниках («чинарики»).</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="edible">
+      <a class="card__media" href="/griby/golovach/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/golovach.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--edible spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Съедобный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/golovach/" style="text-decoration: none; color: inherit;">Головач гигантский</a>
+      </h3>
+      <p class="card__latin">Calvatia gigantea</p>
+      <p class="card__summary">Один из крупнейших грибов мира — плодовое тело достигает 30–50 см в диаметре и до 20 кг массы. В молодом возрасте (с белой мякотью) — съедобен и даже считается деликатесом. Зрелый споровый порошок используется в народной медицине.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="medicinal">
+      <a class="card__media" href="/griby/reishi/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/reishi.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--medicinal spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Лечебный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/reishi/" style="text-decoration: none; color: inherit;">Гриб Рейши (трутовик лакированный)</a>
+      </h3>
+      <p class="card__latin">Ganoderma lucidum</p>
+      <p class="card__summary">Древесный гриб, используемый в традиционной медицине Азии. Изучается как источник бета-глюканов и тритерпеноидов.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="edible">
+      <a class="card__media" href="/griby/grib-zontik/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/grib-zontik.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--edible spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Съедобный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/grib-zontik/" style="text-decoration: none; color: inherit;">Гриб-зонтик пёстрый</a>
+      </h3>
+      <p class="card__latin">Macrolepiota procera</p>
+      <p class="card__summary">Крупный шляпочный гриб из семейства Agaricaceae с чешуйчатой шляпкой и высокой тонкой ножкой. Исполинский деликатесный гриб с нежным ореховым вкусом. Используется в кулинарии только шляпка.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="conditional">
+      <a class="card__media" href="/griby/dozhdevik/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/dozhdevik.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--conditional spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Условно-съедобный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/dozhdevik/" style="text-decoration: none; color: inherit;">Дождевик</a>
+      </h3>
+      <p class="card__latin">Lycoperdon</p>
+      <p class="card__summary">Род гастеромицетов с шаровидными или грушевидными плодовыми телами. Молодые (с белой мякотью) грибы — съедобны. Споровый порошок зрелых грибов используется в народной медицине как кровоостанавливающее и антисептическое средство.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="conditional">
+      <a class="card__media" href="/griby/dubovik/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/dubovik.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--conditional spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Условно-съедобный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/dubovik/" style="text-decoration: none; color: inherit;">Дубовик</a>
+      </h3>
+      <p class="card__latin">Suillellus luridus</p>
+      <p class="card__summary">Крупный трубчатый гриб из семейства Boletaceae, близкий к белому грибу. Отличается жёлто-оранжевыми порами и быстрым посинением мякоти на срезе. Условно-съедобен — требует предварительного отваривания.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="medicinal">
+      <a class="card__media" href="/griby/ezhovik/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/ezhovik.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--medicinal spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Лечебный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/ezhovik/" style="text-decoration: none; color: inherit;">Ежовик гребенчатый (Hericium erinaceus)</a>
+      </h3>
+      <p class="card__latin">Hericium erinaceus</p>
+      <p class="card__summary">Древесный гриб с характерными белыми свисающими шипами. Изучается как источник гериценонов и эринацинов — стимуляторов факторов роста нервов (NGF, BDNF).</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="edible">
+      <a class="card__media" href="/griby/lisichka/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/lisichka.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--edible spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Съедобный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/lisichka/" style="text-decoration: none; color: inherit;">Лисичка обыкновенная</a>
+      </h3>
+      <p class="card__latin">Cantharellus cibarius</p>
+      <p class="card__summary">Один из самых известных съедобных грибов. Шляпка воронковидная, яично-жёлтая; мякоть плотная, с фруктовым запахом.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="edible">
+      <a class="card__media" href="/griby/maslyata/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/maslyata.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--edible spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Съедобный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/maslyata/" style="text-decoration: none; color: inherit;">Маслята</a>
+      </h3>
+      <p class="card__latin">Suillus</p>
+      <p class="card__summary">Род трубчатых грибов, образующих микоризу с сосной. Наиболее известны маслёнок обыкновенный (Suillus luteus) и маслёнок зернистый (S. granulatus). Отличаются маслянистой шляпкой и трубочками под ней.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="conditional">
+      <a class="card__media" href="/griby/openyosenniy/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/openyosenniy.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--conditional spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Условно-съедобный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/openyosenniy/" style="text-decoration: none; color: inherit;">Опёнок осенний</a>
+      </h3>
+      <p class="card__latin">Armillaria mellea</p>
+      <p class="card__summary">Условно-съедобный гриб, растущий большими колониями на древесине. Требует обязательной термической обработки перед употреблением.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="edible">
+      <a class="card__media" href="/griby/pechenochnitsa/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/pechenochnitsa.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--edible spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Съедобный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/pechenochnitsa/" style="text-decoration: none; color: inherit;">Печёночница обыкновенная</a>
+      </h3>
+      <p class="card__latin">Fistulina hepatica</p>
+      <p class="card__summary">Древесный гриб-паразит из семейства Fistulinaceae, растущий на дубах и каштанах. Внешне напоминает кусок печени: ярко-красный, сочный, с характерной кисловатой мякотью. Богат витамином C.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="edible">
+      <a class="card__media" href="/griby/podberezovik/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/podberezovik.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--edible spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Съедобный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/podberezovik/" style="text-decoration: none; color: inherit;">Подберёзовик</a>
+      </h3>
+      <p class="card__latin">Leccinum scabrum</p>
+      <p class="card__summary">Трубчатый гриб из семейства Boletaceae с тёмно-коричневой или серой шляпкой и длинной ножкой, покрытой тёмными чешуйками. Образует микоризу с берёзой. Один из самых распространённых и любимых съедобных грибов России.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="edible">
+      <a class="card__media" href="/griby/podosinovik/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/podosinovik.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--edible spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Съедобный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/podosinovik/" style="text-decoration: none; color: inherit;">Подосиновик</a>
+      </h3>
+      <p class="card__latin">Leccinum aurantiacum</p>
+      <p class="card__summary">Трубчатый гриб из семейства Boletaceae с ярко-оранжевой или красно- бурой шляпкой. Образует микоризу с осиной, дубом, берёзой. Мякоть на срезе быстро темнеет (синеет или чернеет). Один из самых ценных съедобных грибов.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="edible">
+      <a class="card__media" href="/griby/ryzhik/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/ryzhik.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--edible spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Съедобный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/ryzhik/" style="text-decoration: none; color: inherit;">Рыжик</a>
+      </h3>
+      <p class="card__latin">Lactarius deliciosus</p>
+      <p class="card__summary">Один из самых ценных хвойных грибов. Шляпка и ножка оранжево-рыжие, на изломе выделяет оранжево-красный млечный сок. Считается лучшим грибом для засолки и жарки.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="medicinal">
+      <a class="card__media" href="/griby/trametes-versicolor/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/trametes-versicolor.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--medicinal spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Лечебный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/trametes-versicolor/" style="text-decoration: none; color: inherit;">Траметес разноцветный (Trametes versicolor)</a>
+      </h3>
+      <p class="card__latin">Trametes versicolor</p>
+      <p class="card__summary">Древесный гриб с яркой полосатой шляпкой. Источник полисахаридов PSK и PSP, изучаемых в адъювантной терапии онкологических заболеваний.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="edible">
+      <a class="card__media" href="/griby/caesarev-grib/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/caesarev-grib.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--edible spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Съедобный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/caesarev-grib/" style="text-decoration: none; color: inherit;">Цезарский гриб (Мухомор Цезаря)</a>
+      </h3>
+      <p class="card__latin">Amanita caesarea</p>
+      <p class="card__summary">Один из самых ценных деликатесных грибов Средиземноморья и южных широколиственных лесов. Отличается ярко-оранжевой шляпкой, жёлтыми пластинками и жёлто-оранжевой ножкой с остатками вольвы.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="medicinal">
+      <a class="card__media" href="/griby/chaga/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/chaga.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--medicinal spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Лечебный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/chaga/" style="text-decoration: none; color: inherit;">Чага (Inonotus obliquus)</a>
+      </h3>
+      <p class="card__latin">Inonotus obliquus</p>
+      <p class="card__summary">Древесный гриб-паразит берёзы. Известен в народной медицине России; изучается как источник антиоксидантов, бетулина и меланинов.</p>
+    </article>
+  
+    <article class="card card--mushroom" data-status="edible">
+      <a class="card__media" href="/griby/chernaya-lisichka/" aria-hidden="true" tabindex="-1">
+        
+          <img src="/assets/img/mushrooms/chernaya-lisichka.jpg" alt="" loading="lazy" decoding="async">
+        
+      </a>
+      
+      
+      
+
+
+
+<span class="spore-stamp spore-stamp--edible spore-stamp--sm">
+  <span class="spore-stamp__mark" aria-hidden="true"></span>
+  <span>Съедобный</span>
+</span>
+
+      <h3 class="card__title">
+        <a href="/griby/chernaya-lisichka/" style="text-decoration: none; color: inherit;">Чёрная лисичка (Ворончик воронковидный)</a>
+      </h3>
+      <p class="card__latin">Craterellus cornucopioides</p>
+      <p class="card__summary">Деликатесный гриб с воронковидным плодовым телом чёрного или тёмно- серого цвета. Ценится за насыщенный аромат и плотную мякоть; во многих странах считается более ценным, чем обыкновенная лисичка.</p>
+    </article>
+  
+</section>
+
+<script src="/assets/js/filters.js?v=2026080602" defer></script>
+
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+  <div class="container site-footer__inner">
+    <div>
+      <strong>Мир грибов</strong> — независимый энциклопедический портал о грибах.
+    </div>
+    <nav class="site-footer__nav" aria-label="Дополнительная навигация">
+      
+        <a href="/o-proekte/">О проекте</a>
+      
+        <a href="/istochniki/">Источники</a>
+      
+        <a href="/poisk/">Поиск</a>
+      
+        <a href="/feed.xml">RSS</a>
+      
+    </nav>
+  </div>
+
+  <div class="container site-footer__legal">
+    <p>
+      Все материалы на сайте являются информационными обзорами,
+      выжимками и авторскими пересказами общедоступных исследований.
+      Все права на упоминаемые книги, концепции и товарные знаки
+      принадлежат их авторам. Сайт носит научно-популярный
+      и информационный характер.
+    </p>
+  </div>
+</footer>
+
+
+    <script src="/assets/js/theme.js?v=2026080602" defer></script>
+    <script src="/assets/js/menu.js?v=2026080602" defer></script>
+    
+  </body>
+</html>
