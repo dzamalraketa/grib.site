@@ -441,7 +441,10 @@
   border-left: 4px solid var(--cat-color, var(--color-leaf));
   border-radius: var(--radius-card);
   padding: var(--space-3) var(--space-4);
-  margin: var(--space-4) 0;
+  margin: 0;
+  height: fit-content;
+  position: sticky;
+  top: calc(var(--space-3) + var(--header-h, 64px));
 }
 .research-meta dl {
   display: grid;
@@ -451,10 +454,170 @@
   font-family: var(--font-ui);
   font-size: 0.9rem;
 }
-.research-meta dt { color: var(--color-text-muted); }
+.research-meta dt { color: var(--color-text-muted); font-weight: 600; }
 .research-meta dd { margin: 0; color: var(--color-text); }
 .research-meta dd a { color: var(--color-leaf); text-decoration-style: dotted; }
 .research-meta dd a:hover { text-decoration: underline; }
+.research-meta__sources {
+  padding-left: 1.1rem;
+  margin: 0;
+  list-style: decimal;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+.research-meta__sources li { margin-bottom: 4px; }
+
+/* ============== Страница исследования (research.njk layout) ============== */
+.research-page {
+  max-width: none;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Разворачиваем research-page и stat/grib-article на всю ширину wide-container (1100px)
+   вместо 720px базового. Сам текст внутри body остаётся в 72ch. */
+.research-page,
+.mushroom-page,
+.article-page  {
+  position: relative;
+  width: calc(min(1100px, 100%));
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 1120px) {
+  .research-page,
+  .mushroom-page,
+  .article-page {
+    width: 100%;
+  }
+}
+
+.article-header__summary {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: var(--space-3) 0 var(--space-4);
+  max-width: 75ch;
+}
+
+/* === Full-paper callout (ВВЕРХУ «Где почитать исследование целиком») === */
+.full-paper-callout {
+  background: linear-gradient(135deg, rgba(78,124,92,0.09), rgba(224,168,81,0.08));
+  border: 1px solid var(--color-leaf);
+  border-left: 5px solid var(--color-leaf);
+  border-radius: var(--radius-card);
+  padding: var(--space-3) var(--space-4);
+  margin: var(--space-4) 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.full-paper-callout__title {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--color-leaf);
+  letter-spacing: 0.01em;
+}
+.full-paper-callout__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+  font-family: var(--font-ui);
+  font-size: 0.93rem;
+}
+.full-paper-callout__list li a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--color-text);
+  background: rgba(255,255,255,0.45);
+  border: 1px solid var(--color-border);
+  transition: background var(--transition), border-color var(--transition);
+}
+.full-paper-callout__list li a:hover {
+  background: #fff;
+  border-color: var(--color-leaf);
+  color: var(--color-leaf);
+  text-decoration: none;
+}
+.full-paper-callout__list li a::after {
+  content: "↗";
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* === research page GRID: мета-карта слева (aside) + тело справа на ≥ 1024px === */
+.research-page__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  margin-top: var(--space-4);
+}
+@media (min-width: 1024px) {
+  .research-page__grid {
+    grid-template-columns: 320px 1fr;
+    gap: var(--space-6);
+    align-items: start;
+  }
+}
+.research-page__body {
+  min-width: 0;
+}
+.research-page__body .article-content {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.75;
+  font-size: 1.04rem;
+}
+.research-page__body .article-content h2,
+.research-page__body .article-content h3,
+.research-page__body .article-content h4 {
+  max-width: 70ch;
+  margin-top: var(--space-6);
+}
+.research-page__body .article-content p,
+.research-page__body .article-content ul,
+.research-page__body .article-content ol,
+.research-page__body .article-content blockquote {
+  max-width: 72ch;
+}
+.research-page__body .article-content blockquote {
+  margin-left: 0;
+  padding-left: var(--space-3);
+  border-left: 3px solid var(--color-leaf);
+  color: var(--color-text-muted);
+}
+.research-page__cta {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+@media (max-width: 640px) {
+  .research-page__cta {
+    flex-direction: column;
+  }
+  .research-page__cta .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (min-width: 1024px) {
+  .research-page__cta {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .card__latin {
   font-family: var(--font-mono);
   font-size: 0.85rem;

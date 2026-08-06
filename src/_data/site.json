@@ -4,23 +4,53 @@
   "url": "https://grib.site",
   "author": "Команда «Мир грибов»",
   "locale": "ru_RU",
-  "version": 2026080602,
+  "version": "2026080701",
   "worker_url": "https://grib-contact-form.dzamalraketa.workers.dev/",
   "default_image": "/assets/img/og-default.svg",
   "navigation": {
     "primary": [
-      { "text": "Главная", "url": "/" },
-      { "text": "Каталог грибов", "url": "/griby/" },
-      { "text": "Темы", "url": "/temy/" },
-      { "text": "Статьи", "url": "/stati/" },
-      { "text": "Исследования", "url": "/issledovaniya/" },
-      { "text": "Контакты", "url": "/kontakty/" }
+      {
+        "text": "Главная",
+        "url": "/"
+      },
+      {
+        "text": "Каталог грибов",
+        "url": "/griby/"
+      },
+      {
+        "text": "Темы",
+        "url": "/temy/"
+      },
+      {
+        "text": "Статьи",
+        "url": "/stati/"
+      },
+      {
+        "text": "Исследования",
+        "url": "/issledovaniya/"
+      },
+      {
+        "text": "Контакты",
+        "url": "/kontakty/"
+      }
     ],
     "footer": [
-      { "text": "О проекте", "url": "/o-proekte/" },
-      { "text": "Источники", "url": "/istochniki/" },
-      { "text": "Поиск", "url": "/poisk/" },
-      { "text": "RSS", "url": "/feed.xml" }
+      {
+        "text": "О проекте",
+        "url": "/o-proekte/"
+      },
+      {
+        "text": "Источники",
+        "url": "/istochniki/"
+      },
+      {
+        "text": "Поиск",
+        "url": "/poisk/"
+      },
+      {
+        "text": "RSS",
+        "url": "/feed.xml"
+      }
     ]
   }
 }

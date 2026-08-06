@@ -3,7 +3,7 @@ layout: layouts/base.njk
 og_type: "article"
 ---
 
-<article>
+<article class="research-page">
   <header class="article-header">
     <div class="article-header__meta">
       {% if date %}<time datetime="{{ date | isoDate }}">{{ date | ruDate }}</time>{% endif %}
@@ -17,36 +17,88 @@ og_type: "article"
       {% if year %}<span aria-hidden="true">·</span><span>{{ year }} г.</span>{% endif %}
     </div>
     <h1 class="article-header__title">{{ title }}</h1>
-    {% if summary %}<p style="color: var(--color-text-muted); font-size: 1.1rem; max-width: 640px;">{{ summary }}</p>{% endif %}
+    {% if summary %}<p class="article-header__summary">{{ summary }}</p>{% endif %}
+
+    <div class="full-paper-callout" role="note" aria-label="Ссылки на полный текст исследования">
+      <p class="full-paper-callout__title">📄 Где почитать исследование целиком</p>
+      <ul class="full-paper-callout__list">
+        {% if source_url %}
+          <li>
+            <a href="{{ source_url }}" rel="noopener noreferrer" target="_blank">
+              <strong>Оригинальная статья</strong> — {{ source_name }}
+            </a>
+          </li>
+        {% endif %}
+        {% if sources and sources.length > 0 %}
+          {% for src in sources %}
+            {% if src.url and src.url.indexOf("pubmed") > -1 %}
+              <li>
+                <a href="{{ src.url }}" rel="noopener noreferrer" target="_blank">
+                  <strong>PubMed</strong> — аннотация и ссылки на полный текст
+                </a>
+              </li>
+            {% elif src.url and src.url.indexOf("doi") > -1 %}
+              <li>
+                <a href="{{ src.url }}" rel="noopener noreferrer" target="_blank">
+                  <strong>DOI</strong> — {{ src.title | truncate(60, true, "…") }}
+                </a>
+              </li>
+            {% elif src.url and loop.index == 1 %}
+              <li>
+                <a href="{{ src.url }}" rel="noopener noreferrer" target="_blank">
+                  <strong>Ссылка №1</strong> — {{ src.title | truncate(60, true, "…") }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </ul>
+    </div>
   </header>
 
   {% set divider_opacity = 0.10 %}
   {% set divider_lines = 28 %}
   {% include "partials/gill-divider.njk" %}
 
-  {% set disclaimer_type = "health" %}
-  {% include "partials/disclaimer.njk" %}
+  <div class="research-page__grid">
+    <aside class="research-meta" aria-label="Сводная информация об исследовании">
+      <dl>
+        {% if mushroom %}<dt>Гриб / объект</dt><dd>{{ mushroom }}</dd>{% endif %}
+        {% if design %}<dt>Дизайн</dt><dd>{{ design }}</dd>{% endif %}
+        {% if date %}<dt>Дата</dt><dd><time datetime="{{ date | isoDate }}">{{ date | ruDate }}, {{ year }} г.</time></dd>{% endif %}
+        <dt>Источник</dt>
+        <dd>
+          <a href="{{ source_url }}" rel="noopener noreferrer" target="_blank">{{ source_name }}</a>
+        </dd>
+        {% if sources and sources.length > 0 %}
+          <dt>Все ссылки</dt>
+          <dd>
+            <ol class="research-meta__sources">
+              {% for src in sources %}
+                <li>
+                  {% if src.url %}<a href="{{ src.url }}" rel="noopener noreferrer" target="_blank">{{ src.title | truncate(70, true, "…") }}</a>{% else %}{{ src.title | truncate(70, true, "…") }}{% endif %}
+                </li>
+              {% endfor %}
+            </ol>
+          </dd>
+        {% endif %}
+      </dl>
+    </aside>
 
-  <aside class="research-meta" aria-label="Сводная информация об исследовании">
-    <dl>
-      {% if mushroom %}<dt>Гриб / объект</dt><dd>{{ mushroom }}</dd>{% endif %}
-      {% if design %}<dt>Дизайн</dt><dd>{{ design }}</dd>{% endif %}
-      <dt>Источник</dt>
-      <dd>
-        <a href="{{ source_url }}" rel="noopener noreferrer" target="_blank">{{ source_name }}</a>, {{ year }}
-      </dd>
-      {% if date %}<dt>Дата публикации</dt><dd><time datetime="{{ date | isoDate }}">{{ date | ruDate }}</time></dd>{% endif %}
-    </dl>
-  </aside>
+    <div class="research-page__body">
+      {% set disclaimer_type = "health" %}
+      {% include "partials/disclaimer.njk" %}
 
-  <div class="article-content">
-    {{ content | safe }}
+      <div class="article-content">
+        {{ content | safe }}
+      </div>
+    </div>
   </div>
 
   {% include "partials/sources-block.njk" %}
 
-  <p style="margin-top: var(--space-5);">
+  <div class="research-page__cta">
     <a class="btn" href="{{ '/issledovaniya/' | url }}">← Вернуться к каталогу исследований</a>
-    <a class="btn btn--primary" href="{{ source_url }}" rel="noopener noreferrer" target="_blank" style="margin-left: var(--space-2);">Читать оригинал (англ.) →</a>
-  </p>
+    <a class="btn btn--primary" href="{{ source_url }}" rel="noopener noreferrer" target="_blank">📄 Открыть оригинал исследования →</a>
+  </div>
 </article>
