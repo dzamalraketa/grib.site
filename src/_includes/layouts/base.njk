@@ -41,11 +41,11 @@
       <script type="application/ld+json">{{ schema | safe }}</script>
     {% endif %}
 
-    <link rel="stylesheet" href="{{ '/assets/css/tokens.css' | url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/base.css' | url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/components.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/tokens.css' | url }}?v={{ site.version }}">
+    <link rel="stylesheet" href="{{ '/assets/css/base.css' | url }}?v={{ site.version }}">
+    <link rel="stylesheet" href="{{ '/assets/css/components.css' | url }}?v={{ site.version }}">
 
-    <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | url }}">
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | url }}?v={{ site.version }}">
 
     {# Inline-скрипт: установить тему ДО отрисовки.
        Светлая — по умолчанию. Сохранённый выбор пользователя перекрывает дефолт. #}
@@ -75,8 +75,8 @@
 
     {% include "partials/footer.njk" %}
 
-    <script src="{{ '/assets/js/theme.js' | url }}" defer></script>
-    <script src="{{ '/assets/js/menu.js' | url }}" defer></script>
+    <script src="{{ '/assets/js/theme.js' | url }}?v={{ site.version }}" defer></script>
+    <script src="{{ '/assets/js/menu.js' | url }}?v={{ site.version }}" defer></script>
     {% block pageScripts %}{% endblock %}
   </body>
 </html>

@@ -4,6 +4,7 @@
   "url": "https://grib.site",
   "author": "Команда «Мир грибов»",
   "locale": "ru_RU",
+  "version": 2026080601,
   "worker_url": "https://grib-contact-form.dzamalraketa.workers.dev/",
   "default_image": "/assets/img/og-default.svg",
   "navigation": {

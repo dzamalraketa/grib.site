@@ -62,7 +62,7 @@ eleventyExcludeFromCollections: true
   {% endfor %}
 </section>
 
-<script src="{{ '/assets/js/research-filter.js' | url }}" defer></script>
+<script src="{{ '/assets/js/research-filter.js' | url }}?v={{ site.version }}" defer></script>
 
 {% set disclaimer_type = "health" %}
 {% include "partials/disclaimer.njk" %}
