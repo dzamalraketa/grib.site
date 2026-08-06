@@ -832,7 +832,12 @@
   display: flex;
   pointer-events: none;
 }
-.site-menu[hidden] { display: none; }
+.site-menu[hidden] {
+  display: none;
+}
+/* Разворот по анимации: сначала убираем hidden (через requestAnimationFrame),
+   потом transition работает. Для закрытия — добавляем hidden только после
+   окончания transform (280ms + 10ms запас). */
 .site-menu__scrim {
   flex: 1 1 auto;
   background: rgba(38, 43, 39, 0.4);

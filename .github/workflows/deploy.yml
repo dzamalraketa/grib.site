@@ -47,6 +47,14 @@ jobs:
           test -f _site/CNAME || (echo "::error::_site/CNAME missing" && exit 1)
           test -f _site/feed.xml || (echo "::error::_site/feed.xml missing" && exit 1)
           test -d _site/pagefind || (echo "::error::_site/pagefind/ missing" && exit 1)
+          ISSLED_COUNT=$(find _site/issledovaniya -mindepth 2 -maxdepth 2 -name index.html | wc -l)
+          STATI_COUNT=$(find _site/stati -mindepth 2 -maxdepth 2 -name index.html | wc -l)
+          echo "Issledovaniya pages: $ISSLED_COUNT (min 35 required)"
+          echo "Stati pages: $STATI_COUNT (min 19 required)"
+          test "$ISSLED_COUNT" -ge 35 || (echo "::error::Too few issledovaniya pages: $ISSLED_COUNT" && exit 1)
+          test "$STATI_COUNT" -ge 19 || (echo "::error::Too few stati pages: $STATI_COUNT" && exit 1)
+          grep -q '?v=20' _site/index.html || (echo "::error::Cache-busting version missing in index.html" && exit 1)
+          echo "Build verification: OK"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

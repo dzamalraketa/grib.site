@@ -78,27 +78,81 @@ MushroomReferences.com в карточках не используется.
 | Miscellaneous | обзоры (cardiometabolic) | ✅ для систематических обзоров |
 | Safety/Adverse | побочные эффекты | ✅ для раздела «безопасность» |
 
-## Уже использовано в каталоге исследований
+## Уже использовано в каталоге исследований (issledovaniya/)
 
-Из MushroomReferences.com взяты следующие 5 карточек (задача 2,
-коммит `14cd654`):
+Из MushroomReferences.com взяты следующие карточки (публиковано в `src/issledovaniya/`):
 
-1. `fotv-covid-active-2026.md` — Saxe 2026, medRxiv
-2. `fotv-covid-vaccine-2026.md` — Saxe 2026, BMC Immunology
-3. `cordyceps-militaris-anemia-runners-2024.md` — Nakamura 2024, Nutrients
-4. `ezhovik-erinacine-cognition-2024.md` — Černelič Bizjak 2024, J Functional Foods
-5. `mushroom-consumption-cardiometabolic-2023.md` — Uffelman 2023, Nutrients (обзор)
+**Прямые импорты из списка задачи 2 (коммит `14cd654`):
+1. `fotv-covid-active-2026.md` — Saxe 2026, medRxiv ✅
+2. `fotv-covid-vaccine-2026.md` — Saxe 2026, BMC Immunology ✅
+3. `cordyceps-militaris-anemia-runners-2024.md` — Nakamura 2024, Nutrients ✅
+4. `ezhovik-erinacine-cognition-2024.md` — Černelič Bizjak 2024, J Functional Foods ✅
+5. `mushroom-consumption-cardiometabolic-2023.md` — Uffelman 2023, Nutrients (обзор) ✅
 
-## Контент для будущих статей блога (stati/)
+**Добавлено позже, тоже по ссылкам из сайта:
 
-Стоит отслеживать featured-публикации — там встречаются редакционные
-обзоры, пригодные как сырьё для блог-постов:
+| Файл | Публикация / Дизайн | Категория
+|---|---|---|
+| `chaga-ibd-2007.md` | Chaga / Язв. колит (in-vitro) | Chaga
+| `cordyceps-bailing-ckd-2024.md` | Bailing / ХБП, n=68 | Cordyceps
+| `cordyceps-cs4-antioxidant-2010.md` | Cordyceps CS4 / антиокисл. стресс | Cordyceps
+| `cordyceps-cs4-elderly-2004.md` | CS4 / пожилые, n=28 | Cordyceps
+| `cordyceps-cs4-exercise-elderly-2010.md` | CS4 / выносливость, n=20 | Cordyceps
+| `cordyceps-militaris-vo2max-2017.md` | C. militaris / VO2max бегунов | Cordyceps
+| `cordyceps-stem-cells-2024.md` | Cordyceps / гемопоэз | Cordyceps
+| `ezhovik-acute-stress-2023.md` | Ежовик / острый стресс | Lion's Mane
+| `ezhovik-alzheimer-2020.md` | Ежовик / БА, n=41 | Lion's Mane
+| `ezhovik-anxiety-2010.md` | Ежовик / тревога, n=30 | Lion's Mane
+| `ezhovik-cognition-middle-2019.md` | Ежовик / когниция, n=77 РКИ | Lion's Mane
+| `ezhovik-depression-anxiety-2023.md` | Ежовик / депр.+тревога | Lion's Mane
+| `ezhovik-mci-2009.md` | Ежовик / MCI, n=50 Mori 6 мес | Lion's Mane
+| `ezhovik-overweight-bdnf-2019.md` | Ежовик / лишний вес+BDNF | Lion's Mane
+| `ezhovik-safety-mci-24weeks-2024.md` | Ежовик / безоп., MCI 24 нед | Safety
+| `ezhovik-working-memory-young-adults-2022.md` | Ежовик / раб. память, n=86 | Lion's Mane
+| `fotv-breast-cancer-2012.md` | FoTv / РМЖ, n=17 | Turkey Tail
+| `maitake-dfraction-2009.md` | Maitake D-fraction / онко | Maitake
+| `maitake-reishi-mix-2019.md` | Maitake+Reishi / иммунитет | Species Blends
+| `psk-colorectal-meta-2006.md` | PSK / колоректальный, метаанализ | Turkey Tail
+| `psk-oncology-meta-2006.md` | PSK / онко метаанализ | Turkey Tail
+| `reishi-breast-cancer-2012.md` | Reishi / РМЖ, n=17 | Reishi
+| `reishi-immunity-fatigue-2023.md` | Reishi / иммунитет+усталость | Reishi
+| `reishi-shiitake-lipid-2018.md` | Reishi+Shiitake / липиды | Species Blends
+| `reishi-sleep-2012.md` | Reishi / сон n=10 | Reishi
+| `shiitake-chemotherapy-2011.md` | Shiitake / ХТ, n=20 | Shiitake
+| `shiitake-immune-2015.md` | Shiitake / иммунитет n=52 | Shiitake
+| `shiitake-immunotherapy-2016.md` | Shiitake / иммунотерапия | Shiitake
+| `shiitake-interferon-2014.md` | Shiitake / интерферон | Shiitake
+| `turkey-tail-breast-cancer-hormonal-2012.md` | Trametes / РМЖ+гормоны | Turkey Tail
 
-- [Lion's Mane for Your Brain and Body (2025/03)](https://mushroomreferences.com/2025/03/27/lions-mane-for-your-brain-and-body/)
-- [Mushroom-Based Supplements in Italy: Let's Open Pandora's Box (2023/02)](https://mushroomreferences.com/2023/02/27/mushroom-based-supplements-in-italy-lets-open-pandoras-box/)
-- [Maitake, the Dancing Mushroom: For your Kitchen and Health (2025/09)](https://mushroomreferences.com/2025/09/10/maitake-the-dancing-mushroom-for-your-kitchen-and-health/)
-- [How Chaga Can Change Your Health (2025/01)](https://mushroomreferences.com/2025/01/09/how-chaga-can-change-your-health/)
-- [COVID, Mushrooms, & Immune Modulators (2025/01)](https://mushroomreferences.com/2025/01/16/covid-mushrooms-immune-modulators/)
+## Контент для блога (stati/) — УЖЕ ИСПОЛЬЗОВАНО
+
+Все 5 featured-обзоров из MushroomReferences.com **уже опубликованы** в `src/stati/`:
+
+| Файл в stati/ | Статья на MushroomReferences |
+|---|---|
+| `lion-s-mane-brain-and-body.md` | [Lion's Mane for Your Brain and Body (2025/03)](https://mushroomreferences.com/2025/03/27/lions-mane-for-your-brain-and-body/) |
+| `mushroom-supplements-italy.md` | [Mushroom-Based Supplements in Italy (2023/02)](https://mushroomreferences.com/2023/02/27/mushroom-based-supplements-in-italy-lets-open-pandoras-box/) |
+| `maitake-lechebnye-svoystva.md` | [Maitake, the Dancing Mushroom (2025/09)](https://mushroomreferences.com/2025/09/10/maitake-the-dancing-mushroom-for-your-kitchen-and-health/) |
+| `chaga-health-overview.md` | [How Chaga Can Change Your Health (2025/01)](https://mushroomreferences.com/2025/01/09/how-chaga-can-change-your-health/) |
+| `griby-covid-immunomodulyatory.md` | [COVID, Mushrooms, & Immune Modulators (2025/01)](https://mushroomreferences.com/2025/01/16/covid-mushrooms-immune-modulators/) |
+
+## Кандидаты на следующую волну добавления (ещё не опубликованы)
+
+Приоритет по категориям с РКИ на людях (из таблицы выше):
+
+1. **Lion's Mane** — ещё ~57 неиспользованных публикаций (67 − 10 уже использовано):
+   - Повторные РКИ Ежовика по депрессии/когниции с большим n, долгосрочные.
+2. **Safety/Adverse Reactions (10) — отдельная карточка «Безопасность: побочные эффекты», обзор по 10 публикаций.
+3. **Ergothioneine (3)** — эрготионеин, кардиометаболические эффекты.
+4. **Beta-glucan (3)** — общие систематические обзоры по бета-глюканам.
+5. **Amadou (3)** — Фомес настоящий (трутовик).
+6. **Chaga (25 − 1 = 24)** — поиски РКИ на людях (в основном in-vitro, ищем исключения).
+
+Правило фильтра **при добавлении новых карточек**:
+- Только люди, РКИ/мета-анализ, n ≥ 20, плацебо или активный контроль.
+- Вести первоисточник (PubMed/DOI/medRxiv), не ссылку на MushroomReferences.
+- Не дублировать уже существующие по конечной точке.
+- `verified: false` до ручной проверки. После фактчекинга → `true`.
 
 ## Особенности сайта
 

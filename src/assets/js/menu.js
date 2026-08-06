@@ -9,16 +9,35 @@
     const menu = document.querySelector("[data-site-menu]");
     if (!toggle || !menu) return;
 
+    const TRANSITION_MS = 290; // совпадает с css transform:280ms + 10ms
+
+    let closeTimer = null;
     function setOpen(isOpen) {
+      if (closeTimer) {
+        clearTimeout(closeTimer);
+        closeTimer = null;
+      }
       toggle.setAttribute("aria-expanded", String(isOpen));
-      menu.hidden = !isOpen;
       document.body.classList.toggle("is-menu-open", isOpen);
+
       if (isOpen) {
-        // Фокус на первый пункт меню для доступности
-        const firstLink = menu.querySelector(".site-menu__link");
-        if (firstLink) firstLink.focus();
+        // Открытие: сначала убираем hidden, даём кадр — тогда transition сработает
+        menu.hidden = false;
+        requestAnimationFrame(() => {
+          // Запускаем трансформацию (body.is-menu-open .site-menu__panel -> translateX(0))
+          document.body.classList.add("is-menu-open");
+          requestAnimationFrame(() => {
+            const firstLink = menu.querySelector(".site-menu__link");
+            if (firstLink) firstLink.focus();
+          });
+        });
       } else {
+        // Закрытие: сначала убираем is-menu-open (запускаем transition), потом hidden через таймаут
         toggle.focus();
+        closeTimer = setTimeout(() => {
+          menu.hidden = true;
+          closeTimer = null;
+        }, TRANSITION_MS);
       }
     }
 
