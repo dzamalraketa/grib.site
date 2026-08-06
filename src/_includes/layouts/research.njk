@@ -3,17 +3,29 @@ layout: layouts/base.njk
 og_type: "article"
 ---
 
-<article class="research-page">
-  <header class="page-header">
-    <p class="page-header__eyebrow">
-      <span class="card--research__cat" style="--cat-color: {% for c in categories.research %}{% if c.id == category %}{{ c.color }}{% endif %}{% endfor %};">
-        <span class="card--research__cat-dot" aria-hidden="true"></span>
-        <span class="card--research__cat-label">{{ category_label }}</span>
-      </span>
-    </p>
-    <h1 class="page-header__title">{{ title }}</h1>
-    {% if summary %}<p class="page-header__lead">{{ summary }}</p>{% endif %}
+<article>
+  <header class="article-header">
+    <div class="article-header__meta">
+      {% if date %}<time datetime="{{ date | isoDate }}">{{ date | ruDate }}</time>{% endif %}
+      {% if category_label %}
+        <span aria-hidden="true">·</span>
+        <span class="card--research__cat" style="--cat-color: {% for c in categories.research %}{% if c.id == category %}{{ c.color }}{% endif %}{% endfor %};">
+          <span class="card--research__cat-dot" aria-hidden="true"></span>
+          <span class="card--research__cat-label">{{ category_label }}</span>
+        </span>
+      {% endif %}
+      {% if year %}<span aria-hidden="true">·</span><span>{{ year }} г.</span>{% endif %}
+    </div>
+    <h1 class="article-header__title">{{ title }}</h1>
+    {% if summary %}<p style="color: var(--color-text-muted); font-size: 1.1rem; max-width: 640px;">{{ summary }}</p>{% endif %}
   </header>
+
+  {% set divider_opacity = 0.10 %}
+  {% set divider_lines = 28 %}
+  {% include "partials/gill-divider.njk" %}
+
+  {% set disclaimer_type = "health" %}
+  {% include "partials/disclaimer.njk" %}
 
   <aside class="research-meta" aria-label="Сводная информация об исследовании">
     <dl>
@@ -31,11 +43,10 @@ og_type: "article"
     {{ content | safe }}
   </div>
 
+  {% include "partials/sources-block.njk" %}
+
   <p style="margin-top: var(--space-5);">
     <a class="btn" href="{{ '/issledovaniya/' | url }}">← Вернуться к каталогу исследований</a>
     <a class="btn btn--primary" href="{{ source_url }}" rel="noopener noreferrer" target="_blank" style="margin-left: var(--space-2);">Читать оригинал (англ.) →</a>
   </p>
-
-  {% set disclaimer_type = "health" %}
-  {% include "partials/disclaimer.njk" %}
 </article>
