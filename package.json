@@ -8,12 +8,9 @@
     "prebuild": "node scripts/check-verified.js",
     "fetch-images": "node scripts/fetch-images.mjs",
     "clean": "rimraf _site",
-    "deploy": "bash scripts/deploy.sh all",
+    "deploy": "bash scripts/deploy.sh deploy",
     "deploy:build": "bash scripts/deploy.sh build",
     "deploy:verify": "bash scripts/deploy.sh verify",
-    "deploy:package": "bash scripts/deploy.sh package",
-    "deploy:rsync": "bash scripts/deploy.sh rsync",
-    "deploy:vercel": "bash scripts/deploy.sh vercel",
     "deploy:preview": "bash scripts/deploy.sh preview"
   },
   "devDependencies": {
