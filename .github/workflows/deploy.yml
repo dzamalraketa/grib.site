@@ -12,13 +12,20 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -53,12 +60,7 @@ jobs:
           grep -q '?v=20' _site/index.html || (echo "::error::Cache-busting version missing in index.html" && exit 1)
           echo "Build verification: OK"
 
-      - name: Upload artifact (for deploy-pages)
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-
-      - name: Deploy to gh-pages branch (dual-deploy fallback)
+      - name: Deploy to gh-pages branch (legacy Pages source)
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -67,16 +69,14 @@ jobs:
           user_name: "github-actions[bot]"
           user_email: "41898282+github-actions[bot]@users.noreply.github.com"
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Setup Pages
+      - name: Setup Pages (new Actions source)
         uses: actions/configure-pages@v5
 
-      - name: Deploy to GitHub Pages (Actions method)
+      - name: Upload artifact (for actions/deploy-pages)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages (Actions source)
         id: deployment
         uses: actions/deploy-pages@v4
