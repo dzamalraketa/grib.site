@@ -5,19 +5,16 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# Разрешения: Pages читает содержимое _site, OIDC пишет в Pages.
+# Разрешения: contents:write нужен для peaceiris gh-pages push.
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
-# Нельзя запускать несколько деплоев параллельно — иначе будет гонка за _site.
 concurrency:
   group: pages
   cancel-in-progress: false
 
-# Используем «latest» из среды actions; у GitHub Pages для своего runner.
-# Этот job собирает сайт.
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -56,15 +53,20 @@ jobs:
           grep -q '?v=20' _site/index.html || (echo "::error::Cache-busting version missing in index.html" && exit 1)
           echo "Build verification: OK"
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
+      - name: Upload artifact (for deploy-pages)
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
 
-  # Этот job публикует собранный _site на GitHub Pages.
+      - name: Deploy to gh-pages branch (dual-deploy fallback)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          force_orphan: true
+          user_name: "github-actions[bot]"
+          user_email: "41898282+github-actions[bot]@users.noreply.github.com"
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -72,6 +74,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Deploy to GitHub Pages (Actions method)
         id: deployment
         uses: actions/deploy-pages@v4
