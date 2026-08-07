@@ -5,24 +5,19 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# Разрешения: contents:write нужен для peaceiris gh-pages push.
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
 concurrency:
-  group: pages-${{ github.ref }}
-  cancel-in-progress: true
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     timeout-minutes: 12
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -54,26 +49,24 @@ jobs:
           echo "Stati pages: $STATI_COUNT (min 19 required)"
           test "$ISSLED_COUNT" -ge 35 || (echo "::error::Too few issledovaniya pages: $ISSLED_COUNT" && exit 1)
           test "$STATI_COUNT" -ge 19 || (echo "::error::Too few stati pages: $STATI_COUNT" && exit 1)
-          grep -q '?v=20' _site/index.html || (echo "::error::Cache-busting version missing in index.html" && exit 1)
+          grep -q '?v=[0-9]' _site/index.html || (echo "::error::Cache-busting version missing in index.html" && exit 1)
           echo "Build verification: OK"
 
-      - name: Deploy to gh-pages branch (legacy Pages source)
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          force_orphan: true
-          user_name: "github-actions[bot]"
-          user_email: "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: Setup Pages (new Actions source)
+      - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact (for actions/deploy-pages)
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
 
-      - name: Deploy to GitHub Pages (Actions source)
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
