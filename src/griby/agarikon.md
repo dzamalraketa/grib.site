@@ -4,6 +4,8 @@ title: Агарикон (Fomitopsis officinalis)
 latin_name: Laricifomes officinalis
 slug: agarikon
 status: medicinal
+ecology: wood
+year_round: true
 tags:
   - лечебные
   - древесные

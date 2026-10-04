@@ -4,6 +4,8 @@ title: Чёрная лисичка (Ворончик воронковидный)
 latin_name: Craterellus cornucopioides
 slug: chernaya-lisichka
 status: edible
+ecology: mycorrhiza
+months: [7, 8, 9, 10]
 tags:
   - съедобные
   - микориза
@@ -20,6 +22,8 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Craterellus_cornucopioides'
   - title: 'First Nature: Craterellus cornucopioides'
     url: 'https://www.first-nature.com/fungi/craterellus-cornucopioides.php'
+  - title: 'MushroomExpert.Com (M. Kuo): Craterellus cornucopioides'
+    url: 'https://www.mushroomexpert.com/craterellus_cornucopioides.html'
 summary: >-
   Деликатесный гриб с воронковидным плодовым телом чёрного или тёмно- серого
   цвета. Ценится за насыщенный аромат и плотную мякоть; во многих странах

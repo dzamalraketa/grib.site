@@ -4,6 +4,8 @@ title: Дубовик
 latin_name: Suillellus luridus
 slug: dubovik
 status: conditional
+ecology: mycorrhiza
+months: [6, 7, 8, 9]
 tags:
   - условно-съедобные
   - микориза
@@ -20,6 +22,8 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Suillellus_luridus'
   - title: 'MushroomExpert: Boletus luridus'
     url: 'https://www.mushroomexpert.com/boletus_luridus.html'
+  - title: 'First Nature: Suillellus luridus'
+    url: 'https://www.first-nature.com/fungi/suillellus-luridus.php'
 summary: >-
   Крупный трубчатый гриб из семейства Boletaceae, близкий к белому грибу.
   Отличается жёлто-оранжевыми порами и быстрым посинением мякоти на срезе.

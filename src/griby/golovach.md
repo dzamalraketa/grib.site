@@ -4,6 +4,8 @@ title: Головач гигантский
 latin_name: Calvatia gigantea
 slug: golovach
 status: edible
+ecology: soil
+months: [6, 7, 8, 9, 10]
 tags:
   - съедобные
   - сапротрофы
@@ -20,6 +22,8 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Calvatia_gigantea'
   - title: 'MushroomExpert: Calvatia gigantea'
     url: 'https://www.mushroomexpert.com/calvatia_gigantea.html'
+  - title: 'First Nature: Calvatia gigantea'
+    url: 'https://www.first-nature.com/fungi/calvatia-gigantea.php'
 summary: >-
   Один из крупнейших грибов мира — плодовое тело достигает 30–50 см в диаметре и
   до 20 кг массы. В молодом возрасте (с белой мякотью) — съедобен и даже

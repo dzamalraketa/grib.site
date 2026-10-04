@@ -4,6 +4,8 @@ title: Кордицепс цикады
 latin_name: Cordyceps cicadae
 slug: cordyceps-cicadae
 status: medicinal
+ecology: insect
+months: []
 research_match:
   - Cordyceps cicadae
   - Isaria cicadae
@@ -21,6 +23,10 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Cordyceps_cicadae'
   - title: 'PubMed: Cordyceps cicadae trial'
     url: 'https://pubmed.ncbi.nlm.nih.gov/?term=cordyceps+cicadae+trial'
+  - title: 'Research advances of Cordyceps cicadae (Acta Agriculturae Zhejiangensis, обзор)'
+    url: 'http://www.zjnyxb.cn/EN/10.3969/j.issn.1004-1524.20220072'
+  - title: 'The Genus Cordyceps Sensu Lato: chemical constituents and biological activities (Life 2025)'
+    url: 'https://www.mdpi.com/2075-1729/15/6/935'
 summary: >-
   «Цикадный» кордицепс Юго-Восточной Азии — энтомопатогенный
   гриб, чей ферментированный мицелий, обогащённый

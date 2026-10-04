@@ -1,0 +1,102 @@
+---
+wide: true
+layout: layouts/base.njk
+title: "Что собирать в лесу и когда: календарь грибника"
+description: "Какие грибы встречаются в начале лета, в августе, осенью и зимой: съедобные, условно-съедобные и опасные виды по сезонам, со ссылками на карточки и признаки двойников."
+permalink: "/sezon/"
+eleventyExcludeFromCollections: true
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Календарь</p>
+  <h1 class="page-header__title">Что собирать в лесу и когда</h1>
+  <p class="page-header__lead">
+    Выберите время года — увидите, какие грибы тогда растут, какие из них
+    съедобны, а какие нужно обходить стороной. Сроки — ориентир для средней
+    полосы: в тёплый и дождливый год всё сдвигается на 2–3 недели.
+  </p>
+</header>
+
+{% set disclaimer_type = "foraging" %}
+{% include "partials/disclaimer.njk" %}
+
+<nav class="season-nav" aria-label="Время года" data-season-nav>
+  {% for p in periods %}
+    <a class="season-nav__item" href="#{{ p.id }}" data-months="{{ p.months | join(',') }}">
+      <span class="season-nav__title">{{ p.title }}</span>
+      <span class="season-nav__range">{{ p.range }}</span>
+    </a>
+  {% endfor %}
+  <a class="season-nav__item" href="#kruglyj-god" data-months="">
+    <span class="season-nav__title">Круглый год</span>
+    <span class="season-nav__range">многолетние</span>
+  </a>
+</nav>
+
+{% for p in periods %}
+  {% set inSeason = collections.griby | inMonths(p.months) %}
+  {% set safe = inSeason | withStatus("edible") %}
+  {% set cond = inSeason | withStatus("conditional") %}
+  {% set med = inSeason | withStatus("medicinal") %}
+  {% set bad = inSeason | withStatus("poisonous") %}
+  <section class="season-period" id="{{ p.id }}" data-months="{{ p.months | join(',') }}" aria-labelledby="{{ p.id }}-h">
+    <header class="season-period__head">
+      <h2 id="{{ p.id }}-h">{{ p.title }} <span class="season-period__range">{{ p.range }}</span></h2>
+      <p class="season-period__now" hidden>Сейчас в лесу</p>
+      <p class="season-period__lead">{{ p.lead }}</p>
+    </header>
+
+    {% if inSeason.length == 0 %}
+      <p class="season-empty">В этот период дикие грибы встречаются редко — см. раздел «Круглый год».</p>
+    {% endif %}
+
+    {% if safe.length %}
+      <h3 class="season-group__title">Съедобные <span class="season-group__count">{{ safe.length }}</span></h3>
+      <div class="season-grid">
+        {% for item in safe %}{% include "partials/season-chip.njk" %}{% endfor %}
+      </div>
+    {% endif %}
+
+    {% if cond.length %}
+      <h3 class="season-group__title">Условно-съедобные <span class="season-group__note">нужна обработка: варка, вымачивание, засол</span> <span class="season-group__count">{{ cond.length }}</span></h3>
+      <div class="season-grid">
+        {% for item in cond %}{% include "partials/season-chip.njk" %}{% endfor %}
+      </div>
+    {% endif %}
+
+    {% if med.length %}
+      <h3 class="season-group__title">Лечебные <span class="season-group__count">{{ med.length }}</span></h3>
+      <div class="season-grid">
+        {% for item in med %}{% include "partials/season-chip.njk" %}{% endfor %}
+      </div>
+    {% endif %}
+
+    {% if bad.length %}
+      <div class="season-danger">
+        <h3 class="season-group__title season-group__title--danger">Опасные — не берите <span class="season-group__count">{{ bad.length }}</span></h3>
+        <p class="season-danger__lead">Эти грибы растут в то же время и в тех же местах. Часть из них смертельно опасна, и варка не помогает.</p>
+        <div class="season-grid">
+          {% for item in bad %}{% include "partials/season-chip.njk" %}{% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </section>
+{% endfor %}
+
+<section class="season-period" id="kruglyj-god" data-months="" aria-labelledby="kruglyj-god-h">
+  <header class="season-period__head">
+    <h2 id="kruglyj-god-h">Круглый год <span class="season-period__range">многолетние</span></h2>
+    <p class="season-period__lead">Многолетние трутовики и нарост чага можно найти в любое время года. Это лечебные, а не пищевые грибы — применять их стоит только после консультации с врачом (см. <a href="{{ '/temy/bezopasnost/' | url }}">безопасность добавок</a>).</p>
+  </header>
+  {% set yr = collections.griby | yearRound %}
+  <div class="season-grid">
+    {% for item in yr %}{% include "partials/season-chip.njk" %}{% endfor %}
+  </div>
+</section>
+
+<p class="season-foot">
+  Подробнее о правилах сбора и самых опасных ошибках — в статье
+  <a href="{{ '/stati/sezonnyj-kalendar-gribnika/' | url }}">«Сезонный календарь грибника»</a>.
+</p>
+
+<script src="{{ '/assets/js/season.js' | url }}?v={{ site.version }}" defer></script>

@@ -4,6 +4,8 @@ title: Мезима (трутовик льняной)
 latin_name: Phellinus linteus
 slug: mesima
 status: medicinal
+ecology: wood
+year_round: true
 tags:
   - лечебные
   - древесные
@@ -21,6 +23,8 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Phellinus_linteus'
   - title: 'PubMed: Phellinus linteus randomized trial'
     url: 'https://pubmed.ncbi.nlm.nih.gov/?term=phellinus+linteus+randomized+trial'
+  - title: 'MSKCC About Herbs: Phellinus linteus'
+    url: 'https://www.mskcc.org/cancer-care/integrative-medicine/herbs/phellinus-linteus'
 summary: >-
   Многолетний полипор на шелковице из Восточной Азии. Источник корейского
   иммуностимулирующего препарата Meshima и одного из немногих грибных экстрактов

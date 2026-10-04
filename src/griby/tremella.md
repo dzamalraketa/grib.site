@@ -4,6 +4,8 @@ title: Тремелла фукусовидная
 latin_name: Tremella fuciformis
 slug: tremella
 status: edible
+ecology: wood
+months: []
 tags:
   - съедобные
   - лекарственные
@@ -19,8 +21,12 @@ verification_date: 2025-10-04T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Tremella fuciformis'
     url: 'https://en.wikipedia.org/wiki/Tremella_fuciformis'
-  - title: 'MSKCC About Herbs: Tremella'
-    url: 'https://www.mskcc.org/cancer-care/integrative-medicine/herbs'
+  - title: 'MushroomExpert.Com (M. Kuo): Tremella fuciformis'
+    url: 'https://www.mushroomexpert.com/tremella_fuciformis.html'
+  - title: 'Structure, bioactivities and applications of Tremella fuciformis polysaccharides: a review (PubMed 30342120)'
+    url: 'https://pubmed.ncbi.nlm.nih.gov/30342120/'
+  - title: 'Recent advances in polysaccharides from Tremella fuciformis (Front Nutr 2025)'
+    url: 'https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2025.1663327/full'
 summary: >-
   «Снежный гриб» или «ледяной гриб» — студенистое белое плодовое тело из
   семейства Tremellaceae, массово выращиваемое в Азии. Знаменит двумя ролями:

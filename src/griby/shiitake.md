@@ -4,6 +4,8 @@ title: Шиитаке (лентинула съедобная)
 latin_name: Lentinula edodes
 slug: shiitake
 status: edible
+ecology: wood
+months: []
 tags:
   - съедобные
   - лечебные
@@ -25,6 +27,8 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Shiitake'
   - title: 'PubMed: Lentinula edodes lentinan clinical'
     url: 'https://pubmed.ncbi.nlm.nih.gov/?term=lentinan+shiitake+clinical+trial'
+  - title: 'MSKCC About Herbs: Shiitake Mushroom'
+    url: 'https://www.mskcc.org/cancer-care/integrative-medicine/herbs/shiitake-mushroom'
 summary: >-
   Второй по объёму культурный гриб мира. Деликатесный съедобный вид; из его
   клеточной стенки выделен лентинан — β-глюкан, применяемый в Японии как

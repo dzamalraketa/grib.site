@@ -4,6 +4,8 @@ title: Белый гриб (боровик)
 latin_name: Boletus edulis
 slug: borovik
 status: edible
+ecology: mycorrhiza
+months: [6, 7, 8, 9, 10]
 tags:
   - съедобные
   - лесные
@@ -24,6 +26,8 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Boletus_edulis'
   - title: 'Funghi: Boletus edulis — edibility, ecology'
     url: 'https://www.first-nature.com/fungi/boletus-edulis.php'
+  - title: 'MushroomExpert.Com (M. Kuo): Boletus edulis'
+    url: 'https://www.mushroomexpert.com/boletus_edulis.html'
 summary: >-
   Ценный съедобный гриб с плотной мякотью, не темнеющей на срезе. Образует
   микоризу со многими лесными деревьями.

@@ -4,6 +4,8 @@ title: Гриб Рейши (трутовик лакированный)
 latin_name: Ganoderma lucidum
 slug: reishi
 status: medicinal
+ecology: wood
+year_round: true
 tags:
   - лечебные
   - древесные
@@ -23,6 +25,10 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Ganoderma_lucidum'
   - title: 'PubMed: Immunomodulatory effects of Ganoderma lucidum'
     url: 'https://pubmed.ncbi.nlm.nih.gov'
+  - title: 'First Nature: Ganoderma lucidum'
+    url: 'https://www.first-nature.com/fungi/ganoderma-lucidum.php'
+  - title: 'MSKCC About Herbs: Reishi Mushroom'
+    url: 'https://www.mskcc.org/cancer-care/integrative-medicine/herbs/reishi-mushroom'
 summary: >-
   Древесный гриб, используемый в традиционной медицине Азии. Изучается как
   источник бета-глюканов и тритерпеноидов.

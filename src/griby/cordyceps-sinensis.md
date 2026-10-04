@@ -4,6 +4,8 @@ title: Кордицепс китайский
 latin_name: Ophiocordyceps sinensis
 slug: cordyceps-sinensis
 status: medicinal
+ecology: insect
+months: [5, 6]
 research_match:
   - Cordyceps sinensis
   - Cs-4
@@ -25,6 +27,8 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Ophiocordyceps_sinensis'
   - title: 'PubMed: Cordyceps sinensis clinical trial'
     url: 'https://pubmed.ncbi.nlm.nih.gov/?term=cordyceps+sinensis+clinical+trial'
+  - title: 'MSKCC About Herbs: Cordyceps'
+    url: 'https://www.mskcc.org/cancer-care/integrative-medicine/herbs/cordyceps'
 summary: >-
   Знаменитый «гусеничный гриб» ярца-гунбу с Тибетского нагорья — исторический
   кордицепс традиционной медицины. Дикий сбор невозобновим и стоит дороже

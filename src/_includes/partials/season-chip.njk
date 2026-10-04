@@ -1,0 +1,12 @@
+<a class="season-chip season-chip--{{ item.data.status }}" href="{{ item.url | url }}">
+  {% if item.data.image %}
+    <img class="season-chip__img" src="{{ item.data.image | url }}" alt="" loading="lazy" decoding="async">
+  {% else %}
+    <img class="season-chip__img" src="{{ '/assets/img/fallback-illustration.svg' | url }}" alt="" aria-hidden="true" loading="lazy">
+  {% endif %}
+  <span class="season-chip__body">
+    <span class="season-chip__name">{{ item.data.title }}</span>
+    <span class="season-chip__latin">{{ item.data.latin_name }}</span>
+    <span class="season-chip__when">{{ item.data.season }}</span>
+  </span>
+</a>

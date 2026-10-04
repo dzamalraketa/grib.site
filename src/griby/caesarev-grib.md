@@ -4,6 +4,8 @@ title: Цезарский гриб (Мухомор Цезаря)
 latin_name: Amanita caesarea
 slug: caesarev-grib
 status: edible
+ecology: mycorrhiza
+months: [7, 8, 9, 10]
 tags:
   - съедобные
   - микориза
@@ -18,8 +20,10 @@ verification_date: 2025-07-27T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Amanita caesarea'
     url: 'https://en.wikipedia.org/wiki/Amanita_caesarea'
-  - title: 'MushroomExpert: Amanita caesarea'
-    url: 'https://www.mushroomexpert.com/amanita_caesarea.html'
+  - title: 'First Nature: Amanita caesarea'
+    url: 'https://www.first-nature.com/fungi/amanita-caesarea.php'
+  - title: 'Monaco Nature Encyclopedia: Amanita caesarea'
+    url: 'https://www.monaconatureencyclopedia.com/amanita-caesarea/?lang=en'
 summary: >-
   Один из самых ценных деликатесных грибов Средиземноморья и южных
   широколиственных лесов. Отличается ярко-оранжевой шляпкой, жёлтыми пластинками

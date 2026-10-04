@@ -4,6 +4,8 @@ title: Рыжик
 latin_name: Lactarius deliciosus
 slug: ryzhik
 status: edible
+ecology: mycorrhiza
+months: [7, 8, 9, 10]
 tags:
   - съедобные
   - микориза
@@ -20,6 +22,8 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Lactarius_deliciosus'
   - title: 'MushroomExpert: Lactarius deliciosus'
     url: 'https://www.mushroomexpert.com/lactarius_deliciosus.html'
+  - title: 'First Nature: Lactarius deliciosus'
+    url: 'https://www.first-nature.com/fungi/lactarius-deliciosus.php'
 summary: >-
   Один из самых ценных хвойных грибов. Шляпка и ножка оранжево-рыжие, на изломе
   выделяет оранжево-красный млечный сок. Считается лучшим грибом для засолки и

@@ -4,6 +4,8 @@ title: Опёнок осенний
 latin_name: Armillaria mellea
 slug: openyosenniy
 status: conditional
+ecology: wood
+months: [8, 9, 10]
 tags:
   - условно-съедобные
   - лесные
@@ -24,6 +26,10 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Armillaria_mellea'
   - title: 'Forest Pathology: Armillaria species'
     url: 'https://www.fs.usda.gov'
+  - title: 'First Nature: Armillaria mellea'
+    url: 'https://www.first-nature.com/fungi/armillaria-mellea.php'
+  - title: 'MushroomExpert.Com (M. Kuo): Armillaria mellea'
+    url: 'https://www.mushroomexpert.com/armillaria_mellea.html'
 summary: >-
   Условно-съедобный гриб, растущий большими колониями на древесине. Требует
   обязательной термической обработки перед употреблением.

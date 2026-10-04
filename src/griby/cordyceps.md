@@ -4,6 +4,8 @@ title: Кордицепс военный
 latin_name: Cordyceps militaris
 slug: cordyceps
 status: medicinal
+ecology: insect
+months: [7, 8, 9, 10]
 tags:
   - лечебные
   - паразиты
@@ -24,6 +26,12 @@ sources:
   - title: 'PubMed: Cordyceps militaris exercise performance'
     url: >-
       https://pubmed.ncbi.nlm.nih.gov/?term=cordyceps+militaris+exercise+randomized
+  - title: 'First Nature: Cordyceps militaris'
+    url: 'https://www.first-nature.com/fungi/cordyceps-militaris.php'
+  - title: 'MushroomExpert.Com (M. Kuo): Cordyceps militaris'
+    url: 'https://www.mushroomexpert.com/cordyceps_militaris.html'
+  - title: 'MSKCC About Herbs: Cordyceps'
+    url: 'https://www.mskcc.org/cancer-care/integrative-medicine/herbs/cordyceps'
 summary: >-
   Энтомопатогенный гриб, паразитирующий на куколках бабочек. Основной
   культивируемый вид кордицепса; источник кордицепина, аденозина и

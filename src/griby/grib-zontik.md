@@ -4,6 +4,8 @@ title: Гриб-зонтик пёстрый
 latin_name: Macrolepiota procera
 slug: grib-zontik
 status: edible
+ecology: soil
+months: [6, 7, 8, 9, 10]
 tags:
   - съедобные
   - сапротрофы
@@ -20,6 +22,8 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Macrolepiota_procera'
   - title: 'First Nature: Macrolepiota procera'
     url: 'https://www.first-nature.com/fungi/macrolepiota-procera.php'
+  - title: 'MushroomExpert.Com (M. Kuo): Macrolepiota procera'
+    url: 'https://www.mushroomexpert.com/macrolepiota_procera.html'
 summary: >-
   Крупный шляпочный гриб из семейства Agaricaceae с чешуйчатой шляпкой и высокой
   тонкой ножкой. Исполинский деликатесный гриб с нежным ореховым вкусом.

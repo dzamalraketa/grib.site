@@ -46,6 +46,28 @@ for (const dir of CONTENT_DIRS) {
   }
 }
 
+// Сверка источников: карточка гриба должна опираться минимум на два
+// независимых (не Wikipedia) домена. Ошибки фактов чаще всего возникают,
+// когда материал основан на одном источнике.
+const MIN_INDEPENDENT_DOMAINS = 2;
+const weakSources = [];
+for (const file of walk(CONTENT_DIRS[0])) {
+  const fm = readFrontMatter(fs.readFileSync(file, "utf8")) || "";
+  const domains = new Set();
+  for (const m of fm.matchAll(/^\s+url:\s*['"]?(\S+?)['"]?\s*$/gm)) {
+    try {
+      const host = new URL(m[1]).hostname.replace(/^www\./, "");
+      if (!host.endsWith("wikipedia.org")) domains.add(host);
+    } catch (_) {}
+  }
+  if (domains.size < MIN_INDEPENDENT_DOMAINS) weakSources.push(path.relative(process.cwd(), file) + " (" + domains.size + ")");
+}
+if (weakSources.length > 0) {
+  console.error("\n[check-verified] Недостаточно независимых источников (нужно >= " + MIN_INDEPENDENT_DOMAINS + " доменов кроме Wikipedia):\n");
+  for (const f of weakSources) console.error("  - " + f);
+  process.exit(1);
+}
+
 if (offenders.length > 0) {
   console.error(
     "\n[check-verified] Сборка остановлена. Следующие файлы не прошли факт-чекинг (verified: false):\n"

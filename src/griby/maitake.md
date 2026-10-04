@@ -4,6 +4,8 @@ title: 'Майтаке (гриб-баран, курчавый гриб)'
 latin_name: Grifola frondosa
 slug: maitake
 status: edible
+ecology: wood
+months: [8, 9, 10, 11]
 tags:
   - съедобные
   - лечебные
@@ -22,6 +24,12 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Grifola_frondosa'
   - title: 'PubMed: Grifola frondosa D-fraction'
     url: 'https://pubmed.ncbi.nlm.nih.gov/?term=grifola+frondosa+D-fraction+clinical'
+  - title: 'First Nature: Grifola frondosa'
+    url: 'https://www.first-nature.com/fungi/grifola-frondosa.php'
+  - title: 'MushroomExpert.Com (M. Kuo): Grifola frondosa'
+    url: 'https://www.mushroomexpert.com/grifola_frondosa.html'
+  - title: 'MSKCC About Herbs: Maitake'
+    url: 'https://www.mskcc.org/cancer-care/integrative-medicine/herbs/maitake'
 summary: >-
   Крупный кустовидный полипор у основания дубов: деликатесный съедобный вид и
   объект исследований полисахаридной D-фракции как иммуномодулятора.

@@ -4,6 +4,8 @@ title: Чага (Inonotus obliquus)
 latin_name: Inonotus obliquus
 slug: chaga
 status: medicinal
+ecology: wood
+year_round: true
 tags:
   - лечебные
   - древесные
@@ -25,6 +27,8 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Inonotus_obliquus'
   - title: 'PubMed: Inonotus obliquus phytochemistry and bioactivity'
     url: 'https://pubmed.ncbi.nlm.nih.gov'
+  - title: 'MushroomExpert.Com (M. Kuo): Inonotus obliquus'
+    url: 'https://www.mushroomexpert.com/inonotus_obliquus.html'
 summary: >-
   Древесный гриб-паразит берёзы. Известен в народной медицине России; изучается
   как источник антиоксидантов, бетулина и меланинов.

@@ -4,6 +4,8 @@ title: Шампиньон двуспоровый
 latin_name: Agaricus bisporus
 slug: shampinon
 status: edible
+ecology: soil
+months: [7, 8, 9, 10]
 research_match:
   - Agaricus bisporus
 tags:
@@ -22,6 +24,10 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Agaricus_bisporus'
   - title: 'PubMed: Agaricus bisporus gut health'
     url: 'https://pubmed.ncbi.nlm.nih.gov/?term=agaricus+bisporus+gut+health+markers'
+  - title: 'First Nature: Agaricus bisporus'
+    url: 'https://www.first-nature.com/fungi/agaricus-bisporus.php'
+  - title: 'MushroomExpert.Com (M. Kuo): Agaricus bisporus'
+    url: 'https://www.mushroomexpert.com/agaricus_bisporus.html'
 summary: >-
   Самый производимый культурный гриб мира — белый, кремовый (кримини) и
   коричневый (портобелло) — это одна и та же форма. Объект первых клинических

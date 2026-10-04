@@ -4,6 +4,8 @@ title: Маслята
 latin_name: Suillus
 slug: maslyata
 status: edible
+ecology: mycorrhiza
+months: [6, 7, 8, 9, 10]
 tags:
   - съедобные
   - микориза
@@ -20,6 +22,8 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Suillus'
   - title: 'MushroomExpert: Suillus'
     url: 'https://www.mushroomexpert.com/suillus.html'
+  - title: 'Wild Food UK: Slippery Jack'
+    url: 'https://www.wildfooduk.com/mushroom-guide/slippery-jack-2/'
 summary: >-
   Род трубчатых грибов, образующих микоризу с сосной. Наиболее известны маслёнок
   обыкновенный (Suillus luteus) и маслёнок зернистый (S. granulatus). Отличаются
@@ -73,3 +77,7 @@ image_source_url: 'https://commons.wikimedia.org/wiki/File:Suillus%20luteus%202.
 путают с перечным грибом (*Chalciporus piperatus*) — несъедобным
 из-за острого перечного вкуса, но не ядовитым. С маслятами иногда
 путают мокруху (*Gomphidius*), но у той пластинки, а не трубочки.
+
+## Сверка источников
+
+Wild Food UK: кожицу шляпки у маслят нужно снимать — у части людей она вызывает неблагоприятные реакции; вкус улучшается, если удалить ещё и трубчатый слой. Все маслята образуют микоризу с хвойными.

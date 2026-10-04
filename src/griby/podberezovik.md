@@ -4,6 +4,8 @@ title: Подберёзовик
 latin_name: Leccinum scabrum
 slug: podberezovik
 status: edible
+ecology: mycorrhiza
+months: [6, 7, 8, 9, 10]
 tags:
   - съедобные
   - микориза
@@ -18,8 +20,10 @@ verification_date: 2025-07-27T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Leccinum scabrum'
     url: 'https://en.wikipedia.org/wiki/Leccinum_scabrum'
-  - title: 'MushroomExpert: Leccinum scabrum'
-    url: 'https://www.mushroomexpert.com/leccinum_scabrum.html'
+  - title: 'First Nature: Leccinum scabrum'
+    url: 'https://www.first-nature.com/fungi/leccinum-scabrum.php'
+  - title: 'Wild Food UK: Brown Birch Bolete'
+    url: 'https://www.wildfooduk.com/mushroom-guide/brown-birch-bolete/'
 summary: >-
   Трубчатый гриб из семейства Boletaceae с тёмно-коричневой или серой шляпкой и
   длинной ножкой, покрытой тёмными чешуйками. Образует микоризу с берёзой. Один

@@ -4,6 +4,8 @@ title: Сморчок съедобный
 latin_name: Morchella esculenta
 slug: smorchok
 status: conditional
+ecology: soil
+months: [4, 5]
 tags:
   - условно-съедобные
   - деликатесные
@@ -20,6 +22,8 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Morchella_esculenta'
   - title: NCCIH / FDA о сморчках
     url: 'https://pubmed.ncbi.nlm.nih.gov/?term=morchella+toxicity'
+  - title: 'First Nature: Morchella esculenta'
+    url: 'https://www.first-nature.com/fungi/morchella-esculenta.php'
 summary: >-
   Весенний деликатесный гриб с ячеистой «мозговидной» шляпкой — один из самых
   дорогих грибов мира. Содержит гидразиновые токсины и употребляется только

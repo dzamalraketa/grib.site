@@ -61,6 +61,17 @@ module.exports = function (eleventyConfig) {
       });
   });
 
+  // ——— Сезонный календарь ————————————————————————————————————————
+  // Грибы, которые встречаются в любом из заданных месяцев (без круглогодичных).
+  eleventyConfig.addFilter("inMonths", (items, months) =>
+    (items || []).filter((i) => !i.data.year_round && Array.isArray(i.data.months) && i.data.months.some((m) => months.includes(m)))
+  );
+  eleventyConfig.addFilter("withStatus", (items, statuses) => {
+    const set = String(statuses).split(",");
+    return (items || []).filter((i) => set.includes(i.data.status));
+  });
+  eleventyConfig.addFilter("yearRound", (items) => (items || []).filter((i) => i.data.year_round));
+
   // ——— Фильтры ——————————————————————————————————————————————————
   // Локализованный статус гриба → русский ярлык.
   eleventyConfig.addFilter("statusLabel", (status) => {

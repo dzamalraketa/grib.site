@@ -4,6 +4,8 @@ title: Подосиновик
 latin_name: Leccinum aurantiacum
 slug: podosinovik
 status: edible
+ecology: mycorrhiza
+months: [6, 7, 8, 9, 10]
 tags:
   - съедобные
   - микориза
@@ -20,6 +22,8 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Leccinum_aurantiacum'
   - title: 'MushroomExpert: Leccinum aurantiacum'
     url: 'https://www.mushroomexpert.com/leccinum_aurantiacum.html'
+  - title: 'First Nature: Leccinum aurantiacum'
+    url: 'https://www.first-nature.com/fungi/leccinum-aurantiacum.php'
 summary: >-
   Трубчатый гриб из семейства Boletaceae с ярко-оранжевой или красно- бурой
   шляпкой. Образует микоризу с осиной, дубом, берёзой. Мякоть на срезе быстро

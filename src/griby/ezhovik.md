@@ -4,6 +4,8 @@ title: Ежовик гребенчатый (Hericium erinaceus)
 latin_name: Hericium erinaceus
 slug: ezhovik
 status: medicinal
+ecology: wood
+months: [8, 9, 10, 11]
 tags:
   - лечебные
   - древесные

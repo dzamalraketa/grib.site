@@ -4,6 +4,8 @@ title: Лисичка обыкновенная
 latin_name: Cantharellus cibarius
 slug: lisichka
 status: edible
+ecology: mycorrhiza
+months: [6, 7, 8, 9, 10]
 tags:
   - съедобные
   - лесные

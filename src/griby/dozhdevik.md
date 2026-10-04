@@ -4,6 +4,8 @@ title: Дождевик
 latin_name: Lycoperdon
 slug: dozhdevik
 status: conditional
+ecology: soil
+months: [6, 7, 8, 9, 10]
 tags:
   - условно-съедобные
   - сапротрофы
@@ -18,8 +20,10 @@ verification_date: 2025-07-27T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Lycoperdon'
     url: 'https://en.wikipedia.org/wiki/Lycoperdon'
-  - title: 'MushroomExpert: Lycoperdon'
-    url: 'https://www.mushroomexpert.com/lycoperdon.html'
+  - title: 'Wild Food UK: Common Puffball'
+    url: 'https://www.wildfooduk.com/mushroom-guide/common-puffball/'
+  - title: 'First Nature: Lycoperdon perlatum (Common Puffball)'
+    url: 'https://www.first-nature.com/fungi/lycoperdon-perlatum.php'
 summary: >-
   Род гастеромицетов с шаровидными или грушевидными плодовыми телами. Молодые (с
   белой мякотью) грибы — съедобны. Споровый порошок зрелых грибов используется в

@@ -4,6 +4,8 @@ title: Вёшенка обыкновенная (устричная)
 latin_name: Pleurotus ostreatus
 slug: veshenka
 status: edible
+ecology: wood
+months: [9, 10, 11, 12]
 tags:
   - съедобные
   - древесные
@@ -20,6 +22,8 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Pleurotus_ostreatus'
   - title: 'MushroomExpert: Pleurotus ostreatus'
     url: 'https://www.mushroomexpert.com/pleurotus_ostreatus.html'
+  - title: 'First Nature: Pleurotus ostreatus'
+    url: 'https://www.first-nature.com/fungi/pleurotus-ostreatus.php'
 summary: >-
   Древесный сапротроф из семейства Pleurotaceae. Растёт ярусами на мёртвой
   древесине лиственных пород. Один из самых популярных культивируемых грибов в

@@ -4,6 +4,8 @@ title: Траметес разноцветный (Trametes versicolor)
 latin_name: Trametes versicolor
 slug: trametes-versicolor
 status: medicinal
+ecology: wood
+year_round: true
 tags:
   - лечебные
   - древесные
@@ -28,6 +30,12 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Trametes_versicolor'
   - title: 'PubMed: Trametes versicolor and PSK/PSP'
     url: 'https://pubmed.ncbi.nlm.nih.gov'
+  - title: 'First Nature: Trametes versicolor'
+    url: 'https://www.first-nature.com/fungi/trametes-versicolor.php'
+  - title: 'MushroomExpert.Com (M. Kuo): Trametes versicolor'
+    url: 'https://www.mushroomexpert.com/trametes_versicolor.html'
+  - title: 'MSKCC About Herbs: Coriolus versicolor'
+    url: 'https://www.mskcc.org/cancer-care/integrative-medicine/herbs/coriolus-versicolor'
 summary: >-
   Древесный гриб с яркой полосатой шляпкой. Источник полисахаридов PSK и PSP,
   изучаемых в адъювантной терапии онкологических заболеваний.

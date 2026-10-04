@@ -4,6 +4,8 @@ title: Печёночница обыкновенная
 latin_name: Fistulina hepatica
 slug: pechenochnitsa
 status: edible
+ecology: wood
+months: [7, 8, 9, 10]
 tags:
   - съедобные
   - древесные
@@ -20,6 +22,8 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Fistulina_hepatica'
   - title: 'First Nature: Fistulina hepatica'
     url: 'https://www.first-nature.com/fungi/fistulina-hepatica.php'
+  - title: 'MushroomExpert.Com (M. Kuo): Fistulina hepatica'
+    url: 'https://www.mushroomexpert.com/fistulina_hepatica.html'
 summary: >-
   Древесный гриб-паразит из семейства Fistulinaceae, растущий на дубах и
   каштанах. Внешне напоминает кусок печени: ярко-красный, сочный, с характерной

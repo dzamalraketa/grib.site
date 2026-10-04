@@ -1,9 +1,11 @@
 ---
 layout: layouts/mushroom.njk
 title: Вёшенка золотистая (тамогитаке)
-latin_name: Pleurotus cornucopiae
+latin_name: Pleurotus citrinopileatus
 slug: veshenka-zolotistaya
 status: edible
+ecology: wood
+months: []
 research_match:
   - Pleurotus cornucopiae
   - citrinopileatus
@@ -19,27 +21,27 @@ date: 2025-10-04T00:00:00.000Z
 verified: true
 verification_date: 2025-10-04T00:00:00.000Z
 sources:
-  - title: 'Wikipedia: Pleurotus cornucopiae'
-    url: 'https://en.wikipedia.org/wiki/Pleurotus_cornucopiae'
+  - title: 'Wikipedia: Pleurotus citrinopileatus (golden oyster, tamogitake)'
+    url: 'https://en.wikipedia.org/wiki/Pleurotus_citrinopileatus'
   - title: 'Front Nutr 2025: тамогитаке у пожилых'
     url: 'https://doi.org/10.3389/fnut.2025.1585111'
+  - title: 'First Nature: Pleurotus cornucopiae'
+    url: 'https://www.first-nature.com/fungi/pleurotus-cornucopiae.php'
 summary: >-
   Золотисто-жёлтый родственник обычной вёшенки, в Японии известный как
   тамогитаке — гриб с высоким содержанием эрготионеина; герой недавнего
   японского исследования «еда → микробиота → когнитивная функция» у пожилых.
 image: /assets/img/mushrooms/veshenka-zolotistaya.jpg
-image_author: >-
-  This image was created by user {{{2}}} at Mushroom Observer, a source for
-  mycological images.You can contact this user here.
-image_license: CC BY-SA 3.0
+image_author: EvaK (Eva Kröcher).
+image_license: GFDL 1.2
 image_source_url: >-
-  https://commons.wikimedia.org/wiki/File:2011-06-30%20Pleurotus%20cornucopiae%205%2070824%20cropped.jpg
+  https://commons.wikimedia.org/wiki/File:Limonenseitlinge%20(Pleurotus%20citrinopileatus)%20-%2020100828.jpg
 ---
 
 ## Описание
 
-Вёшенка золотистая (Pleurotus cornucopiae var.
-citrinopileatus; японское имя — тамогитаке, タモギ茸) —
+Вёшенка золотистая (Pleurotus citrinopileatus, прежнее название — Pleurotus
+cornucopiae var. citrinopileatus; японское имя — тамогитаке, タモギ茸) —
 близкая родственница обыкновенной вёшенки, отличающаяся
 ярким лимонно-жёлтым цветом шляпки и более тонкой текстурой.
 В кластерах выглядит нарядно — «букетами»; в кулинарии ценится
@@ -76,3 +78,7 @@ citrinopileatus; японское имя — тамогитаке, タモギ茸)
 дискомфорт ЖКТ. При сборе дикой вёшенки золотистой ориентиры —
 ярко-жёлтая шляпка, белый кремовый оттенок пластинок и
 спорового порошка, рост кластерами на древесине.
+
+## Сверка источников
+
+Название вида приведено к современному: золотистая вёшенка (тамогитаке) — *Pleurotus citrinopileatus*; её раньше описывали как разновидность вёшенки рожковидной (*P. cornucopiae*). Это разные по облику грибы: у *P. cornucopiae* шляпка кремово-коричневая, у золотистой — ярко-лимонно-жёлтая. First Nature указывает, что золотистая вёшенка — очень популярный съедобный гриб Восточной Азии, а *P. cornucopiae* также съедобен.

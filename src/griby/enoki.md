@@ -4,6 +4,8 @@ title: Опёнок зимний (еноки)
 latin_name: Flammulina velutipes
 slug: enoki
 status: edible
+ecology: wood
+months: [11, 12, 1, 2, 3]
 research_match:
   - Flammulina velutipes
   - Flammulina
@@ -25,6 +27,10 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Flammulina_velutipes'
   - title: 'PubMed: Flammulina velutipes study'
     url: 'https://pubmed.ncbi.nlm.nih.gov/?term=flammulina+velutipes+clinical'
+  - title: 'First Nature: Flammulina velutipes'
+    url: 'https://www.first-nature.com/fungi/flammulina-velutipes.php'
+  - title: 'MushroomExpert.Com (M. Kuo): Flammulina velutipes'
+    url: 'https://www.mushroomexpert.com/flammulina_velutipes.html'
 summary: >-
   «Зимний опёнок» с опушек и пней и его белая игольная культурная форма еноки —
   один и тот же вид: под светом и кислородом растёт «лесным» грибом, в культуре

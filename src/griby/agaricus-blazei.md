@@ -4,6 +4,8 @@ title: Агарик бразильский
 latin_name: Agaricus subrufescens
 slug: agaricus-blazei
 status: medicinal
+ecology: soil
+months: []
 research_match:
   - Agaricus blazei
   - Agaricus blazei Murill
@@ -23,6 +25,10 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Agaricus_subrufescens'
   - title: 'PubMed: Agaricus blazei clinical trial'
     url: 'https://pubmed.ncbi.nlm.nih.gov/?term=agaricus+blazei+clinical+trial'
+  - title: 'Phase I clinical study of Agaricus blazei Murill in cancer patients in remission (PMC3092499)'
+    url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3092499/'
+  - title: 'Effects of the medicinal mushroom Agaricus blazei Murill on immunity, infection and cancer (Scand J Immunol 2008)'
+    url: 'https://onlinelibrary.wiley.com/doi/10.1111/j.1365-3083.2008.02156.x'
 summary: >-
   Южноамериканский лечебный гриб, также известный как химэмматсутаке и «солнце
   Пьедаде»; после нескольких норвежских и японских клинических работ — один из
