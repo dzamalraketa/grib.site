@@ -3,6 +3,34 @@ layout: layouts/base.njk
 og_type: "article"
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ title | dump | safe }},
+  "description": {{ (summary or description or site.description) | dump | safe }},
+  "inLanguage": "ru",
+  "image": {{ (site.url + (image or site.default_image)) | dump | safe }},
+  "author": {
+    "@type": "Organization",
+    "name": {{ site.author | dump | safe }},
+    "url": {{ site.url | dump | safe }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.title | dump | safe }},
+    "url": {{ site.url | dump | safe }}
+  },
+  "datePublished": {{ (date | isoDate) | dump | safe }},
+  "dateModified": {{ ((verification_date or date) | isoDate) | dump | safe }},
+  "mainEntityOfPage": {{ (site.url + page.url) | dump | safe }},
+  "about": {
+    "@type": "Taxon",
+    "name": {{ (latin_name or title) | dump | safe }}
+  }
+}
+</script>
+
 <article class="mushroom-page">
   <header class="mushroom-header">
     <div class="mushroom-header__media">
@@ -48,6 +76,33 @@ og_type: "article"
   <div class="article-content">
     {{ content | safe }}
   </div>
+
+  {# Связанные исследования: подбор карточек из /issledovaniya/,
+     у которых поле mushroom содержит латинское название вида
+     (или одно из значений research_match из front matter). #}
+  {% set species_research = [] %}
+  {% set needles = research_match or ([latin_name] if latin_name else []) %}
+  {% for item in collections.issledovaniya %}
+    {% for n in needles %}
+      {% if item.data.mushroom and item.data.mushroom.indexOf(n) > -1 and not (item in species_research) %}
+        {% set _ = species_research.push(item) %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  {% if species_research.length > 0 %}
+    <section class="related-research" aria-label="Исследования по этому виду">
+      <h2>Исследования по этому виду</h2>
+      <ul class="related-research__list">
+        {% for item in species_research %}
+          <li>
+            <a href="{{ item.url | url }}">{{ item.data.title }}</a>
+            {% if item.data.year %}<span class="related-research__year">, {{ item.data.year }}</span>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
 
   {% if tags and tags.length > 0 %}
     <div class="tags" style="margin-top: var(--space-4);">

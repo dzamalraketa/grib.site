@@ -25,7 +25,7 @@ MushroomReferences.com в карточках не используется.
 - **`source_url` ведёт на PubMed/medRxiv/DOI**, **не** на
   MushroomReferences.com.
 - **Соблюдать формат front matter** из существующих карточек
-  (`design` с указанием n, `category` из [categories.json](file:///home/sky/Documents/N/src/_data/categories.json)).
+  (`design` с указанием n, `category` из [categories.json](file:///home/sky/Documents/site/grib/src/_data/categories.json)).
 - **Без повторов по смыслу** — каждая новая карточка должна покрывать
   отдельный аспект (свой гриб, свой дизайн, свою конечную точку),
   иначе дублировать уже имеющуюся в каталоге.

@@ -3,6 +3,29 @@ layout: layouts/base.njk
 og_type: "article"
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ title | dump | safe }},
+  "description": {{ (summary or description or site.description) | dump | safe }},
+  "inLanguage": "ru",
+  "datePublished": {{ (date | isoDate) | dump | safe }},
+  "dateModified": {{ ((verification_date or date) | isoDate) | dump | safe }},
+  "author": {
+    "@type": "Organization",
+    "name": {{ (author or site.author) | dump | safe }},
+    "url": {{ site.url | dump | safe }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.title | dump | safe }},
+    "url": {{ site.url | dump | safe }}
+  },
+  "mainEntityOfPage": {{ (site.url + page.url) | dump | safe }}
+}
+</script>
+
 <article>
   <header class="article-header">
     <div class="article-header__meta">
