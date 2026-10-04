@@ -15,8 +15,6 @@ habitat: >-
 season: Лето — осень
 research_match:
   - Cordyceps militaris
-  - Cordyceps sinensis
-  - Cordyceps cicadae
 date: 2026-10-04T00:00:00.000Z
 verified: true
 verification_date: 2026-10-04T00:00:00.000Z
@@ -88,7 +86,8 @@ O. sinensis.
 [«Cs-4 у пожилых»]({{ '/issledovaniya/cordyceps-cs4-elderly-2004/' | url }}) и
 [«Cs-4 при тренировках»]({{ '/issledovaniya/cordyceps-cs4-exercise-elderly-2010/' | url }}) —
 это формально другой организм, и результаты на C. militaris
-напрямую не переносятся.
+напрямую не переносятся; подробная разборка — в карточке
+[«Кордицепс китайский»]({{ '/griby/cordyceps-sinensis/' | url }}).
 
 ## Съедобность
 
