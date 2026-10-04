@@ -1,0 +1,285 @@
+/* =========================================================================
+   motion.css — современный слой: живой hero, счётчики, scroll-reveal,
+   подсветка карточек, прогресс чтения, полоса видов.
+   Аддитивен: удалите подключение — сайт останется прежним.
+   Всё движение отключается при prefers-reduced-motion: reduce.
+   ========================================================================= */
+
+:root {
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --glow-leaf: color-mix(in srgb, var(--color-leaf) 38%, transparent);
+  --glow-clay: color-mix(in srgb, var(--color-clay) 32%, transparent);
+  --glow-plum: color-mix(in srgb, var(--color-spore-plum) 28%, transparent);
+}
+
+/* --- Reading progress ---------------------------------------------- */
+.read-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 3px;
+  z-index: 200;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  background: linear-gradient(90deg, var(--color-leaf), var(--color-clay));
+  pointer-events: none;
+}
+
+/* --- Hero: живой фон ----------------------------------------------- */
+.hero { isolation: isolate; padding-top: var(--space-7); padding-bottom: var(--space-6); }
+.hero__aurora {
+  position: absolute;
+  inset: -20% -10%;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(60px);
+  opacity: 0.9;
+}
+.hero__blob {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+}
+.hero__blob--a { width: 46%; aspect-ratio: 1; left: 4%;  top: 8%;  background: radial-gradient(circle, var(--glow-leaf), transparent 68%); }
+.hero__blob--b { width: 40%; aspect-ratio: 1; right: 6%; top: 0;   background: radial-gradient(circle, var(--glow-clay), transparent 68%); }
+.hero__blob--c { width: 34%; aspect-ratio: 1; left: 36%; bottom: 0; background: radial-gradient(circle, var(--glow-plum), transparent 68%); }
+
+.hero__spores { position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
+.hero__spore {
+  position: absolute;
+  bottom: -12px;
+  left: var(--x);
+  width: var(--s);
+  height: var(--s);
+  border-radius: 50%;
+  background: var(--color-leaf);
+  opacity: 0;
+}
+
+.hero__title {
+  background: linear-gradient(100deg, var(--color-text) 0%, var(--color-leaf) 45%, var(--color-clay) 75%, var(--color-text) 100%);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border: 1px solid color-mix(in srgb, var(--color-clay) 35%, transparent);
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--color-clay) 8%, transparent);
+}
+.hero__eyebrow::before {
+  content: "";
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--color-clay);
+}
+
+/* --- Кнопки: блик --------------------------------------------------- */
+.btn--primary { position: relative; overflow: hidden; }
+.btn--primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.28) 50%, transparent 70%);
+  transform: translateX(-120%);
+}
+.btn--primary:hover::after { transform: translateX(120%); transition: transform 700ms var(--ease-out); }
+
+/* --- Статистика ---------------------------------------------------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+@media (min-width: 768px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+.stat {
+  position: relative;
+  padding: var(--space-4) var(--space-3);
+  text-align: center;
+  background: color-mix(in srgb, var(--color-surface) 78%, transparent);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+.stat::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-leaf), var(--color-clay));
+  opacity: 0.8;
+}
+.stat__num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+}
+.stat__label {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* --- Полоса видов -------------------------------------------------- */
+.species-strip {
+  display: flex;
+  gap: var(--space-3);
+  overflow-x: auto;
+  padding: var(--space-2) 2px var(--space-3);
+  margin: 0 calc(var(--gutter) * -1);
+  padding-inline: var(--gutter);
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  mask-image: linear-gradient(90deg, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+}
+.species-chip {
+  position: relative;
+  flex: 0 0 168px;
+  height: 212px;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  scroll-snap-align: start;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+.species-chip img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 700ms var(--ease-out);
+}
+.species-chip::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(18, 16, 12, 0.82) 100%);
+}
+.species-chip__body { position: absolute; z-index: 1; left: 12px; right: 12px; bottom: 12px; }
+.species-chip__name { display: block; font-family: var(--font-display); font-size: 1.02rem; font-weight: 600; line-height: 1.15; }
+.species-chip__latin { display: block; margin-top: 3px; font-family: var(--font-ui); font-size: 0.74rem; font-style: italic; opacity: 0.82; }
+.species-chip:hover img { transform: scale(1.09); }
+.species-chip:focus-visible { outline: 2px solid var(--color-glow); outline-offset: 3px; }
+
+/* --- Подсветка карточек за курсором -------------------------------- */
+.card, .topic-tile { --mx: 50%; --my: 0%; }
+.card::after, .topic-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(360px circle at var(--mx) var(--my), color-mix(in srgb, var(--color-leaf) 14%, transparent), transparent 62%);
+  transition: opacity 300ms ease-out;
+}
+.card:hover::after, .topic-tile:hover::after { opacity: 1; }
+.topic-tile { position: relative; overflow: hidden; }
+
+/* --- Кнопка «наверх» ----------------------------------------------- */
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 120;
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--color-text);
+  box-shadow: var(--color-shadow);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 250ms ease-out, transform 250ms var(--ease-out), border-color 180ms;
+}
+.to-top.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover { border-color: var(--color-leaf); color: var(--color-leaf); }
+.to-top:focus-visible { outline: 2px solid var(--color-glow); outline-offset: 3px; }
+
+/* =========================================================================
+   Движение — только если пользователь не просил его уменьшить
+   ========================================================================= */
+@media (prefers-reduced-motion: no-preference) {
+  .hero__blob--a { animation: blob-a 18s ease-in-out infinite alternate; }
+  .hero__blob--b { animation: blob-b 22s ease-in-out infinite alternate; }
+  .hero__blob--c { animation: blob-c 26s ease-in-out infinite alternate; }
+  @keyframes blob-a { to { transform: translate(14%, 10%) scale(1.18); } }
+  @keyframes blob-b { to { transform: translate(-12%, 16%) scale(0.9); } }
+  @keyframes blob-c { to { transform: translate(10%, -14%) scale(1.25); } }
+
+  .hero__spore { animation: spore-rise var(--d) linear var(--delay) infinite; }
+  @keyframes spore-rise {
+    0%   { transform: translate3d(0, 0, 0); opacity: 0; }
+    12%  { opacity: 0.5; }
+    85%  { opacity: 0.35; }
+    100% { transform: translate3d(var(--dx), -62vh, 0); opacity: 0; }
+  }
+
+  @keyframes title-shine { to { background-position: 100% center; } }
+
+  .hero__eyebrow { animation: hero-in 800ms var(--ease-out) 60ms backwards; }
+  .hero__title   { animation: hero-in 800ms var(--ease-out) 160ms backwards, title-shine 9s ease-in-out 1s infinite alternate; }
+  .hero__lead    { animation: hero-in 800ms var(--ease-out) 280ms backwards; }
+  .hero__actions { animation: hero-in 800ms var(--ease-out) 400ms backwards; }
+  @keyframes hero-in { from { opacity: 0; transform: translateY(22px); } }
+
+  .reveal { opacity: 0; }
+  .reveal.is-in {
+    animation: rise 650ms var(--ease-out) calc(var(--i, 0) * 70ms) both;
+  }
+  @keyframes rise { from { opacity: 0; transform: translateY(26px) scale(0.985); } to { opacity: 1; transform: none; } }
+
+  .card, .topic-tile, .species-chip { transition: transform 260ms var(--ease-out), box-shadow 260ms ease-out, border-color 180ms; }
+  .species-chip:hover { transform: translateY(-5px); box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22); }
+
+  .stat { transition: transform 260ms var(--ease-out); }
+  .stat:hover { transform: translateY(-4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__spores { display: none; }
+  .hero__title { background-position: 40% center; }
+  .reveal { opacity: 1; }
+}
+
+/* Печать: без декора */
+@media print {
+  .hero__aurora, .hero__spores, .read-progress, .to-top { display: none !important; }
+  .hero__title { -webkit-text-fill-color: currentColor; background: none; }
+}
+
+/* --- Hero во всю ширину окна (без квадратных краёв фона) ------------ */
+html { overflow-x: clip; }
+.hero {
+  margin-inline: calc(50% - 50vw);
+  padding-inline: var(--gutter);
+  width: 100vw;
+  max-width: 100vw;
+}
+.hero__lead { max-width: 680px; }
+.hero__aurora, .hero__spores {
+  -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 98%);
+  mask-image: linear-gradient(180deg, #000 55%, transparent 98%);
+}

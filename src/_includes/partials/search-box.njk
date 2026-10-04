@@ -64,14 +64,23 @@
         showFallback();
         return;
       }
-      // Pagefind в 1.5 регистрирует customElement <pagefind-search>
-      // после загрузки скрипта. Если через секунду ничего не зарегистрировано
-      // и нет индекса — показываем fallback.
-      setTimeout(function () {
-        if (!customElements || !customElements.get("pagefind-search")) {
-          showFallback();
-        }
-      }, 1500);
+      // Pagefind 1.5 не регистрирует <pagefind-search> как custom element —
+      // он энхансит разметку и подставляет свой input (.pf-input, id=pfmod-*).
+      // Признак рабочего компонента — отрендеренный input; если его нет
+      // (скрипт/индекс не собраны) — показываем fallback.
+      // Enter в форме не должен перезагружать страницу — результаты
+      // подтягиваются живьём по мере ввода.
+      var form = document.querySelector("form.pagefind-form");
+      if (form) form.addEventListener("submit", function (e) { e.preventDefault(); });
+
+      var tries = 0;
+      (function poll() {
+        var mount = document.querySelector("[data-pagefind-mount]");
+        var enhanced = mount && mount.querySelector(".pf-input, [id^='pfmod-']");
+        if (enhanced) return;
+        if (++tries < 4) { setTimeout(poll, 1200); return; }
+        showFallback();
+      })();
     }
 
     if (document.readyState === "loading") {

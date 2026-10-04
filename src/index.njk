@@ -1,4 +1,5 @@
 ---
+wide: true
 layout: layouts/base.njk
 title: "Мир грибов — энциклопедия о грибах"
 description: "Энциклопедия мира грибов: виды, микология, экология и практическое применение. Каталог грибов, статьи о мицелии, микоремедиации, бета-глюканах."
@@ -23,6 +24,17 @@ eleventyExcludeFromCollections: true
 </script>
 
 <section class="hero">
+  <div class="hero__aurora" aria-hidden="true">
+    <span class="hero__blob hero__blob--a"></span>
+    <span class="hero__blob hero__blob--b"></span>
+    <span class="hero__blob hero__blob--c"></span>
+  </div>
+  <div class="hero__spores" aria-hidden="true">
+    {% for i in range(0, 16) %}
+      <span class="hero__spore" style="--x: {{ (i * 37 + 11) % 97 }}%; --s: {{ 3 + (i * 5) % 6 }}px; --d: {{ 11 + (i * 3) % 9 }}s; --delay: -{{ (i * 7) % 14 }}s; --dx: {{ ((i * 13) % 80) - 40 }}px;"></span>
+    {% endfor %}
+  </div>
+
   {# Радиальные пластинки — анимация раскрытия при загрузке #}
   <div class="hero__gills" aria-hidden="true">
     <svg viewBox="-300 -300 600 600" width="600" height="600">
@@ -60,6 +72,33 @@ eleventyExcludeFromCollections: true
     <a class="btn btn--primary" href="{{ '/griby/' | url }}">Каталог грибов</a>
     <a class="btn" href="{{ '/stati/' | url }}">Статьи и обзоры</a>
   </div>
+</section>
+
+<div class="stats" aria-label="Сайт в цифрах">
+  <div class="stat"><span class="stat__num" data-counter="{{ collections.griby.length }}">{{ collections.griby.length }}</span><span class="stat__label">видов в каталоге</span></div>
+  <div class="stat"><span class="stat__num" data-counter="{{ collections.issledovaniya.length }}">{{ collections.issledovaniya.length }}</span><span class="stat__label">карточек исследований</span></div>
+  <div class="stat"><span class="stat__num" data-counter="{{ collections.stati.length }}">{{ collections.stati.length }}</span><span class="stat__label">статей и обзоров</span></div>
+  <div class="stat"><span class="stat__num" data-counter="{{ collections.temy.length }}">{{ collections.temy.length }}</span><span class="stat__label">тематических разделов</span></div>
+</div>
+
+<section aria-labelledby="species" style="margin-top: var(--space-6);">
+  <h2 id="species" style="font-size: 1.6rem; margin-bottom: var(--space-3);">Из каталога</h2>
+  <div class="species-strip">
+    {% set shown = 0 %}
+    {% for g in collections.griby %}
+      {% if g.data.image and shown < 14 %}
+        {% set shown = shown + 1 %}
+        <a class="species-chip" href="{{ g.url | url }}">
+          <img src="{{ g.data.image | url }}" alt="{{ g.data.title }}" loading="lazy" decoding="async">
+          <span class="species-chip__body">
+            <span class="species-chip__name">{{ g.data.title }}</span>
+            <span class="species-chip__latin">{{ g.data.latin_name }}</span>
+          </span>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <p style="margin-top: var(--space-2);"><a href="{{ '/griby/' | url }}">Весь каталог →</a></p>
 </section>
 
 <section aria-labelledby="topics" style="margin-top: var(--space-6);">

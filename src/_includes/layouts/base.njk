@@ -78,6 +78,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/tokens.css' | url }}?v={{ site.version }}">
     <link rel="stylesheet" href="{{ '/assets/css/base.css' | url }}?v={{ site.version }}">
     <link rel="stylesheet" href="{{ '/assets/css/components.css' | url }}?v={{ site.version }}">
+    <link rel="stylesheet" href="{{ '/assets/css/motion.css' | url }}?v={{ site.version }}">
 
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | url }}?v={{ site.version }}">
 
@@ -103,7 +104,7 @@
 
     {% include "partials/header.njk" %}
 
-    <main id="main" class="container" data-pagefind-body>
+    <main id="main" class="container{% if wide %} container--wide{% endif %}" data-pagefind-body>
       {{ content | safe }}
     </main>
 
@@ -111,6 +112,7 @@
 
     <script src="{{ '/assets/js/theme.js' | url }}?v={{ site.version }}" defer></script>
     <script src="{{ '/assets/js/menu.js' | url }}?v={{ site.version }}" defer></script>
+    <script src="{{ '/assets/js/motion.js' | url }}?v={{ site.version }}" defer></script>
     {% block pageScripts %}{% endblock %}
   </body>
 </html>
