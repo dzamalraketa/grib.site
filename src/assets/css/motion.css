@@ -43,18 +43,6 @@
 .hero__blob--b { width: 40%; aspect-ratio: 1; right: 6%; top: 0;   background: radial-gradient(circle, var(--glow-clay), transparent 68%); }
 .hero__blob--c { width: 34%; aspect-ratio: 1; left: 36%; bottom: 0; background: radial-gradient(circle, var(--glow-plum), transparent 68%); }
 
-.hero__spores { position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
-.hero__spore {
-  position: absolute;
-  bottom: -12px;
-  left: var(--x);
-  width: var(--s);
-  height: var(--s);
-  border-radius: 50%;
-  background: var(--color-leaf);
-  opacity: 0;
-}
-
 .hero__title {
   background: linear-gradient(100deg, var(--color-text) 0%, var(--color-leaf) 45%, var(--color-clay) 75%, var(--color-text) 100%);
   background-size: 220% auto;
@@ -229,19 +217,12 @@
   @keyframes blob-b { to { transform: translate(-12%, 16%) scale(0.9); } }
   @keyframes blob-c { to { transform: translate(10%, -14%) scale(1.25); } }
 
-  .hero__spore { animation: spore-rise var(--d) linear var(--delay) infinite; }
-  @keyframes spore-rise {
-    0%   { transform: translate3d(0, 0, 0); opacity: 0; }
-    12%  { opacity: 0.5; }
-    85%  { opacity: 0.35; }
-    100% { transform: translate3d(var(--dx), -62vh, 0); opacity: 0; }
-  }
-
   @keyframes title-shine { to { background-position: 100% center; } }
 
   .hero__eyebrow { animation: hero-in 800ms var(--ease-out) 60ms backwards; }
   .hero__title   { animation: hero-in 800ms var(--ease-out) 160ms backwards, title-shine 9s ease-in-out 1s infinite alternate; }
   .hero__lead    { animation: hero-in 800ms var(--ease-out) 280ms backwards; }
+  .hero__note    { animation: hero-in 800ms var(--ease-out) 340ms backwards; }
   .hero__actions { animation: hero-in 800ms var(--ease-out) 400ms backwards; }
   @keyframes hero-in { from { opacity: 0; transform: translateY(22px); } }
 
@@ -259,14 +240,13 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__spores { display: none; }
   .hero__title { background-position: 40% center; }
   .reveal { opacity: 1; }
 }
 
 /* Печать: без декора */
 @media print {
-  .hero__aurora, .hero__spores, .read-progress, .to-top { display: none !important; }
+  .hero__aurora, .read-progress, .to-top { display: none !important; }
   .hero__title { -webkit-text-fill-color: currentColor; background: none; }
 }
 
@@ -279,7 +259,17 @@ html { overflow-x: clip; }
   max-width: 100vw;
 }
 .hero__lead { max-width: 680px; }
-.hero__aurora, .hero__spores {
+.hero__note {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
+  margin: calc(var(--space-2) * -1) auto var(--space-4);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  opacity: 0.85;
+}
+.hero__aurora {
   -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 98%);
   mask-image: linear-gradient(180deg, #000 55%, transparent 98%);
 }

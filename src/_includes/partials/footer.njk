@@ -1,22 +1,43 @@
 <footer class="site-footer" role="contentinfo">
-  <div class="container container--wide site-footer__inner">
-    <div>
-      <strong>{{ site.title }}</strong> — независимый энциклопедический портал о грибах.
+  <div class="container container--wide site-footer__grid">
+    <div class="site-footer__about">
+      <a class="site-footer__brand" href="{{ '/' | url }}">{{ site.title }}</a>
+      <p>
+        Независимый портал о грибах: каталог видов, разбор исследований
+        на людях и безопасность добавок — со ссылками на первоисточники.
+      </p>
     </div>
-    <nav class="site-footer__nav" aria-label="Дополнительная навигация">
-      {% for item in site.navigation.footer %}
-        <a href="{{ item.url | url }}">{{ item.text }}</a>
-      {% endfor %}
+
+    <nav class="site-footer__col" aria-label="Разделы сайта">
+      <h2 class="site-footer__heading">Разделы</h2>
+      <ul>
+        {% for item in site.navigation.primary %}
+          {% if item.url != '/' and item.url != '/kontakty/' %}
+            <li><a href="{{ item.url | url }}">{{ item.text }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <nav class="site-footer__col" aria-label="О сайте">
+      <h2 class="site-footer__heading">О сайте</h2>
+      <ul>
+        {% for item in site.navigation.footer %}
+          <li><a href="{{ item.url | url }}">{{ item.text }}</a></li>
+        {% endfor %}
+        <li><a href="{{ '/kontakty/' | url }}">Контакты</a></li>
+      </ul>
     </nav>
   </div>
 
   <div class="container container--wide site-footer__legal">
     <p>
-      Все материалы на сайте являются информационными обзорами,
-      выжимками и авторскими пересказами общедоступных исследований.
-      Все права на упоминаемые книги, концепции и товарные знаки
-      принадлежат их авторам. Сайт носит научно-популярный
-      и информационный характер.
+      <strong>Не медицинский совет.</strong> Материалы носят
+      научно-популярный и информационный характер: это обзоры и авторские
+      пересказы общедоступных исследований. Перед приёмом добавок, особенно
+      при лечении и приёме лекарств, проконсультируйтесь с врачом.
+      Права на упоминаемые книги, концепции и товарные знаки принадлежат
+      их авторам.
     </p>
   </div>
 </footer>
