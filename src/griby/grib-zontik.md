@@ -12,9 +12,9 @@ habitat: >-
   Опушки, просеки, луга, светлые сосновые и эвкалиптовые рощи; часто вдоль троп
   и на нарушенных почвах.
 season: Июнь — октябрь
-date: 2026-07-27T00:00:00.000Z
+date: 2025-07-27T00:00:00.000Z
 verified: true
-verification_date: 2026-07-27T00:00:00.000Z
+verification_date: 2025-07-27T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Macrolepiota procera'
     url: 'https://en.wikipedia.org/wiki/Macrolepiota_procera'

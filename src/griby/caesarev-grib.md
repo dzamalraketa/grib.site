@@ -12,9 +12,9 @@ habitat: >-
   Дубовые, буковые и грабовые леса; предпочитает тёплые лиственные и смешанные
   насаждения на хорошо дренированных почвах.
 season: Июль — октябрь
-date: 2026-07-27T00:00:00.000Z
+date: 2025-07-27T00:00:00.000Z
 verified: true
-verification_date: 2026-07-27T00:00:00.000Z
+verification_date: 2025-07-27T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Amanita caesarea'
     url: 'https://en.wikipedia.org/wiki/Amanita_caesarea'

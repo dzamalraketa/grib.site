@@ -15,9 +15,9 @@ habitat: >-
   В природе — богатая органикой почва субтропиков (Бразилия, Северная Америка);
   в коммерции — исключительно культура.
 season: В природе — лето; в культуре — круглый год
-date: 2026-10-04T00:00:00.000Z
+date: 2025-10-04T00:00:00.000Z
 verified: true
-verification_date: 2026-10-04T00:00:00.000Z
+verification_date: 2025-10-04T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Agaricus subrufescens'
     url: 'https://en.wikipedia.org/wiki/Agaricus_subrufescens'

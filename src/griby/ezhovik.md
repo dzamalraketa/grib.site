@@ -19,9 +19,9 @@ image_alt: >-
 image_author: Lebrac
 image_license: CC BY-SA 3.0
 image_source_url: 'https://commons.wikimedia.org/wiki/File:Igelstachelbart%20Nov%2006.jpg'
-date: 2026-02-12T00:00:00.000Z
+date: 2025-02-12T00:00:00.000Z
 verified: true
-verification_date: 2026-02-12T00:00:00.000Z
+verification_date: 2025-02-12T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Hericium erinaceus'
     url: 'https://en.wikipedia.org/wiki/Hericium_erinaceus'

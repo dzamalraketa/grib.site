@@ -12,9 +12,9 @@ habitat: >-
   Широколиственные и смешанные леса с дубом, буком, грабом; часто встречается во
   мху и на подстилке у валежника.
 season: Июль — октябрь
-date: 2026-07-27T00:00:00.000Z
+date: 2025-07-27T00:00:00.000Z
 verified: true
-verification_date: 2026-07-27T00:00:00.000Z
+verification_date: 2025-07-27T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Craterellus cornucopioides'
     url: 'https://en.wikipedia.org/wiki/Craterellus_cornucopioides'

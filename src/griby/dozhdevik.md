@@ -12,9 +12,9 @@ habitat: >-
   Луга, поляны, лесные опушки, хвойные и лиственные леса. Часто встречается на
   нарушенных почвах и у лесных троп.
 season: Июнь — октябрь
-date: 2026-07-27T00:00:00.000Z
+date: 2025-07-27T00:00:00.000Z
 verified: true
-verification_date: 2026-07-27T00:00:00.000Z
+verification_date: 2025-07-27T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Lycoperdon'
     url: 'https://en.wikipedia.org/wiki/Lycoperdon'

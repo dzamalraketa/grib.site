@@ -17,7 +17,9 @@ research_match:
   - Lactarius torminosus
 tags:
   - griby
+date: 2025-10-04
 verified: true
+verification_date: 2025-10-04
 sources:
   - title: 'Wikipedia: Lactarius torminosus'
     url: 'https://en.wikipedia.org/wiki/Lactarius_torminosus'

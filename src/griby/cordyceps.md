@@ -15,9 +15,9 @@ habitat: >-
 season: Лето — осень
 research_match:
   - Cordyceps militaris
-date: 2026-10-04T00:00:00.000Z
+date: 2025-10-04T00:00:00.000Z
 verified: true
-verification_date: 2026-10-04T00:00:00.000Z
+verification_date: 2025-10-04T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Cordyceps militaris'
     url: 'https://en.wikipedia.org/wiki/Cordyceps_militaris'

@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.njk
 title: "Ежовик гребенчатый (Lion's Mane) для мозга и тела: комплексный обзор современных данных"
-date: 2026-07-28
+date: 2025-07-28
 author: "Научный обзор"
 summary: "Адаптированный обзор редакционной статьи MushroomReferences.com: комплексное воздействие Hericium erinaceus на когнитивные функции, нервную систему и пищеварение. Что подтверждено клинически и что остаётся гипотезой."
 tags:
@@ -9,7 +9,7 @@ tags:
   - исследования
   - ежовик
 verified: true
-verification_date: 2026-07-28
+verification_date: 2025-07-28
 disclaimer: "Материал носит исключительно ознакомительный характер."
 sources:
   - title: "MushroomReferences.com: Lion's Mane for Your Brain and Body (2025/03)"

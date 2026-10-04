@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.njk
 title: "Грибные добавки в интегративной онкологии: обзор доказательной базы 2026"
-date: 2026-07-27
+date: 2025-07-27
 author: "Научный обзор"
 summary: "Обзор Mohammed et al. (2026, The American Journal of Medicine) о применении грибных добавок в онкологии: рейши, траметес, кордицепс, майтаке, агарикон, ежовик, псилоцибин. Какие виды имеют доказательную базу у людей, и где она остаётся слабой."
 tags:
@@ -10,7 +10,7 @@ tags:
   - онкология
   - иммунитет
 verified: true
-verification_date: 2026-07-27
+verification_date: 2025-07-27
 disclaimer: "Материал носит исключительно ознакомительный характер. Грибные добавки не заменяют стандартную противоопухолевую терапию. Любые решения — только совместно с лечащим врачом-онкологом."
 sources:
   - title: "MushroomReferences.com: Fungal-derived supplements in integrative oncology"

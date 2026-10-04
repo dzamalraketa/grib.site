@@ -1,11 +1,11 @@
 ---
 layout: layouts/article.njk
 title: "Энтомопатогенные грибы: биологический контроль насекомых"
-date: 2026-07-26
+date: 2025-07-26
 author: "Команда «Мир грибов»"
 tags: [стеметс, энтомопатогенные, пестициды, исследования]
 verified: true
-verification_date: 2026-07-26
+verification_date: 2025-07-26
 disclaimer: health
 summary: "Адаптированный пересказ одной из ключевых работ Стеметса: грибы Metarhizium и Beauveria как альтернатива химическим инсектицидам."
 sources:

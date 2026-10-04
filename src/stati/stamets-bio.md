@@ -1,11 +1,11 @@
 ---
 layout: layouts/article.njk
 title: "Пол Стеметс: краткая биография миколога"
-date: 2026-07-22
+date: 2025-07-22
 author: "Команда «Мир грибов»"
 tags: [стеметс, биография, исследования]
 verified: true
-verification_date: 2026-07-23
+verification_date: 2025-07-23
 disclaimer: none
 summary: "Краткая биография американского миколога Пола Стеметса: путь от самоучки 1970-х до автора «Mycelium Running» и сооснователя Fungi Perfecti."
 sources:

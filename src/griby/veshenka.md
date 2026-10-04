@@ -12,9 +12,9 @@ habitat: >-
   Валежник, пни и ослабленные стволы лиственных пород — берёзы, осины, бука,
   граба, тополя, ивы. В горно-лесной зоне растёт на буке.
 season: Сентябрь — декабрь; в мягкие зимы — до весны
-date: 2026-07-27T00:00:00.000Z
+date: 2025-07-27T00:00:00.000Z
 verified: true
-verification_date: 2026-07-27T00:00:00.000Z
+verification_date: 2025-07-27T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Pleurotus ostreatus'
     url: 'https://en.wikipedia.org/wiki/Pleurotus_ostreatus'

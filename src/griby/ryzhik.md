@@ -12,9 +12,9 @@ habitat: >-
   Сосновые и еловые леса, реже — смешанные с примесью хвойных. На побережье — в
   сосновых посадках, в горах — под кедром и пихтой.
 season: Июль — октябрь
-date: 2026-07-27T00:00:00.000Z
+date: 2025-07-27T00:00:00.000Z
 verified: true
-verification_date: 2026-07-27T00:00:00.000Z
+verification_date: 2025-07-27T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Lactarius deliciosus'
     url: 'https://en.wikipedia.org/wiki/Lactarius_deliciosus'

@@ -1,11 +1,11 @@
 ---
 layout: layouts/article.njk
 title: "Микориза: как грибы кормят лес"
-date: 2026-07-18
+date: 2025-07-18
 author: "Команда «Мир грибов»"
 tags: [микориза, экология, симбиоз]
 verified: true
-verification_date: 2026-07-19
+verification_date: 2025-07-19
 disclaimer: none
 summary: "Что такое микоризный симбиоз, какие деревья зависят от грибов больше всего и почему это важно для лесного хозяйства."
 sources:

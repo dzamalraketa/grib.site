@@ -14,9 +14,9 @@ habitat: >-
   Почва, богатая органикой: луга, поля, компостные кучи; в культуре — компостные
   грядки в закрытых помещениях.
 season: В природе — лето и осень; в культуре — круглый год
-date: 2026-10-04T00:00:00.000Z
+date: 2025-10-04T00:00:00.000Z
 verified: true
-verification_date: 2026-10-04T00:00:00.000Z
+verification_date: 2025-10-04T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Agaricus bisporus'
     url: 'https://en.wikipedia.org/wiki/Agaricus_bisporus'

@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.njk
 title: "Грибные добавки в Италии: открывая ящик Пандоры"
-date: 2026-07-28
+date: 2025-07-28
 author: "Научный обзор"
 summary: "Адаптированный обзор редакционной статьи MushroomReferences.com: состояние и регулирование рынка грибных добавок в Италии, качество продукции и риски для потребителя."
 tags:
@@ -9,7 +9,7 @@ tags:
   - регулирование
   - безопасность
 verified: true
-verification_date: 2026-07-28
+verification_date: 2025-07-28
 disclaimer: "Материал носит исключительно ознакомительный характер."
 sources:
   - title: "MushroomReferences.com: Mushroom-Based Supplements in Italy (2023/02)"

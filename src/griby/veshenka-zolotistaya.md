@@ -15,9 +15,9 @@ habitat: >-
   Дикая форма — на вязе и других лиственных деревьях в Восточной Азии;
   культурная — широко выращивается на соломе и опилках.
 season: Лето — осень в природе; в культуре — круглый год
-date: 2026-10-04T00:00:00.000Z
+date: 2025-10-04T00:00:00.000Z
 verified: true
-verification_date: 2026-10-04T00:00:00.000Z
+verification_date: 2025-10-04T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Pleurotus cornucopiae'
     url: 'https://en.wikipedia.org/wiki/Pleurotus_cornucopiae'

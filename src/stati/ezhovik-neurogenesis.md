@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.njk
 title: "Ежовик гребенчатый и нейрогенез: исследования гериценонов и BDNF"
-date: 2026-02-12
+date: 2025-02-12
 author: "Научный обзор"
 summary: "Обзор современных исследований Hericium erinaceus: стимуляция фактора роста нервов (NGF) и BDNF, улучшение памяти и защита от нейродегенерации."
 tags:
@@ -9,7 +9,7 @@ tags:
   - исследования
   - ежовик
 verified: true
-verification_date: 2026-02-12
+verification_date: 2025-02-12
 disclaimer: "Материал носит исключительно ознакомительный характер."
 sources:
   - title: "Neurotrophic properties of Hericium erinaceus (PubMed PMC5987239)"

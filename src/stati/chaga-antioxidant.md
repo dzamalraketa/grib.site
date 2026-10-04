@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.njk
 title: "Чага: антиоксидантные и метаболические эффекты, обзор исследований 2020–2025"
-date: 2026-02-12
+date: 2025-02-12
 author: "Научный обзор"
 summary: "Современные данные о биологически активных веществах чаги (Inonotus obliquus): меланины, бетулин, полисахариды. Антиоксидантные и метаболические эффекты по данным доклинических и клинических работ."
 tags:
@@ -9,7 +9,7 @@ tags:
   - исследования
   - иммунитет
 verified: true
-verification_date: 2026-02-12
+verification_date: 2025-02-12
 disclaimer: "Материал носит исключительно ознакомительный характер."
 sources:
   - title: "PubMed: Inonotus obliquus — phytochemistry and bioactivity"

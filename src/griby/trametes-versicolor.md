@@ -20,9 +20,9 @@ image_alt: >-
 image_author: Ecornerdropshop at en.wikipedia
 image_license: Public domain
 image_source_url: 'https://commons.wikimedia.org/wiki/File:Stumpfungus.jpg'
-date: 2026-02-12T00:00:00.000Z
+date: 2025-02-12T00:00:00.000Z
 verified: true
-verification_date: 2026-02-12T00:00:00.000Z
+verification_date: 2025-02-12T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Trametes versicolor'
     url: 'https://en.wikipedia.org/wiki/Trametes_versicolor'

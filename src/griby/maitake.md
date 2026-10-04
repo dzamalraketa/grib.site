@@ -14,9 +14,9 @@ habitat: >-
   Основания стволов и корни лиственных пород, прежде всего дуба;
   широколиственные леса умеренного пояса.
 season: Конец лета — поздняя осень
-date: 2026-10-04T00:00:00.000Z
+date: 2025-10-04T00:00:00.000Z
 verified: true
-verification_date: 2026-10-04T00:00:00.000Z
+verification_date: 2025-10-04T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Grifola frondosa'
     url: 'https://en.wikipedia.org/wiki/Grifola_frondosa'

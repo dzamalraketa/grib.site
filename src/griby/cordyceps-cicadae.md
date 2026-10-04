@@ -13,9 +13,9 @@ tags:
   - культивируемые
 habitat: 'Паразит нимф цикад в почве; широкий ареал Азии (Китай, Корея, Япония, Тайвань) и тропических регионов.'
 season: 'Плодоношение — лето; мицелий доступен круглый год'
-date: 2026-10-04T00:00:00.000Z
+date: 2025-10-04T00:00:00.000Z
 verified: true
-verification_date: 2026-10-04T00:00:00.000Z
+verification_date: 2025-10-04T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Cordyceps cicadae'
     url: 'https://en.wikipedia.org/wiki/Cordyceps_cicadae'

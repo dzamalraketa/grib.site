@@ -12,9 +12,9 @@ habitat: >-
   Дубравы, буковые и смешанные леса с примесью липы, берёзы; предпочитает тёплые
   известковые почвы.
 season: Июнь — сентябрь
-date: 2026-07-27T00:00:00.000Z
+date: 2025-07-27T00:00:00.000Z
 verified: true
-verification_date: 2026-07-27T00:00:00.000Z
+verification_date: 2025-07-27T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Suillellus luridus'
     url: 'https://en.wikipedia.org/wiki/Suillellus_luridus'

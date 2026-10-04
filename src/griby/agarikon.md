@@ -18,9 +18,9 @@ image_alt: Плодовое тело Fomitopsis officinalis на стволе л
 image_author: Dusty Yao-Stamets
 image_license: CC BY 3.0
 image_source_url: 'https://commons.wikimedia.org/wiki/File:Paul%20Stamets%20with%20Agarikon.jpg'
-date: 2026-07-25T00:00:00.000Z
+date: 2025-07-25T00:00:00.000Z
 verified: true
-verification_date: 2026-07-25T00:00:00.000Z
+verification_date: 2025-07-25T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Laricifomes officinalis'
     url: 'https://en.wikipedia.org/wiki/Laricifomes_officinalis'

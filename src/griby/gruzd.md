@@ -12,9 +12,9 @@ habitat: >-
   Берёзовые и смешанные с берёзой леса; сырые места, подстилка; образует
   микоризу с берёзой.
 season: 'Июль — сентябрь, пик после дождей'
-date: 2026-10-04T00:00:00.000Z
+date: 2025-10-04T00:00:00.000Z
 verified: true
-verification_date: 2026-10-04T00:00:00.000Z
+verification_date: 2025-10-04T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Lactarius resimus'
     url: 'https://en.wikipedia.org/wiki/Lactarius_resimus'

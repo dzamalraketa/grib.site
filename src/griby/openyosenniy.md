@@ -16,9 +16,9 @@ image_author: Stu's Images
 image_license: CC BY-SA 3.0
 image_source_url: >-
   https://commons.wikimedia.org/wiki/File:Armillaria%20mellea%2C%20Honey%20Fungus%2C%20UK%201.jpg
-date: 2026-07-15T00:00:00.000Z
+date: 2025-07-15T00:00:00.000Z
 verified: true
-verification_date: 2026-07-20T00:00:00.000Z
+verification_date: 2025-07-20T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Armillaria mellea'
     url: 'https://en.wikipedia.org/wiki/Armillaria_mellea'

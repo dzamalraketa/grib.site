@@ -17,9 +17,9 @@ habitat: >-
 season: >-
   Поздняя осень — ранняя весна (плодоносит при температуре около нуля); в
   культуре — круглый год
-date: 2026-10-04T00:00:00.000Z
+date: 2025-10-04T00:00:00.000Z
 verified: true
-verification_date: 2026-10-04T00:00:00.000Z
+verification_date: 2025-10-04T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Flammulina velutipes'
     url: 'https://en.wikipedia.org/wiki/Flammulina_velutipes'

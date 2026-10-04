@@ -12,9 +12,9 @@ habitat: >-
   Стволы живых и мёртвых дубов, каштанов, реже — бука, ясеня; в широколиственных
   лесах.
 season: Июль — октябрь
-date: 2026-07-27T00:00:00.000Z
+date: 2025-07-27T00:00:00.000Z
 verified: true
-verification_date: 2026-07-27T00:00:00.000Z
+verification_date: 2025-07-27T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Fistulina hepatica'
     url: 'https://en.wikipedia.org/wiki/Fistulina_hepatica'

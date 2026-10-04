@@ -17,9 +17,9 @@ habitat: >-
   Паразит личинок бабочек-бражников (Hepialidae) в почве; Тибетское нагорье и
   высокогорья Гималаев на высоте 3000–5000 м.
 season: Плодоношение — весна и начало лета; сбор ярца-гунбу традиционно в мае–июне
-date: 2026-10-04T00:00:00.000Z
+date: 2025-10-04T00:00:00.000Z
 verified: true
-verification_date: 2026-10-04T00:00:00.000Z
+verification_date: 2025-10-04T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Ophiocordyceps sinensis'
     url: 'https://en.wikipedia.org/wiki/Ophiocordyceps_sinensis'

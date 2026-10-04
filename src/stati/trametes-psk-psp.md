@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.njk
 title: "Траметес разноцветный: PSK и PSP в адъювантной терапии онкозаболеваний"
-date: 2026-02-12
+date: 2025-02-12
 author: "Научный обзор"
 summary: "Современные данные о клиническом применении полисахаридов PSK и PSP из Trametes versicolor: адъювантная терапия рака желудка, колоректального рака и других нозологий. Ограничения доказательной базы."
 tags:
@@ -9,7 +9,7 @@ tags:
   - исследования
   - иммунитет
 verified: true
-verification_date: 2026-02-12
+verification_date: 2025-02-12
 disclaimer: "Материал носит исключительно ознакомительный характер."
 sources:
   - title: "PubMed: Polysaccharide-K (PSK) in adjuvant cancer therapy"

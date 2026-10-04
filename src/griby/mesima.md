@@ -13,9 +13,9 @@ habitat: >-
   Живые и ослабленные стволы тутовых деревьев (шелковица), реже других
   лиственных пород; Восточная Азия.
 season: Многолетний конечный вид; плодоносит летом — осенью
-date: 2026-10-04T00:00:00.000Z
+date: 2025-10-04T00:00:00.000Z
 verified: true
-verification_date: 2026-10-04T00:00:00.000Z
+verification_date: 2025-10-04T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Phellinus linteus'
     url: 'https://en.wikipedia.org/wiki/Phellinus_linteus'

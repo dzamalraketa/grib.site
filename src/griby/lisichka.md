@@ -18,9 +18,9 @@ image_author: неизвестен
 image_license: CC BY-SA 3.0
 image_source_url: >-
   https://commons.wikimedia.org/wiki/File:Chanterelle%20Cantharellus%20cibarius.jpg
-date: 2026-07-15T00:00:00.000Z
+date: 2025-07-15T00:00:00.000Z
 verified: true
-verification_date: 2026-07-20T00:00:00.000Z
+verification_date: 2025-07-20T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Cantharellus cibarius'
     url: 'https://en.wikipedia.org/wiki/Cantharellus_cibarius'

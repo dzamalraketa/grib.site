@@ -1,11 +1,11 @@
 ---
 layout: layouts/article.njk
 title: "«Mycelium Running» — главная книга Стеметса: о чём она"
-date: 2026-07-24
+date: 2025-07-24
 author: "Команда «Мир грибов»"
 tags: [стеметс, книги, мицелий, микоремедиация]
 verified: true
-verification_date: 2026-07-25
+verification_date: 2025-07-25
 disclaimer: none
 summary: "Адаптированный обзор книги Пола Стеметса «Mycelium Running» (2005): четыре роли мицелия, ключевые идеи и критика."
 sources:

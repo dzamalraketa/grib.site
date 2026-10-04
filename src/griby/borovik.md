@@ -16,9 +16,9 @@ image_author: Holger Krisp
 image_license: CC BY 3.0
 image_source_url: >-
   https://commons.wikimedia.org/wiki/File:(Gemeine%20Steinpilz)%20Boletus%20edulis.jpg
-date: 2026-07-15T00:00:00.000Z
+date: 2025-07-15T00:00:00.000Z
 verified: true
-verification_date: 2026-07-20T00:00:00.000Z
+verification_date: 2025-07-20T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Boletus edulis'
     url: 'https://en.wikipedia.org/wiki/Boletus_edulis'

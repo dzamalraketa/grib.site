@@ -12,9 +12,9 @@ habitat: >-
   Сосновые и смешанные с сосной леса, лесные опушки, молодые посадки сосны. На
   побережье — в прибрежных сосновых рощах.
 season: Июнь — октябрь
-date: 2026-07-27T00:00:00.000Z
+date: 2025-07-27T00:00:00.000Z
 verified: true
-verification_date: 2026-07-27T00:00:00.000Z
+verification_date: 2025-07-27T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Suillus'
     url: 'https://en.wikipedia.org/wiki/Suillus'

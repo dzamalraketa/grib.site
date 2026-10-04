@@ -12,9 +12,9 @@ habitat: >-
   Лиственные и смешанные леса, старые яблоневые сады, гари и вырубки, поймы рек;
   плодородная почва, тепло.
 season: 'Весна: апрель — май, сразу после схода снега; короткое окно 2–3 недели'
-date: 2026-10-04T00:00:00.000Z
+date: 2025-10-04T00:00:00.000Z
 verified: true
-verification_date: 2026-10-04T00:00:00.000Z
+verification_date: 2025-10-04T00:00:00.000Z
 sources:
   - title: 'Wikipedia: Morchella esculenta'
     url: 'https://en.wikipedia.org/wiki/Morchella_esculenta'

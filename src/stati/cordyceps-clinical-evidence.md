@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.njk
 title: "Кордицепс (Cordyceps): клинические данные и области применения"
-date: 2026-07-28
+date: 2025-07-28
 author: "Научный обзор"
 summary: "Обзор клинических данных о кордицепсе: работоспособность и выносливость, функция почек, иммунитет. Что подтверждено в РКИ, а что — только в доклинических моделях."
 tags:
@@ -9,7 +9,7 @@ tags:
   - исследования
   - кордицепс
 verified: true
-verification_date: 2026-07-28
+verification_date: 2025-07-28
 disclaimer: "Материал носит исключительно ознакомительный характер."
 sources:
   - title: "MushroomReferences.com: Cordyceps category"
