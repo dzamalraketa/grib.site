@@ -5,6 +5,8 @@
  * фильтры (русская дата, локализация статуса гриба) и настраивает Markdown.
  */
 
+const fs = require("node:fs");
+const path = require("node:path");
 const {
   dateToRfc3339,
   dateToRfc822,
@@ -106,10 +108,24 @@ module.exports = function (eleventyConfig) {
     return trimmed.slice(0, maxLen).replace(/[\s,;:.-]+$/, "") + "…";
   });
 
+  // Дата изменения исходного файла страницы (mtime) — для честного
+  // <lastmod> в sitemap: у карточек исследований page.date — это дата
+  // публикации РАБОТЫ, а не изменения страницы.
+  eleventyConfig.addFilter("fileModified", (inputPath) => {
+    try {
+      const p = path.resolve(process.cwd(), inputPath.replace(/^\.\//, ""));
+      return fs.statSync(p).mtime;
+    } catch (_) {
+      return new Date();
+    }
+  });
+
   // ——— Глобальные данные ——————————————————————————————————————————
   // site.json уже подключается автоматически из src/_data/site.json.
   // Дополнительно: язык по умолчанию для локализации дат.
   eleventyConfig.addGlobalData("siteLocale", () => "ru-RU");
+  // Момент сборки — lastmod для страниц без своей даты (sitemap, главная).
+  eleventyConfig.addGlobalData("buildDate", () => new Date());
 
   // ——— Markdown ——————————————————————————————————————————————————
   eleventyConfig.amendLibrary("md", (mdLib) => {

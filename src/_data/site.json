@@ -6,7 +6,7 @@
   "locale": "ru_RU",
   "version": "2026080701",
   "worker_url": "https://grib-contact-form.dzamalraketa.workers.dev/",
-  "default_image": "/assets/img/og-default.svg",
+  "default_image": "/assets/img/og-default.png",
   "navigation": {
     "primary": [
       {

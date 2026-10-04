@@ -17,7 +17,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Source+Serif+4:opsz,wght@8..60,300..700&family=Work+Sans:wght@400..700&display=swap">
 
     {# Open Graph / Twitter Card #}
+    {% if noindex %}<meta name="robots" content="noindex, follow">{% endif %}
     <meta property="og:type" content="{{ og_type or 'website' }}">
+    <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:title" content="{% if title %}{{ title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:description" content="{{ description or summary or site.description }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
@@ -27,6 +29,15 @@
     {% else %}
       <meta property="og:image" content="{{ site.url }}{{ og_image }}">
     {% endif %}
+    {% if og_image and og_image.endsWith(".png") %}
+      <meta property="og:image:type" content="image/png">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+    {% elif og_image %}
+      <meta property="og:image:type" content="image/jpeg">
+      <meta property="og:image:width" content="1200">
+    {% endif %}
+    <meta property="og:image:alt" content="{{ image_alt or title or site.title }}">
     <meta property="og:locale" content="ru_RU">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{% if title %}{{ title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
@@ -39,6 +50,29 @@
 
     {% if schema %}
       <script type="application/ld+json">{{ schema | safe }}</script>
+    {% endif %}
+
+    {# BreadcrumbList: строится по первому сегменту URL.
+       Служебные страницы и индексы разделов пропускаются. #}
+    {% set crumb_sections = {
+      "/griby/": "Каталог грибов",
+      "/issledovaniya/": "Исследования",
+      "/stati/": "Статьи",
+      "/temy/": "Темы"
+    } %}
+    {% set seg = "/" + page.url.split("/")[1] + "/" %}
+    {% if page.url != "/" and crumb_sections[seg] and page.url != seg %}
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Главная", "item": {{ (site.url + "/") | dump | safe }} },
+          { "@type": "ListItem", "position": 2, "name": {{ crumb_sections[seg] | dump | safe }}, "item": {{ (site.url + seg) | dump | safe }} },
+          { "@type": "ListItem", "position": 3, "name": {{ title | dump | safe }}, "item": {{ (site.url + page.url) | dump | safe }} }
+        ]
+      }
+      </script>
     {% endif %}
 
     <link rel="stylesheet" href="{{ '/assets/css/tokens.css' | url }}?v={{ site.version }}">
