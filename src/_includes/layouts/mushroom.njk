@@ -63,16 +63,6 @@ og_type: "article"
   {% set divider_lines = 28 %}
   {% include "partials/gill-divider.njk" %}
 
-  {# Дисклеймер: всегда для ядовитых и условно-съедобных, иначе по front matter #}
-  {% if status == "poisonous" or status == "conditional" %}
-    {% set disclaimer_type = "foraging" %}
-    {% include "partials/disclaimer.njk" %}
-  {% endif %}
-  {% if disclaimer and disclaimer != "none" %}
-    {% set disclaimer_type = disclaimer %}
-    {% include "partials/disclaimer.njk" %}
-  {% endif %}
-
   <div class="article-content">
     {{ content | safe }}
   </div>

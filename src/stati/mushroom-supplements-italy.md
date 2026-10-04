@@ -10,7 +10,6 @@ tags:
   - безопасность
 verified: true
 verification_date: 2025-07-28
-disclaimer: "Материал носит исключительно ознакомительный характер."
 sources:
   - title: "MushroomReferences.com: Mushroom-Based Supplements in Italy (2023/02)"
     url: "https://mushroomreferences.com/2023/02/27/mushroom-based-supplements-in-italy-lets-open-pandoras-box/"

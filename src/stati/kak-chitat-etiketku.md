@@ -10,7 +10,6 @@ tags:
   - качество
 verified: true
 verification_date: 2025-10-04
-disclaimer: "Материал о качестве и маркировке добавок, а не медицинская рекомендация. Документированные риски и взаимодействия собраны в разделе «Безопасность»."
 sources:
   - title: "Nammex: технические разборы β-глюканов и мицелия на зерне"
     url: "https://www.nammex.com/real-medicinal-mushrooms/"

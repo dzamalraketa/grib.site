@@ -6,7 +6,6 @@ author: "Команда «Мир грибов»"
 tags: [стеметс, энтомопатогенные, пестициды, исследования]
 verified: true
 verification_date: 2025-07-26
-disclaimer: health
 summary: "Адаптированный пересказ одной из ключевых работ Стеметса: грибы Metarhizium и Beauveria как альтернатива химическим инсектицидам."
 sources:
   - title: "Stamets P. Mycelium Running (2005) — глава 7"

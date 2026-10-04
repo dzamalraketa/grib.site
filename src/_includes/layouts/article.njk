@@ -46,12 +46,6 @@ og_type: "article"
   {% set divider_lines = 28 %}
   {% include "partials/gill-divider.njk" %}
 
-  {# Дисклеймер: по front matter #}
-  {% if disclaimer and disclaimer != "none" %}
-    {% set disclaimer_type = disclaimer %}
-    {% include "partials/disclaimer.njk" %}
-  {% endif %}
-
   <div class="article-content">
     {{ content | safe }}
   </div>

@@ -11,7 +11,6 @@ tags:
   - метаболизм
 verified: true
 verification_date: 2025-07-27
-disclaimer: "Материал носит исключительно ознакомительный характер. При онкологических и метаболических заболеваниях любые решения — только совместно с лечащим врачом."
 sources:
   - title: "MushroomReferences.com: Maitake, the Dancing Mushroom"
     url: "https://mushroomreferences.com/2025/09/10/maitake-the-dancing-mushroom-for-your-kitchen-and-health/"

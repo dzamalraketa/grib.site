@@ -10,7 +10,6 @@ tags:
   - чага
 verified: true
 verification_date: 2025-07-28
-disclaimer: "Материал носит исключительно ознакомительный характер."
 sources:
   - title: "MushroomReferences.com: How Chaga Can Change Your Health (2025/01)"
     url: "https://mushroomreferences.com/2025/01/09/how-chaga-can-change-your-health/"

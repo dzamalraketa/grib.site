@@ -6,7 +6,6 @@ author: "Команда «Мир грибов»"
 tags: [иммунитет, пчёлы, исследования]
 verified: true
 verification_date: 2025-07-15
-disclaimer: health
 summary: "Несколько независимых групп опубликовали данные о влиянии экстрактов мицелия на вирусную нагрузку у медоносных пчёл. Что известно на сегодня."
 sources:
   - title: "PubMed: Mushroom extracts and honeybee viruses"

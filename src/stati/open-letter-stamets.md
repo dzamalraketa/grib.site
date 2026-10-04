@@ -10,7 +10,6 @@ tags:
   - манифест
 verified: true
 verification_date: 2025-02-12
-disclaimer: "Материал подготовлен на основе официального обращения Пола Стейметса на Fungi.com. Носит ознакомительный и научный характер."
 sources:
   - title: "An Open Letter to the Mycological and Academic Community — Fungi Perfecti"
     url: "https://fungi.com/pages/open-letter"

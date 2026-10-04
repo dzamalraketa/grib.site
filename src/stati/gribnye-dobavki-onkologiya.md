@@ -11,7 +11,6 @@ tags:
   - иммунитет
 verified: true
 verification_date: 2025-07-27
-disclaimer: "Материал носит исключительно ознакомительный характер. Грибные добавки не заменяют стандартную противоопухолевую терапию. Любые решения — только совместно с лечащим врачом-онкологом."
 sources:
   - title: "MushroomReferences.com: Fungal-derived supplements in integrative oncology"
     url: "https://mushroomreferences.com/2026/03/12/fungal-derived-supplements-in-integrative-oncology/"

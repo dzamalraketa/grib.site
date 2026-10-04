@@ -10,7 +10,6 @@ tags:
   - ежовик
 verified: true
 verification_date: 2025-07-28
-disclaimer: "Материал носит исключительно ознакомительный характер."
 sources:
   - title: "MushroomReferences.com: Lion's Mane for Your Brain and Body (2025/03)"
     url: "https://mushroomreferences.com/2025/03/27/lions-mane-for-your-brain-and-body/"

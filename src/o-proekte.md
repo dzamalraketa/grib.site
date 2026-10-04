@@ -71,11 +71,7 @@ eleventyExcludeFromCollections: true
 </section>
 
 <section>
-  <h2>Отказ от ответственности</h2>
-  {% set disclaimer_type = "foraging" %}
-  {% include "partials/disclaimer.njk" %}
-  {% set disclaimer_type = "health" %}
-  {% include "partials/disclaimer.njk" %}
+  <h2>Характер материалов</h2>
   <p>
     Сайт носит информационный и научно-популярный характер.
     Мы не приводим дозировок и схем приёма; конкретные

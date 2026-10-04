@@ -11,7 +11,6 @@ tags:
   - covid
 verified: true
 verification_date: 2025-07-27
-disclaimer: "Материал носит исключительно ознакомительный характер. Грибные добавки не заменяют вакцинацию и стандартную противовирусную терапию. Все решения — совместно с врачом."
 sources:
   - title: "MushroomReferences.com: COVID, Mushrooms, & Immune Modulators"
     url: "https://mushroomreferences.com/2025/01/16/covid-mushrooms-immune-modulators/"

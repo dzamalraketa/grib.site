@@ -10,7 +10,6 @@ tags:
   - шиитаке
 verified: true
 verification_date: 2025-10-04
-disclaimer: "Материал носит исключительно ознакомительный характер. При хронических заболеваниях, иммунных состояниях и приёме лекарств любые решения о добавках — только совместно с лечащим врачом."
 sources:
   - title: "PubMed: Lentinula edodes clinical trial"
     url: "https://pubmed.ncbi.nlm.nih.gov/?term=lentinula+edodes+clinical+trial"

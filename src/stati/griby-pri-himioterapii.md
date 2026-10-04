@@ -11,7 +11,6 @@ tags:
   - чек-лист
 verified: true
 verification_date: 2025-10-04
-disclaimer: "Материал — инструмент для разговора с врачом, а не руководство к самолечению. При онкологическом диагнозе любые добавки обсуждаются только с лечащей командой."
 sources:
   - title: "MSKCC About Herbs — монографии и разделы взаимодействий"
     url: "https://www.mskcc.org/cancer-care/diagnosis-treatment/symptom-management/integrative-medicine/herbs"

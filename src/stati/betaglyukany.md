@@ -6,7 +6,6 @@ author: "Команда «Мир грибов»"
 tags: [иммунитет, бета-глюканы, исследования]
 verified: true
 verification_date: 2025-07-17
-disclaimer: health
 summary: "Обзор рецензируемых исследований бета-глюканов из грибов: лабораторные данные, клинические работы и ограничения доказательной базы."
 sources:
   - title: "PubMed: Beta-glucans from mushrooms and immune response"

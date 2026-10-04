@@ -6,7 +6,6 @@ author: "Команда «Мир грибов»"
 tags: [микориза, экология, симбиоз]
 verified: true
 verification_date: 2025-07-19
-disclaimer: none
 summary: "Что такое микоризный симбиоз, какие деревья зависят от грибов больше всего и почему это важно для лесного хозяйства."
 sources:
   - title: "Wikipedia: Mycorrhiza"

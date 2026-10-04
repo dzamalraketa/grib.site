@@ -10,7 +10,6 @@ tags:
   - ежовик
 verified: true
 verification_date: 2025-02-12
-disclaimer: "Материал носит исключительно ознакомительный характер."
 sources:
   - title: "Neurotrophic properties of Hericium erinaceus (PubMed PMC5987239)"
     url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5987239/"

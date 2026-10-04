@@ -11,7 +11,6 @@ tags:
   - взаимодействия
 verified: true
 verification_date: 2025-10-06
-disclaimer: "Материал не заменяет консультацию врача и фармацевта. Любые грибные добавки поверх назначенной терапии обсуждайте с лечащим врачом — особенно при онкологии, антикоагулянтах и иммуносупрессии."
 sources:
   - title: "MSKCC About Herbs — база монографий по добавкам"
     url: "https://www.mskcc.org/cancer-care/diagnosis-treatment/symptom-management/integrative-medicine/herbs"

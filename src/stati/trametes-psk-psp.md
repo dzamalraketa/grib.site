@@ -10,7 +10,6 @@ tags:
   - иммунитет
 verified: true
 verification_date: 2025-02-12
-disclaimer: "Материал носит исключительно ознакомительный характер."
 sources:
   - title: "PubMed: Polysaccharide-K (PSK) in adjuvant cancer therapy"
     url: "https://pubmed.ncbi.nlm.nih.gov"

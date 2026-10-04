@@ -6,7 +6,6 @@ author: "Команда «Мир грибов»"
 tags: [стеметс, книги, мицелий, микоремедиация]
 verified: true
 verification_date: 2025-07-25
-disclaimer: none
 summary: "Адаптированный обзор книги Пола Стеметса «Mycelium Running» (2005): четыре роли мицелия, ключевые идеи и критика."
 sources:
   - title: "Stamets P. Mycelium Running (2005)"

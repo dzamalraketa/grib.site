@@ -6,7 +6,6 @@ author: "Команда «Мир грибов»"
 tags: [микоремедиация, экология, штаметс]
 verified: true
 verification_date: 2025-07-20
-disclaimer: none
 summary: "Адаптированный пересказ исследований о том, как мицелий разрушает углеводороды, пестициды и связывает тяжёлые металлы в загрязнённых почвах."
 sources:
   - title: "Wikipedia: Mycoremediation"

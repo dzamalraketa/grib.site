@@ -17,9 +17,6 @@ eleventyExcludeFromCollections: true
   </p>
 </header>
 
-{% set disclaimer_type = "foraging" %}
-{% include "partials/disclaimer.njk" %}
-
 <nav class="season-nav" aria-label="Время года" data-season-nav>
   {% for p in periods %}
     <a class="season-nav__item" href="#{{ p.id }}" data-months="{{ p.months | join(',') }}">
@@ -86,7 +83,7 @@ eleventyExcludeFromCollections: true
 <section class="season-period" id="kruglyj-god" data-months="" aria-labelledby="kruglyj-god-h">
   <header class="season-period__head">
     <h2 id="kruglyj-god-h">Круглый год <span class="season-period__range">многолетние</span></h2>
-    <p class="season-period__lead">Многолетние трутовики и нарост чага можно найти в любое время года. Это лечебные, а не пищевые грибы — применять их стоит только после консультации с врачом (см. <a href="{{ '/temy/bezopasnost/' | url }}">безопасность добавок</a>).</p>
+    <p class="season-period__lead">Многолетние трутовики и нарост чага можно найти в любое время года. Это лечебные, а не пищевые грибы (см. <a href="{{ '/temy/bezopasnost/' | url }}">безопасность добавок</a>).</p>
   </header>
   {% set yr = collections.griby | yearRound %}
   <div class="season-grid">
