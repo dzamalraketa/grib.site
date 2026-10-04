@@ -78,9 +78,13 @@ async function processMushroom(file) {
   const raw = await fs.readFile(filePath, "utf8");
   const { data, content } = matter(raw);
 
+  // Slug: из front matter, иначе из имени файла (иначе имя
+  // картинки получалось «undefined.jpg»).
+  const slug = data.slug || path.basename(file, ".md");
+
   // Пропускаем, только если локальный файл уже существует и
   // запись в front matter указывает на локальный путь.
-  const localImagePath = path.join(IMG_DIR, `${data.slug}.jpg`);
+  const localImagePath = path.join(IMG_DIR, `${slug}.jpg`);
   if (data.image && data.image.startsWith("/assets/img/")) {
     try {
       await fs.access(localImagePath);
@@ -107,14 +111,14 @@ async function processMushroom(file) {
   const buffer = Buffer.from(await imgRes.arrayBuffer());
 
   await fs.mkdir(IMG_DIR, { recursive: true });
-  const outPath = path.join(IMG_DIR, `${data.slug}.jpg`);
+  const outPath = path.join(IMG_DIR, `${slug}.jpg`);
   await sharp(buffer)
     .resize({ width: 1200, withoutEnlargement: true })
     .jpeg({ quality: 82, mozjpeg: true })
     .toFile(outPath);
 
   // Обновляем front matter
-  data.image = `/assets/img/mushrooms/${data.slug}.jpg`;
+  data.image = `/assets/img/mushrooms/${slug}.jpg`;
   data.image_author = found.author;
   data.image_license = found.license;
   data.image_source_url = found.sourceUrl;
