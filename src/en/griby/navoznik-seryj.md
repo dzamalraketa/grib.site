@@ -31,7 +31,7 @@ image_alt: 'Common inkcap (Coprinopsis atramentaria) — gray inking clusters'
 sources:
   - title: 'Wikipedia: Coprinopsis atramentaria'
     url: 'https://en.wikipedia.org/wiki/Coprinopsis_atramentaria'
-  - title: 'Coprine — клиническая токсикология (ScienceDirect Topics)'
+  - title: 'Coprine — clinical toxicology (ScienceDirect Topics)'
     url: 'https://www.sciencedirect.com/topics/medicine-and-dentistry/coprine'
   - title: 'On the disulfiram-like effect of coprine (Acta Pharmacol Toxicol 1978)'
     url: 'https://d.docksci.com/on-the-disulfiram-like-effect-of-coprine-the-pharmacologically-active-principle-_5da7b2d0097c47c35a8b456b.html'

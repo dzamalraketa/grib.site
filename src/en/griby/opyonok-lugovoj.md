@@ -32,7 +32,7 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Marasmius_oreades'
   - title: 'First Nature: Marasmius oreades'
     url: 'https://www.first-nature.com/fungi/marasmius-oreades.php'
-  - title: 'First Nature: Clitocybe rivulosa (опасный двойник)'
+  - title: 'First Nature: Clitocybe rivulosa (dangerous lookalike)'
     url: 'https://www.first-nature.com/fungi/clitocybe-rivulosa.php'
   - title: 'MushroomExpert.Com (M. Kuo): Marasmius oreades'
     url: 'https://www.mushroomexpert.com/marasmius_oreades.html'

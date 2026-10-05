@@ -1,0 +1,48 @@
+---
+wide: true
+layout: layouts/base.njk
+lang: en
+title: "Articles and reviews"
+description: "Chronological feed of mushroom publications: mycelium, mycoremediation, beta-glucans, entomopathogenic fungi, mycorrhiza."
+permalink: "/en/stati/"
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Blog</p>
+  <h1 class="page-header__title">Articles and reviews</h1>
+  <p class="page-header__lead">
+    A chronological feed of publications. Each piece is an independent
+    reworking of open sources with references and a verification date.
+    Main topics — mushroom species, mycology, ecology and practical use.
+  </p>
+</header>
+
+{% if collections.statiEn.length == 0 %}
+  <p class="empty">No published articles yet.</p>
+{% else %}
+  {% set sorted = collections.statiEn %}
+  <ul style="list-style: none; padding: 0; display: grid; gap: var(--space-3);">
+    {% for item in sorted %}
+      <li class="card" style="display: block;">
+        <div class="article-header__meta" style="margin-bottom: var(--space-1);">
+          <time datetime="{{ item.date | isoDate }}">{{ item.date | isoDate }}</time>
+          {% if item.data.tags and item.data.tags.length > 0 %}
+            <span aria-hidden="true">·</span>
+            <span>{{ item.data.tags | join(", ") }}</span>
+          {% endif %}
+        </div>
+        <h2 class="card__title" style="margin: 0 0 var(--space-1);">
+          <a href="{{ item.url | url }}" style="text-decoration: none; color: inherit;">{{ item.data.title }}</a>
+        </h2>
+        <p class="card__summary" style="margin: 0;">{{ (item.data.summary or item.data.description or "") | excerpt(180) }}</p>
+        <p style="margin: var(--space-2) 0 0; font-family: var(--font-ui); font-size: 0.85rem;">
+          <a href="{{ item.url | url }}" style="color: var(--color-leaf);">Read in full →</a>
+        </p>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p style="margin-top: var(--space-4);">
+    <a href="{{ '/feed.xml' | url }}">Subscribe to RSS</a>
+  </p>
+{% endif %}

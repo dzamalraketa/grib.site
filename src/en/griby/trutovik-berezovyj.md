@@ -31,7 +31,7 @@ image_alt: 'Birch polypore (Fomitopsis betulina) — pale rounded brackets on bi
 sources:
   - title: 'MushroomExpert (M. Kuo): Fomitopsis betulina'
     url: 'https://www.mushroomexpert.com/fomitopsis_betulina.html'
-  - title: 'First Nature: Piptoporus betulinus (синоним)'
+  - title: 'First Nature: Piptoporus betulinus (synonym)'
     url: 'https://www.first-nature.com/fungi/piptoporus-betulinus.php'
   - title: 'Wikipedia: Fomitopsis betulina'
     url: 'https://en.wikipedia.org/wiki/Fomitopsis_betulina'

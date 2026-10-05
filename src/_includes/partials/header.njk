@@ -129,7 +129,7 @@
     </nav>
     <div class="site-menu__divider" aria-hidden="true"></div>
     <div class="site-menu__footer">
-      <a class="site-menu__contact" href="{{ '/kontakty/' | url }}">{{ L.ui.contact if L.ui else "Связаться с командой" }}</a>
+      <a class="site-menu__contact" href="{{ ('/en/kontakty/' if lang == 'en' else '/kontakty/') | url }}">{{ L.ui.contact if L.ui else "Связаться с командой" }}</a>
     </div>
   </div>
 </aside>

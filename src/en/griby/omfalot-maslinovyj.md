@@ -27,7 +27,7 @@ image_alt: 'Jack-o''-lantern (Omphalotus olearius) — orange funnel caps cluste
 sources:
   - title: 'First Nature: Omphalotus olearius'
     url: 'https://www.first-nature.com/fungi/omphalotus-olearius.php'
-  - title: 'MushroomExpert (M. Kuo): Omphalotus illudens (американский родственник)'
+  - title: 'MushroomExpert (M. Kuo): Omphalotus illudens (American relative)'
     url: 'https://www.mushroomexpert.com/omphalotus_illudens.html'
   - title: 'Wikipedia: Omphalotus olearius'
     url: 'https://en.wikipedia.org/wiki/Omphalotus_olearius'

@@ -25,7 +25,7 @@ habitat: 'Stumps and dead wood of broadleaf trees; late clusters.'
 season: 'August–November'
 image_alt: 'Brick cap (Hypholoma sublateritium) — brick-red clusters on a stump'
 sources:
-  - title: 'First Nature: Hypholoma lateritium (синоним H. sublateritium)'
+  - title: 'First Nature: Hypholoma lateritium (syn. H. sublateritium)'
     url: 'https://www.first-nature.com/fungi/hypholoma-lateritium.php'
   - title: 'MushroomExpert (M. Kuo): Hypholoma sublateritium'
     url: 'https://www.mushroomexpert.com/hypholoma_sublateritium.html'

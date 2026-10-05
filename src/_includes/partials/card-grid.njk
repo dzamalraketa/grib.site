@@ -24,7 +24,7 @@
         {% endif %}
         <p class="card__summary">{{ item.data.summary or item.data.description or "" }}</p>
         <div class="card__meta">
-          {% if item.date %}<time datetime="{{ item.date | isoDate }}">{{ item.date | ruDate }}</time>{% endif %}
+          {% if item.date %}<time datetime="{{ item.date | isoDate }}">{{ item.date | dateFmt(lang) }}</time>{% endif %}
           {% if item.data.tags and item.data.tags.length > 0 %}
             <span aria-hidden="true">·</span>
             <span>{{ item.data.tags[0] }}</span>

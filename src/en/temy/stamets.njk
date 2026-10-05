@@ -1,0 +1,99 @@
+---
+layout: layouts/base.njk
+lang: en
+title: "Paul Stamets and his work"
+description: "Biography, key books and research directions of Paul Stamets: mycoremediation, mycelium extracts for bees, entomopathogenic fungi, mycorrhiza."
+permalink: "/en/temy/stamets/"
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Topic</p>
+  <h1 class="page-header__title">Paul Stamets and his work</h1>
+  <p class="page-header__lead">
+    An adapted overview of the biography and key research
+    directions of American mycologist Paul Stamets
+    (b. 1955): mycoremediation, mycelium extracts for bees,
+    entomopathogenic fungi, mycorrhiza.
+  </p>
+</header>
+
+<section>
+  <h2>About Stamets</h2>
+  <p>
+    Paul Stamets is an American mycologist, author of "Mycelium
+    Running" and "Fantastic Fungi", co-founder of Fungi Perfecti
+    and the Host Defense brand. A detailed biography is in
+    <a href="{{ '/en/stati/stamets-bio/' | url }}">"Paul Stamets: a short biography of the mycologist"</a>.
+  </p>
+</section>
+
+<section>
+  <h2>Main directions</h2>
+  <ul>
+    <li><strong>Mycoremediation.</strong> Degradation of hydrocarbons and pesticides, binding of heavy metals. Overview —
+      <a href="{{ '/en/temy/mikoremediatsiya/' | url }}">the "Mycoremediation" topic</a>.</li>
+    <li><strong>Mycelium extracts for bees.</strong> A series of papers on the effect of supplements on viral load in honeybees. Overview —
+      <a href="{{ '/en/stati/pchely/' | url }}">the "Mushrooms and bees" article</a>.</li>
+    <li><strong>Entomopathogenic fungi.</strong> <em>Metarhizium</em>, <em>Beauveria</em> and other species as biological control. Overview —
+      <a href="{{ '/en/stati/entomopatogennye/' | url }}">the "Entomopathogenic fungi" article</a>.</li>
+    <li><strong>Mushrooms and immunity.</strong> Beta-glucans, PSK/PSP, innate-immunity receptors —
+      <a href="{{ '/en/temy/immunitet/' | url }}">the "Mushrooms and immunity" topic</a>.</li>
+    <li><strong>Mycorrhiza and mycoforestry.</strong> The role of fungal networks in forest ecosystems and the idea of forestry built on mycorrhizal connections. Overview —
+      <a href="{{ '/en/stati/mikoriza/' | url }}">the "Mycorrhiza" article</a>.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Books</h2>
+  <dl>
+    <dt>"Mycelium Running" (2005)</dt>
+    <dd>Stamets's main popular-science book. An adapted overview —
+      <a href="{{ '/en/stati/mycelium-running/' | url }}">the "Mycelium Running" article</a>.</dd>
+
+    <dt>"Fantastic Fungi" (2020)</dt>
+    <dd>The companion book to the documentary film of the same name (co-authored with Louie Schwartzberg and Evelyn Draper).</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Species connected to Stamets's research</h2>
+  <p>
+    Stamets's materials and the Host Defense company catalog most
+    often mention wood-decay fungi rich in beta-glucans and other
+    bioactive compounds. Species cards — in the
+    <a href="{{ '/en/griby/' | url }}">mushroom catalog</a>:
+  </p>
+  <ul>
+    <li><a href="{{ '/en/griby/reishi/' | url }}">Reishi (Ganoderma lucidum)</a> — a wood-decay polypore, one of the key objects in the Host Defense line.</li>
+    <li><a href="{{ '/en/griby/agarikon/' | url }}">Agarikon (Laricifomes officinalis)</a> — a wood-decay fungus to which Stamets dedicated separate chapters in "Mycelium Running".</li>
+  </ul>
+</section>
+
+<section>
+  <h2>How we work with sources</h2>
+  <p>
+    In the site's materials we adapt Stamets's original texts and
+    accompany them with links to the originals. Where Stamets
+    formulates a hypothesis or a personal position, we mark it.
+    Controversial claims are checked against independent
+    scientific publications — collected in the
+    <a href="{{ '/en/istochniki/' | url }}">"Sources"</a> section.
+  </p>
+</section>
+
+{% set related = [] %}
+{% for item in collections.statiEn %}
+  {% if "stamets" in (item.data.tags or []) %}
+    {% set _ = related.push(item) %}
+  {% endif %}
+{% endfor %}
+<section>
+  <h2>Materials on this topic</h2>
+  {% if related.length > 0 %}
+    {% set items = related %}
+    {% set kind = "article" %}
+    {% include "partials/card-grid.njk" %}
+  {% else %}
+    <p class="empty">No related articles yet.</p>
+  {% endif %}
+</section>

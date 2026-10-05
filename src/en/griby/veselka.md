@@ -10,7 +10,7 @@ verification_date: 2026-10-05T00:00:00.000Z
 verified: true
 image: /assets/img/mushrooms/veselka.jpg
 image_author: |-
-  Гриб_Phallus_Impudicus.jpg: Max31051980
+  Phallus_impudicus.jpg: Max31051980
   derivative work: Ak ccm
 image_license: CC BY-SA 3.0
 image_source_url: >-

@@ -1,11 +1,28 @@
 ---
 wide: true
 layout: layouts/base.njk
+lang: en
 title: "Mushroom encyclopedia"
 description: "Mushrooms without myths: a catalog of edible, poisonous and medicinal species, reviews of human clinical research and supplement safety — linked to primary sources."
 og_type: "website"
 permalink: "/en/"
 ---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Mushroom World",
+  "url": {{ (site.url + "/en/") | dump | safe }},
+  "description": {{ description | dump | safe }},
+  "inLanguage": "en",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mushroom World",
+    "url": {{ site.url | dump | safe }}
+  }
+}
+</script>
 
 <section class="hero">
   <div class="hero__aurora" aria-hidden="true">
@@ -20,6 +37,14 @@ permalink: "/en/"
           {% set angle = (loop.index0 / 36) * 360 %}
           <line x1="0" y1="0" x2="280" y2="0" transform="rotate({{ angle }})"/>
         {% endfor %}
+      </g>
+      <g fill="var(--color-leaf)" opacity="0.25">
+        <circle cx="180" cy="-110" r="2"/>
+        <circle cx="-220" cy="60" r="2"/>
+        <circle cx="120" cy="220" r="1.5"/>
+        <circle cx="-160" cy="-180" r="1.5"/>
+        <circle cx="240" cy="160" r="1.5"/>
+        <circle cx="-80" cy="240" r="1.5"/>
       </g>
     </svg>
   </div>
@@ -37,13 +62,15 @@ permalink: "/en/"
   </p>
   <div class="hero__actions">
     <a class="btn btn--primary" href="{{ '/en/griby/' | url }}">Mushroom catalog</a>
-    <a class="btn" href="{{ '/en/sezon/' | url }}">What to gather when</a>
+    <a class="btn" href="{{ '/en/stati/' | url }}">Articles and reviews</a>
   </div>
 </section>
 
 <div class="stats" aria-label="Site in numbers">
   <a class="stat" href="{{ '/en/griby/' | url }}"><span class="stat__num" data-counter="{{ collections.gribyEn.length }}">{{ collections.gribyEn.length }}</span><span class="stat__label">species in the catalog</span></a>
-  <a class="stat" href="{{ '/griby/' | url }}"><span class="stat__num">{{ collections.griby.length }}</span><span class="stat__label">species in the Russian version</span></a>
+  <a class="stat" href="{{ '/en/issledovaniya/' | url }}"><span class="stat__num" data-counter="{{ collections.issledovaniyaEn.length }}">{{ collections.issledovaniyaEn.length }}</span><span class="stat__label">research entries</span></a>
+  <a class="stat" href="{{ '/en/stati/' | url }}"><span class="stat__num" data-counter="{{ collections.statiEn.length }}">{{ collections.statiEn.length }}</span><span class="stat__label">articles and reviews</span></a>
+  <a class="stat" href="{{ '/en/temy/' | url }}"><span class="stat__num" data-counter="{{ collections.temyEn.length }}">{{ collections.temyEn.length }}</span><span class="stat__label">topic sections</span></a>
 </div>
 
 <section aria-labelledby="species" style="margin-top: var(--space-6);">
@@ -66,14 +93,53 @@ permalink: "/en/"
   <p style="margin-top: var(--space-2);"><a href="{{ '/en/griby/' | url }}">Full catalog →</a></p>
 </section>
 
+<section aria-labelledby="topics" style="margin-top: var(--space-6);">
+  <h2 id="topics" style="font-size: 1.6rem; margin-bottom: var(--space-3);">Topics</h2>
+  <div class="topic-grid">
+    {% for t in collections.temyEn %}
+      <a class="topic-tile" href="{{ t.url | url }}">
+        <h3 class="topic-tile__title">{{ t.data.title }}</h3>
+        <p class="topic-tile__lead">{{ t.data.description or t.data.lead or "" }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section aria-labelledby="latest" style="margin-top: var(--space-6);">
+  <h2 id="latest" style="font-size: 1.6rem; margin-bottom: var(--space-3);">Latest materials</h2>
+
+  {% if collections.statiEn.length == 0 %}
+    <p class="empty">No published materials yet.</p>
+  {% else %}
+    <div class="card-grid">
+      {% for item in collections.statiEn | reverse %}
+        {% if loop.index <= 6 %}
+          <article class="card">
+            <h3 class="card__title">
+              <a href="{{ item.url | url }}" style="text-decoration: none; color: inherit;">{{ item.data.title }}</a>
+            </h3>
+            <p class="card__summary">{{ (item.data.summary or item.data.description or "") | excerpt(160) }}</p>
+            <div class="card__meta">
+              <time datetime="{{ item.date | isoDate }}">{{ item.date | isoDate }}</time>
+              {% if item.data.tags %}
+                <span aria-hidden="true">·</span>
+                <span>{{ item.data.tags[0] }}</span>
+              {% endif %}
+            </div>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</section>
+
 <section aria-labelledby="about-short" style="margin-top: var(--space-6);">
   <h2 id="about-short" style="font-size: 1.6rem; margin-bottom: var(--space-3);">About the project</h2>
   <p style="max-width: 640px; color: var(--color-text-muted);">
     Mushroom World is an independent reference about fungi. We collect
     and adapt open material, base entries on peer-reviewed publications,
-    and present them in a readable form. Articles and research reviews
-    are currently available in Russian; the species catalog and the
-    seasonal calendar are being translated.
+    and present them in a readable form. The site is informational and
+    popular-science in nature.
   </p>
   <p style="margin-top: var(--space-3);">
     <a href="{{ '/en/o-proekte/' | url }}">More about the project →</a>

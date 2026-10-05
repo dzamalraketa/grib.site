@@ -9,7 +9,7 @@ date: 2025-10-05T00:00:00.000Z
 verification_date: 2025-10-05T00:00:00.000Z
 verified: true
 image: /assets/img/mushrooms/opyonok-letnij.jpg
-image_author: неизвестен
+image_author: unknown
 image_license: CC BY-SA 3.0
 image_source_url: 'https://commons.wikimedia.org/wiki/File:Stockschwaemmchen.jpg'
 months:
@@ -30,7 +30,7 @@ image_alt: 'Summer honey fungus (Kuehneromyces mutabilis) — two-toned brown ca
 sources:
   - title: 'Wikipedia: Kuehneromyces mutabilis'
     url: 'https://en.wikipedia.org/wiki/Kuehneromyces_mutabilis'
-  - title: 'Wikipedia: Kuehneromyces mutabilis (edible but not recommended, сходство с Galerina)'
+  - title: 'Wikipedia: Kuehneromyces mutabilis (edible but not recommended, resemblance to Galerina)'
     url: 'https://en.wikipedia.org/wiki/Kuehneromyces_mutabilis'
   - title: 'English Fungi Species: Kuehneromyces mutabilis'
     url: 'https://www.englishfungi.org/Species/Kuehneromyces%20mutabilis'

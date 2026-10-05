@@ -34,8 +34,7 @@ sources:
   - title: 'First Nature: Auricularia auricula-judae'
     url: 'https://www.first-nature.com/fungi/auricularia-auricula-judae.php'
   - title: >-
-      MushroomExpert (M. Kuo): Auricularia auricula (североамериканский
-      родственник)
+      MushroomExpert (M. Kuo): Auricularia auricula (North American relative)
     url: 'https://www.mushroomexpert.com/auricularia_auricula.html'
   - title: 'Wikipedia: Auricularia auricula-judae'
     url: 'https://en.wikipedia.org/wiki/Auricularia_auricula-judae'

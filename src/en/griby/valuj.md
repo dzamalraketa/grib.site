@@ -30,7 +30,7 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Russula_foetens'
   - title: 'First Nature: Russula foetens'
     url: 'https://www.first-nature.com/fungi/russula-foetens.php'
-  - title: 'Грибопедия: валуй'
+  - title: 'Gribopediya: Russula foetens'
     url: 'http://gribopedia.ru/mushrooms/valuj.html'
 summary: 'A yellow-brown russula with a foul smell — conditionally edible salted after soaking; one of the traditionally salted russulas of birch forest.'
 ---

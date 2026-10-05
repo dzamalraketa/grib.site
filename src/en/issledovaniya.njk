@@ -1,0 +1,63 @@
+---
+wide: true
+layout: layouts/base.njk
+lang: en
+title: "Mushroom research"
+description: "Entries on peer-reviewed studies of medicinal and culinary mushrooms: cognition, immunity, oncology, physical performance, antioxidants."
+permalink: "/en/issledovaniya/"
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Scientific sources</p>
+  <h1 class="page-header__title">Mushroom research</h1>
+  <p class="page-header__lead">
+    A catalog of peer-reviewed papers and reviews on medicinal and
+    culinary mushrooms. Every entry links directly to the original
+    publication — usually PubMed, Cochrane, Frontiers or the National
+    Cancer Institute. The site text is our retelling of the finding; for
+    details, figures and limitations, go to the primary source.
+  </p>
+</header>
+
+<section aria-label="Filter by category">
+  <div class="filters research-filters" role="group" aria-label="Filter by research category">
+    <button type="button" class="filter-btn" data-research-filter="all" aria-pressed="true">
+      All <span class="filter-btn__count" data-count="all"></span>
+    </button>
+    {% for cat in categories.research %}
+      <button type="button" class="filter-btn" data-research-filter="{{ cat.id }}" aria-pressed="false" style="--filter-accent: {{ cat.color }};">
+        {{ cat.title_en or cat.title }} <span class="filter-btn__count" data-count="{{ cat.id }}"></span>
+      </button>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="research-catalog" class="card-grid" aria-live="polite">
+  {% for item in collections.issledovaniyaEn %}
+    <article class="card card--research" data-category="{{ item.data.category }}" style="--cat-color: {% for c in categories.research %}{% if c.id == item.data.category %}{{ c.color }}{% endif %}{% endfor %};">
+      <div class="card--research__cat" aria-hidden="true">
+        <span class="card--research__cat-dot"></span>
+        <span class="card--research__cat-label">{{ item.data.category_label }}</span>
+      </div>
+
+      <h3 class="card__title">
+        <a href="{{ item.url | url }}">{{ item.data.title }}</a>
+      </h3>
+
+      <p class="card__summary">{{ item.data.summary }}</p>
+
+      <dl class="card--research__meta">
+        {% if item.data.mushroom %}
+          <dt>Mushroom</dt><dd>{{ item.data.mushroom }}</dd>
+        {% endif %}
+        {% if item.data.design %}
+          <dt>Design</dt><dd>{{ item.data.design }}</dd>
+        {% endif %}
+        <dt>Source</dt>
+        <dd><a href="{{ item.data.source_url }}" rel="noopener noreferrer" target="_blank">{{ item.data.source_name }}</a>, {{ item.data.year }}</dd>
+      </dl>
+    </article>
+  {% endfor %}
+</section>
+
+<script src="{{ '/assets/js/research-filter.js' | url }}?v={{ site.version }}" defer></script>

@@ -1,0 +1,100 @@
+---
+layout: layouts/base.njk
+lang: en
+title: "Mushrooms and immunity"
+description: "A collection of materials and links to primary sources on mushrooms and immunity: beta-glucans, mycelium extracts, studies in bees and humans."
+permalink: "/en/temy/immunitet/"
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Topic</p>
+  <h1 class="page-header__title">Mushrooms and immunity</h1>
+  <p class="page-header__lead">
+    This section collects materials on the effects of mushrooms and
+    mycelial components on the immune system — from beta-glucans to
+    extracts studied in clinical and preclinical research.
+  </p>
+</header>
+
+<section>
+  <h2>Beta-glucans: what exactly is being studied</h2>
+  <p>
+    Beta-(1→3)-glucans with β-(1→6) side branches are the main
+    structural polysaccharides of the basidiomycete cell wall. The
+    review by S. P. Wasser, "Medicinal mushrooms as a source of
+    antitumor and immunomodulating polysaccharides" (Applied
+    Microbiology and Biotechnology, 2002), collects the material on
+    the structural diversity of these compounds and their interaction
+    with innate-immunity receptors — Dectin-1, CR3 and toll-like
+    receptors. The effect depends not on the mere presence of the
+    polysaccharide but on molecular weight, degree of branching and
+    molecular conformation (triple helix versus unfolded chain).
+  </p>
+
+  <h2>Trametes versicolor and the PSK/PSP work</h2>
+  <p>
+    For <em>Trametes versicolor</em> (Turkey Tail), PubMed indexes
+    dozens of papers — predominantly by Japanese and Chinese
+    authors — on the mycelium-derived fractions PSK
+    (polysaccharide-K, "Krestin") and PSP (polysaccharide-peptide).
+    These fractions are discussed as adjuvant-therapy agents for
+    oncology patients and are included in approved protocols in
+    Japan and China. In "Mycelium Running" (2005), Paul Stamets
+    separately emphasizes that the results were obtained on
+    specific strains and fractions, not on "mushrooms in general".
+  </p>
+
+  <h2>Mushrooms and honeybee viruses</h2>
+  <p>
+    In the 2010s, a group led by Paul Stamets together with a
+    Washington State University lab published a series of papers on
+    the effect of mycelium extracts (<em>Ganoderma lucidum</em>,
+    <em>Fomitopsis officinalis</em>, <em>Trametes versicolor</em>
+    and other species) on viral load in honeybees infected with
+    deformed wing virus (DWV). The effect was observed in limited
+    samples and depended on concentration and delivery method;
+    the protocols are analyzed in Fungi Perfecti materials.
+  </p>
+
+  <h2>What this section does not publish</h2>
+  <p>
+    Dosages, regimens and "protocols" are not given here — those
+    data live in the primary sources, linked from the article
+    cards below and on the
+    <a href="{{ '/en/istochniki/' | url }}">"Sources"</a> page. The
+    texts deliberately separate laboratory data on specific
+    fractions from the colloquial notion of "mushrooms for
+    immunity" — these are different things, and Stamets himself
+    points this out in lectures and in his materials on
+    paulstamets.com.
+  </p>
+</section>
+
+<section>
+  <h2>Related species</h2>
+  <p>
+    More about the species behind much of the research in this
+    section — in the
+    <a href="{{ '/en/griby/' | url }}">mushroom catalog</a>:
+  </p>
+  <ul>
+    <li><a href="{{ '/en/griby/reishi/' | url }}">Reishi (Ganoderma lucidum)</a> — a wood-decay polypore, source of beta-glucans and triterpenoids, one of the most studied "medicinal" mushrooms.</li>
+  </ul>
+</section>
+
+{% set related = [] %}
+{% for item in collections.statiEn %}
+  {% if "immunity" in (item.data.tags or []) %}
+    {% set _ = related.push(item) %}
+  {% endif %}
+{% endfor %}
+<section>
+  <h2>Materials on this topic</h2>
+  {% if related.length > 0 %}
+    {% set items = related %}
+    {% set kind = "article" %}
+    {% include "partials/card-grid.njk" %}
+  {% else %}
+    <p class="empty">No related articles yet.</p>
+  {% endif %}
+</section>

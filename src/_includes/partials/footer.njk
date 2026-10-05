@@ -4,7 +4,7 @@
 <footer class="site-footer" role="contentinfo">
   <div class="container container--wide site-footer__grid">
     <div class="site-footer__about">
-      <a class="site-footer__brand" href="{{ ('/en/' if lang == 'en' else '/') | url }}">{{ site.title }}</a>
+      <a class="site-footer__brand" href="{{ ('/en/' if lang == 'en' else '/') | url }}">{{ "Mushroom World" if lang == "en" else site.title }}</a>
       <p>{{ L.ui.footerAbout if L.ui else "Независимый портал о грибах: каталог видов, разбор исследований на людях и безопасность добавок — со ссылками на первоисточники." }}</p>
     </div>
 
@@ -12,7 +12,7 @@
       <h2 class="site-footer__heading">{{ L.ui.sections if L.ui else "Разделы" }}</h2>
       <ul>
         {% for item in navItems %}
-          {% if item.url != '/' and item.url != '/kontakty/' and item.url != '/en/' %}
+          {% if item.url != '/' and item.url != '/kontakty/' and item.url != '/en/' and item.url != '/en/kontakty/' %}
             <li><a href="{{ item.url | url }}">{{ item.text }}</a></li>
           {% endif %}
         {% endfor %}
@@ -25,7 +25,7 @@
         {% for item in footerNavItems %}
           <li><a href="{{ item.url | url }}">{{ item.text }}</a></li>
         {% endfor %}
-        {% if lang != 'en' %}<li><a href="{{ '/kontakty/' | url }}">Контакты</a></li>{% endif %}
+        <li><a href="{{ ('/en/kontakty/' if lang == 'en' else '/kontakty/') | url }}">{{ 'Contacts' if lang == 'en' else 'Контакты' }}</a></li>
       </ul>
     </nav>
   </div>

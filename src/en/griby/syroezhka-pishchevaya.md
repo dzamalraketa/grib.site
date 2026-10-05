@@ -31,7 +31,7 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Russula_vesca'
   - title: 'First Nature: Russula vesca'
     url: 'https://www.first-nature.com/fungi/russula-vesca.php'
-  - title: 'Грибопедия: сыроежка пищевая'
+  - title: 'Gribopediya: Russula vesca'
     url: 'http://gribopedia.ru/mushrooms/syroezhka-pishchevaya.php'
 summary: 'A mild russula with a distinctive feature: the cap skin peels only halfway from the edge. Edible, nutty — one of the safe russulas.'
 ---

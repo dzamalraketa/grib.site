@@ -1,0 +1,136 @@
+---
+layout: layouts/base.njk
+lang: en
+title: "Contact"
+description: "Feedback form. Messages are sent via a Cloudflare Worker."
+permalink: "/en/kontakty/"
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Contact</p>
+  <h1 class="page-header__title">Contact</h1>
+  <p class="page-header__lead">
+    Messages, suggestions and corrections of facts can be sent
+    through the form below.
+  </p>
+</header>
+
+<section style="max-width: 560px;">
+  <h2>Feedback form</h2>
+
+  <div class="form-status" data-form-status hidden role="status" aria-live="polite"></div>
+
+  <form
+    class="form"
+    data-contact-form
+    action="{{ site.worker_url }}"
+    method="POST"
+    aria-label="Feedback form"
+    novalidate>
+
+    <div class="form-field">
+      <label class="form-label" for="name">Name</label>
+      <input class="form-input" id="name" name="name" type="text" required autocomplete="name">
+    </div>
+
+    <div class="form-field">
+      <label class="form-label" for="email">E-mail</label>
+      <input class="form-input" id="email" name="email" type="email" required autocomplete="email">
+    </div>
+
+    <div class="form-field">
+      <label class="form-label" for="subject">Subject</label>
+      <input class="form-input" id="subject" name="subject" type="text" placeholder="Fact correction / suggestion / other">
+    </div>
+
+    <div class="form-field">
+      <label class="form-label" for="message">Message</label>
+      <textarea class="form-textarea" id="message" name="message" rows="6" required></textarea>
+    </div>
+
+    <p class="form-help">
+      By submitting the form you agree that the e-mail you provide will
+      be used for a reply. We do not share contact data with third
+      parties without your explicit consent.
+    </p>
+
+    <button
+      type="submit"
+      class="btn btn--primary"
+      data-submit-button
+      data-label-busy="Sending…">Send</button>
+  </form>
+
+  <p style="margin-top: var(--space-4); font-size: var(--font-size-sm); color: var(--color-text-muted);">
+    If the form does not work, write directly:
+    <a href="mailto:info@grib.site">info@grib.site</a>.
+  </p>
+</section>
+
+<script>
+  (() => {
+    const form   = document.querySelector('[data-contact-form]');
+    const status = document.querySelector('[data-form-status]');
+    const button = document.querySelector('[data-submit-button]');
+    if (!form || !button) return;
+
+    const workerUrl = form.getAttribute('action');
+    const defaultLabel = button.textContent.trim();
+    const busyLabel = button.dataset.labelBusy || 'Sending…';
+
+    const setStatus = (kind, text) => {
+      if (!status) return;
+      status.hidden = false;
+      status.dataset.kind = kind;
+      status.textContent = text;
+    };
+    const clearStatus = () => {
+      if (!status) return;
+      status.hidden = true;
+      status.removeAttribute('data-kind');
+      status.textContent = '';
+    };
+    const setBusy = (busy) => {
+      button.disabled = busy;
+      button.textContent = busy ? busyLabel : defaultLabel;
+      button.setAttribute('aria-busy', busy ? 'true' : 'false');
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      clearStatus();
+
+      if (!form.reportValidity()) return;
+
+      const data = {
+        name:    form.elements.name.value.trim(),
+        email:   form.elements.email.value.trim(),
+        subject: form.elements.subject.value.trim(),
+        message: form.elements.message.value.trim(),
+      };
+
+      setBusy(true);
+      try {
+        const res = await fetch(workerUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        let payload = null;
+        try { payload = await res.json(); } catch (_) {}
+
+        if (res.ok && (!payload || payload.ok !== false)) {
+          setStatus('ok', 'Message sent. Thank you!');
+          form.reset();
+        } else {
+          setStatus('error', (payload && payload.error) || 'Send failed. Please try again later.');
+        }
+      } catch (_) {
+        setStatus('error', 'Network error. Please try again later.');
+      } finally {
+        setBusy(false);
+      }
+    });
+  })();
+</script>

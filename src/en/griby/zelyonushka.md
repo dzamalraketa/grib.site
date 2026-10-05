@@ -9,7 +9,7 @@ date: 2025-10-05T00:00:00.000Z
 verification_date: 2025-10-05T00:00:00.000Z
 verified: true
 image: /assets/img/mushrooms/zelyonushka.jpg
-image_author: неизвестен
+image_author: unknown
 image_license: CC BY-SA 3.0
 image_source_url: 'https://commons.wikimedia.org/wiki/File:Tricholoma%20equestre.jpg'
 months:
@@ -35,7 +35,7 @@ sources:
       A series of cases of rhabdomyolysis after ingestion of Tricholoma equestre
       (PMC5287993)
     url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5287993/'
-  - title: 'First Nature: Tricholoma terreum (рекомендация по зелёнушке)'
+  - title: 'First Nature: Tricholoma terreum (recommendation on T. equestre)'
     url: 'https://www.first-nature.com/fungi/tricholoma-terreum.php'
 summary: 'Long considered edible, but a French series described delayed rhabdomyolysis — muscle breakdown threatening kidneys and heart — after large repeated meals.'
 ---

@@ -27,7 +27,7 @@ image_alt: 'Poison pie (Hebeloma crustuliniforme) — beige caps with pale gills
 sources:
   - title: 'First Nature: Hebeloma crustuliniforme'
     url: 'https://www.first-nature.com/fungi/hebeloma-crustuliniforme.php'
-  - title: 'MushroomExpert (M. Kuo): Hebeloma (review рода)'
+  - title: 'MushroomExpert (M. Kuo): Hebeloma (genus review)'
     url: 'https://www.mushroomexpert.com/hebeloma.html'
   - title: 'Wikipedia: Hebeloma crustuliniforme'
     url: 'https://en.wikipedia.org/wiki/Hebeloma_crustuliniforme'

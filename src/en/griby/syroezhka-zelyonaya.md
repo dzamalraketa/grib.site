@@ -27,7 +27,7 @@ image_alt: 'Green russula (Russula aeruginea) — green cracked cap'
 sources:
   - title: 'First Nature: Russula aeruginea'
     url: 'https://www.first-nature.com/fungi/russula-aeruginea.php'
-  - title: 'MushroomExpert (M. Kuo): Russula (review рода)'
+  - title: 'MushroomExpert (M. Kuo): Russula (genus review)'
     url: 'https://www.mushroomexpert.com/russula.html'
   - title: 'Wikipedia: Russula aeruginea'
     url: 'https://en.wikipedia.org/wiki/Russula_aeruginea'

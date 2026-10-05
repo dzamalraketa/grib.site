@@ -9,7 +9,7 @@ date: 2026-10-05T00:00:00.000Z
 verification_date: 2026-10-05T00:00:00.000Z
 verified: true
 image: /assets/img/mushrooms/chesuichatka-obyknovennaya.jpg
-image_author: Игорь Лебединский
+image_author: Igor Lebedinsky
 image_license: CC BY 3.0
 image_source_url: 'https://commons.wikimedia.org/wiki/File:Pholiota%20squarrosa2.jpg'
 months:

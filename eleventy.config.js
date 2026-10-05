@@ -55,6 +55,32 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => b.date - a.date);
   });
 
+  // Английские статьи.
+  eleventyConfig.addCollection("statiEn", (api) => {
+    return api
+      .getFilteredByGlob("src/en/stati/*.md")
+      .sort((a, b) => b.date - a.date);
+  });
+
+  // Английские тематические обзоры.
+  eleventyConfig.addCollection("temyEn", (api) => {
+    return api
+      .getFilteredByGlob("src/en/temy/*.njk")
+      .sort((a, b) => a.data.title.localeCompare(b.data.title, "en"));
+  });
+
+  // Английские карточки исследований.
+  eleventyConfig.addCollection("issledovaniyaEn", (api) => {
+    return api
+      .getFilteredByGlob("src/en/issledovaniya/*.md")
+      .sort((a, b) => {
+        const yearA = a.data.year || (a.date ? a.date.getUTCFullYear() : 0);
+        const yearB = b.data.year || (b.date ? b.date.getUTCFullYear() : 0);
+        if (yearA !== yearB) return yearB - yearA;
+        return (a.data.title || "").localeCompare(b.data.title || "", "en");
+      });
+  });
+
   // Тематические обзоры (temy).
   eleventyConfig.addCollection("temy", (api) => {
     return api

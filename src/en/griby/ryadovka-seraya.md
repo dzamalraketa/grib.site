@@ -24,7 +24,7 @@ image_alt: 'Grey tricholoma (Tricholoma portentosum) — gray cap with yellowish
 sources:
   - title: 'First Nature: Tricholoma portentosum'
     url: 'https://www.first-nature.com/fungi/tricholoma-portentosum.php'
-  - title: 'MushroomExpert (M. Kuo): Tricholoma (review рода)'
+  - title: 'MushroomExpert (M. Kuo): Tricholoma (genus review)'
     url: 'https://www.mushroomexpert.com/tricholoma.html'
   - title: 'Wikipedia: Tricholoma portentosum'
     url: 'https://en.wikipedia.org/wiki/Tricholoma_portentosum'

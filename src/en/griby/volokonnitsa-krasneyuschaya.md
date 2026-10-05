@@ -27,7 +27,7 @@ image_alt: 'Blushing fibercap (Inocybe erubescens) — pinkish cone caps in a gr
 sources:
   - title: 'First Nature: Inocybe erubescens'
     url: 'https://www.first-nature.com/fungi/inocybe-erubescens.php'
-  - title: 'MushroomExpert (M. Kuo): Inocybe (review рода)'
+  - title: 'MushroomExpert (M. Kuo): Inocybe (genus review)'
     url: 'https://www.mushroomexpert.com/inocybe.html'
   - title: 'Wikipedia: Inocybe erubescens'
     url: 'https://en.wikipedia.org/wiki/Inocybe_erubescens'

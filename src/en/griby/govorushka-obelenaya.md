@@ -28,7 +28,7 @@ image_alt: 'Fool''s funnel (Clitocybe dealbata) — pale funnel caps in grass'
 sources:
   - title: 'First Nature: Clitocybe rivulosa'
     url: 'https://www.first-nature.com/fungi/clitocybe-rivulosa.php'
-  - title: 'MushroomExpert (M. Kuo): Clitocybe (review рода)'
+  - title: 'MushroomExpert (M. Kuo): Clitocybe (genus review)'
     url: 'https://www.mushroomexpert.com/clitocybe.html'
   - title: 'Wikipedia: Clitocybe rivulosa'
     url: 'https://en.wikipedia.org/wiki/Clitocybe_rivulosa'

@@ -27,7 +27,7 @@ image_alt: 'Yellow milkcap (Lactarius scrobiculatus) — yellowish funnel with p
 sources:
   - title: 'First Nature: Lactarius scrobiculatus'
     url: 'https://www.first-nature.com/fungi/lactarius-scrobiculatus.php'
-  - title: 'MushroomExpert (M. Kuo): Lactarius (review рода)'
+  - title: 'MushroomExpert (M. Kuo): Lactarius (genus review)'
     url: 'https://www.mushroomexpert.com/lactarius.html'
   - title: 'Wikipedia: Lactarius scrobiculatus'
     url: 'https://en.wikipedia.org/wiki/Lactarius_scrobiculatus'

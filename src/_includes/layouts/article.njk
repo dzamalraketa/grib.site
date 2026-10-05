@@ -29,9 +29,9 @@ og_type: "article"
 <article>
   <header class="article-header">
     <div class="article-header__meta">
-      <time datetime="{{ page.date | isoDate }}">{{ page.date | ruDate }}</time>
+      <time datetime="{{ page.date | isoDate }}">{{ page.date | dateFmt(lang) }}</time>
       {% if author %}<span aria-hidden="true">·</span><span>{{ author }}</span>{% endif %}
-      {% if verified %}<span aria-hidden="true">·</span><span>Проверено: {{ verification_date | ruDate or "—" }}</span>{% endif %}
+      {% if verified %}<span aria-hidden="true">·</span><span>{{ "Verified:" if lang == "en" else "Проверено:" }} {{ verification_date | dateFmt(lang) or "—" }}</span>{% endif %}
     </div>
     <h1 class="article-header__title">{{ title }}</h1>
     {% if summary %}<p style="color: var(--color-text-muted); font-size: 1.1rem; max-width: 640px;">{{ summary }}</p>{% endif %}

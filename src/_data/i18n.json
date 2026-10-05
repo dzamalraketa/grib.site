@@ -12,6 +12,22 @@
       {
         "text": "What to gather",
         "url": "/en/sezon/"
+      },
+      {
+        "text": "Topics",
+        "url": "/en/temy/"
+      },
+      {
+        "text": "Articles",
+        "url": "/en/stati/"
+      },
+      {
+        "text": "Research",
+        "url": "/en/issledovaniya/"
+      },
+      {
+        "text": "Contact",
+        "url": "/en/kontakty/"
       }
     ],
     "footerNav": [
@@ -21,7 +37,15 @@
       },
       {
         "text": "Sources",
-        "url": "/istochniki/"
+        "url": "/en/istochniki/"
+      },
+      {
+        "text": "Search",
+        "url": "/en/poisk/"
+      },
+      {
+        "text": "RSS",
+        "url": "/feed.xml"
       }
     ],
     "ui": {

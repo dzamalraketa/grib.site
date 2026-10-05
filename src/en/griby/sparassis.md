@@ -27,7 +27,7 @@ image_alt: 'Cauliflower fungus (Sparassis crispa) — cream ruffled mass at a pi
 sources:
   - title: 'First Nature: Sparassis crispa'
     url: 'https://www.first-nature.com/fungi/sparassis-crispa.php'
-  - title: 'MushroomExpert (M. Kuo): Sparassis (review рода)'
+  - title: 'MushroomExpert (M. Kuo): Sparassis (genus review)'
     url: 'https://www.mushroomexpert.com/sparassis.html'
   - title: 'Wild Food UK: Cauliflower Fungus'
     url: 'https://www.wildfooduk.com/mushroom-guides/cauliflower-fungus/'

@@ -9,7 +9,7 @@ date: 2025-07-15T00:00:00.000Z
 verification_date: 2025-07-20T00:00:00.000Z
 verified: true
 image: /assets/img/mushrooms/lisichka.jpg
-image_author: неизвестен
+image_author: unknown
 image_license: CC BY-SA 3.0
 image_source_url: >-
   https://commons.wikimedia.org/wiki/File:Chanterelle%20Cantharellus%20cibarius.jpg
@@ -31,7 +31,7 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Cantharellus_cibarius'
   - title: 'Mycologia: Revision of the Cantharellus cibarius complex'
     url: 'https://www.mycologia.org'
-  - title: 'Российская микология: Cantharellus cibarius'
+  - title: 'Russian Mycology: Cantharellus cibarius'
     url: 'https://www.mushroom.su'
 summary: 'The egg-yellow forest mushroom: blunt ridges instead of gills, apricot smell, worm-resistant flesh. A reliable edible even for beginners.'
 ---

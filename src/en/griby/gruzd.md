@@ -28,11 +28,11 @@ image_alt: 'True milkcap (Lactarius resimus) — white funnel with fringed edge'
 sources:
   - title: 'Wikipedia: Lactarius resimus'
     url: 'https://en.wikipedia.org/wiki/Lactarius_resimus'
-  - title: Определители грибов России
+  - title: Russian mushroom field guides
     url: 'https://ru.wikipedia.org/wiki/Груздь_настоящий'
-  - title: 'gotovim.ru: груздь настоящий'
+  - title: 'gotovim.ru: Lactarius resimus'
     url: 'https://www.gotovim.ru/mushroom/diversity/lactarius_3.shtml'
-  - title: 'Грибопедия: груздь настоящий'
+  - title: 'Gribopediya: Lactarius resimus'
     url: 'http://gribopedia.ru/mushrooms/gruzd-nastoyashchij.php'
 summary: 'The classic Russian salting mushroom: white funnel with a fringed margin and acrid latex — conditionally edible, always soaked before salting.'
 ---

@@ -32,11 +32,11 @@ image_alt: 'Woolly milkcap (Lactarius torminosus) — pinkish cap with fringed w
 sources:
   - title: 'Wikipedia: Lactarius torminosus'
     url: 'https://en.wikipedia.org/wiki/Lactarius_torminosus'
-  - title: 'Русская Википедия: Волнушка розовая'
+  - title: 'Russian Wikipedia: Lactarius torminosus'
     url: 'https://ru.wikipedia.org/wiki/Волнушка_розовая'
   - title: 'First Nature: Lactarius torminosus'
     url: 'https://www.first-nature.com/fungi/lactarius-torminosus.php'
-  - title: 'Грибопедия: волнушка розовая'
+  - title: 'Gribopediya: Lactarius torminosus'
     url: 'http://gribopedia.ru/mushrooms/volnushka-rozovaja.html'
 summary: 'A pink woolly-fringed milkcap — conditionally edible salted after soaking; the pink shaggy margin and birch habitat mark it.'
 ---

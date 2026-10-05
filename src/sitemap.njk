@@ -45,9 +45,9 @@ eleventyExcludeFromCollections: true
   {%- set indexPages = [
     { url: "/griby/", src: "./src/griby.njk", en: "/en/griby/" },
     { url: "/sezon/", src: "./src/sezon.njk", en: "/en/sezon/" },
-    { url: "/temy/", src: "./src/temy.njk" },
-    { url: "/stati/", src: "./src/stati.njk" },
-    { url: "/issledovaniya/", src: "./src/issledovaniya.njk" }
+    { url: "/temy/", src: "./src/temy.njk", en: "/en/temy/" },
+    { url: "/stati/", src: "./src/stati.njk", en: "/en/stati/" },
+    { url: "/issledovaniya/", src: "./src/issledovaniya.njk", en: "/en/issledovaniya/" }
   ] -%}
   {%- for ip in indexPages %}
   <url>

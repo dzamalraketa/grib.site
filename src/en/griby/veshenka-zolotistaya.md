@@ -26,7 +26,7 @@ image_alt: 'Golden oyster (Pleurotus citrinopileatus) — bright yellow clustere
 sources:
   - title: 'Wikipedia: Pleurotus citrinopileatus (golden oyster, tamogitake)'
     url: 'https://en.wikipedia.org/wiki/Pleurotus_citrinopileatus'
-  - title: 'Front Nutr 2025: тамогитаке у пожилых'
+  - title: 'Front Nutr 2025: tamogitake in the elderly'
     url: 'https://doi.org/10.3389/fnut.2025.1585111'
   - title: 'First Nature: Pleurotus cornucopiae'
     url: 'https://www.first-nature.com/fungi/pleurotus-cornucopiae.php'

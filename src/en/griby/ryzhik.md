@@ -9,7 +9,7 @@ date: 2025-07-27T00:00:00.000Z
 verification_date: 2025-07-27T00:00:00.000Z
 verified: true
 image: /assets/img/mushrooms/ryzhik.jpg
-image_author: неизвестен
+image_author: unknown
 image_license: CC BY-SA 3.0
 image_source_url: 'https://commons.wikimedia.org/wiki/File:Lactarius%20deliciosus.jpg'
 months:

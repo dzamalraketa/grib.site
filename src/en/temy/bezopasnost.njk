@@ -1,0 +1,107 @@
+---
+layout: layouts/base.njk
+lang: en
+title: "Mushroom supplement safety"
+description: "What is actually documented about harm from mushroom supplements in humans: oxalate nephropathy from chaga, warfarin interactions, Phase I tolerability data — and where the line of 'safe' runs."
+permalink: "/en/temy/bezopasnost/"
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Topic</p>
+  <h1 class="page-header__title">Mushroom supplement safety</h1>
+  <p class="page-header__lead">
+    "Natural" does not mean "inert". Mushroom supplements have a
+    small but real body of documented harm — and a large body of
+    tolerability data. Both are collected here without marketing
+    retouch.
+  </p>
+</header>
+
+<section>
+  <h2>Two categories of data</h2>
+  <p>
+    Human mushroom safety is known from two different types of
+    sources, and they should not be conflated:
+  </p>
+  <ul>
+    <li>
+      <strong>Phase I and interventional work</strong> — where
+      tolerability was measured deliberately: trametes extract up
+      to 9 g/day in women after breast-cancer treatment,
+      <em>Cordyceps cicadae</em> mycelium for 3 months in healthy
+      adults, Phase I <em>Agaricus blazei</em> in 78 patients in
+      remission, <em>C. militaris</em> in people with already
+      elevated liver transaminases. Here there are numbers: doses,
+      duration, laboratory panels.
+    </li>
+    <li>
+      <strong>Case reports</strong> — where harm happened in real
+      life and was published. These are not "weak data" but the
+      canonical form of pharmacovigilance: this is exactly how
+      rare and unexpected reactions that RCTs cannot catch are
+      recorded.
+    </li>
+  </ul>
+
+  <h2>Documented harm</h2>
+  <p>
+    The most notable signal is <strong>chaga and oxalate
+    nephropathy</strong>: three published cases from Japan and
+    Korea, all with biopsy-confirmed oxalate crystals in renal
+    tubules. In one case the oxalate content of the chaga powder
+    was measured directly — 14.2 g per 100 g, which at daily
+    intake produced a load 2–5 times the usual dietary one. The
+    common denominator of the cases: <em>concentrated powder,
+    grams a day, months and years</em>.
+  </p>
+  <p>
+    The second class is <strong>drug interactions</strong>:
+    maitake and INR elevation on warfarin (the Hanselin 2010
+    case), cautions on reishi and anticoagulants/immunosuppressants
+    from the MSKCC database. The full map is in our article
+    "<a href="{{ '/en/stati/gribnye-dobavki-vzaimodejstviya/' | url }}">Mushroom supplements and medicines</a>".
+  </p>
+
+  <h2>What tolerability studies show</h2>
+  <p>
+    Where safety was measured deliberately, the picture is
+    reassuring: Phase I trials found no toxicity at working doses,
+    and laboratory panels (liver, kidneys, blood) stayed within
+    normal ranges. But these studies share a common limit: they
+    are short (weeks to months) and run in specific groups — they
+    say "at this dose, these people had no problems", not "safe
+    always and for everyone".
+  </p>
+
+  <h2>The practical boundary</h2>
+  <p>
+    Documented harm converges into one formula:
+    <strong>concentrate + large dose + long duration + vulnerable
+    system</strong> (kidneys, anticoagulation, immunosuppression).
+    Culinary doses of mushrooms do not fall into this formula.
+    Grams of chaga powder daily — falls into it squarely.
+  </p>
+</section>
+
+<section>
+  <h2>Related species</h2>
+  <ul>
+    <li><a href="{{ '/en/griby/chaga/' | url }}">Chaga (Inonotus obliquus)</a> — the only mushroom with a series of biopsy-confirmed kidney complications.</li>
+    <li><a href="{{ '/en/griby/maitake/' | url }}">Maitake (Grifola frondosa)</a> — documented interaction with warfarin.</li>
+    <li><a href="{{ '/en/griby/trametes-versicolor/' | url }}">Trametes versicolor</a> — the best-studied tolerability (Phase I in oncology).</li>
+    <li><a href="{{ '/en/griby/cordyceps-cicadae/' | url }}">Cordyceps cicadae</a> — a 3-month mycelium tolerability study.</li>
+  </ul>
+</section>
+
+{% set related = [] %}
+{% for item in collections.issledovaniyaEn %}
+  {% if item.data.category == "safety" %}
+    {% set _ = related.push(item) %}
+  {% endif %}
+{% endfor %}
+<section>
+  <h2>Research on this topic</h2>
+  {% set items = related %}
+  {% set kind = "article" %}
+  {% include "partials/card-grid.njk" %}
+</section>

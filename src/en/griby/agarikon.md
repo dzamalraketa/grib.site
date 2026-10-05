@@ -24,7 +24,7 @@ image_alt: 'Agarikon (Laricifomes officinalis) — white columnar conk on a coni
 sources:
   - title: 'Wikipedia: Laricifomes officinalis'
     url: 'https://en.wikipedia.org/wiki/Laricifomes_officinalis'
-  - title: Stamets P. Mycelium Running (2005) — глава об Agarikon
+  - title: Stamets P. Mycelium Running (2005) — the Agarikon chapter
     url: 'https://www.google.com/books/edition/Mycelium_Running'
   - title: 'Fungi Perfecti: Agarikon research'
     url: 'https://fungi.com/blogs/articles'

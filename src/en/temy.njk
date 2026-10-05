@@ -1,0 +1,27 @@
+---
+wide: true
+layout: layouts/base.njk
+lang: en
+title: "Topics"
+description: "Thematic reviews in mycology: mushroom species, mycoremediation, fungi and immunity, mycorrhiza, entomopathogenic fungi."
+permalink: "/en/temy/"
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Reviews</p>
+  <h1 class="page-header__title">Topics</h1>
+  <p class="page-header__lead">
+    Thematic pages gathering material on key areas of mycology:
+    mushroom species, mycoremediation, effects on immunity, mycorrhiza,
+    entomopathogenic fungi.
+  </p>
+</header>
+
+<div class="topic-grid">
+  {% for t in collections.temyEn %}
+    <a class="topic-tile" href="{{ t.url | url }}">
+      <h2 class="topic-tile__title">{{ t.data.title }}</h2>
+      <p class="topic-tile__lead">{{ t.data.description or t.data.lead or "" }}</p>
+    </a>
+  {% endfor %}
+</div>

@@ -73,7 +73,8 @@ og_type: "article"
      (или одно из значений research_match из front matter). #}
   {% set species_research = [] %}
   {% set needles = research_match or ([latin_name] if latin_name else []) %}
-  {% for item in collections.issledovaniya %}
+  {% set research_collection = collections.issledovaniyaEn if lang == 'en' else collections.issledovaniya %}
+  {% for item in research_collection %}
     {% for n in needles %}
       {% if item.data.mushroom and item.data.mushroom.indexOf(n) > -1 and not (item in species_research) %}
         {% set _ = species_research.push(item) %}

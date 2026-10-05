@@ -26,7 +26,7 @@ image_alt: 'Morel (Morchella esculenta) — honeycomb pitted cap'
 sources:
   - title: 'Wikipedia: Morchella esculenta'
     url: 'https://en.wikipedia.org/wiki/Morchella_esculenta'
-  - title: NCCIH / FDA о сморчках
+  - title: NCCIH / FDA on morels
     url: 'https://pubmed.ncbi.nlm.nih.gov/?term=morchella+toxicity'
   - title: 'First Nature: Morchella esculenta'
     url: 'https://www.first-nature.com/fungi/morchella-esculenta.php'

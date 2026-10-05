@@ -30,7 +30,7 @@ image_alt: 'Tiger tricholoma (Tricholoma pardinum) — gray scaly cap with pale 
 sources:
   - title: 'Wikipedia: Tricholoma pardinum'
     url: 'https://en.wikipedia.org/wiki/Tricholoma_pardinum'
-  - title: 'Wikipedia: Tricholoma pardinum — клинические данные'
+  - title: 'Wikipedia: Tricholoma pardinum — clinical data'
     url: 'https://en.wikipedia.org/wiki/Tricholoma_pardinum'
   - title: 'First Nature: Tricholoma pardinum'
     url: 'https://www.first-nature.com/fungi/tricholoma-pardinum.php'

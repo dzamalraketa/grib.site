@@ -1,0 +1,82 @@
+---
+layout: layouts/base.njk
+lang: en
+title: "Mushrooms and the microbiome"
+description: "What is known about the effect of mushrooms and fungal β-glucans on the human gut microbiota: clinical work, shifts in microbiota composition and an honest level of evidence."
+permalink: "/en/temy/mikrobiom/"
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Topic</p>
+  <h1 class="page-header__title">Mushrooms and the microbiome</h1>
+  <p class="page-header__lead">
+    The fungal cell wall is made of polysaccharides humans cannot
+    digest — β-glucans and chitin. That makes mushrooms a natural
+    candidate for the role of prebiotic: a substrate for gut
+    bacteria. This section collects what has actually been
+    measured in humans on this question.
+  </p>
+</header>
+
+<section>
+  <h2>How mushrooms could influence the microbiota</h2>
+  <p>
+    A fungal cell wall is above all β-(1→3)-glucans with
+    β-(1→6) branches and chitin. The human GI tract has no
+    enzymes to break them down, so the polysaccharides reach the
+    colon, where they become a substrate for bacterial
+    fermentation. Potential fermentation products — short-chain
+    fatty acids (SCFAs: butyrate, propionate, acetate) — are how
+    the microbiota connects to immunity and metabolism.
+    Separately studied is the effect of mushrooms on intestinal
+    immunoglobulin A (IgA) — the mucosa's first defensive barrier.
+  </p>
+
+  <h2>What has been measured in humans</h2>
+  <p>
+    There is little clinical work, and it mostly measures
+    microbiota <em>composition</em> rather than health-related
+    outcomes. A crossover study with button mushrooms (10 days of
+    "mushrooms versus meat" at equal protein) showed a different
+    fecal-microbiota composition and greater stool weight — with
+    no SCFA shift. An RCT of a shiitake β-glucan extract in people
+    with moderate hypercholesterolemia changed neither lipids nor
+    inflammatory markers — but modulated colon microbiota
+    differently from placebo. A Japanese pilot of a mixed-mushroom
+    diet in 80 people showed rising intestinal SCFAs and a trend
+    toward higher IgA, dependent on the starting microbiota state.
+  </p>
+
+  <h2>An honest level of evidence</h2>
+  <p>
+    The model "fungal β-glucan → substrate for bacteria → health"
+    is biologically plausible and sits well within the prebiotics
+    picture. But the human branch is still at the stage of "do
+    markers shift" rather than "do outcomes change": short
+    interventions, small samples, surrogate endpoints. The claim
+    "mushrooms heal the microbiome" is already beyond the data;
+    the phrase "fungal polysaccharides measurably change
+    microbiota composition in humans" is within it.
+  </p>
+</section>
+
+<section>
+  <h2>Related species</h2>
+  <ul>
+    <li><a href="{{ '/en/griby/shampinon/' | url }}">Button mushroom (Agaricus bisporus)</a> — the object of the first clinical mushroom→microbiota study.</li>
+    <li><a href="{{ '/en/griby/shiitake/' | url }}">Shiitake (Lentinula edodes)</a> — the source of the BGE β-glucan blend from the Reducol study.</li>
+  </ul>
+</section>
+
+{% set related = [] %}
+{% for item in collections.issledovaniyaEn %}
+  {% if item.data.category == "microbiome" %}
+    {% set _ = related.push(item) %}
+  {% endif %}
+{% endfor %}
+<section>
+  <h2>Research on this topic</h2>
+  {% set items = related %}
+  {% set kind = "article" %}
+  {% include "partials/card-grid.njk" %}
+</section>

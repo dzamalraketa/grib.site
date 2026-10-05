@@ -36,7 +36,7 @@
     {# Open Graph / Twitter Card #}
     {% if noindex %}<meta name="robots" content="noindex, follow">{% else %}<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">{% endif %}
     <meta property="og:type" content="{{ og_type or 'website' }}">
-    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:site_name" content="{{ siteTitle }}">
     <meta property="og:title" content="{% if title %}{{ title }} — {{ siteTitle }}{% else %}{{ siteTitle }}{% endif %}">
     <meta property="og:description" content="{{ description or summary or site.description }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
@@ -73,23 +73,39 @@
       <script type="application/ld+json">{{ schema | safe }}</script>
     {% endif %}
 
-    {# BreadcrumbList: строится по первому сегменту URL.
+    {# BreadcrumbList: строится по первому сегменту URL (для EN — по второму).
        Служебные страницы и индексы разделов пропускаются. #}
-    {% set crumb_sections = {
-      "/griby/": "Каталог грибов",
-      "/issledovaniya/": "Исследования",
-      "/stati/": "Статьи",
-      "/temy/": "Темы"
-    } %}
-    {% set seg = "/" + page.url.split("/")[1] + "/" %}
-    {% if page.url != "/" and crumb_sections[seg] and page.url != seg %}
+    {% if lang == "en" %}
+      {% set crumb_sections = {
+        "/griby/": "Mushroom catalog",
+        "/issledovaniya/": "Research",
+        "/stati/": "Articles",
+        "/temy/": "Topics"
+      } %}
+      {% set seg = "/" + page.url.split("/")[2] + "/" %}
+      {% set segUrl = "/en" + seg %}
+      {% set crumb_home_name = "Home" %}
+      {% set crumb_home_url = "/en/" %}
+    {% else %}
+      {% set crumb_sections = {
+        "/griby/": "Каталог грибов",
+        "/issledovaniya/": "Исследования",
+        "/stati/": "Статьи",
+        "/temy/": "Темы"
+      } %}
+      {% set seg = "/" + page.url.split("/")[1] + "/" %}
+      {% set segUrl = seg %}
+      {% set crumb_home_name = "Главная" %}
+      {% set crumb_home_url = "/" %}
+    {% endif %}
+    {% if page.url != "/" and page.url != "/en/" and crumb_sections[seg] and page.url != segUrl %}
       <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Главная", "item": {{ (site.url + "/") | dump | safe }} },
-          { "@type": "ListItem", "position": 2, "name": {{ crumb_sections[seg] | dump | safe }}, "item": {{ (site.url + seg) | dump | safe }} },
+          { "@type": "ListItem", "position": 1, "name": {{ crumb_home_name | dump | safe }}, "item": {{ (site.url + crumb_home_url) | dump | safe }} },
+          { "@type": "ListItem", "position": 2, "name": {{ crumb_sections[seg] | dump | safe }}, "item": {{ (site.url + segUrl) | dump | safe }} },
           { "@type": "ListItem", "position": 3, "name": {{ title | dump | safe }}, "item": {{ (site.url + page.url) | dump | safe }} }
         ]
       }

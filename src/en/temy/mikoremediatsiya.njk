@@ -1,0 +1,79 @@
+---
+layout: layouts/base.njk
+lang: en
+title: "Mycoremediation"
+description: "How fungi break down toxins, filter water and clean soil. A review of research and key work."
+permalink: "/en/temy/mikoremediatsiya/"
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Topic</p>
+  <h1 class="page-header__title">Mycoremediation</h1>
+  <p class="page-header__lead">
+    Mycoremediation is a branch of bioremediation that uses fungi
+    and their enzymes to break down pollutants. This page collects
+    materials on the key mechanisms, studies and practical results.
+  </p>
+</header>
+
+<section>
+  <h2>What it is</h2>
+  <p>
+    The term "mycoremediation" describes the use of fungi — most
+    often mycelium — to destroy or bind pollutants: petroleum
+    products, pesticides, heavy metals, some plastics and
+    synthetic dyes. The key idea is that the fungi's extracellular
+    enzymes (laccases, peroxidases, cytochromes P450) can cleave
+    complex organic molecules that are beyond bacteria's reach.
+  </p>
+
+  <h2>Main directions</h2>
+  <ul>
+    <li><strong>Mycodegradation</strong> — breaking down organic pollutants (oil, PAHs, pesticides).</li>
+    <li><strong>Mycosorption</strong> — binding heavy metals and radionuclides in fungal biomass.</li>
+    <li><strong>Mycofiltration</strong> — passing contaminated water through mycelial mats.</li>
+    <li><strong>Mycostabilization</strong> — locking a pollutant into a matrix that prevents its spread.</li>
+  </ul>
+
+  <h2>Key research results</h2>
+  <p>
+    Among the most cited work are Paul Stamets's publications on
+    petroleum degradation and on using mycelium for water
+    filtration in ecosystems after spills. Independent laboratories
+    have confirmed the ability of a number of species to degrade
+    components of crude oil and some organochlorine pesticides.
+  </p>
+  <p>
+    There are also data showing that certain fungi can accumulate
+    cadmium, lead and arsenic — used in experimental soil-cleanup
+    schemes around former industrial zones.
+  </p>
+</section>
+
+<section>
+  <h2>Related species</h2>
+  <p>
+    Among the wood-decay fungi mentioned in the mycoremediation
+    context and in Stamets's work — first of all
+    <a href="{{ '/en/griby/agarikon/' | url }}">agarikon (Laricifomes officinalis)</a>,
+    which has a dedicated section in "Mycelium Running". The full
+    species list is in the <a href="{{ '/en/griby/' | url }}">mushroom catalog</a>.
+  </p>
+</section>
+
+<section>
+  <h2>Materials on this topic</h2>
+  {% set related = [] %}
+  {% for item in collections.statiEn %}
+    {% if "mycoremediation" in (item.data.tags or []) %}
+      {% set _ = related.push(item) %}
+    {% endif %}
+  {% endfor %}
+  {% if related.length > 0 %}
+    {% set items = related %}
+    {% set kind = "article" %}
+    {% include "partials/card-grid.njk" %}
+  {% else %}
+    <p class="empty">No related articles yet.</p>
+  {% endif %}
+</section>

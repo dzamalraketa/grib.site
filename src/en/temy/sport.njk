@@ -1,0 +1,91 @@
+---
+layout: layouts/base.njk
+lang: en
+title: "Mushrooms and physical endurance"
+description: "Cordyceps and athletic performance: what clinical studies measured about VO₂max, metabolism under exertion and the state of the evidence base."
+permalink: "/en/temy/sport/"
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Topic</p>
+  <h1 class="page-header__title">Mushrooms and physical endurance</h1>
+  <p class="page-header__lead">
+    A section on the most "athletic" of the medicinal mushrooms —
+    cordyceps: what clinical studies measured about VO₂max,
+    metabolism and fatigue, and where the line of the proven
+    runs today.
+  </p>
+</header>
+
+<section>
+  <h2>Why cordyceps specifically</h2>
+  <p>
+    The "cordyceps–endurance" link in popular culture goes back
+    to the story of the Chinese women runners of the early 1990s,
+    whose coach attributed record results to a cordyceps
+    decoction; that story is closer to a myth than a study.
+    Scientific interest latched onto the species' compounds:
+    cordycepin, adenosine and polysaccharides, theoretically able
+    to influence energy metabolism (ATP, mitochondria) and oxygen
+    utilization.
+  </p>
+
+  <h2>Two different "cordyceps" in the studies</h2>
+  <p>
+    Behind the name in clinical work stand different products,
+    and that is fundamental for reading the results:
+  </p>
+  <ul>
+    <li>
+      <strong>Cordyceps militaris</strong> — the cultivated
+      species, extracts and fruiting-body/mycelium blends; the
+      modern VO₂max studies in untrained and athletic populations
+      were done with it;
+    </li>
+    <li>
+      <strong>"Cordyceps sinensis" / Cs-4</strong> — fermented
+      mycelium of the <em>Paecilomyces hepiali</em> strain, the
+      historical substitute for scarce wild cordyceps; the older
+      studies in the elderly and the Bailing nephrology
+      meta-analyses were done on it.
+    </li>
+  </ul>
+  <p>
+    Results obtained on one product do not automatically carry
+    over to the other — the raw material, standardization and
+    doses of marker compounds differ.
+  </p>
+
+  <h2>The line of the proven</h2>
+  <p>
+    The site collects cordyceps work in the "physical endurance"
+    category — from small pilot RCTs to crossover acute
+    protocols. The honest summary: signals on submaximal loads
+    and some metabolic markers do occur, but clinical studies
+    have not convincingly shown a stable shift in "hard"
+    outcomes (VO₂max, competitive results); the designs are
+    small and heterogeneous. See the cards below — each one
+    breaks down the design and limitations of the specific
+    study.
+  </p>
+</section>
+
+<section>
+  <h2>Related species</h2>
+  <ul>
+    <li><a href="{{ '/en/griby/cordyceps/' | url }}">Cordyceps militaris</a> — the species of the modern "athletic" studies.</li>
+  </ul>
+</section>
+
+{% set related = [] %}
+{% for item in collections.issledovaniyaEn %}
+  {% if item.data.category == "performance" %}
+    {% set _ = related.push(item) %}
+  {% endif %}
+{% endfor %}
+<section>
+  <h2>Research on this topic</h2>
+  {% set items = related %}
+  {% set kind = "article" %}
+  {% include "partials/card-grid.njk" %}
+</section>
