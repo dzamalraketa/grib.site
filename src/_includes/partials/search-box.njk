@@ -4,10 +4,11 @@
    (web components), а старый `pagefind-ui.js` больше не генерируется.
    Если индекс не собран, показывается понятное сообщение. #}
 
+{% set L = i18n[lang] if lang and i18n[lang] else {} %}
 <div class="search-block" data-pagefind-root>
-  <h2>Поиск по сайту</h2>
+  <h2>{{ L.ui.searchHeading if L.ui else 'Поиск по сайту' }}</h2>
   <p class="search-block__hint">
-    Введите слово или фразу — например, «лисичка», «микориза», «агарикон».
+    {{ L.ui.searchHint if L.ui else 'Введите слово или фразу — например, «лисичка», «микориза», «агарикон».' }}
   </p>
 
   {# Сюда монтируется Pagefind Component UI. Если скрипт не загрузится
@@ -15,13 +16,13 @@
   <div id="search" data-pagefind-mount class="pagefind-mount">
     <pagefind-search class="pagefind-search">
       <form slot="search-input" class="pagefind-form" role="search">
-        <label for="pagefind-search-input" class="visually-hidden">Поиск по сайту</label>
+        <label for="pagefind-search-input" class="visually-hidden">{{ L.ui.searchLabel if L.ui else 'Поиск по сайту' }}</label>
         <pagefind-input>
           <input id="pagefind-search-input" name="query" type="search"
-                 placeholder="Поиск по сайту…"
+                 placeholder="{{ L.ui.searchPlaceholder if L.ui else 'Поиск по сайту…' }}"
                  autocomplete="off" enterkeyhint="search">
         </pagefind-input>
-        <button type="submit" class="btn btn--primary pagefind-form__submit">Найти</button>
+        <button type="submit" class="btn btn--primary pagefind-form__submit">{{ L.ui.searchSubmit if L.ui else 'Найти' }}</button>
       </form>
       <div slot="summary" aria-live="polite">
         <pagefind-summary class="pagefind-summary"></pagefind-summary>
@@ -33,13 +34,11 @@
   </div>
 
   <noscript>
-    <p class="empty">Для поиска требуется JavaScript.</p>
+    <p class="empty">{{ L.ui.searchNeedJs if L.ui else 'Для поиска требуется JavaScript.' }}</p>
   </noscript>
 
   <p class="search-block__fallback" data-pagefind-fallback hidden>
-    Поисковый индекс ещё не построен. Запустите
-    <code>npm run build</code> локально, чтобы Pagefind проиндексировал
-    страницы, или откройте уже собранную версию сайта.
+    {{ L.ui.searchFallback if L.ui else 'Поисковый индекс ещё не построен. Запустите npm run build локально, чтобы Pagefind проиндексировал страницы, или откройте уже собранную версию сайта.' }}
   </p>
 </div>
 

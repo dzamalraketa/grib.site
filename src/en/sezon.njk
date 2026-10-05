@@ -1,0 +1,98 @@
+---
+wide: true
+layout: layouts/base.njk
+title: "What to gather and when: a forager's calendar"
+description: "Which mushrooms appear in early summer, August, autumn and winter: edible, conditionally edible and dangerous species by season, with links to species cards and lookalike notes."
+permalink: "/en/sezon/"
+---
+
+{% set L = i18n[lang] if lang and i18n[lang] else {} %}
+{% set plist = L.periods or periods %}
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Calendar</p>
+  <h1 class="page-header__title">What to gather and when</h1>
+  <p class="page-header__lead">
+    Pick a time of year — see which mushrooms grow then, which are
+    edible, and which must be avoided. Dates are a guide for the
+    temperate belt: a warm, wet year shifts everything by 2–3 weeks.
+    The catalog is being translated; species currently available in
+    English appear here automatically.
+  </p>
+</header>
+
+<nav class="season-nav" aria-label="Time of year" data-season-nav>
+  {% for p in plist %}
+    <a class="season-nav__item" href="#{{ p.id }}" data-months="{{ p.months | join(',') }}">
+      <span class="season-nav__title">{{ p.title }}</span>
+      <span class="season-nav__range">{{ p.range }}</span>
+    </a>
+  {% endfor %}
+  <a class="season-nav__item" href="#kruglyj-god" data-months="">
+    <span class="season-nav__title">{{ L.ui.yearRound if L.ui else "Круглый год" }}</span>
+    <span class="season-nav__range">{{ L.ui.perennial if L.ui else "многолетние" }}</span>
+  </a>
+</nav>
+
+{% for p in plist %}
+  {% set inSeason = collections.gribyEn | inMonths(p.months) %}
+  {% set safe = inSeason | withStatus("edible") %}
+  {% set cond = inSeason | withStatus("conditional") %}
+  {% set med = inSeason | withStatus("medicinal") %}
+  {% set bad = inSeason | withStatus("poisonous") %}
+  <section class="season-period" id="{{ p.id }}" data-months="{{ p.months | join(',') }}" aria-labelledby="{{ p.id }}-h">
+    <header class="season-period__head">
+      <h2 id="{{ p.id }}-h">{{ p.title }} <span class="season-period__range">{{ p.range }}</span></h2>
+      <p class="season-period__now" hidden>{{ L.ui.nowInForest if L.ui else "Сейчас в лесу" }}</p>
+      <p class="season-period__lead">{{ p.lead }}</p>
+    </header>
+
+    {% if inSeason.length == 0 %}
+      <p class="season-empty">{{ L.ui.rareSeason if L.ui else "В этот период дикие грибы встречаются редко." }}</p>
+    {% endif %}
+
+    {% if safe.length %}
+      <h3 class="season-group__title">{{ L.ui.edible if L.ui else "Съедобные" }} <span class="season-group__count">{{ safe.length }}</span></h3>
+      <div class="season-grid">
+        {% for item in safe %}{% include "partials/season-chip.njk" %}{% endfor %}
+      </div>
+    {% endif %}
+
+    {% if cond.length %}
+      <h3 class="season-group__title">{{ L.ui.conditional if L.ui else "Условно-съедобные" }} <span class="season-group__note">{{ L.ui.conditionalNote if L.ui else "нужна обработка" }}</span> <span class="season-group__count">{{ cond.length }}</span></h3>
+      <div class="season-grid">
+        {% for item in cond %}{% include "partials/season-chip.njk" %}{% endfor %}
+      </div>
+    {% endif %}
+
+    {% if med.length %}
+      <h3 class="season-group__title">{{ L.ui.medicinal if L.ui else "Лечебные" }} <span class="season-group__count">{{ med.length }}</span></h3>
+      <div class="season-grid">
+        {% for item in med %}{% include "partials/season-chip.njk" %}{% endfor %}
+      </div>
+    {% endif %}
+
+    {% if bad.length %}
+      <div class="season-danger">
+        <h3 class="season-group__title season-group__title--danger">{{ L.ui.dangerTitle if L.ui else "Опасные — не берите" }} <span class="season-group__count">{{ bad.length }}</span></h3>
+        <p class="season-danger__lead">{{ L.ui.dangerLead if L.ui else "Эти грибы растут в то же время и в тех же местах." }}</p>
+        <div class="season-grid">
+          {% for item in bad %}{% include "partials/season-chip.njk" %}{% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </section>
+{% endfor %}
+
+<section class="season-period" id="kruglyj-god" data-months="" aria-labelledby="kruglyj-god-h">
+  <header class="season-period__head">
+    <h2 id="kruglyj-god-h">{{ L.ui.yearRound if L.ui else "Круглый год" }} <span class="season-period__range">{{ L.ui.perennial if L.ui else "многолетние" }}</span></h2>
+    <p class="season-period__lead">Perennial bracket fungi and the chaga conk can be found at any time of year. These are medicinal, not culinary mushrooms.</p>
+  </header>
+  {% set yr = collections.gribyEn | yearRound %}
+  <div class="season-grid">
+    {% for item in yr %}{% include "partials/season-chip.njk" %}{% endfor %}
+  </div>
+</section>
+
+<script src="{{ '/assets/js/season.js' | url }}?v={{ site.version }}" defer></script>

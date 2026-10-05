@@ -127,6 +127,14 @@
   outline: 2px solid var(--color-leaf);
   outline-offset: 2px;
 }
+/* Переключатель языка — текстовая кнопка в стиле icon-btn */
+.lang-switch {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
 .icon-btn[aria-expanded="true"] {
   background: rgba(78, 124, 92, 0.12);
   color: var(--color-leaf);

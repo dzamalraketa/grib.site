@@ -12,6 +12,7 @@ const path = require("path");
 
 const CONTENT_DIRS = [
   path.join(__dirname, "..", "src", "griby"),
+  path.join(__dirname, "..", "src", "en", "griby"),
   path.join(__dirname, "..", "src", "stati"),
   // src/issledovaniya — карточки исследований, не проходят verified-проверку.
 ];

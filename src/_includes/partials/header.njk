@@ -1,6 +1,10 @@
+{% set L = i18n[lang] if lang and i18n[lang] else {} %}
+{% set navItems = L.nav or site.navigation.primary %}
+{% set footerNavItems = L.footerNav or site.navigation.footer %}
+{% set homeUrl = '/en/' if lang == 'en' else '/' %}
 <header class="site-header" role="banner" data-site-header>
   <div class="container container--wide site-header__inner">
-    <a class="site-brand" href="{{ '/' | url }}" aria-label="{{ site.title }} — главная">
+    <a class="site-brand" href="{{ homeUrl | url }}" aria-label="{{ "Mushroom World" if lang == "en" else site.title }} — {{ 'home' if lang == 'en' else 'главная' }}">
       <svg class="site-brand__mark" viewBox="0 0 32 32" aria-hidden="true">
         <defs>
           <radialGradient id="brandHalo" cx="50%" cy="40%" r="55%">
@@ -35,25 +39,26 @@
           <path d="M29 3 L29.4 4 L30.4 4.4 L29.4 4.8 L29 5.8 L28.6 4.8 L27.6 4.4 L28.6 4 Z"/>
         </g>
       </svg>
-      <span class="site-brand__text">{{ site.title }}</span>
+      <span class="site-brand__text">{{ "Mushroom World" if lang == "en" else site.title }}</span>
     </a>
 
-    <nav class="site-nav site-nav--primary" aria-label="Основная навигация">
-      {% for item in site.navigation.primary %}
-        {% set is_current = page.url == item.url or (item.url != "/" and page.url and page.url.startsWith(item.url)) %}
+    <nav class="site-nav site-nav--primary" aria-label="{{ L.ui.mobileNav if L.ui else 'Основная навигация' }}">
+      {% for item in navItems %}
+        {% set is_current = page.url == item.url or (item.url != "/" and item.url != "/en/" and page.url and page.url.startsWith(item.url)) %}
         <a class="site-nav__link" href="{{ item.url | url }}" {% if is_current %}aria-current="page"{% endif %}>{{ item.text }}</a>
       {% endfor %}
     </nav>
 
     <div class="site-header__actions">
-      <button type="button" class="icon-btn" data-search-toggle aria-label="Поиск по сайту" aria-expanded="false" aria-controls="site-search">
+      {# Pagefind строит отдельный индекс на язык — поиск работает в обеих версиях. #}
+      <button type="button" class="icon-btn" data-search-toggle aria-label="{{ L.ui.search if L.ui else 'Поиск по сайту' }}" aria-expanded="false" aria-controls="site-search">
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="11" cy="11" r="7"/>
           <path d="m20 20-3.5-3.5"/>
         </svg>
       </button>
 
-      <button type="button" class="icon-btn" data-theme-toggle aria-label="Включить тёмную тему">
+      <button type="button" class="icon-btn" data-theme-toggle aria-label="{{ L.ui.theme if L.ui else 'Включить тёмную тему' }}">
         <svg class="icon-btn__icon icon-btn__icon--sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="4"/>
           <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
@@ -63,7 +68,18 @@
         </svg>
       </button>
 
-      <button type="button" class="icon-btn site-menu-toggle" data-menu-toggle aria-label="Открыть меню" aria-expanded="false" aria-controls="site-menu">
+      {# Переключатель языка: EN-страницы живут по URL = "/en" + русский URL.
+         Если перевода страницы нет — ведём на английскую главную. #}
+      {% if lang == "en" %}
+        {% set altUrl = page.url | replace("/en/", "/") %}
+        <a class="icon-btn lang-switch" href="{{ altUrl | url }}" hreflang="ru" aria-label="Русская версия страницы" lang="ru">RU</a>
+      {% else %}
+        {% set enUrl = "/en" + page.url %}
+        {% if not (collections.enUrls | listHas(enUrl)) %}{% set enUrl = "/en/" %}{% endif %}
+        <a class="icon-btn lang-switch" href="{{ enUrl | url }}" hreflang="en" aria-label="English version" lang="en">EN</a>
+      {% endif %}
+
+      <button type="button" class="icon-btn site-menu-toggle" data-menu-toggle aria-label="{{ L.ui.menuOpen if L.ui else 'Открыть меню' }}" aria-expanded="false" aria-controls="site-menu">
         <svg class="site-menu-toggle__icon site-menu-toggle__icon--open" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <path d="M4 7h16M4 12h16M4 17h16"/>
         </svg>
@@ -77,42 +93,43 @@
   {# Выпадающая панель поиска (открывается по клику на лупу) #}
   <div class="site-search" id="site-search" data-site-search hidden>
     <div class="container site-search__inner">
-      <form class="site-search__form" role="search" action="{{ '/poisk/' | url }}" method="get">
-        <label for="site-search-input" class="visually-hidden">Поиск по сайту</label>
-        <input type="search" id="site-search-input" name="q" placeholder="Поиск по сайту — виды, темы, статьи…" autocomplete="off" data-site-search-input>
-        <button type="submit" class="btn btn--primary site-search__submit">Найти</button>
-        <button type="button" class="icon-btn site-search__close" data-search-close aria-label="Закрыть поиск">
+      {% set searchUrl = '/en/poisk/' if lang == 'en' else '/poisk/' %}
+      <form class="site-search__form" role="search" action="{{ searchUrl | url }}" method="get">
+        <label for="site-search-input" class="visually-hidden">{{ L.ui.searchLabel if L.ui else 'Поиск по сайту' }}</label>
+        <input type="search" id="site-search-input" name="q" placeholder="{{ L.ui.searchPlaceholder if L.ui else 'Поиск по сайту — виды, темы, статьи…' }}" autocomplete="off" data-site-search-input>
+        <button type="submit" class="btn btn--primary site-search__submit">{{ L.ui.searchSubmit if L.ui else 'Найти' }}</button>
+        <button type="button" class="icon-btn site-search__close" data-search-close aria-label="{{ L.ui.searchClose if L.ui else 'Закрыть поиск' }}">
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
             <path d="M6 6l12 12M18 6L6 18"/>
           </svg>
         </button>
       </form>
       <p class="site-search__hint">
-        <a href="{{ '/poisk/' | url }}">Расширенный поиск →</a>
+        <a href="{{ searchUrl | url }}">{{ L.ui.advancedSearch if L.ui else 'Расширенный поиск →' }}</a>
       </p>
     </div>
   </div>
 </header>
 
 {# Мобильный drawer с навигацией (slide-in) #}
-<aside class="site-menu" id="site-menu" data-site-menu hidden aria-label="Мобильная навигация">
-  <button type="button" class="site-menu__scrim" data-menu-close aria-label="Закрыть меню" tabindex="-1"></button>
+<aside class="site-menu" id="site-menu" data-site-menu hidden aria-label="{{ L.ui.mobileNav if L.ui else 'Мобильная навигация' }}">
+  <button type="button" class="site-menu__scrim" data-menu-close aria-label="{{ L.ui.menuClose if L.ui else 'Закрыть меню' }}" tabindex="-1"></button>
   <div class="site-menu__panel">
-    <nav class="site-menu__nav" aria-label="Разделы сайта">
-      {% for item in site.navigation.primary %}
-        {% set is_current = page.url == item.url or (item.url != "/" and page.url and page.url.startsWith(item.url)) %}
+    <nav class="site-menu__nav" aria-label="{{ L.ui.sections if L.ui else 'Разделы сайта' }}">
+      {% for item in navItems %}
+        {% set is_current = page.url == item.url or (item.url != "/" and item.url != "/en/" and page.url and page.url.startsWith(item.url)) %}
         <a class="site-menu__link" href="{{ item.url | url }}" {% if is_current %}aria-current="page"{% endif %}>{{ item.text }}</a>
       {% endfor %}
     </nav>
     <div class="site-menu__divider" aria-hidden="true"></div>
-    <nav class="site-menu__subnav" aria-label="Дополнительно">
-      {% for item in site.navigation.footer %}
+    <nav class="site-menu__subnav" aria-label="{{ L.ui.more if L.ui else 'Дополнительно' }}">
+      {% for item in footerNavItems %}
         <a class="site-menu__sublink" href="{{ item.url | url }}">{{ item.text }}</a>
       {% endfor %}
     </nav>
     <div class="site-menu__divider" aria-hidden="true"></div>
     <div class="site-menu__footer">
-      <a class="site-menu__contact" href="{{ '/kontakty/' | url }}">Связаться с командой</a>
+      <a class="site-menu__contact" href="{{ '/kontakty/' | url }}">{{ L.ui.contact if L.ui else "Связаться с командой" }}</a>
     </div>
   </div>
 </aside>

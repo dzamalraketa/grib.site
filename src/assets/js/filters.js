@@ -46,7 +46,9 @@
       });
     }
 
+    var EN = document.documentElement.lang === "en";
     function plural(n) {
+      if (EN) return n === 1 ? "mushroom" : "mushrooms";
       var m10 = n % 10, m100 = n % 100;
       if (m10 === 1 && m100 !== 11) return "гриб";
       if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return "гриба";
@@ -69,7 +71,9 @@
       updateCounts();
       var active = Object.keys(state).some(function (k) { return state[k] !== "all"; });
       if (resetBtn) resetBtn.hidden = !active;
-      if (statusEl) statusEl.textContent = visible ? "Показано: " + visible + " " + plural(visible) : "Ничего не найдено — попробуйте сбросить фильтры.";
+      if (statusEl) statusEl.textContent = visible
+        ? (EN ? "Showing: " : "Показано: ") + visible + " " + plural(visible)
+        : (EN ? "Nothing found — try resetting the filters." : "Ничего не найдено — попробуйте сбросить фильтры.");
       if (pushUrl && window.history && history.replaceState) {
         var p = new URLSearchParams();
         Object.keys(state).forEach(function (k) { if (state[k] !== "all") p.set(k, state[k]); });

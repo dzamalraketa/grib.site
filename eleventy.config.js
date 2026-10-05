@@ -36,6 +36,18 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => a.data.title.localeCompare(b.data.title, "ru"));
   });
 
+  // Английские карточки видов (src/en/griby/).
+  eleventyConfig.addCollection("gribyEn", (api) => {
+    return api
+      .getFilteredByGlob("src/en/griby/*.md")
+      .sort((a, b) => a.data.title.localeCompare(b.data.title, "en"));
+  });
+
+  // URL всех англоязычных страниц — нужен для hreflang и переключателя языка.
+  eleventyConfig.addCollection("enUrls", (api) => {
+    return api.getAll().filter((p) => p.data.lang === "en").map((p) => p.url);
+  });
+
   // Статьи блога — сортируем по дате по убыванию.
   eleventyConfig.addCollection("stati", (api) => {
     return api
@@ -74,16 +86,45 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("yearRound", (items) => (items || []).filter((i) => i.data.year_round));
 
   // ——— Фильтры ——————————————————————————————————————————————————
-  // Локализованный статус гриба → русский ярлык.
-  eleventyConfig.addFilter("statusLabel", (status) => {
+  // Есть ли URL в списке (для проверки существования перевода страницы).
+  eleventyConfig.addFilter("listHas", (list, v) => (list || []).includes(v));
+
+  // Локализованный статус гриба → ярлык на языке страницы.
+  eleventyConfig.addFilter("statusLabel", (status, lang) => {
     const labels = {
-      edible: "Съедобный",
-      conditional: "Условно-съедобный",
-      poisonous: "Ядовитый",
-      inedible: "Несъедобный",
-      medicinal: "Лечебный",
+      ru: {
+        edible: "Съедобный",
+        conditional: "Условно-съедобный",
+        poisonous: "Ядовитый",
+        inedible: "Несъедобный",
+        medicinal: "Лечебный",
+      },
+      en: {
+        edible: "Edible",
+        conditional: "Conditionally edible",
+        poisonous: "Poisonous",
+        inedible: "Inedible",
+        medicinal: "Medicinal",
+      },
     };
-    return labels[status] || status;
+    return (labels[lang] || labels.ru)[status] || status;
+  });
+
+  // Дата в формате языка страницы: ru — «12 июля 2026», en — «12 July 2026».
+  eleventyConfig.addFilter("dateFmt", (dateObj, lang) => {
+    if (!dateObj) return "";
+    const d = dateObj instanceof Date ? dateObj : new Date(dateObj);
+    if (isNaN(d)) return "";
+    const monthsEn = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December",
+    ];
+    if (lang === "en") return `${monthsEn[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
+    const monthsRu = [
+      "января", "февраля", "марта", "апреля", "мая", "июня",
+      "июля", "августа", "сентября", "октября", "ноября", "декабря",
+    ];
+    return `${d.getUTCDate()} ${monthsRu[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
   });
 
   // Дата в русском формате: «12 июля 2026».

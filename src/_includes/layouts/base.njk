@@ -1,14 +1,27 @@
 <!doctype html>
-<html lang="ru" data-theme="light">
+<html lang="{{ lang or 'ru' }}" data-theme="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#FAF8F3" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1B1712" media="(prefers-color-scheme: dark)">
-    <title>{% if title %}{{ title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    {% set siteTitle = "Mushroom World" if lang == "en" else site.title %}
+    <title>{% if title %}{{ title }} — {{ siteTitle }}{% else %}{{ siteTitle }}{% endif %}</title>
     <meta name="description" content="{{ description or summary or site.description }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    {# hreflang: пара RU↔EN. EN-страница живёт по URL = "/en" + русский URL. #}
+    {% if lang == "en" %}
+      {% set altRu = page.url | replace("/en/", "/") %}
+      <link rel="alternate" hreflang="ru" href="{{ site.url }}{{ altRu }}">
+      <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ altRu }}">
+    {% else %}
+      {% set altEn = "/en" + page.url %}
+      {% if collections.enUrls | listHas(altEn) %}
+        <link rel="alternate" hreflang="en" href="{{ site.url }}{{ altEn }}">
+        <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url }}">
+      {% endif %}
+    {% endif %}
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} — статьи" href="{{ '/feed.xml' | url }}">
 
     {# Preconnect для шрифтов Google Fonts (Fraunces, Source Serif 4, Work Sans) #}
@@ -24,7 +37,7 @@
     {% if noindex %}<meta name="robots" content="noindex, follow">{% else %}<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">{% endif %}
     <meta property="og:type" content="{{ og_type or 'website' }}">
     <meta property="og:site_name" content="{{ site.title }}">
-    <meta property="og:title" content="{% if title %}{{ title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:title" content="{% if title %}{{ title }} — {{ siteTitle }}{% else %}{{ siteTitle }}{% endif %}">
     <meta property="og:description" content="{{ description or summary or site.description }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     {% set og_image = image or site.default_image %}
@@ -42,13 +55,13 @@
       <meta property="og:image:width" content="1200">
     {% endif %}
     <meta property="og:image:alt" content="{{ image_alt or title or site.title }}">
-    <meta property="og:locale" content="ru_RU">
+    <meta property="og:locale" content="{{ 'en_US' if lang == 'en' else 'ru_RU' }}">
     {% if og_type == "article" and date %}
     <meta property="article:published_time" content="{{ date | isoDate }}">
     <meta property="article:modified_time" content="{{ (verification_date or date) | isoDate }}">
     {% endif %}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{% if title %}{{ title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:title" content="{% if title %}{{ title }} — {{ siteTitle }}{% else %}{{ siteTitle }}{% endif %}">
     <meta name="twitter:description" content="{{ description or summary or site.description }}">
     {% if og_image and og_image.indexOf("http") == 0 %}
       <meta name="twitter:image" content="{{ og_image }}">
@@ -108,7 +121,8 @@
     </script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    {% set L = i18n[lang] if lang and i18n[lang] else {} %}
+    <a class="skip-link" href="#main">{{ L.ui.skip if L.ui else "Перейти к содержимому" }}</a>
 
     {% include "partials/header.njk" %}
 

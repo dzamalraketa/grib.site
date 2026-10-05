@@ -1,0 +1,144 @@
+{
+  "en": {
+    "nav": [
+      {
+        "text": "Home",
+        "url": "/en/"
+      },
+      {
+        "text": "Mushroom catalog",
+        "url": "/en/griby/"
+      },
+      {
+        "text": "What to gather",
+        "url": "/en/sezon/"
+      }
+    ],
+    "footerNav": [
+      {
+        "text": "About the project",
+        "url": "/en/o-proekte/"
+      },
+      {
+        "text": "Sources",
+        "url": "/istochniki/"
+      }
+    ],
+    "ui": {
+      "skip": "Skip to content",
+      "search": "Search the site",
+      "theme": "Toggle dark theme",
+      "menuOpen": "Open menu",
+      "menuClose": "Close menu",
+      "mobileNav": "Mobile navigation",
+      "sections": "Site sections",
+      "more": "More",
+      "aboutSite": "About",
+      "contact": "Contact the team",
+      "habitat": "Habitat",
+      "season": "Season",
+      "verified": "Verified",
+      "relatedResearch": "Research on this species",
+      "sources": "Sources",
+      "photoBy": "Photo",
+      "licenseMissing": "license not specified",
+      "source": "source",
+      "nowInForest": "In season now",
+      "edible": "Edible",
+      "conditional": "Conditionally edible",
+      "conditionalNote": "requires processing: boiling, soaking, salting",
+      "poisonous": "Poisonous",
+      "medicinal": "Medicinal",
+      "inedible": "Inedible",
+      "dangerTitle": "Dangerous — do not pick",
+      "dangerLead": "These mushrooms grow at the same time and in the same places. Some are deadly and cooking does not help.",
+      "yearRound": "All year",
+      "perennial": "perennials",
+      "rareSeason": "Wild mushrooms are rare in this period — see the “All year” section.",
+      "footerAbout": "An independent mushroom reference: species catalog, human-trial research reviews and supplement safety — with links to primary sources.",
+      "footerLegal": "Materials are popular-science overviews of publicly available research with links to primary sources. Rights to mentioned books, concepts and trademarks belong to their authors.",
+      "langSwitch": "Русская версия",
+      "searchHeading": "Search the site",
+      "searchHint": "Type a word or phrase — e.g. “chanterelle”, “mycorrhiza”, “agarikon”.",
+      "searchPlaceholder": "Search the site — species, topics, articles…",
+      "searchSubmit": "Search",
+      "searchLabel": "Search the site",
+      "searchFallback": "The search index has not been built yet. Run npm run build locally so Pagefind can index the pages, or open the deployed site.",
+      "searchNeedJs": "JavaScript is required for search.",
+      "advancedSearch": "Advanced search →",
+      "searchEyebrow": "Navigation",
+      "searchTitle": "Search",
+      "searchLead": "Full-text search across all sections. Powered by the static Pagefind index — no backend, no data sent to third parties."
+    },
+    "periods": [
+      {
+        "id": "vesna",
+        "title": "Spring",
+        "range": "March — May",
+        "months": [
+          3,
+          4,
+          5
+        ],
+        "lead": "A quiet season. The main find is morels right after the snow melts — and poisonous false morels grow right beside them."
+      },
+      {
+        "id": "nachalo-leta",
+        "title": "Early summer",
+        "range": "June",
+        "months": [
+          6
+        ],
+        "lead": "The season gains momentum: first boletes, chanterelles and porcini appear after warm rains."
+      },
+      {
+        "id": "seredina-leta",
+        "title": "Mid summer",
+        "range": "July",
+        "months": [
+          7
+        ],
+        "lead": "Variety widens: saffron milkcaps and milkcaps join the main species. The first dangerous lookalikes appear — check the stem base carefully."
+      },
+      {
+        "id": "konec-leta",
+        "title": "Late summer",
+        "range": "August",
+        "months": [
+          8
+        ],
+        "lead": "Peak season — and peak risk: death caps and destroying angels fruit now, easily confused with field mushrooms and parasols. Honey fungi begin."
+      },
+      {
+        "id": "nachalo-oseni",
+        "title": "Early autumn",
+        "range": "September",
+        "months": [
+          9
+        ],
+        "lead": "Prime time for honey fungi. Their deadly lookalikes must be known by heart (see the funeral bell)."
+      },
+      {
+        "id": "pozdnyaya-osen",
+        "title": "Late autumn",
+        "range": "October — November",
+        "months": [
+          10,
+          11
+        ],
+        "lead": "The season winds down: oyster mushrooms, blewits, late honey fungi remain. Many mushrooms turn soft and unusable after frosts."
+      },
+      {
+        "id": "zima",
+        "title": "Winter",
+        "range": "December — February",
+        "months": [
+          12,
+          1,
+          2
+        ],
+        "lead": "Almost nothing except oyster mushrooms in a thaw and velvet shank. Chaga and polypores can be found year-round."
+      }
+    ]
+  }
+}

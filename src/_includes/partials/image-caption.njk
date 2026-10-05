@@ -3,9 +3,10 @@
 
 {% if image_author %}
   <figcaption class="image-caption">
-    Фото: {{ image_author }} · {{ image_license or "лицензия не указана" }} ·
+    {% set L = i18n[lang] if lang and i18n[lang] else {} %}
+    {{ L.ui.photoBy if L.ui else "Фото" }}: {{ image_author }} · {{ image_license or (L.ui.licenseMissing if L.ui else "лицензия не указана") }} ·
     {% if image_source_url %}
-      <a href="{{ image_source_url }}" rel="noopener noreferrer" target="_blank">источник</a>
+      <a href="{{ image_source_url }}" rel="noopener noreferrer" target="_blank">{{ L.ui.source if L.ui else "источник" }}</a>
     {% endif %}
   </figcaption>
 {% endif %}

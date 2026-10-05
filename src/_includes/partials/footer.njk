@@ -1,41 +1,36 @@
+{% set L = i18n[lang] if lang and i18n[lang] else {} %}
+{% set navItems = L.nav or site.navigation.primary %}
+{% set footerNavItems = L.footerNav or site.navigation.footer %}
 <footer class="site-footer" role="contentinfo">
   <div class="container container--wide site-footer__grid">
     <div class="site-footer__about">
-      <a class="site-footer__brand" href="{{ '/' | url }}">{{ site.title }}</a>
-      <p>
-        Независимый портал о грибах: каталог видов, разбор исследований
-        на людях и безопасность добавок — со ссылками на первоисточники.
-      </p>
+      <a class="site-footer__brand" href="{{ ('/en/' if lang == 'en' else '/') | url }}">{{ site.title }}</a>
+      <p>{{ L.ui.footerAbout if L.ui else "Независимый портал о грибах: каталог видов, разбор исследований на людях и безопасность добавок — со ссылками на первоисточники." }}</p>
     </div>
 
-    <nav class="site-footer__col" aria-label="Разделы сайта">
-      <h2 class="site-footer__heading">Разделы</h2>
+    <nav class="site-footer__col" aria-label="{{ L.ui.sections if L.ui else 'Разделы сайта' }}">
+      <h2 class="site-footer__heading">{{ L.ui.sections if L.ui else "Разделы" }}</h2>
       <ul>
-        {% for item in site.navigation.primary %}
-          {% if item.url != '/' and item.url != '/kontakty/' %}
+        {% for item in navItems %}
+          {% if item.url != '/' and item.url != '/kontakty/' and item.url != '/en/' %}
             <li><a href="{{ item.url | url }}">{{ item.text }}</a></li>
           {% endif %}
         {% endfor %}
       </ul>
     </nav>
 
-    <nav class="site-footer__col" aria-label="О сайте">
-      <h2 class="site-footer__heading">О сайте</h2>
+    <nav class="site-footer__col" aria-label="{{ L.ui.aboutSite if L.ui else 'О сайте' }}">
+      <h2 class="site-footer__heading">{{ L.ui.aboutSite if L.ui else "О сайте" }}</h2>
       <ul>
-        {% for item in site.navigation.footer %}
+        {% for item in footerNavItems %}
           <li><a href="{{ item.url | url }}">{{ item.text }}</a></li>
         {% endfor %}
-        <li><a href="{{ '/kontakty/' | url }}">Контакты</a></li>
+        {% if lang != 'en' %}<li><a href="{{ '/kontakty/' | url }}">Контакты</a></li>{% endif %}
       </ul>
     </nav>
   </div>
 
   <div class="container container--wide site-footer__legal">
-    <p>
-      Материалы носят научно-популярный и информационный характер: это
-      обзоры и авторские пересказы общедоступных исследований со ссылками
-      на первоисточники. Права на упоминаемые книги, концепции и товарные
-      знаки принадлежат их авторам.
-    </p>
+    <p>{{ L.ui.footerLegal if L.ui else "Материалы носят научно-популярный и информационный характер: это обзоры и авторские пересказы общедоступных исследований со ссылками на первоисточники. Права на упоминаемые книги, концепции и товарные знаки принадлежат их авторам." }}</p>
   </div>
 </footer>

@@ -3,13 +3,26 @@ permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {%- set pages = collections.all | sort("url") -%}
   {%- for page in pages -%}
     {%- if page.url and not page.data.eleventyExcludeFromCollections and not page.data.draft -%}
       {%- set absUrl %}{{ site.url }}{{ page.url }}{% endset -%}
       <url>
         <loc>{{ absUrl }}</loc>
+        {%- if page.data.lang == "en" -%}
+          {%- set ruUrl = page.url | replace("/en/", "/") -%}
+          <xhtml:link rel="alternate" hreflang="en" href="{{ absUrl }}"/>
+          <xhtml:link rel="alternate" hreflang="ru" href="{{ site.url }}{{ ruUrl }}"/>
+          <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ ruUrl }}"/>
+        {%- else -%}
+          {%- set enUrl = "/en" + page.url -%}
+          {%- if collections.enUrls | listHas(enUrl) -%}
+            <xhtml:link rel="alternate" hreflang="ru" href="{{ absUrl }}"/>
+            <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ enUrl }}"/>
+            <xhtml:link rel="alternate" hreflang="x-default" href="{{ absUrl }}"/>
+          {%- endif -%}
+        {%- endif %}
         <lastmod>{{ page.inputPath | fileModified | isoDate }}</lastmod>
         <changefreq>{% if page.url == "/" %}daily{% else %}monthly{% endif %}</changefreq>
         <priority>{% if page.url == "/" %}1.0{% elif page.url == "/o-proekte/" %}0.8{% else %}0.7{% endif %}</priority>
@@ -19,14 +32,19 @@ eleventyExcludeFromCollections: true
   {# Главная страница исключена из коллекций, но должна быть в sitemap. #}
   <url>
     <loc>{{ site.url }}/</loc>
+    {%- if collections.enUrls | listHas("/en/") %}
+    <xhtml:link rel="alternate" hreflang="ru" href="{{ site.url }}/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}/"/>
+    {%- endif %}
     <lastmod>{{ "./src/index.njk" | fileModified | isoDate }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   {# Разделы-индексы исключены из коллекций, но должны быть в sitemap. #}
   {%- set indexPages = [
-    { url: "/griby/", src: "./src/griby.njk" },
-    { url: "/sezon/", src: "./src/sezon.njk" },
+    { url: "/griby/", src: "./src/griby.njk", en: "/en/griby/" },
+    { url: "/sezon/", src: "./src/sezon.njk", en: "/en/sezon/" },
     { url: "/temy/", src: "./src/temy.njk" },
     { url: "/stati/", src: "./src/stati.njk" },
     { url: "/issledovaniya/", src: "./src/issledovaniya.njk" }
@@ -34,6 +52,16 @@ eleventyExcludeFromCollections: true
   {%- for ip in indexPages %}
   <url>
     <loc>{{ site.url }}{{ ip.url }}</loc>
+    {%- if ip.en and collections.enUrls | listHas(ip.en) %}
+    <xhtml:link rel="alternate" hreflang="ru" href="{{ site.url }}{{ ip.url }}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ ip.en }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ ip.url }}"/>
+    {%- endif %}
+    {%- if ip.url.startsWith("/en/") %}
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ ip.url }}"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="{{ site.url }}{{ ip.url | replace("/en/", "/") }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ ip.url | replace("/en/", "/") }}"/>
+    {%- endif %}
     <lastmod>{{ ip.src | fileModified | isoDate }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

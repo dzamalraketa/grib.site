@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+lang: en
+title: "Search"
+description: "Full-text search across the Mushroom World website."
+permalink: "/en/poisk/"
+noindex: true
+eleventyExcludeFromCollections: true
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Navigation</p>
+  <h1 class="page-header__title">Search</h1>
+  <p class="page-header__lead">
+    Full-text search across all sections. Powered by the static Pagefind
+    index — no backend, no data sent to third parties.
+  </p>
+</header>
+
+{% include "partials/search-box.njk" %}

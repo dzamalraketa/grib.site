@@ -9,16 +9,16 @@ og_type: "article"
   "@type": "Article",
   "headline": {{ title | dump | safe }},
   "description": {{ (summary or description or site.description) | dump | safe }},
-  "inLanguage": "ru",
+  "inLanguage": {{ (lang or "ru") | dump | safe }},
   "image": {{ (site.url + (image or site.default_image)) | dump | safe }},
   "author": {
     "@type": "Organization",
-    "name": {{ site.author | dump | safe }},
+    "name": {{ ("Mushroom World team" if lang == "en" else site.author) | dump | safe }},
     "url": {{ site.url | dump | safe }}
   },
   "publisher": {
     "@type": "Organization",
-    "name": {{ site.title | dump | safe }},
+    "name": {{ ("Mushroom World" if lang == "en" else site.title) | dump | safe }},
     "url": {{ site.url | dump | safe }}
   },
   "datePublished": {{ (date | isoDate) | dump | safe }},
@@ -42,7 +42,7 @@ og_type: "article"
     </div>
     <div>
       {% set stamp_status = status %}
-      {% set stamp_label = status | statusLabel %}
+      {% set stamp_label = status | statusLabel(lang) %}
       {% set stamp_size = "lg" %}
       {% include "partials/spore-stamp.njk" %}
 
@@ -51,10 +51,11 @@ og_type: "article"
 
       {% include "partials/image-caption.njk" %}
 
+      {% set L = i18n[lang] if lang and i18n[lang] else {} %}
       <dl class="mushroom-meta">
-        {% if habitat %}<dt>Среда</dt><dd>{{ habitat }}</dd>{% endif %}
-        {% if season %}<dt>Сезон</dt><dd>{{ season }}</dd>{% endif %}
-        {% if verified %}<dt>Проверено</dt><dd>{{ verification_date | ruDate or "—" }}</dd>{% endif %}
+        {% if habitat %}<dt>{{ L.ui.habitat if L.ui else "Среда" }}</dt><dd>{{ habitat }}</dd>{% endif %}
+        {% if season %}<dt>{{ L.ui.season if L.ui else "Сезон" }}</dt><dd>{{ season }}</dd>{% endif %}
+        {% if verified %}<dt>{{ L.ui.verified if L.ui else "Проверено" }}</dt><dd>{{ verification_date | dateFmt(lang) or "—" }}</dd>{% endif %}
       </dl>
     </div>
   </header>
@@ -81,8 +82,8 @@ og_type: "article"
   {% endfor %}
 
   {% if species_research.length > 0 %}
-    <section class="related-research" aria-label="Исследования по этому виду">
-      <h2>Исследования по этому виду</h2>
+    <section class="related-research" aria-label="{{ L.ui.relatedResearch if L.ui else 'Исследования по этому виду' }}">
+      <h2>{{ L.ui.relatedResearch if L.ui else "Исследования по этому виду" }}</h2>
       <ul class="related-research__list">
         {% for item in species_research %}
           <li>

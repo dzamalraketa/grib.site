@@ -9,7 +9,7 @@ og_type: "article"
   "@type": "Article",
   "headline": {{ title | dump | safe }},
   "description": {{ (summary or description or site.description) | dump | safe }},
-  "inLanguage": "ru",
+  "inLanguage": {{ (lang or "ru") | dump | safe }},
   "datePublished": {{ (date | isoDate) | dump | safe }},
   "dateModified": {{ ((verification_date or date) | isoDate) | dump | safe }},
   "author": {
