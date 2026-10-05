@@ -16,8 +16,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Source+Serif+4:opsz,wght@8..60,300..700&family=Work+Sans:wght@400..700&display=swap">
 
+    {# Верификация поисковых кабинетов: коды задаются в src/_data/site.json #}
+    {% if site.verification.google %}<meta name="google-site-verification" content="{{ site.verification.google }}">{% endif %}
+    {% if site.verification.yandex %}<meta name="yandex-verification" content="{{ site.verification.yandex }}">{% endif %}
+
     {# Open Graph / Twitter Card #}
-    {% if noindex %}<meta name="robots" content="noindex, follow">{% endif %}
+    {% if noindex %}<meta name="robots" content="noindex, follow">{% else %}<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">{% endif %}
     <meta property="og:type" content="{{ og_type or 'website' }}">
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:title" content="{% if title %}{{ title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
@@ -39,6 +43,10 @@
     {% endif %}
     <meta property="og:image:alt" content="{{ image_alt or title or site.title }}">
     <meta property="og:locale" content="ru_RU">
+    {% if og_type == "article" and date %}
+    <meta property="article:published_time" content="{{ date | isoDate }}">
+    <meta property="article:modified_time" content="{{ (verification_date or date) | isoDate }}">
+    {% endif %}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{% if title %}{{ title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{{ description or summary or site.description }}">

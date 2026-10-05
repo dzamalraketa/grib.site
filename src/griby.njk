@@ -7,6 +7,26 @@ permalink: "/griby/"
 eleventyExcludeFromCollections: true
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": {{ title | dump | safe }},
+  "description": {{ description | dump | safe }},
+  "url": {{ (site.url + page.url) | dump | safe }},
+  "inLanguage": "ru",
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": {{ collections.griby.length }},
+    "itemListElement": [
+      {%- for g in collections.griby %}
+      { "@type": "ListItem", "position": {{ loop.index }}, "name": {{ g.data.title | dump | safe }}, "url": {{ (site.url + g.url) | dump | safe }} }{% if not loop.last %},{% endif %}
+      {%- endfor %}
+    ]
+  }
+}
+</script>
+
 <header class="page-header">
   <p class="page-header__eyebrow">Раздел</p>
   <h1 class="page-header__title">Каталог грибов</h1>
