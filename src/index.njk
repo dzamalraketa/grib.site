@@ -67,10 +67,10 @@ eleventyExcludeFromCollections: true
 </section>
 
 <div class="stats" aria-label="Сайт в цифрах">
-  <div class="stat"><span class="stat__num" data-counter="{{ collections.griby.length }}">{{ collections.griby.length }}</span><span class="stat__label">видов в каталоге</span></div>
-  <div class="stat"><span class="stat__num" data-counter="{{ collections.issledovaniya.length }}">{{ collections.issledovaniya.length }}</span><span class="stat__label">карточек исследований</span></div>
-  <div class="stat"><span class="stat__num" data-counter="{{ collections.stati.length }}">{{ collections.stati.length }}</span><span class="stat__label">статей и обзоров</span></div>
-  <div class="stat"><span class="stat__num" data-counter="{{ collections.temy.length }}">{{ collections.temy.length }}</span><span class="stat__label">тематических разделов</span></div>
+  <a class="stat" href="{{ '/griby/' | url }}"><span class="stat__num" data-counter="{{ collections.griby.length }}">{{ collections.griby.length }}</span><span class="stat__label">видов в каталоге</span></a>
+  <a class="stat" href="{{ '/issledovaniya/' | url }}"><span class="stat__num" data-counter="{{ collections.issledovaniya.length }}">{{ collections.issledovaniya.length }}</span><span class="stat__label">карточек исследований</span></a>
+  <a class="stat" href="{{ '/stati/' | url }}"><span class="stat__num" data-counter="{{ collections.stati.length }}">{{ collections.stati.length }}</span><span class="stat__label">статей и обзоров</span></a>
+  <a class="stat" href="{{ '/temy/' | url }}"><span class="stat__num" data-counter="{{ collections.temy.length }}">{{ collections.temy.length }}</span><span class="stat__label">тематических разделов</span></a>
 </div>
 
 <section aria-labelledby="species" style="margin-top: var(--space-6);">

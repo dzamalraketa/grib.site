@@ -372,8 +372,15 @@
   margin: 0;
   font-weight: 600;
   letter-spacing: var(--tracking-display);
-  position: relative;
 }
+/* Вся карточка — ссылка: растягиваем ::after ссылки заголовка на весь .card */
+.card__title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.card:focus-within { border-color: var(--color-leaf); }
 
 /* Миниатюра для карточки гриба в каталоге */
 .card--mushroom { padding: 0; overflow: hidden; }
