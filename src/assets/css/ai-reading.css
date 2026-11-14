@@ -1,0 +1,33 @@
+/* Reading room: scoped styles, shared site colours and themes. */
+.ai-reading { margin-bottom: var(--space-6); overflow-wrap: anywhere; }
+.ai-reading__intro { margin-bottom: var(--space-4); }
+.ai-reading__meta { font: 500 0.85rem var(--font-ui); color: var(--color-text-muted); }
+.ai-reading__tools { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4); }
+.ai-reading__tools[hidden] { display: none; }
+.ai-section { border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-surface); margin-bottom: var(--space-3); scroll-margin-top: 120px; }
+.ai-section summary { display: flex; align-items: baseline; gap: var(--space-3); padding: var(--space-4); cursor: pointer; list-style: none; border-radius: var(--radius-card); }
+.ai-section summary::-webkit-details-marker { display: none; }
+.ai-section summary::after { content: '+'; flex: none; margin-left: auto; color: var(--color-link); font: 400 1.4rem var(--font-ui); }
+.ai-section[open] summary::after { content: '−'; }
+.ai-section summary:hover { background: var(--color-sources-bg); }
+.ai-section summary h3 { margin: 0; font-size: clamp(1.1rem, 3vw, 1.35rem); }
+.ai-section__number { font: 500 0.8rem var(--font-ui); color: var(--color-text-muted); flex: none; }
+.ai-section__body { padding: 0 var(--space-4) var(--space-4); line-height: 1.8; }
+.ai-section__body > :last-child { margin-bottom: 0; }
+.ai-section pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.85em; line-height: 1.65; }
+.ai-reading__table { overflow-x: auto; margin-bottom: var(--space-3); }
+.ai-reading table { width: 100%; border-collapse: collapse; font-size: 0.96rem; line-height: 1.6; }
+.ai-reading th, .ai-reading td { padding: 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--color-border); }
+.ai-reading th { font-weight: 600; }
+.ai-reading thead { background: var(--color-sources-bg); }
+.ai-reading__takeaway { border-left: 3px solid var(--color-link); padding: var(--space-3); background: var(--color-sources-bg); }
+@media (max-width: 480px) {
+  .ai-section summary { gap: 10px; padding: var(--space-3); }
+  .ai-section__body { padding: 0 var(--space-3) var(--space-3); }
+  .ai-reading th, .ai-reading td { padding: 8px; }
+}
+@media print {
+  .ai-reading__tools { display: none; }
+  .ai-section { background: none; }
+  .ai-section::details-content { content-visibility: visible; }
+}

@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+title: "Про ИИ"
+description: "Наши разговоры об искусственном интеллекте: как устроены модели, обучение, контекст и рои агентов. Простые объяснения по шагам."
+permalink: /pro-ii/
+lang: ru
+---
+<link rel="stylesheet" href="{{ '/assets/css/ai-reading.css' | url }}?v={{ site.version }}">
+<header class="page-header">
+  <p class="page-header__eyebrow">Разговоры об искусственном интеллекте</p>
+  <h1 class="page-header__title">Про ИИ</h1>
+  <p class="page-header__lead">Наш разговор об ИИ — спокойно, по шагам и простыми словами. Открывай интересующий раздел или читай всё подряд.</p>
+</header>
+<article class="ai-reading" aria-labelledby="conversation-01">
+  <header class="ai-reading__intro">
+    <p class="ai-reading__meta">Разговор 01</p>
+    <h2 id="conversation-01">Одна модель или целый рой?</h2>
+    <p><strong>Обычная языковая модель — это единая обученная нейросеть. Рой появляется, когда вокруг одной или нескольких моделей строят систему из взаимодействующих агентов.</strong> При этом одна модель может физически работать на нескольких видеокартах или серверах.</p>
+  </header>
+  <div class="ai-reading__tools" data-pagefind-ignore hidden>
+    <button type="button" class="btn btn--secondary" data-ai-expand>Раскрыть всё</button>
+    <button type="button" class="btn btn--secondary" data-ai-collapse>Свернуть всё</button>
+  </div>
+  {% include "conversations/01-model-and-swarm.njk" %}
+</article>
+<script src="{{ '/assets/js/ai-reading.js' | url }}?v={{ site.version }}" defer></script>
