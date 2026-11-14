@@ -27,29 +27,80 @@ og_type: "article"
 }
 </script>
 
-<article>
+<article class="article-page">
+  <nav class="page-breadcrumb" aria-label="{{ 'Section navigation' if lang == 'en' else 'Навигация по разделу' }}">
+    <a href="{{ ('/en/stati/' if lang == 'en' else '/stati/') | url }}">{{ "← All articles" if lang == "en" else "← Все статьи" }}</a>
+    <span>{{ "Articles & reviews" if lang == "en" else "Статьи и обзоры" }}</span>
+  </nav>
+
   <header class="article-header">
     <div class="article-header__meta">
       <time datetime="{{ page.date | isoDate }}">{{ page.date | dateFmt(lang) }}</time>
       {% if author %}<span aria-hidden="true">·</span><span>{{ author }}</span>{% endif %}
       {% if verified %}<span aria-hidden="true">·</span><span>{{ "Verified:" if lang == "en" else "Проверено:" }} {{ verification_date | dateFmt(lang) or "—" }}</span>{% endif %}
+      <span aria-hidden="true">·</span><span>{{ content | readingTime(lang) }}</span>
     </div>
     <h1 class="article-header__title">{{ title }}</h1>
-    {% if summary %}<p style="color: var(--color-text-muted); font-size: 1.1rem; max-width: 640px;">{{ summary }}</p>{% endif %}
-    {% if tags and tags.length > 0 %}
-      <div class="tags" style="margin-top: var(--space-2);">
-        {% for t in tags %}<span class="tag">#{{ t }}</span>{% endfor %}
+    {% if summary %}<p class="article-header__summary">{{ summary }}</p>{% endif %}
+    {% set visibleTags = [] %}
+    {% if tags %}
+      {% for t in tags %}
+        {% if t != "stati" and t != "articles" %}
+          {% set _ = visibleTags.push(t) %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% if visibleTags.length > 0 %}
+      <div class="tags article-header__tags">
+        {% for t in visibleTags %}<span class="tag">#{{ t }}</span>{% endfor %}
       </div>
     {% endif %}
   </header>
 
-  {% set divider_opacity = 0.10 %}
+  {% set divider_opacity = 0.14 %}
   {% set divider_lines = 28 %}
   {% include "partials/gill-divider.njk" %}
+
+  {% set toc = content | extractToc(4) %}
+  {% if toc.length > 0 %}
+    <nav class="article-toc" aria-label="{{ 'Article contents' if lang == 'en' else 'Содержание статьи' }}">
+      <p class="article-toc__title">{{ "Contents" if lang == "en" else "Содержание статьи" }}</p>
+      <ol class="article-toc__list">
+        {% for item in toc %}
+          <li><a href="#{{ item.id }}">{{ item.text }}</a></li>
+        {% endfor %}
+      </ol>
+    </nav>
+  {% endif %}
 
   <div class="article-content">
     {{ content | safe }}
   </div>
 
   {% include "partials/sources-block.njk" %}
+
+  {% set articleCollection = collections.statiEn if lang == "en" else collections.stati %}
+  {% set relatedList = articleCollection | relatedArticles(page.url, tags, 3) %}
+  <nav class="article-footer-nav" aria-label="{{ 'Further reading' if lang == 'en' else 'Навигация по статьям' }}">
+    {% if relatedList.length > 0 %}
+      <div class="article-related">
+        <p class="article-related__eyebrow">{{ "Read next" if lang == "en" else "Читайте также" }}</p>
+        <h2 class="article-related__heading">{{ "Related articles" if lang == "en" else "Смежные материалы" }}</h2>
+        <div class="article-related__grid">
+          {% for rel in relatedList %}
+            <a class="article-related__card" href="{{ rel.url | url }}">
+              <span class="article-related__title">{{ rel.data.title }}</span>
+              {% if rel.data.summary or rel.data.description %}
+                <span class="article-related__summary">{{ (rel.data.summary or rel.data.description) | excerpt(120) }}</span>
+              {% endif %}
+              <span class="article-related__cta">{{ "Read article →" if lang == "en" else "Читать →" }}</span>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+    <div class="article-footer-nav__back">
+      <a class="btn" href="{{ ('/en/stati/' if lang == 'en' else '/stati/') | url }}">{{ "← All articles" if lang == "en" else "← Вернуться ко всем статьям" }}</a>
+    </div>
+  </nav>
 </article>

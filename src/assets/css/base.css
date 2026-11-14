@@ -1,7 +1,7 @@
 /* =========================================================================
    base.css — сброс, типографика, базовая раскладка.
-   Тёмная тема — основная (без prefers-color-scheme запроса);
-   светлая активируется явным [data-theme="light"].
+   Светлая тема — основная (по умолчанию);
+   тёмная активируется явным [data-theme="dark"].
    ========================================================================= */
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -48,12 +48,12 @@ p { margin: 0 0 var(--space-3); }
 a {
   color: var(--color-link);
   text-decoration: underline;
-  text-decoration-color: rgba(111, 191, 139, 0.4);
+  text-decoration-color: rgba(78, 124, 92, 0.4);
   text-underline-offset: 3px;
   transition: text-decoration-color var(--transition), color var(--transition);
 }
-[data-theme="light"] a {
-  text-decoration-color: rgba(47, 107, 74, 0.4);
+[data-theme="dark"] a {
+  text-decoration-color: rgba(111, 191, 139, 0.4);
 }
 a:hover, a:focus-visible { text-decoration-color: currentColor; }
 a:focus-visible {
@@ -129,8 +129,8 @@ button {
   position: absolute;
   top: -40px;
   left: 0;
-  background: var(--color-glow);
-  color: var(--color-loam);
+  background: var(--color-leaf);
+  color: #FAF8F3;
   padding: var(--space-2) var(--space-3);
   z-index: 1000;
   text-decoration: none;

@@ -199,6 +199,66 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  // Оценка времени чтения статьи по очищенному от HTML тексту (~190 слов/мин).
+  eleventyConfig.addFilter("readingTime", (content, lang) => {
+    const plain = String(content || "")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&[a-z0-9#]+;/gi, " ")
+      .trim();
+    const words = plain ? plain.split(/\s+/).length : 0;
+    const minutes = Math.max(1, Math.round(words / 190));
+    return lang === "en" ? `~${minutes} min read` : `~${minutes} мин чтения`;
+  });
+
+  // Извлекает оглавление из <h2 id="..."> в отрендеренном HTML статьи,
+  // только если заголовков второго уровня не меньше minCount.
+  eleventyConfig.addFilter("extractToc", (content, minCount = 4) => {
+    const html = String(content || "");
+    const decodeEntities = (str) =>
+      String(str || "")
+        .replace(/&amp;/g, "&")
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">")
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;|&apos;/g, "'")
+        .replace(/&nbsp;/g, " ");
+    const items = [];
+    const re = /<h2\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/gi;
+    let match;
+    while ((match = re.exec(html)) !== null) {
+      const text = decodeEntities(match[2].replace(/<[^>]+>/g, ""))
+        .replace(/\s+/g, " ")
+        .trim();
+      if (text) items.push({ id: match[1], text });
+    }
+    return items.length >= minCount ? items : [];
+  });
+
+  // Подбор до limit смежных статей по общим содержательным тегам и дате.
+  eleventyConfig.addFilter("relatedArticles", (collection, currentUrl, currentTags, limit = 3) => {
+    const skip = new Set(["stati", "articles"]);
+    const baseTags = new Set(
+      (Array.isArray(currentTags) ? currentTags : [])
+        .map((t) => String(t).trim().toLowerCase())
+        .filter((t) => t && !skip.has(t))
+    );
+    return (collection || [])
+      .filter((item) => item && item.url && item.url !== currentUrl)
+      .map((item) => {
+        const tags = Array.isArray(item.data && item.data.tags) ? item.data.tags : [];
+        let overlap = 0;
+        for (const t of tags) {
+          const norm = String(t).trim().toLowerCase();
+          if (norm && !skip.has(norm) && baseTags.has(norm)) overlap += 1;
+        }
+        const ts = item.date ? new Date(item.date).getTime() : 0;
+        return { item, overlap, ts };
+      })
+      .sort((a, b) => (b.overlap !== a.overlap ? b.overlap - a.overlap : b.ts - a.ts))
+      .slice(0, limit)
+      .map((entry) => entry.item);
+  });
+
   // ——— Глобальные данные ——————————————————————————————————————————
   // site.json уже подключается автоматически из src/_data/site.json.
   // Дополнительно: язык по умолчанию для локализации дат.
@@ -209,6 +269,76 @@ module.exports = function (eleventyConfig) {
   // ——— Markdown ——————————————————————————————————————————————————
   eleventyConfig.amendLibrary("md", (mdLib) => {
     mdLib.set({ html: true, breaks: false, linkify: true, typographer: false });
+
+    const cyrillicMap = {
+      а: "a", б: "b", в: "v", г: "g", д: "d", е: "e", ё: "yo", ж: "zh",
+      з: "z", и: "i", й: "j", к: "k", л: "l", м: "m", н: "n", о: "o",
+      п: "p", р: "r", с: "s", т: "t", у: "u", ф: "f", х: "h", ц: "ts",
+      ч: "ch", ш: "sh", щ: "sch", ъ: "", ы: "y", ь: "", э: "e", ю: "yu", я: "ya",
+    };
+
+    const translitSlug = (raw) => {
+      let out = "";
+      for (const ch of String(raw || "").toLowerCase()) {
+        out += Object.prototype.hasOwnProperty.call(cyrillicMap, ch) ? cyrillicMap[ch] : ch;
+      }
+      return out
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+    };
+
+    const headingPlainText = (inlineToken) => {
+      if (!inlineToken) return "";
+      if (Array.isArray(inlineToken.children) && inlineToken.children.length > 0) {
+        return inlineToken.children
+          .map((t) => {
+            if (t.type === "text" || t.type === "code_inline") return t.content;
+            if (t.type === "softbreak" || t.type === "hardbreak") return " ";
+            if (t.type === "html_inline") return t.content.replace(/<[^>]+>/g, "");
+            return "";
+          })
+          .join("");
+      }
+      return inlineToken.content || "";
+    };
+
+    const seenIdsByTokens = new WeakMap();
+    const defaultHeadingOpen =
+      mdLib.renderer.rules.heading_open ||
+      function (tokens, idx, options, env, self) {
+        return self.renderToken(tokens, idx, options);
+      };
+
+    // Генерируем стабильные уникальные id для h2 и h3, чтобы работали оглавление и якоря.
+    mdLib.renderer.rules.heading_open = function (tokens, idx, options, env, self) {
+      const token = tokens[idx];
+      if (token.tag === "h2" || token.tag === "h3") {
+        let used = seenIdsByTokens.get(tokens);
+        if (!used) {
+          used = new Set();
+          seenIdsByTokens.set(tokens, used);
+        }
+        const existing = token.attrGet("id");
+        if (existing) {
+          used.add(existing);
+        } else {
+          const base = translitSlug(headingPlainText(tokens[idx + 1])) || "section";
+          let slug = base;
+          let suffix = 2;
+          while (used.has(slug)) {
+            slug = `${base}-${suffix++}`;
+          }
+          used.add(slug);
+          token.attrSet("id", slug);
+        }
+      }
+      return defaultHeadingOpen(tokens, idx, options, env, self);
+    };
+
+    mdLib.renderer.rules.table_open = () => '<div class="table-wrap"><table>\n';
+    mdLib.renderer.rules.table_close = () => "</table></div>\n";
   });
 
   return {

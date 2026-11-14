@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 og_type: "article"
+wide: true
 ---
 
 <script type="application/ld+json">
@@ -32,6 +33,11 @@ og_type: "article"
 </script>
 
 <article class="mushroom-page">
+  <nav class="page-breadcrumb" aria-label="{{ 'Section navigation' if lang == 'en' else 'Навигация по разделу' }}">
+    <a href="{{ ('/en/griby/' if lang == 'en' else '/griby/') | url }}">{{ "← Mushroom catalog" if lang == "en" else "← Каталог грибов" }}</a>
+    {% if latin_name %}<span class="page-breadcrumb__latin">{{ latin_name }}</span>{% endif %}
+  </nav>
+
   <header class="mushroom-header">
     <div class="mushroom-header__media">
       {% if image %}
@@ -96,9 +102,17 @@ og_type: "article"
     </section>
   {% endif %}
 
-  {% if tags and tags.length > 0 %}
-    <div class="tags" style="margin-top: var(--space-4);">
-      {% for t in tags %}<span class="tag">#{{ t }}</span>{% endfor %}
+  {% set visibleTags = [] %}
+  {% if tags %}
+    {% for t in tags %}
+      {% if t != "griby" %}
+        {% set _ = visibleTags.push(t) %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% if visibleTags.length > 0 %}
+    <div class="tags mushroom-page__tags">
+      {% for t in visibleTags %}<span class="tag">#{{ t }}</span>{% endfor %}
     </div>
   {% endif %}
 
