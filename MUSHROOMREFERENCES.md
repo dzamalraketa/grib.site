@@ -138,6 +138,8 @@ MushroomReferences.com в карточках не используется.
 | `mushroom-poisoning-syndromes-diaz-2005.md` | Diaz 2005 / обзор 28 018 отравлений | Safety |
 | `mushroom-poisoning-mortality-meta-2023.md` | Janatolmakan 2023 / метаанализ 33 исслед., смертность | Safety |
 | `mushroom-consumption-gastric-stop-2023.md` | Ba 2023 / пул-анализ StoP, рак желудка | Oncology |
+| `nephrotoxic-poisoning-diaz-2021.md` | Diaz 2021 / нефротоксичные отравления | Safety |
+| `lionsmane-reishi-blend-anxiety-2026.md` | Smith & Docherty 2026 / LM+Reishi, n=84 | Cognition |
 
 ## Контент для блога (stati/) — УЖЕ ИСПОЛЬЗОВАНО
 
