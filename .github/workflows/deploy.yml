@@ -36,6 +36,9 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Verify SEO and share previews
+        run: python3 scripts/check-seo.py
+
       - name: Verify build output
         run: |
           test -d _site || (echo "::error::_site/ not found" && exit 1)

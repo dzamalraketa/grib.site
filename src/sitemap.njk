@@ -6,7 +6,7 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {%- set pages = collections.all | sort("url") -%}
   {%- for page in pages -%}
-    {%- if page.url and not page.data.eleventyExcludeFromCollections and not page.data.draft -%}
+    {%- if page.url and not page.data.eleventyExcludeFromCollections and not page.data.draft and not page.data.noindex -%}
       {%- set absUrl %}{{ site.url }}{{ page.url }}{% endset -%}
       <url>
         <loc>{{ absUrl }}</loc>
@@ -47,7 +47,10 @@ eleventyExcludeFromCollections: true
     { url: "/sezon/", src: "./src/sezon.njk", en: "/en/sezon/" },
     { url: "/temy/", src: "./src/temy.njk", en: "/en/temy/" },
     { url: "/stati/", src: "./src/stati.njk", en: "/en/stati/" },
-    { url: "/issledovaniya/", src: "./src/issledovaniya.njk", en: "/en/issledovaniya/" }
+    { url: "/issledovaniya/", src: "./src/issledovaniya.njk", en: "/en/issledovaniya/" },
+    { url: "/o-proekte/", src: "./src/o-proekte.md", en: "/en/o-proekte/" },
+    { url: "/istochniki/", src: "./src/istochniki.md", en: "/en/istochniki/" },
+    { url: "/kontakty/", src: "./src/kontakty.njk", en: "/en/kontakty/" }
   ] -%}
   {%- for ip in indexPages %}
   <url>

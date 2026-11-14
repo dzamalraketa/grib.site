@@ -4,13 +4,13 @@
   "url": "https://grib.site",
   "author": "Команда «Мир грибов»",
   "locale": "ru_RU",
-  "version": "2026080701",
+  "version": "2026111404",
   "worker_url": "https://grib-contact-form.dzamalraketa.workers.dev/",
   "verification": {
     "google": "",
     "yandex": ""
   },
-  "default_image": "/assets/img/og-default.png",
+  "default_image": "/assets/img/social/site-ru-v2.jpg",
   "navigation": {
     "primary": [
       {
@@ -64,5 +64,14 @@
         "url": "/feed.xml"
       }
     ]
+  },
+  "default_image_en": "/assets/img/social/site-en-v2.jpg",
+  "description_en": "A guide to fungi: species, ecology, research reviews and clear explanations linked to primary sources.",
+  "social_sections": {
+    "griby": "catalog",
+    "stati": "articles",
+    "issledovaniya": "research",
+    "temy": "topics",
+    "sezon": "season"
   }
 }

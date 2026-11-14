@@ -1406,3 +1406,11 @@ body.is-menu-open { overflow: hidden; }
   .season-nav { top: 56px; }
   .season-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* Neon mushroom identity: one shared SVG in header and browser icon. */
+.site-brand__mark { width: 40px; height: 40px; border-radius: 12px; filter: drop-shadow(0 0 5px #8953d333); }
+.site-brand__text { white-space: nowrap; }
+@media (max-width: 480px) {
+  .site-brand { font-size: 1.05rem; }
+  .site-brand__mark { width: 34px; height: 34px; border-radius: 10px; }
+}

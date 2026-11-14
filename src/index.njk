@@ -1,7 +1,10 @@
 ---
 wide: true
+stylesheets:
+  - /assets/css/home.css
 layout: layouts/base.njk
-title: "Мир грибов — энциклопедия о грибах"
+title: "Мир грибов — энциклопедия грибов, науки и экологии"
+social_title: "Мир грибов — грибы без мифов"
 description: "Грибы без мифов: каталог съедобных, ядовитых и лечебных видов, разбор клинических исследований на людях и безопасность добавок — со ссылками на первоисточники."
 og_type: "website"
 eleventyExcludeFromCollections: true
@@ -23,46 +26,18 @@ eleventyExcludeFromCollections: true
 }
 </script>
 
-<section class="hero">
-  <div class="hero__aurora" aria-hidden="true">
-    <span class="hero__blob hero__blob--a"></span>
-    <span class="hero__blob hero__blob--b"></span>
-    <span class="hero__blob hero__blob--c"></span>
-  </div>
-  {# Радиальные пластинки — анимация раскрытия при загрузке #}
-  <div class="hero__gills" aria-hidden="true">
-    <svg viewBox="-300 -300 600 600" width="600" height="600">
-      <g stroke="var(--color-leaf)" stroke-width="0.6" stroke-linecap="round" opacity="0.5">
-        {% for i in range(0, 36) %}
-          {% set angle = (loop.index0 / 36) * 360 %}
-          <line x1="0" y1="0" x2="280" y2="0" transform="rotate({{ angle }})"/>
-        {% endfor %}
-      </g>
-      <g fill="var(--color-leaf)" opacity="0.25">
-        <circle cx="180" cy="-110" r="2"/>
-        <circle cx="-220" cy="60" r="2"/>
-        <circle cx="120" cy="220" r="1.5"/>
-        <circle cx="-160" cy="-180" r="1.5"/>
-        <circle cx="240" cy="160" r="1.5"/>
-        <circle cx="-80" cy="240" r="1.5"/>
-      </g>
-    </svg>
-  </div>
-
-  <p class="hero__eyebrow">Грибы и доказательная наука</p>
-  <h1 class="hero__title">{{ site.title }}</h1>
-  <p class="hero__lead">
-    Что известно о грибах на самом деле: какие виды съедобны, а какие опасны,
-    что показали клинические исследования на людях и о чём стоит знать, прежде
-    чем покупать добавки.
-  </p>
-  <p class="hero__note">
-    Каждая карточка опирается на рецензируемые работы и ссылается на первоисточник.
-    Без чудодейственных обещаний — только то, что подтверждено данными.
-  </p>
-  <div class="hero__actions">
-    <a class="btn btn--primary" href="{{ '/griby/' | url }}">Каталог грибов</a>
-    <a class="btn" href="{{ '/stati/' | url }}">Статьи и обзоры</a>
+<section class="home-hero" aria-labelledby="home-title">
+  <picture class="home-hero__art">
+    <source srcset="/assets/img/forest-magic-hero.webp" type="image/webp">
+    <img src="/assets/img/forest-magic-hero.jpg" width="1600" height="900" alt="Художественная иллюстрация: волшебные грибы в сумеречном лесу и светящиеся нити мицелия" loading="eager" fetchpriority="high" decoding="async">
+  </picture>
+  <div class="home-hero__copy">
+    <p class="home-hero__eyebrow">Природа связей и маленьких открытий</p>
+    <h1 id="home-title">Мир грибов</h1>
+    <p class="home-hero__tagline">Целая вселенная<br>под нашими ногами.</p>
+    <p class="home-hero__lead">От лесной находки до невидимого мицелия. Узнавайте виды, изучайте исследования и открывайте удивительные связи в природе.</p>
+    <div class="home-hero__actions"><a class="btn btn--primary" href="{{ '/griby/' | url }}">Открыть каталог <span aria-hidden="true">↗</span></a><a class="home-hero__link" href="{{ '/pro-ii/' | url }}">От мицелия к нейросетям →</a></div>
+    <p class="home-hero__note">Научные источники · понятные объяснения · любопытство к миру</p>
   </div>
 </section>
 

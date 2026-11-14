@@ -7,8 +7,11 @@
     <meta name="theme-color" content="#FAF8F3" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1B1712" media="(prefers-color-scheme: dark)">
     {% set siteTitle = "Mushroom World" if lang == "en" else site.title %}
-    <title>{% if title %}{{ title }} — {{ siteTitle }}{% else %}{{ siteTitle }}{% endif %}</title>
-    <meta name="description" content="{{ description or summary or site.description }}">
+    {% set pageTitle = seo_title or title or siteTitle %}
+    {% if pageTitle.indexOf(siteTitle) == -1 %}{% set pageTitle = pageTitle + " — " + siteTitle %}{% endif %}
+    {% set pageDescription = description or summary or (site.description_en if lang == 'en' else site.description) %}
+    <title>{{ pageTitle | escape }}</title>
+    <meta name="description" content="{{ pageDescription | escape }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     {# hreflang: пара RU↔EN. EN-страница живёт по URL = "/en" + русский URL. #}
     {% if lang == "en" %}
@@ -33,41 +36,46 @@
     {% if site.verification.google %}<meta name="google-site-verification" content="{{ site.verification.google }}">{% endif %}
     {% if site.verification.yandex %}<meta name="yandex-verification" content="{{ site.verification.yandex }}">{% endif %}
 
-    {# Open Graph / Twitter Card #}
+    {# Share metadata is rendered into HTML for crawlers that do not run JavaScript. #}
     {% if noindex %}<meta name="robots" content="noindex, follow">{% else %}<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">{% endif %}
+    {% set shareTitle = social_title or title or siteTitle %}
+    {% set og_image = social_image or image %}
+    {% if not og_image %}
+      {% set sectionCover = site.social_sections[page.url.split('/')[1]] %}
+      {% if lang != 'en' and sectionCover %}
+        {% set og_image = '/assets/img/social/' + sectionCover + '-ru-v2.jpg' %}
+      {% else %}
+        {% set og_image = site.default_image_en if lang == 'en' else site.default_image %}
+      {% endif %}
+    {% endif %}
+    {% set imageInfo = imageMetadata[og_image] %}
+    {% set shareImageUrl = og_image if og_image.indexOf('https://') == 0 or og_image.indexOf('http://') == 0 else site.url + og_image %}
+    {% set shareImageAlt = social_image_alt or image_alt or shareTitle %}
     <meta property="og:type" content="{{ og_type or 'website' }}">
-    <meta property="og:site_name" content="{{ siteTitle }}">
-    <meta property="og:title" content="{% if title %}{{ title }} — {{ siteTitle }}{% else %}{{ siteTitle }}{% endif %}">
-    <meta property="og:description" content="{{ description or summary or site.description }}">
+    <meta property="og:site_name" content="{{ siteTitle | escape }}">
+    <meta property="og:title" content="{{ shareTitle | escape }}">
+    <meta property="og:description" content="{{ pageDescription | escape }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    {% set og_image = image or site.default_image %}
-    {% if og_image and og_image.indexOf("http") == 0 %}
-      <meta property="og:image" content="{{ og_image }}">
-    {% else %}
-      <meta property="og:image" content="{{ site.url }}{{ og_image }}">
+    <meta property="og:image" content="{{ shareImageUrl | escape }}">
+    {% if shareImageUrl.indexOf('https://') == 0 %}<meta property="og:image:secure_url" content="{{ shareImageUrl | escape }}">{% endif %}
+    {% if imageInfo %}
+    <meta property="og:image:type" content="{{ imageInfo.type }}">
+    <meta property="og:image:width" content="{{ imageInfo.width }}">
+    <meta property="og:image:height" content="{{ imageInfo.height }}">
     {% endif %}
-    {% if og_image and og_image.endsWith(".png") %}
-      <meta property="og:image:type" content="image/png">
-      <meta property="og:image:width" content="1200">
-      <meta property="og:image:height" content="630">
-    {% elif og_image %}
-      <meta property="og:image:type" content="image/jpeg">
-      <meta property="og:image:width" content="1200">
-    {% endif %}
-    <meta property="og:image:alt" content="{{ image_alt or title or site.title }}">
+    <meta property="og:image:alt" content="{{ shareImageAlt | escape }}">
     <meta property="og:locale" content="{{ 'en_US' if lang == 'en' else 'ru_RU' }}">
-    {% if og_type == "article" and date %}
+    {% set alternateUrl = page.url | replace('/en/', '/') if lang == 'en' else '/en' + page.url %}
+    {% if lang == 'en' or collections.enUrls | listHas(alternateUrl) %}<meta property="og:locale:alternate" content="{{ 'ru_RU' if lang == 'en' else 'en_US' }}">{% endif %}
+    {% if og_type == 'article' and date %}
     <meta property="article:published_time" content="{{ date | isoDate }}">
     <meta property="article:modified_time" content="{{ (verification_date or date) | isoDate }}">
     {% endif %}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{% if title %}{{ title }} — {{ siteTitle }}{% else %}{{ siteTitle }}{% endif %}">
-    <meta name="twitter:description" content="{{ description or summary or site.description }}">
-    {% if og_image and og_image.indexOf("http") == 0 %}
-      <meta name="twitter:image" content="{{ og_image }}">
-    {% else %}
-      <meta name="twitter:image" content="{{ site.url }}{{ og_image }}">
-    {% endif %}
+    <meta name="twitter:title" content="{{ shareTitle | escape }}">
+    <meta name="twitter:description" content="{{ pageDescription | escape }}">
+    <meta name="twitter:image" content="{{ shareImageUrl | escape }}">
+    <meta name="twitter:image:alt" content="{{ shareImageAlt | escape }}">
 
     {% if schema %}
       <script type="application/ld+json">{{ schema | safe }}</script>
@@ -117,7 +125,10 @@
     <link rel="stylesheet" href="{{ '/assets/css/components.css' | url }}?v={{ site.version }}">
     <link rel="stylesheet" href="{{ '/assets/css/motion.css' | url }}?v={{ site.version }}">
 
+    {% for stylesheet in stylesheets %}<link rel="stylesheet" href="{{ stylesheet | url }}?v={{ site.version }}">{% endfor %}
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | url }}?v={{ site.version }}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | url }}?v={{ site.version }}">
 
     {# Inline-скрипт: установить тему ДО отрисовки.
        Светлая — по умолчанию. Сохранённый выбор пользователя перекрывает дефолт. #}

@@ -10,6 +10,7 @@ og_type: "article"
   "headline": {{ title | dump | safe }},
   "description": {{ (summary or description or site.description) | dump | safe }},
   "inLanguage": {{ (lang or "ru") | dump | safe }},
+  "image": {{ (social_image or image or (site.default_image_en if lang == 'en' else site.default_image)) | absoluteUrl(site.url) | dump | safe }},
   "datePublished": {{ (date | isoDate) | dump | safe }},
   "dateModified": {{ ((verification_date or date) | isoDate) | dump | safe }},
   "author": {
