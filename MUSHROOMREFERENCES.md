@@ -134,6 +134,8 @@ MushroomReferences.com в карточках не используется.
 | `mushroom-consumption-mortality-nhanes-2021.md` | Ba 2021 / NHANES + мета 5 когорт, смертность | Nutrition |
 | `ergothioneine-cognitive-decline-2022.md` | Wu 2022 / когорта клиник памяти, n=470 | Cognition |
 | `lentinan-gastric-chemo-meta-2024.md` | Wang 2024 / метаанализ 31 РКИ, рак желудка | Oncology |
+| `amatoxin-treatment-enjalbert-2002.md` | Enjalbert 2002 / ретроспектива 2108 случаев | Safety |
+| `mushroom-poisoning-syndromes-diaz-2005.md` | Diaz 2005 / обзор 28 018 отравлений | Safety |
 
 ## Контент для блога (stati/) — УЖЕ ИСПОЛЬЗОВАНО
 
