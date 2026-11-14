@@ -1,23 +1,57 @@
 ---
 layout: layouts/base.njk
-title: "Про ИИ — справочник для начинающих"
-description: "Понятный справочник по искусственному интеллекту: нейросети, обучение, токены, контекст, промпты, RAG и агенты. Примеры, словарь и проверка ответов."
+title: "От мицелия к нейросетям — справочник по ИИ"
+description: "От мицелия и «интернета природы» к нейросетям: понятный справочник по ИИ. Как учатся модели, работают с контекстом и почему ошибаются."
 permalink: /pro-ii/
 lang: ru
+wide: true
 ---
-<link rel="stylesheet" href="{{ '/assets/css/ai-reading.css' | url }}?v=2026111402">
-<header class="page-header">
-  <p class="page-header__eyebrow">Справочник для начинающих</p>
-  <h1 class="page-header__title">Про ИИ</h1>
-  <p class="page-header__lead">Как устроен искусственный интеллект и как с ним работать. Базовые понятия, понятные примеры и ответы на частые вопросы — без предварительной подготовки.</p>
+<link rel="stylesheet" href="{{ '/assets/css/ai-reading.css' | url }}?v=2026111403">
+<header class="ai-hero">
+  <div class="ai-hero__copy">
+    <p class="ai-hero__eyebrow">Мир грибов / Понятно об ИИ</p>
+    <h1>От мицелия<br>к нейросетям</h1>
+    <p class="ai-hero__lead">«Интернет природы» — отправная точка для знакомства с миром искусственного интеллекта. Разбираемся в связях, обучении и возможностях нейросетей.</p>
+    <div class="ai-hero__actions"><a class="ai-hero__button" href="#basics">Начать с основ <span aria-hidden="true">↗</span></a><a href="#guide-contents">Выбрать тему ↓</a></div>
+    <p class="ai-hero__note">16 тем · простые примеры · словарь · первоисточники</p>
+  </div>
+  <div class="ai-hero__visual">
+    <svg viewBox="0 0 360 380" role="img" aria-labelledby="ai-network-title ai-network-desc">
+      <title id="ai-network-title">Два образа сети: мицелий и нейросеть</title>
+      <desc id="ai-network-desc">Слева ветвящиеся нити грибницы, справа узлы вычислительной сети. Схематичная иллюстрация, а не биологическая или техническая модель.</desc>
+      <defs><radialGradient id="ai-halo"><stop stop-color="#B5CD91" stop-opacity=".24"/><stop offset="1" stop-color="#B5CD91" stop-opacity="0"/></radialGradient></defs>
+      <circle cx="180" cy="185" r="170" fill="url(#ai-halo)"/>
+      <g fill="none" stroke="#BACD9D" stroke-width="1.5" stroke-linecap="round">
+        <path d="M170 190Q112 179 70 152L34 113M70 152L32 168M98 167L90 120L58 94M90 120L111 81M170 190Q114 217 80 259L49 302M80 259L37 246M108 227L76 211L36 212M108 227L124 280L109 318M170 190L148 139L159 100L143 66M148 139L122 118M170 190L155 252L168 299L154 333"/>
+        <path d="M34 113L31 89M34 113L13 105M32 168L16 154M58 94L39 83M111 81L118 59M49 302L24 312M37 246L16 234M36 212L19 198M109 318L88 335M143 66L151 42M154 333L163 350" opacity=".5"/>
+      </g>
+      <g fill="none" stroke="#DDB776" stroke-width="1" opacity=".6">
+        <path d="M184 190L226 95L286 126L321 190L285 259L225 285L184 190L286 126L285 259L226 95L225 285L321 190L226 95M184 190L285 259M184 190L321 190M286 126L225 285"/>
+      </g>
+      <g fill="#DDB776"><circle cx="226" cy="95" r="5"/><circle cx="286" cy="126" r="6"/><circle cx="321" cy="190" r="5"/><circle cx="285" cy="259" r="6"/><circle cx="225" cy="285" r="5"/></g>
+      <g fill="#BACD9D"><circle cx="70" cy="152" r="3"/><circle cx="90" cy="120" r="3"/><circle cx="80" cy="259" r="3"/><circle cx="108" cy="227" r="3"/><circle cx="148" cy="139" r="3"/></g>
+      <circle cx="177" cy="190" r="13" fill="#E8DDC0"/><circle cx="177" cy="190" r="23" fill="none" stroke="#E8DDC0" opacity=".25"/>
+      <path d="M177 43V146M177 235V345" stroke="#E8DDC0" stroke-dasharray="2 7" opacity=".2"/>
+      <g fill="#E8DDC0" font-family="system-ui, sans-serif" font-size="11" letter-spacing="2"><text x="38" y="370">МИЦЕЛИЙ</text><text x="218" y="370">НЕЙРОСЕТЬ</text></g>
+    </svg>
+    <p>Связи как образ.<br>Разные принципы работы.</p>
+  </div>
 </header>
 <article class="ai-reading" aria-labelledby="guide-start">
   <header class="ai-reading__intro">
-    <h2 id="guide-start">От первых понятий к практике</h2>
-    <p>Читайте по порядку или переходите к нужной теме. В каждом разделе — короткое объяснение; технические подробности можно изучить по ссылкам на учебные материалы.</p>
+    <p class="ai-reading__meta">Две сети — два устройства мира</p>
+    <h2 id="guide-start">Что связывает грибы и разговор об ИИ?</h2>
+    <p>Мицелий и нейросети удобно сопоставить через образ связей. Это помогает начать разговор о сложных системах, но сходство рисунка ещё не означает одинаковую работу.</p>
+    <div class="ai-compare">
+      <section><span class="ai-compare__label">Живая сеть</span><h3>Мицелий</h3><p>Грибница — сеть грибных нитей, гиф. В микоризных сетях гифы могут соединять корни разных растений. Образ «интернета природы» описывает эти связи, а не буквальную компьютерную сеть.</p><a href="{{ '/stati/mikoriza/' | url }}">О микоризе →</a></section>
+      <section><span class="ai-compare__label">Вычислительная сеть</span><h3>Нейросеть</h3><p>Математическая модель со связанными операциями и обучаемыми параметрами. Она находит закономерности в данных и использует их для распознавания, прогнозирования или генерации.</p><a href="#parameters">Как она устроена →</a></section>
+    </div>
+    <p class="ai-reading__source">О границах метафоры «лесного интернета»: <a href="https://www.nature.com/articles/s41559-023-01986-1">обзор исследований микоризных сетей, Nature Ecology &amp; Evolution</a>.</p>
+    <h2>Понять ИИ с нуля</h2>
+    <p>Дальше — справочник об искусственном интеллекте. Читайте по порядку или выбирайте нужную тему: в каждом разделе есть короткое объяснение, а в конце — словарь и материалы для продолжения.</p>
     <p class="ai-reading__takeaway"><strong>Первое знакомство:</strong> начните с <a href="#basics">основ</a>, затем разберите <a href="#terms">модель и приложение</a>, <a href="#tokens">токены</a> и <a href="#context">контекст</a>. Для практики — <a href="#prompt">как задать вопрос</a> и <a href="#errors">как проверить ответ</a>.</p>
   </header>
-  <nav class="ai-reading__contents" aria-label="Оглавление справочника" data-pagefind-ignore>
+  <nav class="ai-reading__contents" id="guide-contents" aria-label="Оглавление справочника" data-pagefind-ignore>
     <h2>Что вы хотите узнать?</h2>
     <ol>{% for section in aiGuide %}<li><a href="#{{ section.id }}">{{ section.title }}</a></li>{% endfor %}</ol>
   </nav>
@@ -37,4 +71,4 @@ lang: ru
     <p class="ai-reading__meta">Обновлено <time datetime="2026-11-14">14 ноября 2026</time>. Справочник объясняет общие принципы; функции и настройки конкретных сервисов могут различаться.</p>
   </footer>
 </article>
-<script src="{{ '/assets/js/ai-reading.js' | url }}?v=2026111402" defer></script>
+<script src="{{ '/assets/js/ai-reading.js' | url }}?v=2026111403" defer></script>
