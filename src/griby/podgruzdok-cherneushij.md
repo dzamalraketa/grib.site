@@ -1,6 +1,6 @@
 ---
 layout: layouts/mushroom.njk
-title: Подгруздок чёрнеющий
+title: Подгруздок чернеющий
 latin_name: Russula nigricans
 slug: podgruzdok-cherneushij
 status: conditional
@@ -31,7 +31,7 @@ sources:
     url: 'https://en.wikipedia.org/wiki/Russula_nigricans'
 summary: >-
   Крупная белая сыроежка, мякоть которой при повреждении краснеет, а затем
-  чернеёт — «подгруздок, переходящий в уголь». Традиционно используется в
+  чернеет — «подгруздок, переходящий в уголь». Традиционно используется в
   засолке, хотя по вкусу уступает груздям.
 image: /assets/img/mushrooms/podgruzdok-cherneushij.jpg
 image_author: Holger Krisp
@@ -49,7 +49,7 @@ image_source_url: >-
 У нас в каталоге уже есть пара:
 - *Russula delica* (белянка) — не чернеет;
 - *R. adusta* (подгруздок чёрный) — чернеет сразу, без красной стадии;
-- *R. nigricans* (подгруздок чёрнеющий) — **сначала краснеет, потом чернеет**.
+- *R. nigricans* (подгруздок чернеющий) — **сначала краснеет, потом чернеет**.
 
 Трёхцветная реакция мякоти (белый → красный → чёрный) — визитная карточка *nigricans*.
 

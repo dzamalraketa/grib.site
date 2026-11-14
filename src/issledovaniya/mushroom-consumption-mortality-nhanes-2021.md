@@ -36,7 +36,7 @@ Ba D.M., Gao X., Al-Shaar L., Muscat J., Chinchilli V.M., Ssentongo P., Zhang X.
 ## Идентификаторы и финансирование
 
 - DOI: [10.1186/s12937-021-00738-w](https://doi.org/10.1186/s12937-021-00738-w); PMID 34548082; полный текст — PMC8454070.
-- Группа Penn State (та же, что у метаанализа рака 2021 — карточка `mushroom-consumption-cancer-meta-2021`).
+- Группа Penn State (та же, что у метаанализа рака 2021 — карточка [метаанализа потребления грибов и риска рака (2021)](/issledovaniya/mushroom-consumption-cancer-meta-2021/)).
 
 ## Что стоит отметить
 
