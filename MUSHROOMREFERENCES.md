@@ -132,6 +132,8 @@ MushroomReferences.com в карточках не используется.
 | `mushroom-consumption-cancer-meta-2021.md` | Ba 2021 / метаанализ 17 набл., рак | Oncology |
 | `mushroom-consumption-mci-2019.md` | Feng 2019 / кросс-секция MCI, n=663 | Cognition |
 | `mushroom-consumption-mortality-nhanes-2021.md` | Ba 2021 / NHANES + мета 5 когорт, смертность | Nutrition |
+| `ergothioneine-cognitive-decline-2022.md` | Wu 2022 / когорта клиник памяти, n=470 | Cognition |
+| `lentinan-gastric-chemo-meta-2024.md` | Wang 2024 / метаанализ 31 РКИ, рак желудка | Oncology |
 
 ## Контент для блога (stati/) — УЖЕ ИСПОЛЬЗОВАНО
 
