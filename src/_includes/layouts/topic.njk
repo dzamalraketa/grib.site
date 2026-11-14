@@ -1,0 +1,8 @@
+---
+layout: layouts/base.njk
+stylesheets:
+  - /assets/css/topics.css
+---
+<nav class="topic-breadcrumb" aria-label="Навигация по темам"><a href="/temy/">← Все темы</a><span>{{ topicGuides[topicKey].label }}</span></nav>
+<article class="topic-article">{{ content | safe }}</article>
+<section class="topic-next" aria-labelledby="topic-next-title"><p class="topic-kicker">Продолжить знакомство</p><h2 id="topic-next-title">Ещё одна ветка</h2><div class="topic-readings__grid">{% for key in topicGuides[topicKey].next %}{% set next = topicGuides[key] %}<a href="/temy/{{ key }}/"><h3>{{ next.title }} →</h3><p>{{ next.question }}</p></a>{% endfor %}</div></section>

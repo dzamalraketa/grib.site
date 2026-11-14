@@ -1,0 +1,11 @@
+{% set guide = topicGuides[topicKey] %}
+<aside class="topic-start" aria-label="Главный вопрос темы">
+  <p class="topic-kicker">Главный вопрос</p>
+  <p class="topic-start__question">{{ guide.question }}</p>
+  <p>{{ guide.takeaway }}</p>
+</aside>
+<nav class="topic-outline" aria-label="Оглавление темы"><h2>В этом обзоре</h2><ol>{% for section in guide.sections %}<li><a href="#{{ section.id }}">{{ section.title }}</a></li>{% endfor %}</ol></nav>
+<section class="topic-readings" aria-labelledby="topic-readings-title">
+  <h2 id="topic-readings-title">С чего начать чтение</h2>
+  <div class="topic-readings__grid">{% for item in guide.reads %}<a href="{{ item[2] | url }}"><span class="topic-kicker">Шаг {{ loop.index }}</span><h3>{{ item[0] }} <span aria-hidden="true">↗</span></h3><p>{{ item[1] }}</p></a>{% endfor %}</div>
+</section>

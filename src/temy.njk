@@ -1,28 +1,21 @@
 ---
 wide: true
 layout: layouts/base.njk
-title: "Темы"
-description: "Тематические обзоры по микологии: виды грибов, микоремедиация, грибы и иммунитет, микориза, энтомопатогенные грибы."
-permalink: "/temy/"
+title: "Темы о грибах — лес, здоровье, мицелий и наука"
+social_title: "У грибов больше одной истории"
+description: "Выберите, что интересно в мире грибов: лес и мицелий, микробиом, иммунитет, кордицепс, безопасность добавок и идеи Пола Стеметса. Путеводители и маршруты чтения."
+permalink: /temy/
 eleventyExcludeFromCollections: true
+stylesheets:
+  - /assets/css/topics.css
 ---
-
-<header class="page-header">
-  <p class="page-header__eyebrow">Обзоры</p>
-  <h1 class="page-header__title">Темы</h1>
-  <p class="page-header__lead">
-    Тематические страницы, на которых собираются материалы по ключевым
-    направлениям микологии: виды грибов, микоремедиация, влияние грибов
-    на иммунитет, микориза, энтомопатогенные грибы. Каждая тема
-    заканчивается обязательным дисклеймером.
-  </p>
-</header>
-
-<div class="topic-grid">
-  {% for t in collections.temy %}
-    <a class="topic-tile" href="{{ t.url | url }}">
-      <h2 class="topic-tile__title">{{ t.data.title }}</h2>
-      <p class="topic-tile__lead">{{ t.data.description or t.data.lead or "" }}</p>
-    </a>
-  {% endfor %}
-</div>
+<header class="topics-intro"><p class="topic-kicker">Путеводитель по миру грибов</p><h1>У грибов больше<br>одной истории.</h1><p>Лесная прогулка, скрытая жизнь мицелия или проверка громких обещаний — выберите вопрос. Внутри каждой темы есть объяснения и материалы для продолжения.</p><nav class="topics-jumps" aria-label="Направления тем"><a href="#nature">Лес и связи ↓</a><a href="#human">Грибы и человек ↓</a><a href="#ideas">Люди и идеи ↓</a></nav></header>
+{% set groups = [{id:'nature',title:'Лес и его связи',lead:'От знакомой шляпки — к тому, что происходит под землёй и вокруг нас.'},{id:'human',title:'Грибы и человек',lead:'Вопросы о питании, добавках и исследованиях. Сначала разбираемся, что именно проверяли.'},{id:'ideas',title:'Люди и идеи',lead:'Книги, авторы и истории, с которых хочется копнуть глубже.'}] %}
+{% for group in groups %}
+<section class="topics-group" id="{{ group.id }}" aria-labelledby="heading-{{ group.id }}"><header><h2 id="heading-{{ group.id }}">{{ group.title }}</h2><p>{{ group.lead }}</p></header><div class="topics-cards">
+{% for key, guide in topicGuides %}{% if guide.group == group.id %}
+<a class="topics-card topics-card--{{ group.id }}" href="/temy/{{ key }}/"><span class="topic-kicker">{{ guide.label }}</span><h3>{{ guide.title }}</h3><p>{{ guide.question }}</p><span class="topics-card__action">Разобраться в теме <span aria-hidden="true">↗</span></span></a>
+{% endif %}{% endfor %}
+</div></section>
+{% endfor %}
+<aside class="topics-crosslink"><div><p class="topic-kicker">Неожиданное продолжение</p><h2>От мицелия к нейросетям</h2><p>Интересны связи и сложные системы? Продолжите знакомство со справочником по искусственному интеллекту.</p></div><a class="btn" href="/pro-ii/">Открыть справочник →</a></aside>
