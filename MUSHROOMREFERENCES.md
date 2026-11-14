@@ -124,6 +124,15 @@ MushroomReferences.com в карточках не используется.
 | `shiitake-interferon-2014.md` | Shiitake / интерферон | Shiitake
 | `turkey-tail-breast-cancer-hormonal-2012.md` | Trametes / РМЖ+гормоны | Turkey Tail
 
+**Ноябрь 2026 — добавлены по PubMed (не из списка MR, но закрывают
+тематику «Miscellaneous/питание»):**
+
+| Файл | Публикация / Дизайн | Категория
+|---|---|---|
+| `mushroom-consumption-cancer-meta-2021.md` | Ba 2021 / метаанализ 17 набл., рак | Oncology |
+| `mushroom-consumption-mci-2019.md` | Feng 2019 / кросс-секция MCI, n=663 | Cognition |
+| `mushroom-consumption-mortality-nhanes-2021.md` | Ba 2021 / NHANES + мета 5 когорт, смертность | Nutrition |
+
 ## Контент для блога (stati/) — УЖЕ ИСПОЛЬЗОВАНО
 
 Все 5 featured-обзоров из MushroomReferences.com **уже опубликованы** в `src/stati/`:
