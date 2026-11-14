@@ -136,6 +136,8 @@ MushroomReferences.com в карточках не используется.
 | `lentinan-gastric-chemo-meta-2024.md` | Wang 2024 / метаанализ 31 РКИ, рак желудка | Oncology |
 | `amatoxin-treatment-enjalbert-2002.md` | Enjalbert 2002 / ретроспектива 2108 случаев | Safety |
 | `mushroom-poisoning-syndromes-diaz-2005.md` | Diaz 2005 / обзор 28 018 отравлений | Safety |
+| `mushroom-poisoning-mortality-meta-2023.md` | Janatolmakan 2023 / метаанализ 33 исслед., смертность | Safety |
+| `mushroom-consumption-gastric-stop-2023.md` | Ba 2023 / пул-анализ StoP, рак желудка | Oncology |
 
 ## Контент для блога (stati/) — УЖЕ ИСПОЛЬЗОВАНО
 
