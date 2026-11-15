@@ -7,14 +7,14 @@ mushroom: "Вёшенка обыкновенная (Pleurotus ostreatus) — п�
 design: "РКИ на людях, двойное слепое, плацебо-контролируемое, параллельное, n=46 (LDL-C 116–190 мг/дл), 4 недели"
 year: 2026
 source_name: "Nutrition & Metabolism (DOI 10.1186/s12986-026-01122-3)"
-source_url: "https://doi.org/10.1186/s12986-026-01122-3"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/42071226/"
 date: 2026-05-03
 permalink: "/issledovaniya/oyster-betaglucan-ldl-2026/"
 slug: oyster-betaglucan-ldl-2026
 summary: "Двойное слепое РКИ у 46 взрослых с умеренно повышенным LDL-C: ежедневный напиток с 8,4 г порошка вёшенки (3 г β-глюканов) против напитка без гриба, 4 недели. Первичный исход — LDL-C — не изменился; не было эффекта и на остальные липиды, аполипопротеины и экспрессию генов. Пост-хок анализ с поправкой на пол показал снижение маркеров абсорбции холестерина (особенно у женщин). Эргостерол в сыворотке подтвердил комплаенс."
 sources:
   - title: "Nutrition & Metabolism: β-glucan-rich oyster mushroom powder and cholesterol metabolism (2026)"
-    url: "https://doi.org/10.1186/s12986-026-01122-3"
+    url: "https://pubmed.ncbi.nlm.nih.gov/42071226/"
   - title: "DRKS: DRKS00033943 (регистрация испытания)"
     url: "https://drks.de/search/de/trial/DRKS00033943"
   - title: "PubMed: поиск по Johnen Ellinger Pleurotus ostreatus LDL"
@@ -81,7 +81,7 @@ A1/B; нехолестериновые стеролы как валидиров�
 
 ## Идентификаторы и финансирование
 
-- DOI: [10.1186/s12986-026-01122-3](https://doi.org/10.1186/s12986-026-01122-3); регистрация: [DRKS00033943](https://drks.de/search/de/trial/DRKS00033943) (21.03.2024).
+- DOI: [10.1186/s12986-026-01122-3](https://pubmed.ncbi.nlm.nih.gov/42071226/); регистрация: [DRKS00033943](https://drks.de/search/de/trial/DRKS00033943) (21.03.2024).
 - Исполнение: Университет Бонна (Human Nutrition, Institute of
   Nutritional and Food Science), Германия.
 

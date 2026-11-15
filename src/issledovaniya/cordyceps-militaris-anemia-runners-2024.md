@@ -7,7 +7,7 @@ mushroom: "Кордицепс (Cordyceps militaris, экстракт мицел�
 design: "Плацебо-контролируемое двойное слепое параллельное исследование (n=22)"
 year: 2024
 source_name: "Nutrients (DOI 10.3390/nu16121835)"
-source_url: "https://doi.org/10.3390/nu16121835"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/38931190/"
 date: 2024-06-13
 permalink: "/issledovaniya/cordyceps-militaris-anemia-runners-2024/"
 slug: cordyceps-militaris-anemia-runners-2024
@@ -34,7 +34,7 @@ Nakamura A., Shinozaki E., Suzuki Y., Santa K., Kumazawa Y., Kobayashi F., Nagao
 
 ## Идентификаторы и финансирование
 
-- DOI: [10.3390/nu16121835](https://doi.org/10.3390/nu16121835).
+- DOI: [10.3390/nu16121835](https://pubmed.ncbi.nlm.nih.gov/38931190/).
 - Статья опубликована в журнале *Nutrients* (MDPI, открытый доступ); ClinicalTrials.gov и EudraCT в аннотации не указаны.
 
 ## Что стоит отметить

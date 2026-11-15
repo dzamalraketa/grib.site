@@ -7,7 +7,7 @@ mushroom: "Ежовик гребенчатый (Hericium erinaceus), компл�
 design: "РКИ на людях, двойное слепое, плацебо-контролируемое, параллельные группы, n=41 (хронический анализ)"
 year: 2023
 source_name: "Nutrients (MDPI)"
-source_url: "https://www.mdpi.com/2072-6643/15/22/4842"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/38004235/"
 date: 2023-11-20
 permalink: "/issledovaniya/ezhovik-acute-stress-2023/"
 slug: ezhovik-acute-stress-2023

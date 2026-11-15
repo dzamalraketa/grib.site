@@ -68,7 +68,7 @@ image_source_url: 'https://commons.wikimedia.org/wiki/File:Shiitakegrowing.jpg'
 - [«Рисовый жмых, ферментированный мицелием шиитаке»]({{ '/issledovaniya/shiitake-interferon-2014/' | url }});
 - [«Шиитаке и иммунные показатели»]({{ '/issledovaniya/shiitake-immune-2015/' | url }}) — цельные сушёные грибы у здоровых людей;
 - [«LEM при химиотерапии»]({{ '/issledovaniya/shiitake-chemotherapy-2011/' | url }});
-- [«Комплекс рейши + шиитаке и липидный профиль»]({{ '/issledovaniya/reishi-shiitake-lipid-2018/' | url }});
+- [«Лентинан (β-глюкан шиитаке) как дополнение к химиотерапии при раке желудка»]({{ '/issledovaniya/lentinan-gastric-chemo-meta-2024/' | url }}) — мета-анализ;
 - [«β-глюкановый экстракт шиитаке и микробиота»]({{ '/issledovaniya/shiitake-bge-microbiome-2021/' | url }}).
 
 Второй известный активный компонент — **эритаденин**,

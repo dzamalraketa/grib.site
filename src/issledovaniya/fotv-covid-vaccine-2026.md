@@ -7,7 +7,7 @@ mushroom: "Агарикон + Траметес разноцветный (Fomitop
 design: "РКИ на людях, двойное слепое, плацебо-контролируемое, n=90"
 year: 2026
 source_name: "BMC Immunology (DOI 10.1186/s12865-026-00809-9)"
-source_url: "https://doi.org/10.1186/s12865-026-00809-9"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/41620671/"
 date: 2026-01-31
 permalink: "/issledovaniya/fotv-covid-vaccine-2026/"
 slug: fotv-covid-vaccine-2026
@@ -35,7 +35,7 @@ Saxe G., Smith C.N., Golshan S., Shekhtman T., Bair Z.J., Beathard C., Davis R.A
 ## Идентификаторы и финансирование
 
 - Регистрация: [ClinicalTrials.gov NCT04951336](https://clinicaltrials.gov/study/NCT04951336) (зарегистрирован 30 июня 2021).
-- DOI: [10.1186/s12865-026-00809-9](https://doi.org/10.1186/s12865-026-00809-9).
+- DOI: [10.1186/s12865-026-00809-9](https://pubmed.ncbi.nlm.nih.gov/41620671/).
 - Публикация: BMC Immunology, Volume 27, article number 24 (2026); open access.
 - Три соавтора (Z.J. Bair, C. Beathard, R.A. Davis) — сотрудники Fungi Perfecti, LLC (производитель FoTv), что указано в аффилиациях.
 

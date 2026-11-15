@@ -8,7 +8,7 @@ mushroom: "Hericium erinaceus — fruiting body, 4 capsules/day"
 design: "Randomized double-blind placebo-controlled parallel-group study, 31 healthy volunteers aged 50–80, 12 weeks"
 year: 2019
 source_name: "Biomedical Research (Japan, J-STAGE), DOI 10.2220/biomedres.40.125"
-source_url: "https://doi.org/10.2220/biomedres.40.125"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/31413233/"
 date: 2019-08-01
 permalink: "/en/issledovaniya/ezhovik-cognition-middle-2019/"
 slug: ezhovik-cognition-middle-2019

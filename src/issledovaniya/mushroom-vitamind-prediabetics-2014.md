@@ -7,14 +7,14 @@ mushroom: "Свежие слайсы грибов (шампиньон/магаз
 design: "Рандомизированное контролируемое исследование, n=43 (преддиабет, дефицит D, ИМТ>25), 4 группы, 16 недель"
 year: 2014
 source_name: "Eur J Clin Nutr (DOI 10.1038/ejcn.2014.157)"
-source_url: "https://doi.org/10.1038/ejcn.2014.157"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/25117997/"
 date: 2014-10-01
 permalink: "/issledovaniya/mushroom-vitamind-prediabetics-2014/"
 slug: mushroom-vitamind-prediabetics-2014
 summary: "Важный контраст к работе Urbain: 43 взрослых с преддиабетом и дефицитом D ели по 100 г обогащённых УФ-B грибов в блюдах шеф-повара 16 недель. Отклик 25(OH)D был скромным или нулевым — часть D2 потерялась при кулинарной обработке, а реальные дозы D3-контроля оказались выше этикеточных. Вывод: грибной D2 работает, но лабораторная доза ≠ тарелка — технология приготовления решает."
 sources:
   - title: "Eur J Clin Nutr: Bioavailability of vitamin D2 from enriched mushrooms in prediabetic adults"
-    url: "https://doi.org/10.1038/ejcn.2014.157"
+    url: "https://pubmed.ncbi.nlm.nih.gov/25117997/"
   - title: "Сравните: Urbain 2011 — та же тема у здоровых (на сайте)"
     url: "/issledovaniya/mushroom-vitamind-urbain-2011/"
 ---

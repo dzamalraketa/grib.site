@@ -8,14 +8,14 @@ mushroom: "White button mushroom (Agaricus bisporus) — whole, in a protein-mat
 design: "Randomized open-label crossover study in humans, n=32, 10 days per phase (mushroom diet vs meat diet)"
 year: 2018
 source_name: "Nutrients (DOI 10.3390/nu10101402)"
-source_url: "https://doi.org/10.3390/nu10101402"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/30279332/"
 date: 2018-10-02
 permalink: "/en/issledovaniya/agaricus-bisporus-microbiome-2018/"
 slug: agaricus-bisporus-microbiome-2018
 summary: "A crossover study in 32 healthy adults: 10 days of mushrooms twice daily vs. a protein-matched meat diet. The mushroom phase produced greater stool weight (p=0.002) and a different fecal microbiota composition — more Bacteroidetes (p=0.0002), fewer Firmicutes (p=0.0009). No differences in SCFA, stool pH, frequency or consistency; the mushroom phase caused more GI symptoms in the first two days."
 sources:
   - title: "Nutrients: Impact of Agaricus bisporus Mushroom Consumption on Gut Health Markers in Healthy Adults (2018)"
-    url: "https://doi.org/10.3390/nu10101402"
+    url: "https://pubmed.ncbi.nlm.nih.gov/30279332/"
   - title: "PubMed search: Hess Slavin Agaricus bisporus study"
     url: "https://pubmed.ncbi.nlm.nih.gov/?term=Hess+Slavin+Agaricus+bisporus+gut+health+markers"
   - title: "MushroomReferences.com: Microbiome category"

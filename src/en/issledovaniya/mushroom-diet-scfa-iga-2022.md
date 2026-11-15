@@ -8,14 +8,14 @@ mushroom: "Mixed mushroom products (bunashimeji, shiitake, enokitake and others)
 design: "Parallel controlled clinical study, n=80 healthy adults, 4 weeks (mushroom diet vs control)"
 year: 2022
 source_name: "Front Nutr (PMC9868702)"
-source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9868702/"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/36698463/"
 date: 2022-12-14
 permalink: "/en/issledovaniya/mushroom-diet-scfa-iga-2022/"
 slug: mushroom-diet-scfa-iga-2022
 summary: "A pilot in 80 healthy Japanese adults: 4 weeks of a daily mushroom serving versus a control diet. The mushroom group showed significantly higher gut butyrate (p=0.001) and propionate (p=0.020); fecal IgA rose weakly (p=0.08), and the IgA gain was stronger in participants whose SCFAs were high from the start — the response to mushrooms depends on the baseline microbiota."
 sources:
   - title: "PMC: Dietary supplement of mushrooms promotes SCFA production and moderately associates with IgA production"
-    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9868702/"
+    url: "https://pubmed.ncbi.nlm.nih.gov/36698463/"
   - title: "Frontiers in Nutrition 2022;9:1078060"
     url: "https://doi.org/10.3389/fnut.2022.1078060"
 ---

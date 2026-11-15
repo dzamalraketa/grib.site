@@ -8,14 +8,14 @@ mushroom: "Shiitake (Lentinula edodes) — a β-D-glucan mix BGE 10.4 g/day (≈
 design: "Human RCT, double-blind, placebo-controlled, parallel, n=52 (moderate hypercholesterolemia), 8 weeks"
 year: 2021
 source_name: "European Journal of Nutrition (DOI 10.1007/s00394-021-02504-4)"
-source_url: "https://doi.org/10.1007/s00394-021-02504-4"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/33580297/"
 date: 2021-09-01
 permalink: "/en/issledovaniya/shiitake-bge-microbiome-2021/"
 slug: shiitake-bge-microbiome-2021
 summary: "A double-blind placebo-controlled trial in 52 people with untreated moderate hypercholesterolemia: a shiitake β-glucan extract (3.5 g/day β-glucans) delivered in food products versus placebo for 8 weeks. Lipid and inflammatory markers (IL-1β, IL-6, TNF-α, oxLDL) did not change significantly; but colonic microbiota was modulated differently from placebo — with certain genera correlating with cholesterol-metabolism markers. The intake was safe and brought fiber consumption up to recommended levels."
 sources:
   - title: "Eur J Nutr: Modulation of human intestinal microbiota by a β-D-glucan-enriched extract from Lentinula edodes (2021)"
-    url: "https://doi.org/10.1007/s00394-021-02504-4"
+    url: "https://pubmed.ncbi.nlm.nih.gov/33580297/"
   - title: "ClinicalTrials.gov: NCT03550287 (Reducol)"
     url: "https://clinicaltrials.gov/study/NCT03550287"
   - title: "PubMed search: Morales Lentinula microbiota"

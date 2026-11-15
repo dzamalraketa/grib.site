@@ -8,7 +8,7 @@ mushroom: "Reishi (Ganoderma lucidum), spore powder"
 design: "Pilot RCT in humans, n=48 (25 experimental, 23 control)"
 year: 2012
 source_name: "Evidence-Based Complementary and Alternative Medicine (PMC3236089)"
-source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3236089/"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/22203880/"
 date: 2012-12-10
 permalink: "/en/issledovaniya/reishi-breast-cancer-2012/"
 slug: reishi-breast-cancer-2012

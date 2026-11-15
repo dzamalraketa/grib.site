@@ -7,14 +7,14 @@ mushroom: "Шампиньон (Agaricus bisporus), облучённый УФ-B (
 design: "Рандомизированное плацебо-контролируемое исследование (single-blind), n=26, 5 недель, зимний период"
 year: 2011
 source_name: "Eur J Clin Nutr (DOI 10.1038/ejcn.2011.53)"
-source_url: "https://doi.org/10.1038/ejcn.2011.53"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/21540874/"
 date: 2011-08-01
 permalink: "/issledovaniya/mushroom-vitamind-urbain-2011/"
 slug: mushroom-vitamind-urbain-2011
 summary: "Первое прямое сравнение «витамин D из гриба vs таблетка»: 26 молодых взрослых с 25(OH)D ≤50 нмоль/л получали зимой суп с УФ-облучёнными шампиньонами (28 000 МЕ D2/нед), добавку D2 или плацебо. Уровень 25(OH)D рос одинаково в грибной и таблеточной группах (+3,9 и +4,7 нмоль/л в неделю) — грибной D2 по биодоступности не отличался от добавки."
 sources:
   - title: "Eur J Clin Nutr: Bioavailability of vitamin D2 from UV-B-irradiated button mushrooms"
-    url: "https://doi.org/10.1038/ejcn.2011.53"
+    url: "https://pubmed.ncbi.nlm.nih.gov/21540874/"
   - title: "GermanCTR: DRKS00000195"
     url: "https://drks.de/search/en/trial/DRKS00000195"
   - title: "PMC: Photobiology of vitamin D in mushrooms and its bioavailability in humans"

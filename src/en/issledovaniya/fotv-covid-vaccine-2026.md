@@ -8,7 +8,7 @@ mushroom: "Agarikon + turkey tail (Fomitopsis officinalis + Trametes versicolor,
 design: "Human RCT, double-blind, placebo-controlled, n=90"
 year: 2026
 source_name: "BMC Immunology (DOI 10.1186/s12865-026-00809-9)"
-source_url: "https://doi.org/10.1186/s12865-026-00809-9"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/41620671/"
 date: 2026-01-31
 permalink: "/en/issledovaniya/fotv-covid-vaccine-2026/"
 slug: fotv-covid-vaccine-2026
@@ -36,7 +36,7 @@ A short adjuvant course of FoTv around COVID-19 vaccination was safe, feasible, 
 ## Identifiers & funding
 
 - Registration: [ClinicalTrials.gov NCT04951336](https://clinicaltrials.gov/study/NCT04951336) (registered 30 June 2021).
-- DOI: [10.1186/s12865-026-00809-9](https://doi.org/10.1186/s12865-026-00809-9).
+- DOI: [10.1186/s12865-026-00809-9](https://pubmed.ncbi.nlm.nih.gov/41620671/).
 - Publication: BMC Immunology, volume 27, article 24 (2026); open access.
 - Three co-authors (Z.J. Bair, C. Beathard, R.A. Davis) are employees of Fungi Perfecti LLC (the FoTv manufacturer), as stated in affiliations.
 

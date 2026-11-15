@@ -8,14 +8,14 @@ mushroom: "Button mushrooms (Agaricus bisporus) UV-B-irradiated (1.5 J/cm² → 
 design: "Randomized placebo-controlled study (single-blind), n=26, 5 weeks, winter season"
 year: 2011
 source_name: "Eur J Clin Nutr (DOI 10.1038/ejcn.2011.53)"
-source_url: "https://doi.org/10.1038/ejcn.2011.53"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/21540874/"
 date: 2011-08-01
 permalink: "/en/issledovaniya/mushroom-vitamind-urbain-2011/"
 slug: mushroom-vitamind-urbain-2011
 summary: "The first direct comparison of 'vitamin D from mushrooms vs a tablet': 26 young adults with 25(OH)D ≤50 nmol/L received, in winter, soup with UV-irradiated button mushrooms (28,000 IU D2/week), a D2 supplement, or placebo. 25(OH)D rose identically in the mushroom and tablet groups (+3.9 and +4.7 nmol/L per week) — mushroom D2 was indistinguishable in bioavailability from the supplement."
 sources:
   - title: "Eur J Clin Nutr: Bioavailability of vitamin D2 from UV-B-irradiated button mushrooms"
-    url: "https://doi.org/10.1038/ejcn.2011.53"
+    url: "https://pubmed.ncbi.nlm.nih.gov/21540874/"
   - title: "GermanCTR: DRKS00000195"
     url: "https://drks.de/search/en/trial/DRKS00000195"
   - title: "PMC: Photobiology of vitamin D in mushrooms and its bioavailability in humans"

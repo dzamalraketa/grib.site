@@ -7,14 +7,14 @@ mushroom: "Тамогитаке (Pleurotus cornucopiae var. citrinopileatus, «�
 design: "Многоцентровое пищевое интервенционное исследование без плацебо-ветки, n=231 зачислено / n=170 проанализировано (60–79 лет), 8 недель приёма"
 year: 2025
 source_name: "Front Nutr (DOI 10.3389/fnut.2025.1585111)"
-source_url: "https://doi.org/10.3389/fnut.2025.1585111"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/40761356/"
 date: 2025-07-21
 permalink: "/issledovaniya/tamogitake-cognition-2025/"
 slug: tamogitake-cognition-2025
 summary: "Японская интервенция n=170 (60–79 лет): 8 недель тамогитаке, моринги или рисовых отрубей + 16S-секвенирование микробиоты и когнитивный тест Cognitrax. У «ответчиков» — участников, чьи баллы выросли — были характерные сдвиги бактерий (Faecalibacterium, Blautia, Parabacteroides и др.), и паттерн сдвига зависел от еды и пола. Вывод осторожный: работает не «гриб для всех», а соответствие еды исходной микробиоте."
 sources:
   - title: "Frontiers in Nutrition: Effect of a specific food intervention with Tamogitake mushroom, Moringa leaves, or rice bran"
-    url: "https://doi.org/10.3389/fnut.2025.1585111"
+    url: "https://pubmed.ncbi.nlm.nih.gov/40761356/"
   - title: "Symbiosis Solutions: страница исследования (яп.)"
     url: "https://www.symbiosis-solutions.co.jp/reaserch-results/reaserch-results-013/"
 ---

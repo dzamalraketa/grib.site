@@ -8,14 +8,14 @@ mushroom: "Tamogitake (Pleurotus cornucopiae var. citrinopileatus, 'golden oyste
 design: "Multicenter dietary interventional study without a placebo arm, n=231 enrolled / n=170 analyzed (aged 60–79), 8 weeks of intake"
 year: 2025
 source_name: "Front Nutr (DOI 10.3389/fnut.2025.1585111)"
-source_url: "https://doi.org/10.3389/fnut.2025.1585111"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/40761356/"
 date: 2025-07-21
 permalink: "/en/issledovaniya/tamogitake-cognition-2025/"
 slug: tamogitake-cognition-2025
 summary: "A Japanese intervention n=170 (ages 60–79): 8 weeks of tamogitake, moringa or rice bran plus 16S microbiota sequencing and the Cognitrax cognitive test. 'Responders' — participants whose scores rose — showed characteristic bacterial shifts (Faecalibacterium, Blautia, Parabacteroides and others), and the shift pattern depended on the food and on sex. The cautious conclusion: it is not 'a mushroom for everyone' that works, but the match between a food and one's baseline microbiota."
 sources:
   - title: "Frontiers in Nutrition: Effect of a specific food intervention with Tamogitake mushroom, Moringa leaves, or rice bran"
-    url: "https://doi.org/10.3389/fnut.2025.1585111"
+    url: "https://pubmed.ncbi.nlm.nih.gov/40761356/"
   - title: "Symbiosis Solutions: study page (Japanese)"
     url: "https://www.symbiosis-solutions.co.jp/reaserch-results/reaserch-results-013/"
 ---

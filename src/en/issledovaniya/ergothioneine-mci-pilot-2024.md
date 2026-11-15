@@ -8,14 +8,14 @@ mushroom: "Pure L-ergothioneine — a mushroom metabolite; 25 mg three times wee
 design: "Randomized double-blind placebo-controlled pilot study, n=19, duration 1 year"
 year: 2024
 source_name: "NCT03641404 / Europe PMC (PMID 39544014)"
-source_url: "https://europepmc.org/article/med/39544014"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/39544014/"
 date: 2024-11-15
 permalink: "/en/issledovaniya/ergothioneine-mci-pilot-2024/"
 slug: ergothioneine-mci-pilot-2024
 summary: "A pilot RCT of pure ergothioneine (a mushroom-derived metabolite, 25 mg three times weekly for a year) in older adults with mild cognitive impairment: the work asks whether a dietary antioxidant can slow decline. Small sample; markers of oxidative stress and cognition were tracked over an unusually long horizon for the field."
 sources:
   - title: "Europe PMC: ergothioneine pilot RCT in MCI (2024)"
-    url: "https://europepmc.org/article/med/39544014"
+    url: "https://pubmed.ncbi.nlm.nih.gov/39544014/"
   - title: "ClinicalTrials.gov: NCT03641404"
     url: "https://clinicaltrials.gov/study/NCT03641404"
 ---

@@ -7,14 +7,14 @@ mushroom: "Рейши (Ganoderma lucidum), стандартизованный в
 design: "РКИ на людях, двойное слепое, плацебо-контролируемое, параллельные группы, n=84"
 year: 2023
 source_name: "Journal of Ethnopharmacology (DOI 10.1016/j.jep.2023.116287)"
-source_url: "https://doi.org/10.1016/j.jep.2023.116287"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/36841376/"
 date: 2023-09-08
 permalink: "/issledovaniya/reishi-immunity-fatigue-2023/"
 slug: reishi-immunity-fatigue-2023
 summary: "Рандомизированное двойное слепое 12-недельное исследование у 84 здоровых взрослых: приём стандартизованного водного экстракта Ganoderma lucidum (3 г/сут) против плацебо. В группе рейши зафиксировано значимое увеличение количества и активности NK-клеток на 34 и 42 % соответственно по сравнению с плацебо, а также повышение уровней IL-2 и IFN-γ. Параллельно отмечено снижение субъективной утомляемости по шкале FSS и улучшение качества сна по PSQI. Переносимость оценили как отличную; серьёзных нежелательных явлений не зафиксировано."
 sources:
   - title: "Journal of Ethnopharmacology: Ganoderma lucidum and immune markers (2023)"
-    url: "https://doi.org/10.1016/j.jep.2023.116287"
+    url: "https://pubmed.ncbi.nlm.nih.gov/36841376/"
   - title: "PubMed: Ganoderma lucidum randomized clinical trials"
     url: "https://pubmed.ncbi.nlm.nih.gov/?term=ganoderma+lucidum+randomized+controlled+trial"
   - title: "MushroomReferences.com: Reishi category"
@@ -61,7 +61,7 @@ Lin C.-C., Chen C.-H., Lin T.-Y., Yang W.-C., Huang Y.-L. Immunomodulatory and a
 
 ## Идентификаторы и финансирование
 
-- DOI: [10.1016/j.jep.2023.116287](https://doi.org/10.1016/j.jep.2023.116287).
+- DOI: [10.1016/j.jep.2023.116287](https://pubmed.ncbi.nlm.nih.gov/36841376/).
 - Исследование поддержано грантом Министерства науки и технологий Тайваня (MOST 111-2320-B-039-056); производитель экстракта предоставил субстанцию и плацебо, но не участвовал в анализе данных или подготовке рукописи.
 
 ## Что стоит отметить

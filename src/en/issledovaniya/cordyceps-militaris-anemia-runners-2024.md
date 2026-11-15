@@ -8,7 +8,7 @@ mushroom: "Cordyceps militaris — mycelium extract"
 design: "Placebo-controlled double-blind parallel-group study (n=22)"
 year: 2024
 source_name: "Nutrients (DOI 10.3390/nu16121835)"
-source_url: "https://doi.org/10.3390/nu16121835"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/38931190/"
 date: 2024-06-13
 permalink: "/en/issledovaniya/cordyceps-militaris-anemia-runners-2024/"
 slug: cordyceps-militaris-anemia-runners-2024

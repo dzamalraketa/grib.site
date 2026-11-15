@@ -7,14 +7,14 @@ mushroom: "Чистый L-эрготионеин (L-ergothioneine) — гриб�
 design: "Рандомизированное двойное слепое плацебо-контролируемое пилотное исследование, n=19, длительность 1 год"
 year: 2024
 source_name: "NCT03641404 / Europe PMC (PMID 39544014)"
-source_url: "https://europepmc.org/article/med/39544014"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/39544014/"
 date: 2024-11-15
 permalink: "/issledovaniya/ergothioneine-mci-pilot-2024/"
 slug: ergothioneine-mci-pilot-2024
 summary: "Первое интервенционное РКИ чистого эрготионеина при когнитивном снижении: 19 пожилых с MCI, 25 мг трижды в неделю год. Безопасность подтверждена (кровь, печень, почки в норме); у группы эрготионеина улучшился тест слуховербального обучения (RAVLT) и стабилизировался плазменный лёгкий нейрофиламент (NfL) — маркер нейроповреждения, который в группе плацебо рос. Пилотный размер выборки — главное ограничение."
 sources:
   - title: "Europe PMC: ergothioneine pilot RCT in MCI (2024)"
-    url: "https://europepmc.org/article/med/39544014"
+    url: "https://pubmed.ncbi.nlm.nih.gov/39544014/"
   - title: "ClinicalTrials.gov: NCT03641404"
     url: "https://clinicaltrials.gov/study/NCT03641404"
 ---

@@ -8,14 +8,14 @@ mushroom: "Mesima (Phellinus linteus) — fermented mycelium extract, 1000 mg/da
 design: "Human RCT, double-blind, placebo-controlled, parallel groups, n=98, 8 weeks"
 year: 2022
 source_name: "Medicine (Baltimore) (DOI 10.1097/MD.0000000000030226, PMID 36042633)"
-source_url: "https://doi.org/10.1097/MD.0000000000030226"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/36042633/"
 date: 2022-08-26
 permalink: "/en/issledovaniya/mesima-immunity-2022/"
 slug: mesima-immunity-2022
 summary: "A randomized double-blind placebo-controlled trial in 98 adults: 1000 mg/day of Phellinus linteus extract versus 1000 mg/day dextrin for 8 weeks. The primary endpoint — NK-cell activity by LDH cytotoxicity assay — rose significantly in the mesima group (p<0.05). Secondary cytokines and immunoglobulins did not change significantly (improvement trend). No liver or kidney abnormalities were found."
 sources:
   - title: "Medicine (Baltimore): Effects of Phellinus linteus extract on immunity improvement (2022)"
-    url: "https://doi.org/10.1097/MD.0000000000030226"
+    url: "https://pubmed.ncbi.nlm.nih.gov/36042633/"
   - title: "PubMed: PMID 36042633"
     url: "https://pubmed.ncbi.nlm.nih.gov/36042633/"
   - title: "PMC: full text PMC9410671"

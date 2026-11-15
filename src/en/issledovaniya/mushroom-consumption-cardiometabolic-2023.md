@@ -8,7 +8,7 @@ mushroom: "Culinary mushrooms in general (mostly Agaricus bisporus, Pleurotus os
 design: "Systematic review: 11 interventional and 11 observational studies (n=22)"
 year: 2023
 source_name: "Nutrients (DOI 10.3390/nu15051079)"
-source_url: "https://doi.org/10.3390/nu15051079"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/36904079/"
 date: 2023-02-22
 permalink: "/en/issledovaniya/mushroom-consumption-cardiometabolic-2023/"
 slug: mushroom-consumption-cardiometabolic-2023

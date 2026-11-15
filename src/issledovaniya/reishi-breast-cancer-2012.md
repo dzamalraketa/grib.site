@@ -7,7 +7,7 @@ mushroom: "Рейши (Ganoderma lucidum), споровый порошок (spor
 design: "Пилотное РКИ на людях, n=48 (25 в экспериментальной, 23 в контроле)"
 year: 2012
 source_name: "Evidence-Based Complementary and Alternative Medicine (PMC3236089)"
-source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3236089/"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/22203880/"
 date: 2012-12-10
 permalink: "/issledovaniya/reishi-breast-cancer-2012/"
 slug: reishi-breast-cancer-2012

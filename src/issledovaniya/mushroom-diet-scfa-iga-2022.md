@@ -7,14 +7,14 @@ mushroom: "Смешанные грибные продукты (бунешиме�
 design: "Параллельное контролируемое клиническое исследование, n=80 здоровых взрослых, 4 недели (грибная диета vs контрольная)"
 year: 2022
 source_name: "Front Nutr (PMC9868702)"
-source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9868702/"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/36698463/"
 date: 2022-12-14
 permalink: "/issledovaniya/mushroom-diet-scfa-iga-2022/"
 slug: mushroom-diet-scfa-iga-2022
 summary: "Пилот у 80 здоровых японцев: 4 недели ежедневной грибной порции против контрольной диеты. У грибной группы значимо выросли кишечные бутират (p=0,001) и пропионат (p=0,020); IgA стула повышался слабо (p=0,08), причём прирост IgA был сильнее у тех, у кого SCFA были высокими с самого начала — ответ на грибы зависит от исходной микробиоты."
 sources:
   - title: "PMC: Dietary supplement of mushrooms promotes SCFA production and moderately associates with IgA production"
-    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9868702/"
+    url: "https://pubmed.ncbi.nlm.nih.gov/36698463/"
   - title: "Frontiers in Nutrition 2022;9:1078060"
     url: "https://doi.org/10.3389/fnut.2022.1078060"
 ---

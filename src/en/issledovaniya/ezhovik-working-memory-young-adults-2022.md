@@ -1,45 +1,43 @@
 ---
 layout: layouts/research.njk
 lang: en
-title: "Acute dose-dependent efficacy of standardized Hericium erinaceus extract for working memory and processing speed in healthy young adults: a randomized double-blind crossover placebo-controlled trial"
+title: "Acute effects of Hericium erinaceus extract on cognition and mood in healthy young adults: a double-blind crossover trial"
 category: cognition
 category_label: "Cognition"
-mushroom: "Hericium erinaceus — standardized fruiting-body extract enriched with hericenones A–E"
-design: "Crossover RCT in humans, double-blind, active-placebo, n=54, two 4-week phases with a 2-week washout"
-year: 2022
-source_name: "Frontiers in Pharmacology (DOI 10.3389/fphar.2022.826741)"
-source_url: "https://doi.org/10.3389/fphar.2022.826741"
-date: 2022-04-21
+mushroom: "Lion's mane (Hericium erinaceus), standardised fruiting body extract"
+design: "Randomized double-blind placebo-controlled crossover trial, n=18, acute dose"
+year: 2025
+source_name: "Frontiers in Nutrition 2025 (PMID 40276537)"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/40276537/"
+date: 2025-04-01
 permalink: "/en/issledovaniya/ezhovik-working-memory-young-adults-2022/"
 slug: ezhovik-working-memory-young-adults-2022
-summary: "A crossover RCT (n=54) in healthy young adults aged 18–30. Two 4-week phases: 1.5 g/day and 3 g/day of a hericenone A–E-enriched standardized H. erinaceus extract versus placebo. In the 3 g/day phase, dose-dependent improvement in n-back working-memory accuracy (2-back +11%, 3-back +14%, p < 0.01) and reduced Trail-Making B completion time (−18%, p = 0.002) versus placebo. Excellent tolerability; no adverse events in either phase."
-sources:
-  - title: "Frontiers in Pharmacology: Hericium erinaceus working memory young adults (2022)"
-    url: "https://doi.org/10.3389/fphar.2022.826741"
-  - title: "PubMed: Hericium erinaceus cognitive function young adults"
-    url: "https://pubmed.ncbi.nlm.nih.gov/?term=hericium+erinaceus+working+memory+young+adults"
-  - title: "MushroomReferences.com: Lion's Mane — cognition entries"
-    url: "https://mushroomreferences.com/category/lions-mane/"
+summary: "A crossover RCT in 18 healthy 18–35-year-olds: a single 3 g dose of H. erinaceus fruiting body extract (10:1) did **not** improve composite cognition or mood versus placebo at 90 minutes; the only signal was better pegboard test performance. An important null finding: acute lion's mane effects in humans are unconfirmed."
 ---
 
-Sato H., Sugiyama S., Yamaguchi Y., Hirasaki Y., Kawai M. Acute and subchronic dose-dependent effects of standardized Hericium erinaceus extract on working memory and cognitive processing speed in healthy young adults: A randomized, double-blind, placebo-controlled crossover trial. Frontiers in Pharmacology. 2022;13:826741.
+Front Nutr 2025. Acute effects of a standardised extract of Hericium erinaceus (Lion's Mane mushroom) on cognition and mood in healthy younger adults (PMID 40276537).
 
 ## Rationale
 
-If lion's mane does anything cognitively measurable, the dose–response relationship matters — and previous trials used fixed powder doses over weeks in older or impaired populations. This crossover study tested a hericenone-standardized extract in healthy young adults at two dose levels.
+Lion's mane is heavily promoted as a "neuroprotective nootropic" on the back of mouse data and small pilots. The authors tested the **acute** effect: does a single dose of fruiting-body extract change cognitive performance or mood in healthy young people — what consumers expect from a "capsule before work".
 
 ## Methods
 
-A double-blind active-placebo crossover RCT: 54 healthy adults aged 18–30 completed two 4-week phases (1.5 g/day and 3 g/day of the standardized extract, each versus placebo) separated by a 2-week washout. Working memory was tested with n-back tasks; processing speed with Trail-Making B.
+A double-blind randomized placebo-controlled **crossover** study: 18 healthy participants aged 18–35 received **3 g of 10:1 fruiting body extract** or placebo in separate sessions. A test battery (executive function, working memory, psychomotor skill, attention, processing speed) and mood questionnaires were administered at baseline and 90 minutes after intake.
 
 ## Results
 
-In the 3 g/day phase the extract produced dose-dependent gains: 2-back accuracy +11%, 3-back +14% (p < 0.01) versus placebo, and Trail-Making B time fell 18% (p = 0.002). The 1.5 g/day phase showed weaker or absent separation — the effect is dose-dependent. No adverse events in either phase.
+- **Composite measures of global cognitive function and mood: NO significant effect** — the extract did not differ from placebo.
+- Among individual tests, the only signal was **improved pegboard test performance** (psychomotor skill) at 90 minutes.
+- The authors interpret cautiously: any benefits may be task- or domain-specific rather than global.
 
 ## Conclusions
 
-A standardized hericenone-enriched extract produced measurable, dose-dependent improvements in working memory and processing speed in healthy young adults — a different and complementary result to the MCI/AD work.
+A single dose of lion's mane fruiting body extract **did not improve overall cognition or mood** compared with placebo — an important negative result that contrasts with the mouse literature and supplement marketing.
 
-## Worth noting
+## Caveats
 
-Two methodological strengths: crossover design (each participant their own control, boosting power at n=54) and extract standardization (hericenones A–E quantified — the effect can be tied to defined chemistry). The dose-dependence seen between 1.5 and 3 g/day is the practically useful finding for anyone choosing a product. Population caveat: healthy 18–30-year-olds; transfer to older or impaired groups is not automatic.
+- The card is valuable precisely for its **null result**: it balances the optimistic lion's mane cards and shows that an "instant nootropic effect" has not been demonstrated in people.
+- n=18 and a single dose — low power for weak effects; chronic use (4+ weeks) may differ — see the same team's chronic work in our card `ezhovik-acute-stress-2023` (PMID 38004235).
+- **Fruiting body extract** was tested, not erinacine-containing mycelium — different chemical profiles, limited transfer.
+- This card replaces an unverifiable citation about a "crossover RCT, n=54, Frontiers in Pharmacology 2022, DOI 10.3389/fphar.2022.826741" — that DOI does not exist; the current source was verified directly.

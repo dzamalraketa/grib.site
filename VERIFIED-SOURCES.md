@@ -86,6 +86,71 @@ eutils/efetch.fcgi?db=pubmed&id=<csv>&retmode=xml
 Не использовать символ «ö» и сложные bool-выражения в term —
 ломает парсинг (проверено: пустой ответ).
 
+### Отбор исследований: польза для человека прежде всего
+
+При выборе новых карточек приоритет: РКИ/пилоты на людях →
+эпидемиология и мета-анализы → токсикология и клинические
+случаи → доклиника (in vitro/мыши) и базовая наука. Доклиничные
+и механистические карточки допустимы, но обязаны быть помечены
+«на животных/in vitro» и снабжены оговоркой о переносе на людей.
+
+### Нормализация источников (аудит 2026-11-15)
+
+Все `source_url` карточек исследований приведены к единому
+виду — прямой PMID-линк `pubmed.ncbi.nlm.nih.gov/<PMID>/`.
+DOI оставлены только там, где статья не индексируется в
+PubMed (см. список ниже). Проверено через
+`esearch ... term=<doi>[doi]` и `pmc/utils/idconv`.
+
+Заменено DOI→PMID (16): agaricus-bisporus-microbiome-2018→30279332,
+cordyceps-militaris-anemia-runners-2024→38931190,
+ezhovik-cognition-middle-2019→31413233,
+fotv-covid-vaccine-2026→41620671, mesima-immunity-2022→36042633,
+mushroom-consumption-cardiometabolic-2023→36904079,
+mushroom-vitamind-prediabetics-2014→25117997,
+mushroom-vitamind-urbain-2011→21540874,
+oyster-betaglucan-ldl-2026→42071226,
+reishi-immunity-fatigue-2023→36841376,
+shiitake-bge-microbiome-2021→33580297,
+tamogitake-cognition-2025→40761356,
+ezhovik-acute-stress-2023→38004235,
+ergothioneine-mci-pilot-2024→39544014,
+mushroom-diet-scfa-iga-2022→36698463,
+reishi-breast-cancer-2012→22203880.
+
+DOI не индексируется в PubMed — ссылка оставлена (проверено,
+резолвится): 10.1007/BF02836405 (Chinese J Integr Med),
+10.15747/jcn.2015.7.3.81, 10.4163/jnh.2019.52.3.258,
+10.1016/j.jadr.2023.100544, 10.1016/j.jff.2024.106120,
+10.1016/j.jff.2010.11.004.
+
+### Исправленные неверифицируемые цитаты (2026-11-15)
+
+Четыре карточки ссылались на несуществующие работы — заменены
+реальными исследованиями по той же теме (прямой PMID):
+
+- `cordyceps-cs4-antioxidant-2010`: «Yan et al, Phytother Res
+  2010;24(9)» — в PubMed отсутствует → Sci Rep 2024,
+  РКИ напитка C. militaris на иммунные маркеры, PMID 38580687.
+- `reishi-shiitake-lipid-2018`: «Abidin et al, Phytomedicine
+  2018» — в PubMed отсутствует → Nutrients 2025, РКИ масла
+  спор рейши n=110 при дислипидемии, PMID 40077714.
+  Ссылки в `stati/reishi-clinical-evidence.md` и
+  `griby/shiitake.md` обновлены под новое содержание.
+- `ezhovik-safety-mci-24weeks-2024`: «Nutr Neurosci 2024,
+  DOI 10.1080/1028415X.2024.2348191» — DOI не резолвится
+  (404) → Nutrients 2021, мыши SAMP8 + эринацин-A,
+  PMID 34684662 (помечено «доклиника»).
+- `ezhovik-working-memory-young-adults-2022`: «Front Pharmacol
+  2022, DOI 10.3389/fphar.2022.826741» — DOI не резолвится
+  (404) → Front Nutr 2025, острое кроссоверное РКИ n=18,
+  PMID 40276537 (нулевой результат — сохранён как важный).
+
+Правило: каждая цитата в карточке должна быть проверена
+esummary/efetch по PMID **до** записи файла; поисковые
+`?term=`-URL в `source_url` запрещены — ссылка обязана вести
+на конкретную запись, а не на выдачу.
+
 ## Изображения (images)
 
 `npm run fetch-images` → `scripts/fetch-images.mjs`:

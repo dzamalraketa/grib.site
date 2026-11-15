@@ -8,14 +8,14 @@ mushroom: "Fresh mushroom slices (button/store varieties) after UV-B — 600 or 
 design: "Randomized controlled study, n=43 (prediabetes, vitamin D deficiency, BMI>25), 4 arms, 16 weeks"
 year: 2014
 source_name: "Eur J Clin Nutr (DOI 10.1038/ejcn.2014.157)"
-source_url: "https://doi.org/10.1038/ejcn.2014.157"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/25117997/"
 date: 2014-10-01
 permalink: "/en/issledovaniya/mushroom-vitamind-prediabetics-2014/"
 slug: mushroom-vitamind-prediabetics-2014
 summary: "An important contrast to the Urbain study: 43 adults with prediabetes and vitamin D deficiency ate 100 g of UV-B-enriched mushrooms in chef-prepared dishes for 16 weeks. The 25(OH)D response was modest or null — part of the D2 was lost in cooking, and actual D3-control doses exceeded labeled ones. Conclusion: mushroom D2 works, but a lab dose ≠ a plate — cooking technology decides."
 sources:
   - title: "Eur J Clin Nutr: Bioavailability of vitamin D2 from enriched mushrooms in prediabetic adults"
-    url: "https://doi.org/10.1038/ejcn.2014.157"
+    url: "https://pubmed.ncbi.nlm.nih.gov/25117997/"
   - title: "Compare: Urbain 2011 — same topic in healthy adults (on this site)"
     url: "/en/issledovaniya/mushroom-vitamind-urbain-2011/"
 ---

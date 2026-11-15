@@ -8,14 +8,14 @@ mushroom: "Reishi (Ganoderma lucidum) — standardized water extract of the frui
 design: "Human RCT, double-blind, placebo-controlled, parallel groups, n=84"
 year: 2023
 source_name: "Journal of Ethnopharmacology (DOI 10.1016/j.jep.2023.116287)"
-source_url: "https://doi.org/10.1016/j.jep.2023.116287"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/36841376/"
 date: 2023-09-08
 permalink: "/en/issledovaniya/reishi-immunity-fatigue-2023/"
 slug: reishi-immunity-fatigue-2023
 summary: "A randomized double-blind 12-week study in 84 healthy adults: standardized Ganoderma lucidum water extract (3 g/day) versus placebo. The reishi group showed significantly increased NK-cell number and activity — +34% and +42% respectively versus placebo — plus elevated IL-2 and IFN-γ. Subjective fatigue on the FSS scale fell and PSQI sleep quality improved. Tolerability rated excellent; no serious adverse events."
 sources:
   - title: "Journal of Ethnopharmacology: Ganoderma lucidum and immune markers (2023)"
-    url: "https://doi.org/10.1016/j.jep.2023.116287"
+    url: "https://pubmed.ncbi.nlm.nih.gov/36841376/"
   - title: "PubMed: Ganoderma lucidum randomized clinical trials"
     url: "https://pubmed.ncbi.nlm.nih.gov/?term=ganoderma+lucidum+randomized+controlled+trial"
   - title: "MushroomReferences.com: Reishi category"

@@ -8,14 +8,14 @@ mushroom: "Oyster mushroom (Pleurotus ostreatus) — 8.4 g/day powder (3 g β-gl
 design: "Human RCT, double-blind, placebo-controlled, parallel, n=46 (LDL-C 116–190 mg/dL), 4 weeks"
 year: 2026
 source_name: "Nutrition & Metabolism (DOI 10.1186/s12986-026-01122-3)"
-source_url: "https://doi.org/10.1186/s12986-026-01122-3"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/42071226/"
 date: 2026-05-03
 permalink: "/en/issledovaniya/oyster-betaglucan-ldl-2026/"
 slug: oyster-betaglucan-ldl-2026
 summary: "A double-blind RCT in 46 adults with moderately elevated LDL-C: a daily drink with 8.4 g of oyster-mushroom powder (3 g β-glucans) versus a mushroom-free drink for 4 weeks. The primary endpoint — LDL-C — did not change; nor did other lipids, apolipoproteins or gene expression. A post-hoc sex-adjusted analysis showed reduced cholesterol-absorption markers (especially in women). Serum ergosterol confirmed compliance."
 sources:
   - title: "Nutrition & Metabolism: β-glucan-rich oyster mushroom powder and cholesterol metabolism (2026)"
-    url: "https://doi.org/10.1186/s12986-026-01122-3"
+    url: "https://pubmed.ncbi.nlm.nih.gov/42071226/"
   - title: "DRKS: DRKS00033943 (trial registration)"
     url: "https://drks.de/search/de/trial/DRKS00033943"
   - title: "PubMed search: Johnen Ellinger Pleurotus ostreatus LDL"

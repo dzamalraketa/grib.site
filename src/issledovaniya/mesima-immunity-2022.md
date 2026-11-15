@@ -7,14 +7,14 @@ mushroom: "Мезима (Phellinus linteus) — ферментированный
 design: "РКИ на людях, двойное слепое, плацебо-контролируемое, параллельные группы, n=98, 8 недель"
 year: 2022
 source_name: "Medicine (Baltimore) (DOI 10.1097/MD.0000000000030226, PMID 36042633)"
-source_url: "https://doi.org/10.1097/MD.0000000000030226"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/36042633/"
 date: 2022-08-26
 permalink: "/issledovaniya/mesima-immunity-2022/"
 slug: mesima-immunity-2022
 summary: "Рандомизированное двойное слепое плацебо-контролируемое исследование у 98 взрослых: 1000 мг/сут экстракта Phellinus linteus против 1000 мг/сут декстрина в течение 8 недель. Первичный исход — активность NK-клеток по LDH-цитотоксическому тесту — достоверно выросла в группе мезимы (p<0,05). Вторичные цитокины и иммуноглобулины достоверно не изменились (тенденция к улучшению). Отклонений по печёночным и почечным показателям не выявлено."
 sources:
   - title: "Medicine (Baltimore): Effects of Phellinus linteus extract on immunity improvement (2022)"
-    url: "https://doi.org/10.1097/MD.0000000000030226"
+    url: "https://pubmed.ncbi.nlm.nih.gov/36042633/"
   - title: "PubMed: PMID 36042633"
     url: "https://pubmed.ncbi.nlm.nih.gov/36042633/"
   - title: "PMC: полный текст PMC9410671"
@@ -84,7 +84,7 @@ IgG1, IgG2, IgM) не зафиксировано — отмечена лишь �
 
 ## Идентификаторы и финансирование
 
-- DOI: [10.1097/MD.0000000000030226](https://doi.org/10.1097/MD.0000000000030226); PMID: [36042633](https://pubmed.ncbi.nlm.nih.gov/36042633/); полный текст в открытом доступе: [PMC9410671](https://pmc.ncbi.nlm.nih.gov/articles/PMC9410671/).
+- DOI: [10.1097/MD.0000000000030226](https://pubmed.ncbi.nlm.nih.gov/36042633/); PMID: [36042633](https://pubmed.ncbi.nlm.nih.gov/36042633/); полный текст в открытом доступе: [PMC9410671](https://pmc.ncbi.nlm.nih.gov/articles/PMC9410671/).
 - Регистрация: CRIS-KCT0005460; этика: DJUMC-2020-BM-07.
 - Исполнение: Daejeon University, College of Korean Medicine (Республика Корея).
 

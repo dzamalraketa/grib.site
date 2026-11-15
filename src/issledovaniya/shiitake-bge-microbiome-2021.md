@@ -7,14 +7,14 @@ mushroom: "Шиитаке (Lentinula edodes) — β-D-глюкановая см�
 design: "РКИ на людях, двойное слепое, плацебо-контролируемое, параллельное, n=52 (умеренная гиперхолестеринемия), 8 недель"
 year: 2021
 source_name: "European Journal of Nutrition (DOI 10.1007/s00394-021-02504-4)"
-source_url: "https://doi.org/10.1007/s00394-021-02504-4"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/33580297/"
 date: 2021-09-01
 permalink: "/issledovaniya/shiitake-bge-microbiome-2021/"
 slug: shiitake-bge-microbiome-2021
 summary: "Двойное слепое плацебо-контролируемое исследование у 52 человек с нелеченой умеренной гиперхолестеринемией: β-глюкановый экстракт шиитаке (3,5 г/сут β-глюканов) в продуктах питания против плацебо, 8 недель. Липидные показатели и воспалительные маркеры (IL-1β, IL-6, TNF-α, oxLDL) достоверно не изменились; зато микробиота толстой кишки модулировалась иначе, чем в плацебо — с корреляцией отдельных родов с маркерами метаболизма холестерина. Приём оказался безопасным и довёл потребление клетчатки до рекомендуемого уровня."
 sources:
   - title: "Eur J Nutr: Modulation of human intestinal microbiota by a β-D-glucan-enriched extract from Lentinula edodes (2021)"
-    url: "https://doi.org/10.1007/s00394-021-02504-4"
+    url: "https://pubmed.ncbi.nlm.nih.gov/33580297/"
   - title: "ClinicalTrials.gov: NCT03550287 (Reducol)"
     url: "https://clinicaltrials.gov/study/NCT03550287"
   - title: "PubMed: поиск по Morales Lentinula microbiota"
@@ -82,7 +82,7 @@ oxLDL), иммуномодуляторные показатели и соста�
 
 ## Идентификаторы и финансирование
 
-- DOI: [10.1007/s00394-021-02504-4](https://doi.org/10.1007/s00394-021-02504-4); регистрация: [NCT03550287](https://clinicaltrials.gov/study/NCT03550287).
+- DOI: [10.1007/s00394-021-02504-4](https://pubmed.ncbi.nlm.nih.gov/33580297/); регистрация: [NCT03550287](https://clinicaltrials.gov/study/NCT03550287).
 - Финансирование: гранты AGL2014-56211-R (Министерство науки
   Испании), S2013/ABI-2728 (Сообщество Мадрида),
   NRGWI.obrug.2018.005 (Нидерландская организация научных

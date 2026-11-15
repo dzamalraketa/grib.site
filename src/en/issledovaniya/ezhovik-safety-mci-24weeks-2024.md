@@ -1,47 +1,43 @@
 ---
 layout: layouts/research.njk
 lang: en
-title: "Safety, tolerability and cognitive effects of 24-week standardized Hericium erinaceus extract in older adults with mild cognitive impairment: a phase IIb RCT with open-label extension"
-category: nutrition
-category_label: "Nutrition & mushrooms"
-mushroom: "Hericium erinaceus — standardized hot-water fruiting-body extract"
-design: "Phase IIb RCT in humans, double-blind, placebo-controlled, n=88, 24 weeks + 24-week open-label extension in 64 participants"
-year: 2024
-source_name: "Nutritional Neuroscience (DOI 10.1080/1028415X.2024.2348191)"
-source_url: "https://doi.org/10.1080/1028415X.2024.2348191"
-date: 2024-02-18
+title: "Erinacine A-enriched Hericium erinaceus mycelium delays age-related cognitive decline: an experiment in SAMP8 mice"
+category: cognition
+category_label: "Cognition"
+mushroom: "Lion's mane (Hericium erinaceus), erinacine A-enriched mycelium"
+design: "Preclinical animal study: SAMP8 mice, 12 weeks of feeding, 3 dose groups"
+year: 2021
+source_name: "Nutrients 2021 (PMID 34684662)"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/34684662/"
+date: 2021-10-19
 permalink: "/en/issledovaniya/ezhovik-safety-mci-24weeks-2024/"
 slug: ezhovik-safety-mci-24weeks-2024
-summary: "A phase IIb randomized study (n=88) in adults aged 60–83 with mild cognitive impairment (Petersen criteria). Two phases: 24 weeks of blinded intake of a standardized H. erinaceus extract 3 g/day versus placebo, then a further 24 weeks of open-label intake (all participants on active extract). Primary endpoint — safety and tolerability: not a single drug-related serious adverse event over either 24 or 48 weeks; overall adverse-event rates comparable to placebo (59% vs 57%). On the ADAS-Cog and RBANS cognitive batteries the blinded phase showed a small but statistically significant effect favoring the H. erinaceus extract."
-sources:
-  - title: "Nutritional Neuroscience: Hericium erinaceus 24-week safety MCI (2024)"
-    url: "https://doi.org/10.1080/1028415X.2024.2348191"
-  - title: "PubMed: Hericium erinaceus long-term safety MCI"
-    url: "https://pubmed.ncbi.nlm.nih.gov/?term=hericium+erinaceus+mci+long+term+safety+randomized"
-  - title: "MushroomReferences.com: Lion's Mane — safety entries"
-    url: "https://mushroomreferences.com/category/lions-mane/"
-  - title: "FDA GRAS notices: H. erinaceus mycelium extract (GRN 968)"
-    url: "https://www.cfsanappsexternal.fda.gov/scripts/fdcc/?set=GRASNotices&id=968"
+summary: "An experiment in senescence-accelerated SAMP8 mice: 12 weeks of erinacine A-enriched H. erinaceus mycelium at the lowest dose of 108 mg/kg/day significantly improved learning and memory (passive and active avoidance tests); brain inflammation and oxidative stress markers (iNOS, TBARS, 8-OHdG) fell dose-dependently in all three groups."
 ---
 
-Saitsu K., Yamada K., Kawabata K., Torita S., Watanabe A., Ohtomo N. Long-term safety, tolerability, and cognitive effects of standardized Hericium erinaceus aqueous extract in older adults with mild cognitive impairment: A 24-week randomized placebo-controlled phase IIb with 24-week open-label extension. Nutritional Neuroscience. 2024;27(9):3512–3525.
+Nutrients 2021. Erinacine A-Enriched Hericium erinaceus Mycelium Delays Progression of Age-Related Cognitive Decline in SAMP8 Mice (PMID 34684662).
 
 ## Rationale
 
-Most lion's mane trials run 4–16 weeks — too short to answer the chronic-use safety question that matters for a supplement people take for months. This phase IIb study put safety and tolerability first, with validated cognitive batteries (ADAS-Cog, RBANS) as efficacy measures.
+This work is the preclinical foundation of the "human" erinacine line: the same research program (erinacine A-enriched mycelium, EAHEM) that led to the pilot RCT in early Alzheimer's disease (our card `ezhovik-alzheimer-2020`, PMID 32581767). Here the question was whether EAHEM slows **normal age-related** brain aging — not disease, but degenerative senescence.
 
 ## Methods
 
-A randomized double-blind placebo-controlled phase IIb trial: 88 participants aged 60–83 with MCI by Petersen criteria. Phase one — 24 weeks of standardized hot-water H. erinaceus extract 3 g/day versus placebo; phase two — a further 24 weeks open-label where all participants received the active extract (64 continued). Safety was the primary endpoint; cognition was tracked on ADAS-Cog and RBANS.
+Three-month-old SAMP8 mice (an accelerated-senescence model) were divided into three dose groups: **108, 215 and 431 mg/kg/day** of EAHEM in feed for 12 weeks. In week 12, learning and memory were assessed by single-trial passive and active avoidance tests. After sacrifice, amyloid plaques, iNOS activity (inflammation), TBARS (lipid peroxidation) and 8-OHdG (oxidative DNA damage) were analyzed in brain tissue.
 
 ## Results
 
-Safety: no drug-related serious adverse events over either the 24-week blinded phase or the full 48-week observation; total adverse-event rates were essentially identical between arms (59% extract vs 57% placebo). Efficacy: in the blinded phase the extract group showed a small but statistically significant advantage on ADAS-Cog and RBANS.
+- **Even the lowest dose of 108 mg/kg/day** significantly improved learning and memory in both avoidance tests.
+- In all three dose groups, **iNOS, TBARS and 8-OHdG fell significantly and dose-dependently** — the higher the dose, the lower the brain inflammation and oxidative stress markers.
+- The authors conclude that EAHEM improves learning/memory and delays degenerative brain aging in mice.
 
 ## Conclusions
 
-Six months of daily standardized extract appears genuinely safe in an elderly MCI population — the strongest safety dataset for the species — and produced a modest but real cognitive signal on modern validated batteries.
+The experiment shows a mechanistically plausible profile: reduced inflammatory iNOS and two independent oxidative-damage markers coinciding with behavioral improvement. The dose-dependence strengthens the case — the effect does not look like a single-group artifact.
 
-## Worth noting
+## Caveats
 
-This is the most rigorous lion's mane human study to date: phase IIb, modern scales (the exact instruments earlier reviewers asked for), a 48-week horizon, and a safety-first primary endpoint it cleanly passed. The honest caveat remains: "small but significant" effects on ADAS-Cog/RBANS are encouraging, not disease-modifying proof; MCI progression is slow and heterogeneous.
+- These are **mice** — and a genetically modified accelerated-aging line at that: no direct extrapolation to humans. Human erinacine A data come from separate small pilot studies.
+- The 108 mg/kg mouse dose **does not convert** directly into a household dose — murine metabolism and erinacine bioavailability differ.
+- Groups lack placebo control in the clinical sense (standard for preclinical work), but dose-dependence partly compensates.
+- This card replaces an unverifiable citation about a "24-week phase IIb RCT, n=88, Nutritional Neuroscience 2024" — no such work exists in PubMed; the current source was verified directly.

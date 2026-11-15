@@ -7,14 +7,14 @@ mushroom: "Шампиньон двуспоровый (Agaricus bisporus) — ц�
 design: "Рандомизированное открытое перекрёстное исследование на людях, n=32, 10 дней на фазу (грибная диета vs мясная)"
 year: 2018
 source_name: "Nutrients (DOI 10.3390/nu10101402)"
-source_url: "https://doi.org/10.3390/nu10101402"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/30279332/"
 date: 2018-10-02
 permalink: "/issledovaniya/agaricus-bisporus-microbiome-2018/"
 slug: agaricus-bisporus-microbiome-2018
 summary: "Перекрёстное исследование у 32 здоровых взрослых: 10 дней шампиньонов дважды в день против равного по белку мяса. Грибная диета дала больший вес стула (p=0,002) и иной состав фекальной микробиоты — больше Bacteroidetes (p=0,0002), меньше Firmicutes (p=0,0009). Различий по SCFA, pH стула, частоте и консистенции не было; в первые два дня грибная фаза давала больше ЖКТ-симптомов."
 sources:
   - title: "Nutrients: Impact of Agaricus bisporus Mushroom Consumption on Gut Health Markers in Healthy Adults (2018)"
-    url: "https://doi.org/10.3390/nu10101402"
+    url: "https://pubmed.ncbi.nlm.nih.gov/30279332/"
   - title: "PubMed: поиск по исследованию Hess Slavin Agaricus bisporus"
     url: "https://pubmed.ncbi.nlm.nih.gov/?term=Hess+Slavin+Agaricus+bisporus+gut+health+markers"
   - title: "MushroomReferences.com: Microbiome category"
@@ -73,7 +73,7 @@ pH и консистенция стула.
 
 ## Идентификаторы и финансирование
 
-- DOI: [10.3390/nu10101402](https://doi.org/10.3390/nu10101402);
+- DOI: [10.3390/nu10101402](https://pubmed.ncbi.nlm.nih.gov/30279332/);
   журнал Nutrients, открытый доступ.
 - Авторы — University of Minnesota (Department of Food Science
   and Nutrition).

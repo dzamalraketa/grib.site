@@ -7,7 +7,7 @@ mushroom: "Hericium erinaceus (ежовик гребенчатый) — плод
 design: "Рандомизированное двойное слепое плацебо-контролируемое параллельное исследование, 31 здоровый доброволец 50–80 лет, 12 недель"
 year: 2019
 source_name: "Biomedical Research (Japan, J-STAGE), DOI 10.2220/biomedres.40.125"
-source_url: "https://doi.org/10.2220/biomedres.40.125"
+source_url: "https://pubmed.ncbi.nlm.nih.gov/31413233/"
 date: 2019-08-01
 permalink: "/issledovaniya/ezhovik-cognition-middle-2019/"
 slug: ezhovik-cognition-middle-2019
@@ -34,7 +34,7 @@ Saitsu Y., Nishide A., Kikushima K., Shimizu K., Ohnuki K. Improvement of cognit
 
 ## Идентификаторы и финансирование
 
-- DOI: [10.2220/biomedres.40.125](https://doi.org/10.2220/biomedres.40.125).
+- DOI: [10.2220/biomedres.40.125](https://pubmed.ncbi.nlm.nih.gov/31413233/).
 - Журнал: Biomedical Research (Tokyo) — J-STAGE, статья в открытом доступе.
 - Автор-корреспондент: Koichiro Ohnuki, Department of Biological and Environmental Chemistry, Kindai University, Япония.
 
