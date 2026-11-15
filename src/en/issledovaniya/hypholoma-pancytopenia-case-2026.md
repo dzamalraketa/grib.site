@@ -19,7 +19,7 @@ Medicine (Baltimore) 2026. Delayed pancytopenia following ingestion of wild mush
 
 ## Why this study
 
-Our new [sulphur tuft card](/en/griby/ljeopenok-sernozhyoltyj/) describes the classic gastrointestinal syndrome. This case shows a **second, delayed face of toxicity**: bone-marrow suppression days after the meal — with no dramatic start.
+Our new [sulphur tuft card](/en/griby/lozhnoopyonok-sernozhyoltyj/) describes the classic gastrointestinal syndrome. This case shows a **second, delayed face of toxicity**: bone-marrow suppression days after the meal — with no dramatic start.
 
 ## What happened
 

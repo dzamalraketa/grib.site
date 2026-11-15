@@ -19,7 +19,7 @@ Toxins 2020. Warning on false or true morels and button mushrooms with potential
 
 ## Why this study
 
-Our new [Bohemian verpa card](/en/griby/verpa-bogemskaya/) mentions trace gyromitrin — this review supplies the direct rationale for caution: its authors (a neurologist and a toxicologist) regard *Verpa bohemica* as **inedible**, and show that "traditional cooking" does not zero out risk across the morel-like group.
+Our new [Bohemian verpa card](/en/griby/smorchkovaya-shapochka/) mentions trace gyromitrin — this review supplies the direct rationale for caution: its authors (a neurologist and a toxicologist) regard *Verpa bohemica* as **inedible**, and show that "traditional cooking" does not zero out risk across the morel-like group.
 
 ## What the review covers
 
