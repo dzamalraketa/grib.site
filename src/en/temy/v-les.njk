@@ -1,0 +1,69 @@
+---
+layout: layouts/base.njk
+lang: en
+title: "Into the forest for mushrooms: season, species and lookalikes"
+description: "Where to start with forest mushrooms: the seasonal calendar, the species catalog and the dangerous lookalikes."
+permalink: "/en/temy/v-les/"
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Topic</p>
+  <h1 class="page-header__title">Into the forest for mushrooms</h1>
+  <p class="page-header__lead">
+    A sane entry point into foraging: learn the season first,
+    then the species, then — deliberately — the dangerous
+    lookalikes. This route is built around the idea that a
+    mushroom is identified by a full set of traits, never by
+    one photo.
+  </p>
+</header>
+
+<section>
+  <h2>First — the time of year</h2>
+  <p>
+    The <a href="{{ '/en/sezon/' | url }}">seasonal calendar</a>
+    helps you pick which species to study right now. The more
+    detailed <a href="{{ '/en/stati/sezonnyj-kalendar-gribnika/' | url }}">month-by-month guide</a>
+    is written for the temperate belt — its geographic frame
+    matters.
+  </p>
+
+  <h2>Then — the species description</h2>
+  <p>
+    The <a href="{{ '/en/griby/' | url }}">mushroom catalog</a>
+    holds cards with descriptions, photos, habitat notes and
+    source links. Compare the full set of traits: cap, gills or
+    pores, stem, ring, volva, flesh colour changes, smell, spore
+    print — plus where and when it grows. A photograph, or an
+    app identification from a single shot, does not replace a
+    reliable species determination.
+  </p>
+
+  <h2>Separately — the dangerous lookalikes</h2>
+  <p>
+    Study lookalike pairs together, not only the mushroom you
+    hope to find. A good first route is to open the cards of the
+    <a href="{{ '/en/griby/borovik/' | url }}">porcini</a>,
+    the <a href="{{ '/en/griby/zhelchnyj-grib/' | url }}">bitter bolete</a>
+    and the <a href="{{ '/en/griby/satanskij-grib/' | url }}">devil's bolete</a>,
+    then follow the source links inside each card.
+  </p>
+  <p class="topic-note">
+    If a specimen raises any doubt, do not eat it. The site's
+    materials help you learn — they cannot confirm the safety of
+    a specific mushroom you have picked.
+  </p>
+</section>
+
+{% set related = [] %}
+{% for item in collections.issledovaniyaEn %}
+  {% if item.data.category == "safety" %}
+    {% set _ = related.push(item) %}
+  {% endif %}
+{% endfor %}
+<section>
+  <h2>Research on this topic</h2>
+  {% set items = related %}
+  {% set kind = "article" %}
+  {% include "partials/card-grid.njk" %}
+</section>

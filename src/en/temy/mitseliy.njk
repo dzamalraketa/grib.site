@@ -1,0 +1,77 @@
+---
+layout: layouts/base.njk
+lang: en
+title: "Mycelium: the invisible network underfoot"
+description: "The fungal network, tree roots and connections in the forest. A route from first meeting mycelium to mycorrhiza, ecology and network thinking."
+permalink: "/en/temy/mitseliy/"
+---
+
+<header class="page-header">
+  <p class="page-header__eyebrow">Topic</p>
+  <h1 class="page-header__title">Mycelium: the invisible network underfoot</h1>
+  <p class="page-header__lead">
+    The mushroom we pick is only the fruiting body — the organism
+    itself lives as a web of hyphae in soil and wood. This section
+    gathers routes into that hidden network: mycorrhizal
+    partnerships with tree roots, ecological ideas and the analogy
+    between living and computational networks.
+  </p>
+</header>
+
+<section>
+  <h2>Start with the fungal web</h2>
+  <p>
+    Three routes meet here: an introduction to mycorrhiza, the
+    ecological vision of "mycelium running" projects, and the
+    idea of networks connecting organisms. Choose one or walk
+    them in order.
+  </p>
+  <p>
+    The introductory article <a href="{{ '/en/stati/mikoriza/' | url }}">on mycorrhiza</a>
+    explains the partnership between fungi and plant roots —
+    the dominant life strategy of most forest mushrooms.
+    The review of <a href="{{ '/en/stati/mycelium-running/' | url }}">"Mycelium Running"</a>
+    widens the picture to ecological applications.
+  </p>
+
+  <h2>Look at the network from the other side</h2>
+  <p>
+    A mycelium is not a metaphor but a working infrastructure:
+    it transports nutrients, signals and metabolites between
+    distant parts of the forest floor. Mycorrhizal networks link
+    trees of different species into shared resource systems —
+    which is why a single fruiting body tells you so little about
+    the organism that made it.
+  </p>
+
+  <h2>From idea to evidence</h2>
+  <p>
+    In the <a href="{{ '/en/temy/mikoremediatsiya/' | url }}">mycoremediation topic</a>
+    you can see how specific mechanisms and measured results are
+    discussed. And the <a href="{{ '/en/temy/stamets/' | url }}">guide to Stamets' work</a>
+    helps connect the books with the research directions they
+    grew from.
+  </p>
+</section>
+
+<section>
+  <h2>Related species</h2>
+  <ul>
+    <li><a href="{{ '/en/griby/borovik/' | url }}">Porcini (Boletus edulis)</a> — a classic ectomycorrhizal partner of spruce and beech.</li>
+    <li><a href="{{ '/en/griby/lisichka/' | url }}">Chanterelle (Cantharellus cibarius)</a> — another mycorrhizal species that refuses cultivation.</li>
+    <li><a href="{{ '/en/griby/maslenok-listvennichnyj/' | url }}">Larch bolete (Suillus grevillei)</a> — a strict partner of larch roots.</li>
+  </ul>
+</section>
+
+{% set related = [] %}
+{% for item in collections.issledovaniyaEn %}
+  {% if item.data.category == "ecology" %}
+    {% set _ = related.push(item) %}
+  {% endif %}
+{% endfor %}
+<section>
+  <h2>Research on this topic</h2>
+  {% set items = related %}
+  {% set kind = "article" %}
+  {% include "partials/card-grid.njk" %}
+</section>

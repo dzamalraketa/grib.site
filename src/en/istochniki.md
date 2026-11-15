@@ -22,8 +22,12 @@ permalink: "/en/istochniki/"
   <p>
     Fresh peer-reviewed material is collected in a dedicated section —
     <a href="{{ '/en/issledovaniya/' | url }}">“Mushroom research”</a>.
-    It holds entries across thematic categories with direct links to
-    PubMed, Cochrane, NCI, Frontiers and other academic sources.
+    It holds 80+ entries across eight thematic categories (cognitive function,
+    immunity, oncology, physical performance, antioxidants &amp; aging,
+    nutrition &amp; mushrooms, gut microbiome, safety &amp; tolerability)
+    — each with a direct link to a specific PubMed record (PMID),
+    Cochrane or journal DOI. Every source is checked against the
+    claimed study before a card is published.
   </p>
   <p>
     <a class="btn btn--primary" href="{{ '/en/issledovaniya/' | url }}">Open the research catalog →</a>
@@ -31,15 +35,30 @@ permalink: "/en/istochniki/"
 </section>
 
 <section>
-  <h2>Academic databases</h2>
+  <h2>Academic and clinical databases</h2>
   <ul>
     <li><strong>PubMed</strong> — the largest biomedical publication database (over 36 million records). <a href="https://pubmed.ncbi.nlm.nih.gov/" rel="noopener noreferrer" target="_blank">pubmed.ncbi.nlm.nih.gov</a></li>
     <li><strong>PubMed Central (PMC)</strong> — open-access full-text archive of biomedical journals. <a href="https://www.ncbi.nlm.nih.gov/pmc/" rel="noopener noreferrer" target="_blank">ncbi.nlm.nih.gov/pmc</a></li>
     <li><strong>Cochrane Library</strong> — systematic reviews prepared to Cochrane methodology. <a href="https://www.cochranelibrary.com/" rel="noopener noreferrer" target="_blank">cochranelibrary.com</a></li>
     <li><strong>National Cancer Institute (PDQ)</strong> — official NCI information on complementary approaches in oncology. <a href="https://www.cancer.gov/" rel="noopener noreferrer" target="_blank">cancer.gov</a></li>
+    <li><strong>MSKCC About Herbs</strong> — Memorial Sloan Kettering Cancer Center clinical database on supplement–drug interactions. <a href="https://www.mskcc.org/cancer-care/integrative-medicine/herbs" rel="noopener noreferrer" target="_blank">mskcc.org</a></li>
+    <li><strong>ClinicalTrials.gov &amp; DRKS</strong> — international clinical trial registries used to verify protocols and primary endpoints. <a href="https://clinicaltrials.gov/" rel="noopener noreferrer" target="_blank">clinicaltrials.gov</a></li>
     <li><strong>Frontiers</strong> — a family of open-access peer-reviewed journals. <a href="https://www.frontiersin.org/" rel="noopener noreferrer" target="_blank">frontiersin.org</a></li>
     <li><strong>MDPI</strong> — publisher of open-access peer-reviewed journals (quality varies by journal). <a href="https://www.mdpi.com/" rel="noopener noreferrer" target="_blank">mdpi.com</a></li>
     <li><strong>ResearchGate</strong> — a network where authors publish preprints and discussion. <a href="https://www.researchgate.net/" rel="noopener noreferrer" target="_blank">researchgate.net</a></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Mycological guides and taxonomy</h2>
+  <p>
+    Each species card in the <a href="{{ '/en/griby/' | url }}">catalog</a> relies on at least two independent domains beyond Wikipedia:
+  </p>
+  <ul>
+    <li><strong>GBIF (Global Biodiversity Information Facility)</strong> — international taxonomic backbone and occurrence database. <a href="https://www.gbif.org/" rel="noopener noreferrer" target="_blank">gbif.org</a></li>
+    <li><strong>First Nature</strong> — European field guide with detailed morphological descriptions. <a href="https://www.first-nature.com/" rel="noopener noreferrer" target="_blank">first-nature.com</a></li>
+    <li><strong>MushroomExpert</strong> — Michael Kuo’s reference with a focus on microscopy and lookalike distinctions. <a href="https://www.mushroomexpert.com/" rel="noopener noreferrer" target="_blank">mushroomexpert.com</a></li>
+    <li><strong>iNaturalist</strong> — community observation database with taxon verification. <a href="https://www.inaturalist.org/" rel="noopener noreferrer" target="_blank">inaturalist.org</a></li>
   </ul>
 </section>
 

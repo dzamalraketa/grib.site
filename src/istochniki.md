@@ -22,8 +22,12 @@ eleventyExcludeFromCollections: true
   <p>
     Свежий рецензируемый материал собран в отдельном разделе —
     <a href="{{ '/issledovaniya/' | url }}">«Исследования о грибах»</a>.
-    Там карточки по шести тематическим категориям с прямой ссылкой на
-    PubMed, Cochrane, NCI, Frontiers и другие академические источники.
+    Там более 80 карточек по восьми тематическим категориям (когнитивные функции,
+    иммунитет, онкология, физическая выносливость, антиоксиданты и старение,
+    питание и грибы в целом, микробиом, безопасность и переносимость)
+    — каждая с прямой ссылкой на конкретную запись PubMed (PMID),
+    Cochrane или DOI журнала. Каждый источник проверен на соответствие
+    заявленной работе до публикации карточки.
   </p>
   <p>
     <a class="btn btn--primary" href="{{ '/issledovaniya/' | url }}">Открыть каталог исследований →</a>
@@ -31,15 +35,30 @@ eleventyExcludeFromCollections: true
 </section>
 
 <section>
-  <h2>Академические базы</h2>
+  <h2>Академические и клинические базы</h2>
   <ul>
     <li><strong>PubMed</strong> — крупнейшая база биомедицинских публикаций (более 36 млн записей). <a href="https://pubmed.ncbi.nlm.nih.gov/" rel="noopener noreferrer" target="_blank">pubmed.ncbi.nlm.nih.gov</a></li>
     <li><strong>PubMed Central (PMC)</strong> — открытый полнотекстовый архив биомедицинских журналов. <a href="https://www.ncbi.nlm.nih.gov/pmc/" rel="noopener noreferrer" target="_blank">ncbi.nlm.nih.gov/pmc</a></li>
     <li><strong>Cochrane Library</strong> — систематические обзоры, подготовленные по методологии Cochrane. <a href="https://www.cochranelibrary.com/" rel="noopener noreferrer" target="_blank">cochranelibrary.com</a></li>
     <li><strong>National Cancer Institute (PDQ)</strong> — официальные информационные материалы NCI о комплементарных подходах в онкологии. <a href="https://www.cancer.gov/" rel="noopener noreferrer" target="_blank">cancer.gov</a></li>
+    <li><strong>MSKCC About Herbs</strong> — клиническая база Memorial Sloan Kettering Cancer Center по взаимодействиям добавок и лекарств. <a href="https://www.mskcc.org/cancer-care/integrative-medicine/herbs" rel="noopener noreferrer" target="_blank">mskcc.org</a></li>
+    <li><strong>ClinicalTrials.gov и DRKS</strong> — международные реестры клинических испытаний для проверки протоколов и первичных конечных точек. <a href="https://clinicaltrials.gov/" rel="noopener noreferrer" target="_blank">clinicaltrials.gov</a></li>
     <li><strong>Frontiers</strong> — группа рецензируемых журналов открытого доступа. <a href="https://www.frontiersin.org/" rel="noopener noreferrer" target="_blank">frontiersin.org</a></li>
     <li><strong>MDPI</strong> — издатель рецензируемых журналов открытого доступа (с переменным качеством отдельных журналов). <a href="https://www.mdpi.com/" rel="noopener noreferrer" target="_blank">mdpi.com</a></li>
     <li><strong>ResearchGate</strong> — сеть, где авторы публикуют препринты и пишут к ним обсуждения. <a href="https://www.researchgate.net/" rel="noopener noreferrer" target="_blank">researchgate.net</a></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Микологические определители и таксономия</h2>
+  <p>
+    Каждая карточка вида в <a href="{{ '/griby/' | url }}">каталоге</a> опирается минимум на два независимых источника (помимо Wikipedia):
+  </p>
+  <ul>
+    <li><strong>GBIF (Global Biodiversity Information Facility)</strong> — международный таксономический реестр и база распространения видов. <a href="https://www.gbif.org/" rel="noopener noreferrer" target="_blank">gbif.org</a></li>
+    <li><strong>First Nature</strong> — европейский полевой определитель с подробными морфологическими описаниями. <a href="https://www.first-nature.com/" rel="noopener noreferrer" target="_blank">first-nature.com</a></li>
+    <li><strong>MushroomExpert</strong> — справочник миколога Майкла Куо с акцентом на микроскопию и различия двойников. <a href="https://www.mushroomexpert.com/" rel="noopener noreferrer" target="_blank">mushroomexpert.com</a></li>
+    <li><strong>iNaturalist</strong> — краудсорсинговая база наблюдений с верификацией таксонов. <a href="https://www.inaturalist.org/" rel="noopener noreferrer" target="_blank">inaturalist.org</a></li>
   </ul>
 </section>
 
