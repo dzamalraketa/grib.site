@@ -8,6 +8,7 @@
     "indexnow": "node scripts/indexnow.mjs",
     "prebuild": "node scripts/check-verified.js",
     "fetch-images": "node scripts/fetch-images.mjs",
+    "optimize-images": "node scripts/optimize-images.mjs",
     "clean": "rimraf _site",
     "deploy": "bash scripts/deploy.sh deploy",
     "deploy:build": "bash scripts/deploy.sh build",

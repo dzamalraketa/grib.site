@@ -41,7 +41,12 @@ wide: true
   <header class="mushroom-header">
     <div class="mushroom-header__media">
       {% if image %}
-        <img src="{{ image | url }}" alt="{{ image_alt or title }}" loading="eager" decoding="async">
+        {% set wSrcset = image | webpSrcset %}
+        {% set imgMeta = imageMetadata[image] %}
+        <picture>
+          {% if wSrcset %}<source srcset="{{ wSrcset }}" sizes="(max-width: 767px) 92vw, 480px" type="image/webp">{% endif %}
+          <img src="{{ image | url }}"{% if imgMeta %} width="{{ imgMeta.width }}" height="{{ imgMeta.height }}"{% endif %} alt="{{ image_alt or title }}" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
       {% else %}
         <img src="{{ '/assets/img/fallback-illustration.svg' | url }}" alt="" aria-hidden="true">
       {% endif %}

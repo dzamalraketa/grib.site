@@ -83,7 +83,12 @@ eleventyExcludeFromCollections: true
     <article class="card card--mushroom" data-status="{{ item.data.status }}" data-ecology="{{ item.data.ecology }}" data-features="{{ item.data.tags | join('|') }}">
       <a class="card__media" href="{{ item.url | url }}" aria-hidden="true" tabindex="-1">
         {% if item.data.image %}
-          <img src="{{ item.data.image | url }}" alt="" loading="lazy" decoding="async">
+          {% set thumb = item.data.image | webpThumb %}
+          {% set imgMeta = imageMetadata[item.data.image] %}
+          <picture>
+            {% if thumb %}<source srcset="{{ thumb | url }}" type="image/webp">{% endif %}
+            <img src="{{ item.data.image | url }}"{% if imgMeta %} width="{{ imgMeta.width }}" height="{{ imgMeta.height }}"{% endif %} alt="" loading="lazy" decoding="async">
+          </picture>
         {% else %}
           <img src="{{ '/assets/img/fallback-illustration.svg' | url }}" alt="" aria-hidden="true">
         {% endif %}

@@ -117,6 +117,16 @@ async function processMushroom(file) {
     .jpeg({ quality: 82, mozjpeg: true })
     .toFile(outPath);
 
+  await sharp(buffer)
+    .resize({ width: 480, withoutEnlargement: true })
+    .webp({ quality: 76, effort: 4 })
+    .toFile(path.join(IMG_DIR, `${slug}-480.webp`));
+
+  await sharp(buffer)
+    .resize({ width: 1200, withoutEnlargement: true })
+    .webp({ quality: 78, effort: 4 })
+    .toFile(path.join(IMG_DIR, `${slug}.webp`));
+
   // Обновляем front matter
   data.image = `/assets/img/mushrooms/${slug}.jpg`;
   data.image_author = found.author;

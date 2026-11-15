@@ -413,6 +413,12 @@
   display: block;
   transition: transform 400ms ease-out;
 }
+.card__media picture,
+.mushroom-header__media picture,
+.species-chip picture,
+.season-chip picture {
+  display: contents;
+}
 .card--mushroom:hover .card__media img { transform: scale(1.05); }
 .card--mushroom .spore-stamp,
 .card--mushroom .card__title,

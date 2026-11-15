@@ -81,7 +81,11 @@ permalink: "/en/"
       {% if g.data.image and shown < 14 %}
         {% set shown = shown + 1 %}
         <a class="species-chip" href="{{ g.url | url }}">
-          <img src="{{ g.data.image | url }}" alt="{{ g.data.title }}" loading="lazy" decoding="async">
+          {% set thumb = g.data.image | webpThumb %}
+          <picture>
+            {% if thumb %}<source srcset="{{ thumb | url }}" type="image/webp">{% endif %}
+            <img src="{{ g.data.image | url }}" alt="{{ g.data.title }}" loading="lazy" decoding="async">
+          </picture>
           <span class="species-chip__body">
             <span class="species-chip__name">{{ g.data.title }}</span>
             <span class="species-chip__latin">{{ g.data.latin_name }}</span>

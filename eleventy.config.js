@@ -115,6 +115,31 @@ module.exports = function (eleventyConfig) {
   // Есть ли URL в списке (для проверки существования перевода страницы).
   eleventyConfig.addFilter("listHas", (list, v) => (list || []).includes(v));
 
+  // WebP-варианты локальных изображений (для <picture><source type="image/webp">).
+  const hasLocalAsset = (assetUrl) => {
+    if (!assetUrl || typeof assetUrl !== "string" || !assetUrl.startsWith("/assets/")) return false;
+    return fs.existsSync(path.join(process.cwd(), "src", assetUrl));
+  };
+
+  eleventyConfig.addFilter("webpThumb", (imgUrl) => {
+    if (!imgUrl || typeof imgUrl !== "string" || !imgUrl.startsWith("/assets/img/")) return "";
+    const thumb = imgUrl.replace(/\.(jpe?g|png)$/i, "-480.webp");
+    if (thumb !== imgUrl && hasLocalAsset(thumb)) return thumb;
+    const full = imgUrl.replace(/\.(jpe?g|png)$/i, ".webp");
+    if (full !== imgUrl && hasLocalAsset(full)) return full;
+    return "";
+  });
+
+  eleventyConfig.addFilter("webpSrcset", (imgUrl) => {
+    if (!imgUrl || typeof imgUrl !== "string" || !imgUrl.startsWith("/assets/img/")) return "";
+    const parts = [];
+    const thumb = imgUrl.replace(/\.(jpe?g|png)$/i, "-480.webp");
+    const full = imgUrl.replace(/\.(jpe?g|png)$/i, ".webp");
+    if (thumb !== imgUrl && hasLocalAsset(thumb)) parts.push(`${thumb} 480w`);
+    if (full !== imgUrl && hasLocalAsset(full)) parts.push(`${full} 1200w`);
+    return parts.join(", ");
+  });
+
   // Локализованный статус гриба → ярлык на языке страницы.
   eleventyConfig.addFilter("statusLabel", (status, lang) => {
     const labels = {
