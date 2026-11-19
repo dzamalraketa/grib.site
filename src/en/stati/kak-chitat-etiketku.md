@@ -12,8 +12,8 @@ verified: true
 verification_date: 2025-10-04
 permalink: "/en/stati/kak-chitat-etiketku/"
 sources:
-  - title: "Nammex: technical reviews of β-glucans and mycelium-on-grain"
-    url: "https://www.nammex.com/real-medicinal-mushrooms/"
+  - title: "Nammex: fungal terminology (manufacturer resource)"
+    url: "https://www.nammex.com/fungal-terminology-and-mushroom-growing-terms/"
   - title: "FDA: Dietary Supplements — regulatory framework"
     url: "https://www.fda.gov/food/dietary-supplements"
   - title: "Our article: Italian mushroom supplement market analysis"

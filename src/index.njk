@@ -4,8 +4,7 @@ stylesheets:
   - /assets/css/home.css
 layout: layouts/base.njk
 title: "Мир грибов — энциклопедия грибов, науки и экологии"
-social_title: "Мир грибов — грибы без мифов"
-description: "Грибы без мифов: каталог съедобных, ядовитых и лечебных видов, разбор клинических исследований на людях и безопасность добавок — со ссылками на первоисточники."
+social_title: "Мир грибов — от леса до науки"
 og_type: "website"
 eleventyExcludeFromCollections: true
 ---
@@ -35,8 +34,8 @@ eleventyExcludeFromCollections: true
     <p class="home-hero__eyebrow">Природа связей и маленьких открытий</p>
     <h1 id="home-title">Мир грибов</h1>
     <p class="home-hero__tagline">Целая вселенная<br>под нашими ногами.</p>
-    <p class="home-hero__lead">От лесной находки до невидимого мицелия. Узнавайте виды, изучайте исследования и открывайте удивительные связи в природе.</p>
-    <div class="home-hero__actions"><a class="btn btn--primary" href="{{ '/griby/' | url }}">Открыть каталог <span aria-hidden="true">↗</span></a><a class="home-hero__link" href="{{ '/pro-ii/' | url }}">От мицелия к нейросетям →</a></div>
+    <p class="home-hero__lead">Узнайте, как грибница помогает деревьям, что грибы добавляют в наш рацион и какие материалы учёные выращивают из мицелия.</p>
+    <div class="home-hero__actions"><a class="btn btn--primary" href="{{ '/griby/' | url }}">Открыть каталог <span aria-hidden="true">↗</span></a><a class="home-hero__link" href="{{ '/temy/' | url }}">Исследовать мир грибов →</a></div>
     <p class="home-hero__note">Научные источники · понятные объяснения · любопытство к миру</p>
   </div>
 </section>
@@ -73,15 +72,17 @@ eleventyExcludeFromCollections: true
 </section>
 
 <section aria-labelledby="topics" style="margin-top: var(--space-6);">
-  <h2 id="topics" style="font-size: 1.6rem; margin-bottom: var(--space-3);">Темы</h2>
+  <h2 id="topics" style="font-size: 1.6rem; margin-bottom: var(--space-3);">Чем удивляют грибы</h2>
   <div class="topic-grid">
-    {% for t in collections.temy %}
-      <a class="topic-tile" href="{{ t.url | url }}">
-        <h3 class="topic-tile__title">{{ t.data.title }}</h3>
-        <p class="topic-tile__lead">{{ t.data.description or t.data.lead or "" }}</p>
+    {% for key in ['mitseliy', 'primenenie', 'mikoremediatsiya', 'v-les', 'mikrobiom', 'stamets'] %}
+      {% set guide = topicGuides[key] %}
+      <a class="topic-tile" href="{{ ('/temy/' + key + '/') | url }}">
+        <h3 class="topic-tile__title">{{ guide.title }}</h3>
+        <p class="topic-tile__lead">{{ guide.question }}</p>
       </a>
     {% endfor %}
   </div>
+  <p><a href="{{ '/temy/' | url }}">Все темы →</a></p>
 </section>
 
 <section aria-labelledby="latest" style="margin-top: var(--space-6);">

@@ -21,7 +21,7 @@ sources:
   - title: "MushroomReferences.com: Turkey Tail category"
     url: "https://mushroomreferences.com/category/turkey-tail/"
   - title: "NCI: Trametes versicolor / Coriolus versicolor (PDQ Integrative)"
-    url: "https://www.cancer.gov/about-cancer/treatment/cam/patient/immune"
+    url: "https://www.cancer.gov/about-cancer/treatment/cam/hp/mushrooms-pdq"
 ---
 
 Torkelson CJ, Sweet E, Homann D, et al. Immunological and clinical effects of Trametes versicolor in women with breast cancer during adjuvant hormonal therapy: A placebo-controlled randomized pilot study. ISRN Oncology. 2012;2012:251632.

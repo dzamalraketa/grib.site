@@ -16,8 +16,8 @@ sources:
     url: "https://fungi.com/pages/open-letter"
   - title: "Paul Stamets — personal site"
     url: "https://paulstamets.com"
-  - title: "Fungi Perfecti: About"
-    url: "https://fungi.com/pages/about-us"
+  - title: "Fungi Perfecti: Research and Development"
+    url: "https://fungi.com/pages/research-and-development"
 ---
 
 ## The letter's context

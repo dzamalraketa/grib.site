@@ -15,7 +15,7 @@ verification_date: 2025-07-25
 permalink: "/en/stati/mycelium-running/"
 sources:
   - title: "Stamets P. Mycelium Running (2005)"
-    url: "https://www.google.com/books/edition/Mycelium_Running"
+    url: "https://www.penguinrandomhouse.com/books/196974/mycelium-running-by-paul-stamets/"
   - title: "Wikipedia: Mycelium Running"
     url: "https://en.wikipedia.org/wiki/Mycelium_Running"
   - title: "Paul Stamets — personal site"

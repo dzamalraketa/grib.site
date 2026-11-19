@@ -12,8 +12,8 @@ sources:
     url: "https://paulstamets.com"
   - title: "Wikipedia: Paul Stamets"
     url: "https://en.wikipedia.org/wiki/Paul_Stamets"
-  - title: "Fungi Perfecti: About"
-    url: "https://fungi.com/pages/about-us"
+  - title: "Fungi Perfecti: Research and Development"
+    url: "https://fungi.com/pages/research-and-development"
 ---
 
 ## Ранние годы

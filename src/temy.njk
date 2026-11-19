@@ -1,16 +1,16 @@
 ---
 wide: true
 layout: layouts/base.njk
-title: "Темы о грибах — лес, здоровье, мицелий и наука"
+title: "Темы о грибах — лес, питание и открытия"
 social_title: "У грибов больше одной истории"
-description: "Выберите, что интересно в мире грибов: лес и мицелий, микробиом, иммунитет, кордицепс, безопасность добавок и идеи Пола Стеметса. Путеводители и маршруты чтения."
+description: "Как грибница связывает лес, что грибы дают нашему рациону и что из мицелия создают исследователи. Тематические обзоры и маршруты чтения."
 permalink: /temy/
 eleventyExcludeFromCollections: true
 stylesheets:
   - /assets/css/topics.css
 ---
-<header class="topics-intro"><p class="topic-kicker">Путеводитель по миру грибов</p><h1>У грибов больше<br>одной истории.</h1><p>Лесная прогулка, скрытая жизнь мицелия или проверка громких обещаний — выберите вопрос. Внутри каждой темы есть объяснения и материалы для продолжения.</p><nav class="topics-jumps" aria-label="Направления тем"><a href="#nature">Лес и связи ↓</a><a href="#human">Грибы и человек ↓</a><a href="#ideas">Люди и идеи ↓</a></nav></header>
-{% set groups = [{id:'nature',title:'Лес и его связи',lead:'От знакомой шляпки — к тому, что происходит под землёй и вокруг нас.'},{id:'human',title:'Грибы и человек',lead:'Вопросы о питании, добавках и исследованиях. Сначала разбираемся, что именно проверяли.'},{id:'ideas',title:'Люди и идеи',lead:'Книги, авторы и истории, с которых хочется копнуть глубже.'}] %}
+<header class="topics-intro"><p class="topic-kicker">Путеводитель по миру грибов</p><h1>У грибов больше<br>одной истории.</h1><p>Загляните под лесную подстилку, узнайте, что грибы добавляют в наш рацион, и посмотрите, какие материалы вырастают из мицелия.</p><nav class="topics-jumps" aria-label="Направления тем"><a href="#nature">Лес и связи ↓</a><a href="#human">Грибы и человек ↓</a><a href="#ideas">Люди и идеи ↓</a></nav></header>
+{% set groups = [{id:'nature',title:'Лес и его связи',lead:'От знакомой шляпки — к тому, что происходит под землёй и вокруг нас.'},{id:'human',title:'Грибы и человек',lead:'Грибы в рационе, исследования их свойств и способы применять мицелий.'},{id:'ideas',title:'Люди и идеи',lead:'Книги, авторы и истории, с которых хочется копнуть глубже.'}] %}
 {% for group in groups %}
 <section class="topics-group" id="{{ group.id }}" aria-labelledby="heading-{{ group.id }}"><header><h2 id="heading-{{ group.id }}">{{ group.title }}</h2><p>{{ group.lead }}</p></header><div class="topics-cards">
 {% for key, guide in topicGuides %}{% if guide.group == group.id %}

@@ -32,8 +32,8 @@ date: 2026-11-15T00:00:00.000Z
 verified: true
 verification_date: 2026-11-15T00:00:00.000Z
 sources:
-  - title: 'First Nature: Lenzites betulina — Gilled Polypore'
-    url: 'https://www.first-nature.com/fungi/lenzites-betulina.php'
+  - title: 'First Nature: Lenzites betulinus — Birch Mazegill'
+    url: 'https://www.first-nature.com/fungi/lenzites-betulinus.php'
   - title: 'Mushroom Expert: Lenzites betulina'
     url: 'https://www.mushroomexpert.com/lenzites_betulina.html'
   - title: 'Wikipedia: Lenzites betulina'

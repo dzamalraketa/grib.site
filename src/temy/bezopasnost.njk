@@ -1,6 +1,6 @@
 ---
 layout: layouts/topic.njk
-title: "Грибные добавки без иллюзий"
+title: "Грибные добавки: состав и переносимость"
 description: "Как читать сведения о безопасности грибных добавок: сообщения о вреде, лекарственные взаимодействия и исследования переносимости."
 topicKey: bezopasnost
 permalink: "/temy/bezopasnost/"
@@ -9,7 +9,7 @@ permalink: "/temy/bezopasnost/"
 <header class="page-header">
   <p class="page-header__eyebrow">Тема</p>
   <h1 class="page-header__title">{{ title }}</h1>
-  <p class="page-header__lead">За словом «натуральное» остаются конкретные вопросы: состав, переносимость, взаимодействия и качество данных. Собрали материалы, которые помогают задавать эти вопросы точнее.</p>
+  <p class="page-header__lead">{{ topicGuides[topicKey].lead }}</p>
 </header>
 
 {% include "partials/topic-navigation.njk" %}

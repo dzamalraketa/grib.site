@@ -29,8 +29,6 @@ sources:
     url: 'https://www.first-nature.com/fungi/coltricia-perennis.php'
   - title: 'GBIF: Coltricia perennis'
     url: 'https://www.gbif.org/species/2519915'
-  - title: 'Wikipedia: Coltricia perennis'
-    url: 'https://en.wikipedia.org/wiki/Coltricia_perennis'
 summary: >-
   The tiger's eye: terrestrial golden-brown funnels with velvety
   concentric zones — a polypore growing on the ground, not on wood.

@@ -25,11 +25,11 @@
 **Источники (первичные мировые):**
 - MSKCC About Herbs: монографии [Reishi](https://www.mskcc.org/cancer-care/integrative-medicine/herbs/reishi-mushroom),
   [Maitake](https://www.mskcc.org/cancer-care/integrative-medicine/herbs/maitake),
-  [Turkey Tail](https://www.mskcc.org/cancer-care/integrative-medicine/herbs/turkey-tail),
+  [Turkey Tail](https://www.mskcc.org/cancer-care/integrative-medicine/herbs/coriolus-versicolor),
   [Shiitake](https://www.mskcc.org/cancer-care/integrative-medicine/herbs/shiitake-mushroom),
   [Chaga](https://www.mskcc.org/cancer-care/integrative-medicine/herbs/chaga-mushroom),
   [Cordyceps](https://www.mskcc.org/cancer-care/integrative-medicine/herbs/cordyceps),
-  [Lion's Mane](https://www.mskcc.org/cancer-care/integrative-medicine/herbs/lions-mane)
+  [Lion's Mane](https://www.mskcc.org/cancer-care/integrative-medicine/herbs/lions-mane-mushroom)
 - Кейс-репорты: Hanselin 2010 (Ann Pharmacother) — мейтаке×варфарин;
   Kikuchi 2014 + корейская серия — чага→оксалатная нефропатия
 - FDA/ODS-фрейминг: добавки не оцениваются до выхода на рынок

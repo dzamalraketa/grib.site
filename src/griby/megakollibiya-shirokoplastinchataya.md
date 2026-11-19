@@ -29,8 +29,8 @@ sources:
     url: 'https://www.first-nature.com/fungi/megacollybia-platyphylla.php'
   - title: 'Mushroom Expert: Megacollybia platyphylla'
     url: 'https://www.mushroomexpert.com/megacollybia_platyphylla.html'
-  - title: 'Wikipedia: Megacollybia platyphylla'
-    url: 'https://en.wikipedia.org/wiki/Megacollybia_platyphylla'
+  - title: 'Hughes et al. (2007): Megacollybia'
+    url: 'https://www.mushroomexpert.com/indianamushrooms/files/25.-Hughes-et-al-2007-Megacollybia-RTMI.pdf'
 summary: >-
   «Белая жила»: крупный серо-бурый гриб с широко разреженными белыми пластинками
   и белыми нитями мицелия у основания ножки — растёт там, где под листвой скрыто

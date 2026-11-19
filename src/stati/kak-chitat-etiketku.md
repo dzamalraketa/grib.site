@@ -11,8 +11,8 @@ tags:
 verified: true
 verification_date: 2025-10-04
 sources:
-  - title: "Nammex: технические разборы β-глюканов и мицелия на зерне"
-    url: "https://www.nammex.com/real-medicinal-mushrooms/"
+  - title: "Nammex: словарь грибных терминов (материал производителя)"
+    url: "https://www.nammex.com/fungal-terminology-and-mushroom-growing-terms/"
   - title: "FDA: Dietary Supplements — регуляторный фрейм"
     url: "https://www.fda.gov/food/dietary-supplements"
   - title: "Наша статья: анализ итальянского рынка грибных добавок"

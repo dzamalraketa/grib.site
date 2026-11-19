@@ -15,7 +15,7 @@ verification_date: 2025-07-26
 permalink: "/en/stati/entomopatogennye/"
 sources:
   - title: "Stamets P. Mycelium Running (2005) — chapter 7"
-    url: "https://www.google.com/books/edition/Mycelium_Running"
+    url: "https://www.penguinrandomhouse.com/books/196974/mycelium-running-by-paul-stamets/"
   - title: "Wikipedia: Metarhizium"
     url: "https://en.wikipedia.org/wiki/Metarhizium"
   - title: "Wikipedia: Beauveria bassiana"

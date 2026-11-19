@@ -30,8 +30,8 @@ sources:
     url: 'https://www.first-nature.com/fungi/megacollybia-platyphylla.php'
   - title: 'Mushroom Expert: Megacollybia platyphylla'
     url: 'https://www.mushroomexpert.com/megacollybia_platyphylla.html'
-  - title: 'Wikipedia: Megacollybia platyphylla'
-    url: 'https://en.wikipedia.org/wiki/Megacollybia_platyphylla'
+  - title: 'Hughes et al. (2007): Megacollybia'
+    url: 'https://www.mushroomexpert.com/indianamushrooms/files/25.-Hughes-et-al-2007-Megacollybia-RTMI.pdf'
 summary: >-
   The whitelaced shank: a large grey-brown mushroom with widely spaced
   white gills and white mycelial cords at the stem base — it grows where

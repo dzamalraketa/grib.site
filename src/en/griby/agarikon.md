@@ -25,7 +25,7 @@ sources:
   - title: 'Wikipedia: Laricifomes officinalis'
     url: 'https://en.wikipedia.org/wiki/Laricifomes_officinalis'
   - title: Stamets P. Mycelium Running (2005) — the Agarikon chapter
-    url: 'https://www.google.com/books/edition/Mycelium_Running'
+    url: 'https://www.penguinrandomhouse.com/books/196974/mycelium-running-by-paul-stamets/'
   - title: 'Fungi Perfecti: Agarikon research'
     url: 'https://fungi.com/blogs/articles'
 summary: 'A century-aged conifer conk of ancient medicine — from Dioscorides to Stamets'' antiviral screens. Wild populations are rare and protected; cultivated extracts exist.'

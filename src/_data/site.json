@@ -1,6 +1,6 @@
 {
   "title": "Мир грибов",
-  "description": "Грибы без мифов: каталог съедобных, ядовитых и лечебных видов, разбор клинических исследований на людях и безопасность добавок — со ссылками на первоисточники.",
+  "description": "Откройте мир грибов: лес и мицелий, съедобные виды, грибы в питании и исследования их свойств и применений.",
   "url": "https://grib.site",
   "author": "Команда «Мир грибов»",
   "locale": "ru_RU",
@@ -66,7 +66,7 @@
     ]
   },
   "default_image_en": "/assets/img/social/site-en-v2.jpg",
-  "description_en": "A guide to fungi: species, ecology, research reviews and clear explanations linked to primary sources.",
+  "description_en": "Explore the world of fungi: forest ecology, mycelium, edible mushrooms, nutrition and research into fungal applications.",
   "social_sections": {
     "griby": "catalog",
     "stati": "articles",

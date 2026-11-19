@@ -27,7 +27,7 @@ sources:
   - title: 'Wikipedia: Laricifomes officinalis'
     url: 'https://en.wikipedia.org/wiki/Laricifomes_officinalis'
   - title: Stamets P. Mycelium Running (2005) — глава об Agarikon
-    url: 'https://www.google.com/books/edition/Mycelium_Running'
+    url: 'https://www.penguinrandomhouse.com/books/196974/mycelium-running-by-paul-stamets/'
   - title: 'Fungi Perfecti: Agarikon research'
     url: 'https://fungi.com/blogs/articles'
 summary: >-

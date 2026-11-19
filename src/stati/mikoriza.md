@@ -11,7 +11,7 @@ sources:
   - title: "Wikipedia: Mycorrhiza"
     url: "https://en.wikipedia.org/wiki/Mycorrhiza"
   - title: "Stamets P. Mycelium Running (2005)"
-    url: "https://www.google.com/books/edition/Mycelium_Running"
+    url: "https://www.penguinrandomhouse.com/books/196974/mycelium-running-by-paul-stamets/"
 ---
 
 ## Что такое микориза
